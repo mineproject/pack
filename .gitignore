@@ -1,5 +1,6 @@
 #MultiMC things
 /patches/*
+/natives/*
 /minecraft/icon.png
 instance.cfg
 .packignore
@@ -23,7 +24,6 @@ instance.cfg
 /minecraft/liteconfig/*
 /minecraft/server-resource-packs/*
 /minecraft/crash-reports/*
-/minecraft/resources/*
 
 #Client configs
 /minecraft/GregTech.cfg
