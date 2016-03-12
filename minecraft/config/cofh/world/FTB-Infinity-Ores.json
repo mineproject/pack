@@ -3,8 +3,7 @@
 "Limestone": {
         "template": "uniform",
         "block": [
-            {"name": "chisel:limestone", "weight":90},
-            {"name": "harvestcraft:salt", "weight":10}
+            {"name": "chisel:limestone", "weight":90}
         ],
         "material": "stone",
         "clusterSize": 25,
