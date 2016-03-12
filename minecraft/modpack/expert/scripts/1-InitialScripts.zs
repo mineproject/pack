@@ -6,11 +6,6 @@ import mods.nei.NEI;
 print("Initializing '1-InitialScripts.zs'...");
 
 # - NEI Cleanup - Hide all non magic mod based obtainable items from NEI
-NEI.hide(<AWWayofTime:bloodLight>);
-NEI.hide(<AWWayofTime:spectralBlock>);
-NEI.hide(<AWWayofTime:spectralContainer>);
-NEI.hide(<AWWayofTime:blockMimic>);
-NEI.hide(<AWWayofTime:efficiencyRune>);
 NEI.hide(<ForbiddenMagic:FMResource:2>);
 NEI.hide(<ForbiddenMagic:FMResource:4>);
 NEI.hide(<Thaumcraft:blockArcaneDoor>);
