@@ -1,0 +1,23 @@
+§2§lBloodMagic
+§0Now that we have some basic ingredients we can make our blood altar:
+
+[bloodaltar]
+
+And we need to get blood into that somehow, so now for Expert Mode's Sacrificial Orb:
+
+[orb]
+
+The good news is, we don't have to go too far into blood magic to start getting our slates. However you will need a few of those Thaumcraft stones now.
+
+[slate]
+
+And we should get our blood orb as well which will take a mana diamond:
+
+[bloodorb1]
+
+Before moving on from blood magic, it is a good idea to get at least to the tier 2 alter which will require 16 slates to make the blood runes. Now let make a few brewing stands and send them trough the alter for our next journey.
+
+[brew]
+
+Now at this point we have a decent infrastructure of all magic schools except the runic altar.
+

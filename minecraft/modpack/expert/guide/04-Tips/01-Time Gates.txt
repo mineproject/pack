@@ -1,0 +1,6 @@
+§2§lTime Gates
+§0There are few time gates in Expert mode to be aware of, so you don't get stuck waiting forever.
+
+1) Pure certus quartz crystal needed for the Inscriber will take 16h real life time to create.
+
+2) Machine frames and iridium, as well as other higher tier materials, can take a long time in the assembly table to create. Gradually increasing the amount of lasers you have as you go will help offset this a bit.

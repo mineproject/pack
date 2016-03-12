@@ -1,0 +1,123 @@
+Permission categories and full licenses for mods marked spreadsheet are available here: http://1drv.ms/1rsQNOJ
+For any problems, please contact Watchful11 on the FTB forums.
+This is a public pack
+
+(Open:Custom) Forge/FML by LexManos, cpw can be found at http://www.minecraftforge.net/. The license is, , and can be found http://sourceforge.net/p/minecraftforge/wiki/Minecraft%20Forge%20Public%20License%201.0/.
+(Open:Custom) Advanced Solar Panels by SeNtiMeL can be found at http://forum.industrial-craft.net/index.php?page=Thread&threadID=3291. The license is, .
+(Open:Custom) AgriCraft by InfinityRaider can be found at http://minecraft.curseforge.com/mc-mods/225635-agricraft. The license is, , and can be found http://minecraft.curseforge.com/mc-mods/225635-agricraft/license.
+(Open:Custom) AOBD 2 by ganymedes01 can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1293528-aobd-2-process-all-the-ores-v2-2-3. The license is, .
+(Open:Custom) Applied Energistics by AlgorithmX2 can be found at http://ae-mod.info/. The license is, , and can be found http://ae-mod.info/Frequently-Asked-Questions/.
+(Open:Custom) Avaritia by SpitefulFox, TTFTCUTS can be found at http://minecraft.curseforge.com/mc-mods/233785-avaritia. The license is, .
+(Open:Custom) Baubles by Azanor can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1294623-baubles-1-0-1-5-updated-20-8-2014. The license is, .
+(Open:Custom) Bdlib by bdew can be found at http://www.curse.com/mc-mods/minecraft/bdlib. The license is, .
+(Open:Custom) BiblioCraft by Nuchaz can be found at http://www.bibliocraftmod.com/. The license is, , and can be found http://www.bibliocraftmod.com/?page_id=57#modpacks.
+(Open:Custom) Big Reactors by Erogenous Beef can be found at http://www.big-reactors.com/. The license is, , and can be found https://github.com/erogenousbeef/BigReactors/blob/master/LICENSE.txt.
+(Notify:Custom) Binnie Patcher by Chocohead can be found at http://forum.feed-the-beast.com/threads/1-7-10-binnie-patcher.143722/. The license is, . The author has been notified, http://i.imgur.com/Dk8ruXv.png.
+(Open:Custom) Binnie's Mods by Binnie can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1284348-1-7-10-1-6-4-forestry-binnies-mods-1-8-0-2-0-dev. The license is, , and can be found http://minecraft.curseforge.com/mc-mods/223525-binnies-mods.
+(Open:Custom) Biomes O' Plenty by TDWP_FTW, Adubbz can be found at http://www.reddit.com/r/biomesoplenty. The license is, , and can be found https://github.com/Glitchfiend/BiomesOPlenty.
+(Open:Custom) Blood Magic by WayofTime can be found at http://www.minecraftforum.net/topic/1899223-. The license is, .
+(Open:Custom) Botania by Vazkii can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1294116-botania-an-innovative-natural-magic-themed-tech. The license is, .
+(Open:Custom) Brandon's Core by brandon3055 can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2445068-brandon3055s-mods-draconic-evolution-town-builder. The license is, .
+(Open:Custom) Buildcraft by CovertJaguar, SirSengir, Krapht, cpw, spacetoad, asiekierka can be found at http://www.mod-buildcraft.com/. The license is, , and can be found http://www.mod-buildcraft.com/wiki/doku.php?id=faq.
+(Open:Custom) Carpenter's Blocks by Mineshopper can be found at http://www.minecraftforum.net/topic/1790919-1516forge-carpenters-blocks-v199-slopes-stairs-and-more/. The license is, .
+(Open:Custom) ChickenChunks by Chickenbones can be found at http://www.minecraftforum.net/topic/909223-164-smp-chickenbones-mods/. The license is, .
+(Open:Custom) Chisel 2 by warlordjones, tterrag1098, TheCricket26, Drullkus can be found at http://www.curse.com/mc-mods/minecraft/225236-chisel-2. The license is, .
+(Open:Custom) CodeChickenCore by Chickenbones can be found at http://www.minecraftforum.net/topic/909223-164-smp-chickenbones-mods/. The license is, .
+(Open:Custom) CodeChickenLib by Chickenbones can be found at https://github.com/Chicken-Bones/CodeChickenLib. The license is, , and can be found https://github.com/Chicken-Bones/CodeChickenLib/blob/master/LICENSE.
+(Open:Custom) CoFH Core by CoFH team can be found at http://teamcofh.com/. The license is, , and can be found http://teamcofh.com/index.php?page=license.
+(Open:Custom) CoFH Lib by CoFH team can be found at http://teamcofh.com/. The license is, , and can be found http://teamcofh.com/index.php?page=license.
+(Open:Custom) ComputerCraft by Dan200 can be found at http://www.computercraft.info/. The license is, , and can be found http://www.computercraft.info/download/.
+(Open:Custom) Custom Main Menu by Lumien can be found at http://minecraft.curseforge.com/mc-mods/226406-custom-main-menu. The license is, http://minecraft.curseforge.com/mc-mods/226406-custom-main-menu.
+(Open:Custom) DecoCraft by RazzleberryFox can be found at http://www.curse.com/mc-mods/minecraft/decocraft. The license is, .
+(Open:Custom) DenseOres by RWTema can be found at https://github.com/rwtema/DenseOres. The license is, .
+(Request:Custom) Draconic Evolution by brandon3055 can be found at http://www.tolkiencraft.com/draconic-evolution. The license is, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/draconicevolution.png. Permission has been obtained from the author, FTB Team.
+(Open:Custom) EJML-Core by EJML-Core can be found at EJML-Core. The license is, EJML-Core.
+(Open:Custom) Ender Tech by Drayshak can be found at http://www.curse.com/mc-mods/minecraft/223428-endertech. The license is, , and can be found https://github.com/Drayshak/EnderTech.
+(Open:Custom) Ender Zoo by CrazyPants can be found at http://www.curse.com/mc-mods/minecraft/225247-ender-zoo. The license is, .
+(Open:Custom) EnderCore by tterrag can be found at https://github.com/SleepyTrousers/EnderCore/. The license is, .
+(Open:Custom) EnderIO by CrazyPants can be found at http://www.minecraftforum.net/topic/1937619-1624152-ender-io-how-many-pipes-in-one-block-v06-so-there/. The license is, .
+(Open:Custom) EnderStorage by Chickenbones can be found at http://www.minecraftforum.net/topic/909223-164-smp-chickenbones-mods/. The license is, .
+(Open:Custom) Extra Cells by Leonelf can be found at http://www.minecraftforum.net/topic/1801643-ae-add-onm3gas-extracells-v-167d-smp-ssp/. The license is, , and can be found https://github.com/M3gaFr3ak/ExtraCells/wiki/License.
+(Open:Custom) Extra Utilities by RWTema can be found at http://www.minecraftforum.net/topic/1776056-164forge-extra-utilities-v102/. The license is, .
+(Open:Custom) ExtraTiC by Glassmaker can be found at http://www.minecraftforum.net/topic/1985397-forge-extratic-tinkers-construct-metallurgy-add-on/. The license is, .
+(Closed:Custom) FastCraft by Player can be found at http://forum.industrial-craft.net/index.php?page=Thread&threadID=10820. The license is, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/fastcraft.png. Permission has been obtained from the author, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/fastcraft.png.
+(Open:Custom) FastLeafDecay by Olafski can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2196219-fastleafdecay-leaves-be-gone. The license is, .
+(Open:Custom) Forbidden Magic by SpitefulFox can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/1445828-tc4-addon-forbidden-magic-v0-35a-v0-41b. The license is, .
+(Open:Custom) Forestry by SirSengir can be found at http://forestry.sengir.net/wiki.new/doku.php. The license is, , and can be found http://forestry.sengir.net/wiki.new/doku.php?id=main%3Adownloads.
+(Open:Custom) Forge Multipart by Chickenbones can be found at http://www.minecraftforum.net/topic/909223-164-smp-chickenbones-mods/. The license is, .
+(Open:Custom) Forge Relocation - FMP Plugin by MrTJP can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1290357-forge-multipart-projectred-v4-7-0pre3-88-06-29. The license is, .
+(Open:Custom) ForgeRelocation by MrTJP can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1290357-forge-multipart-projectred-v4-7-0pre3-88-06-29. The license is, .
+(Open:Custom) FTBLib by jaredlll08, LatvianModder can be found at http://minecraft.curseforge.com/projects/ftblib. The license is, http://minecraft.curseforge.com/projects/ftblib.
+(Open:Custom) FTBTweaks by jaredlll08 can be found at http://minecraft.curseforge.com/projects/ftb-tweaks. The license is, http://minecraft.curseforge.com/projects/ftb-tweaks.
+(Open:Custom) FTBUtilities by LatvianModder can be found at http://minecraft.curseforge.com/projects/ftb-utilities. The license is, http://minecraft.curseforge.com/projects/ftb-utilities.
+(Open:Custom) Funky Locomotion by RWTema can be found at http://www.curse.com/mc-mods/minecraft/224190-funky-locomotion. The license is, , and can be found https://github.com/rwtema/FunkyLocomotion/blob/master/LICENSE-fml.txt.
+(Open:Custom) Gendustry by bdew can be found at http://bdew.net/gendustry/. The license is, .
+(Open:Custom) Gravitation Suite by SeNtiMeL can be found at http://forum.industrial-craft.net/index.php?page=Thread&threadID=6915. The license is, .
+(Open:Custom) Guide-API by TehNut can be found at http://www.curse.com/mc-mods/minecraft/228832-guide-api. The license is, http://www.curse.com/mc-mods/minecraft/228832-guide-api.
+(Open:Custom) HarvestCraft by MatrexsVigil, Rhodox can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1294413-pams-mods-july-16th-all-mods-updated-to-1-7-10#entry29809669. The license is, , and can be found http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1274678-1-6-x-1-5-2-others-pams-mods-feb-9th-im-back.
+(Open:Custom) Hat Stand by iChun can be found at http://ichun.us/mods/hats/hat-stand/. The license is, , and can be found http://ichun.us/support/mod-packs/.
+(Open:Custom) Hats by iChun can be found at http://ichun.us/mods/hats/. The license is, , and can be found http://ichun.us/support/mod-packs/.
+(Open:Custom) Headcrumbs by ganymedes01 can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2184837-headcrumbs-celebrities-heads-as-dungeon-loot-heads. The license is, .
+(Open:Custom) iChunUtil by iChun can be found at http://ichun.us/mods/ichun-util/. The license is, .
+(Open:Custom) Immersive Engineering by BluSunrize can be found at http://minecraft.curseforge.com/mc-mods/231951-immersive-engineering. The license is, .
+(Open:Custom) Immersive Intergration by Unwritten Fun can be found at http://www.curse.com/mc-mods/minecraft/232159-immersive-integration. The license is, .
+(Open:Custom) IndustrialCraft 2 by IC2 Dev Team can be found at http://www.industrial-craft.net/. The license is, , and can be found http://forum.industrial-craft.net/index.php?page=Thread&threadID=7994.
+(Open:Custom) INpure Core by denoflionsx can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2196459-1-7-10-inpure-projects-denoflions-mods. The license is, .
+(Open:Custom) Inventory Tweaks by Kobata can be found at http://www.minecraftforum.net/topic/1720872-162-inventory-tweaks-156-august-21/. The license is, .
+(Open:Custom) IronChests by cpw, progwml6 can be found at http://www.minecraftforum.net/topic/981855-15-and-up-forge-universalironchests-50-minecraft-15-update/. The license is, .
+(Open:Custom) JABBA by ProfMobius can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1292942-1-7-2-1-6-4-jabba-1-1-3-just-another-better. The license is, .
+(Notify:Custom) JourneyMap by techbrew can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1278348-journeymap-4-0-3-realtime-mapping-in-game-or-in-a. The license is, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/journeymap.png, and can be found http://journeymap.techbrew.net/help/modpacks/. The author has been notified, http://journeymap.techbrew.net/help/modpacks/.
+(Open:Custom) LogisticsPipes by davboecki, theZorro266, GUIpsp, AartBluestoke, ArtForz can be found at http://www.minecraftforum.net/topic/1831791-16xbuildcraft-logistics-pipes/. The license is, .
+(Open:Custom) Magic Bees by MysteriousAges can be found at http://www.minecraftforum.net/topic/1627856-magic-bees-magic-themed-bees-for-forestry-the-successor-to-thaumicbees/. The license is, .
+(Open:Custom) Mantle by mDiyo, progwml6 can be found at http://www.curse.com/mc-mods/minecraft/mantle. The license is, .
+(Open:Custom) McjtyLib by Mcjty can be found at http://www.minecraftforum.net/topic/1885652-164forge-multipart-projectred-v42218-12312013/. The license is, .
+(Open:Custom) MineFactory Reloaded by skyboy026, powercrystals can be found at http://www.minecraftforum.net/topic/2016680-162164-powercrystals-mods-minefactoryreloaded-powercrystalscore-and-netherores-updated-mfr-275-released/. The license is, .
+(Open:Custom) MineTweaker by StanH can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1290366-1-6-4-1-7-x-minetweaker-3-customize-your. The license is, .
+(Open:Custom) ModTweaker by jaredlll08, joshie, SpitefulFox can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2364943-modtweaker-0-7-x. The license is, , and can be found http://minecraft.curseforge.com/mc-mods/220954-modtweaker/license.
+(Open:Custom) Morpheus by quetzi can be found at http://www.curse.com/mc-mods/minecraft/morpheus. The license is, .
+(Request:Custom) Mystcraft by XCompWiz can be found at http://www.minecraftforum.net/topic/918541-164-mystcraft-01011/. The license is, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/mystcraft.png, and can be found http://binarymage.com/forum/viewtopic.php?f=23&t=844. Permission has been obtained from the author, http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mods-discussion/1386925-ftb-mod-pack-permissions-thread#c15.
+(Open:Custom) Natura by mDiyo can be found at http://www.minecraftforum.net/topic/1753754-16xnatura/. The license is, .
+(Open:Custom) NEI Addons by bdew can be found at http://www.minecraftforum.net/topic/1803460-nei-addons-v1102-updated-120214/. The license is, .
+(Open:Custom) NEI Integration by Tonius can be found at http://www.curse.com/mc-mods/minecraft/225251-nei-integration. The license is, .
+(Open:Custom) NetherOres by skyboy026, powercrystals can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1292152-powercrystals-mods-minefactoryreloaded. The license is, .
+(Open:Custom) Not Enough Items by Chickenbones can be found at http://www.minecraftforum.net/topic/909223-164-smp-chickenbones-mods/. The license is, .
+(Open:Custom) Not Enough Resources by Way2muchnoise, Hilburn can be found at http://minecraft.curseforge.com/mc-mods/225815-notenoughresources. The license is, .
+(Open:Custom) Nuclear Control by shedar can be found at http://forum.industrial-craft.net/index.php?page=Thread&threadID=10649. The license is, , and can be found https://bitbucket.org/shedar/ic2-nuclear-control/src/98638e71c14fc3990562c2e65f4c27e28cb473a5/LICENSE?at=default.
+(Open:Custom) Open Peripheral Intergration by OpenMods, boq can be found at http://www.curse.com/mc-mods/minecraft/228819-openperipheral-integration. The license is, .
+(Open:Custom) OpenBlocks by Mikeemoo, boq can be found at http://www.openblocks.info/. The license is, .
+(Open:Custom) OpenModsLib by Mikeemoo, boq can be found at http://www.openblocks.info/. The license is, .
+(Open:Custom) OpenPeripheral Core by Mikeemoo, boq can be found at http://www.openblocks.info/. The license is, .
+(Open:Custom) Portal Gun by iChun can be found at http://ichun.us/mods/gravity-gun/. The license is, , and can be found http://ichun.us/support/mod-packs/.
+(Open:Custom) Project Red by MrTJP, Chickenbones can be found at http://www.minecraftforum.net/topic/1885652-164forge-multipart-projectred-v42218-12312013/. The license is, .
+(Open:Custom) Railcraft by CovertJaguar can be found at http://www.railcraft.info/. The license is, , and can be found http://railcraft.info/wiki/info:license.
+(Open:Custom) Redstone Arsenal by CoFH team can be found at http://teamcofh.com/. The license is, , and can be found http://teamcofh.com/license/.
+(Open:Custom) Resource Loader by lumien231 can be found at http://www.curse.com/mc-mods/minecraft/226447-resource-loader. The license is, http://www.curse.com/mc-mods/minecraft/226447-resource-loader.
+(Open:Custom) RFtools by McJty can be found at http://www.curse.com/mc-mods/minecraft/224641-rftools. The license is, http://www.curse.com/mc-mods/minecraft/224641-rftools.
+(Open:Custom) Runic Dungeons by MrComputerGhost can be found at http://www.curse.com/mc-mods/minecraft/227065-runic-dungeons. The license is, http://www.curse.com/mc-mods/minecraft/227065-runic-dungeons.
+(Open:Custom) Simply Jetpacks by Tonius can be found at http://www.curse.com/mc-mods/minecraft/simply-jetpacks. The license is, .
+(Open:Custom) Solar Expansion by TedTheRusSB624 can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2188753-solar-expansion-v1-1a-thermal-expansion-4-addon. The license is, .
+(Open:Custom) Springboards by Galoubet can be found at http://www.curse.com/mc-mods/minecraft/227301-springboards. The license is, http://www.curse.com/mc-mods/minecraft/227301-springboards.
+(Open:Custom) Steve's Addons by hilburn can be found at http://www.curse.com/mc-mods/minecraft/226067-steves-addons#t1:description. The license is, http://www.curse.com/mc-mods/minecraft/226067-steves-addons#t1:description.
+(Open:Custom) Steve's Carts 2 by Vswe can be found at http://stevescarts2.wikispaces.com/. The license is, .
+(Open:Custom) Steve's Factory Manager by Vswe can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1293066-1-7-2-steves-factory-manager. The license is, , and can be found http://stevesfactorymanager.wikispaces.com/.
+(Open:Custom) Steve's Workshop by Vswe can be found at http://www.curse.com/mc-mods/minecraft/223173-steves-workshop. The license is, .
+(Open:Custom) Storage Drawers by jaquadro can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2198533-storage-drawers-updated-sep-01-14. The license is, .
+(Open:Custom) Storage Drawers: Misc Pack by jaquadro can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2198533-storage-drawers-v1-5-15-v2-1-9-updated-aug-25-15. The license is, .
+(Open:Custom) Thaumcraft by Azanor can be found at http://www.minecraftforum.net/topic/2011841-thaumcraft-405b-updated-24112013/. The license is, .
+(Request:Custom) Thaumcraft NEI Plugin by DjGiannuzz can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2237271-1-6-4-1-7-10-thaumcraft-nei-plugin-nei. The license is, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/thaumcraftneiplugin.png. Permission has been obtained from the author, FTB Team.
+(Open:Custom) Thaumic Energistics by Nividica can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/2150151-1-7-10-tc4-ae2-thaumic-energistics. The license is, .
+(Open:Custom) Thaumic Exploration by Flaxbeard, nekosune can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/1445786-1-6-4-1-7-10-thaumic-exploration-0-6-0-thaumcraft. The license is, .
+(Open:Custom) Thaumic Tinkerer by pixlepix, nekosune, Vazkii can be found at http://www.minecraftforum.net/topic/1813058-thaumic-tinkerer-thaumcraft-addon-evolve-knowledge/. The license is, .
+(Open:Custom) Thermal Dynamics by TeamCoFH can be found at http://www.curse.com/mc-mods/minecraft/227443-thermal-dynamics. The license is, .
+(Open:Custom) Thermal Expansion by CoFH team can be found at http://teamcofh.com/. The license is, , and can be found http://teamcofh.com/index.php?page=license.
+(Open:Custom) Thermal Foundation by CoFH team can be found at http://www.curse.com/mc-mods/minecraft/222880-thermal-foundation. The license is, , and can be found http://teamcofh.com/.
+(Open:Custom) TiC Tooltips by squeek502 can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1294501-tic-tooltips-in-game-tinkers-construct-tool. The license is, , and can be found https://github.com/squeek502/TiC-Tooltips/blob/master/LICENSE.
+(Open:Custom) Tinker's Construct by boni, mDiyo can be found at http://www.minecraftforum.net/topic/1659892-164tinkers-construct/. The license is, .
+(Open:Custom) Tinker's Mechworks by mDiyo can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/1446244-1-6-4-tinkers-mechworks. The license is, .
+(Open:Custom) Translocators by Chickenbones can be found at http://www.minecraftforum.net/topic/909223-164-smp-chickenbones-mods/. The license is, .
+(Open:Custom) Twilight Forest by Benimatic can be found at http://www.minecraftforum.net/topic/561673-164-the-twilight-forest-v1203-haunting-of-the-knight-phantoms/. The license is, .
+(Open:Custom) Waila by ProfMobius can be found at http://www.minecraftforum.net/topic/1846244-172-waila-145/. The license is, .
+(Open:Custom) Waila Harvestability by squeek502 can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1295067-waila-harvestability-how-can-i-harvest-what-im. The license is, .
+(Open:Custom) Wawla by Darkhax can be found at http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2169830-wawla-what-are-we-looking-at. The license is, .
+(Open:Custom) Wireless Redstone CBE by Chickenbones can be found at http://www.minecraftforum.net/topic/909223-164-smp-chickenbones-mods/. The license is, .
+(Notify:Custom) Witchery by Emoniph can be found at http://www.minecraftforum.net/topic/1992544-164-forge-witchery-0140/. The license is, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/witchery.png. The author has been notified, https://dl.dropboxusercontent.com/u/27836116/FTBPermissionsImages/witchery.png.

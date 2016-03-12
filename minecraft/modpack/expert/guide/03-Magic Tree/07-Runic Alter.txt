@@ -1,0 +1,16 @@
+§2§lRunic Alter
+§0The runic alter from Thaumcraft is our last bit we will cover in this guide.
+You will need a few things to get this created.
+
+Firstly you will need a full Mana pool from Botania.
+Then 1 of each of the tier 1 runes.
+
+[manarune]
+
+4 blood runes from blood magic and an attuned stone from witchery:
+
+[matrix]
+
+You may want to consider some potency lenses or additional manapools and spreaders, as this process takes awhile.
+
+Now you can make the Altar and have a decent magic setup in each school, going forward, remember that NEI is your best friend for many of the recipe changes!

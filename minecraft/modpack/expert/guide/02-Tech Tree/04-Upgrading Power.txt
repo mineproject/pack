@@ -1,0 +1,25 @@
+§2§lUpgrading Power
+§0
+At this point, you may be feeling the need for more POWER!
+There are many more options open to you at this point, but the Immersive Engineering options may be the easiest.
+
+For the water wheel you will need a good amount of treated wood, and some IC2 machines to make the parts for the wheel.
+
+You can connect the water wheels to a kinetic dynamo to generate power.
+
+Let take a look at the changes to the recipes in Evolved.
+
+Water wheel:
+
+[segment]
+[waterwheel]
+
+The Dynamo:
+
+[dynamo]
+
+And an example setup:
+
+[watersetup]
+
+You could also go with a wind power setup, or perhaps some IC2 power.  

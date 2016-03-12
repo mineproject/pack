@@ -1,0 +1,17 @@
+## Title: custom_nei_filters
+## Author: FTB
+## Version: 1.0
+## Bootstrap: Bootstrap.js
+## Saved Variables: vanilla_enabled, ThermalExpansion_enabled, ForgeMicroblock_enabled, ExtraUtilities_enabled, BuildCraft_enabled, Bibliocraft_enabled, AE2_enabled, Tcon_enabled, AgriCraft_enabled, IC2_enabled, HarvestCraft_enabled, Misc_enabled
+ThermalExpansion.js
+ForgeMicroblock.js
+ExtraUtilities.js
+BuildCraft.js
+Bibliocraft.js
+AppliedEnergistics2.js
+Tcon.js
+AgriCraft.js
+IC2.js
+HarvestCraft.js
+vanilla.js
+Misc.js

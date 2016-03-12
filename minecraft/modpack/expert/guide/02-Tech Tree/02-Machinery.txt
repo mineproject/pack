@@ -1,0 +1,24 @@
+§2§lFirst Machines
+§0
+Power taken care of, the next step is to make the needed machines to make higher-tier ones. You'll note that Thermal Expansion and Ender IO machines need a few new things to produce.
+
+The Forestry carpenter and thermionic fabricator are your first machines you'll need. These take standard RF.
+
+[carpenter]
+[therm]
+
+Note Gold chest requires plates from IC2:
+
+[goldchest]
+
+Once you get those built and powered, get your assembly table and lasers going. The more lasers you have, the shorter assembly time will be. 6 is a good start. Standard RF to these, too.
+
+[assembly]
+[laser]
+
+That done, you'll want a Railcraft rock crusher. Crushed obsidian is found in several recipes, but it can also crush ore. RF power source for this as well.
+
+[rockcrusher]
+[rockcrushercomp]
+
+After this setup is complete, you can start looking at IC2 machines.

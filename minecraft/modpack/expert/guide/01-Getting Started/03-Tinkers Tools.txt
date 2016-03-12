@@ -1,0 +1,13 @@
+§2§lTinkers Tools
+§0 After you have collected your first round of resources you'll want to get into tinkers tools.
+Before you can get into the metal tools you will need a bucket for lava.  See "Getting the Bucket" Section of this guide for that information.
+You will want to gather some iron, some coal, and perhaps loot a bit for smeltery parts or if you're lucky some creosote oil. 
+
+§2 Note: the Tool Forge recipe has been changed to be much farther down the line in progression, so you will have to use the basic tools for now.
+
+Tool Forge Recipe:
+
+[toolforge]
+
+
+

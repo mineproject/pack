@@ -1,0 +1,34 @@
+§2§lIC2 Machines
+§0
+There are a few machine requirements to progress further on the tech tree.
+One of the first IC2 machines you will want to get is the metal former.  with this you can make all of your plates for half the material cost with some power.  
+
+Most IC2 recipes have remained largely unchanged.
+
+To make the metal former you will need several sub recipes:
+
+[coil]
+[machinecase]
+[toolbox]
+
+And finally you can make the former itself:
+
+[metalformer]
+
+This will require some form of IC2 power, from a IC2 generator or converting your RF power generation to EU with Immersive Engineering cables.
+
+There are 3 modes within the machine itself.
+
+Cutting for wires:
+
+[cutting]
+
+Extruding for cells rods and other metal parts:
+
+[extruding]
+
+Rolling for plates:
+
+[rolling]
+
+For more information on IC2 machines, automation, and parts.  Check out the IC2 wiki, it has quite a good amount of information, and in Infinity Evolved most recipes have not changed.

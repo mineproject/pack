@@ -1,0 +1,5 @@
+You are currently in normal mode.
+
+If you wish to switch to Expert type the following command:
+
+/ftb_mode set expert

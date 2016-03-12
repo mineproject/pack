@@ -1,0 +1,102 @@
+{
+  "minecraftArguments": "--username ${auth_player_name} --version ${version_name} --gameDir ${game_directory} --assetsDir ${assets_root} --assetIndex ${assets_index_name} --uuid ${auth_uuid} --accessToken ${auth_access_token} --userProperties ${user_properties} --userType ${user_type} --tweakClass cpw.mods.fml.common.launcher.FMLTweaker",
+
+ "libraries": [
+    {
+      "name": "net.minecraftforge:forge:1.7.10-10.13.4.1614-1.7.10:universal",
+      "url": "http://ftb.cursecdn.com/FTB2/maven/",
+	  "checksums" : [ "25fd97f72beca728112256938e03e8105b1b78cc"]
+    },
+    {
+      "name": "net.minecraft:launchwrapper:1.12",
+      "download":true
+    },
+    {
+      "name": "org.ow2.asm:asm-all:5.0.3",
+      "download":true
+    },
+    {
+      "name": "com.typesafe.akka:akka-actor_2.11:2.3.3",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "78341769e501a2f3fd3c8c5022bf904562d9a3d7" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "com.typesafe:config:1.2.1",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "b3285be5fd553eeb69eccb56d4c3e3776ab921b8" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang:scala-actors-migration_2.11:1.1.0",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "6cede0b9381e06e98b644d5d881010bb298189d1" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang:scala-compiler:2.11.1",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "039ef1262007705bcc0aa5615c9ee1a3659dd80a" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang.plugins:scala-continuations-library_2.11:1.0.2",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "0795b90a5da3edb3b93745e07dc37629965124ec" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang.plugins:scala-continuations-plugin_2.11.1:1.0.2",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "33c526ae16b6bb842c44240df2ed4a0cebfa4824" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang:scala-library:2.11.1",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "6ee9a2bf52f2211107bb36f3c66a3fd41354afea" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang:scala-parser-combinators_2.11:1.0.1",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "56f1de74d040eac8848949acd2b6e74b6fdd0d78" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang:scala-reflect:2.11.1",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "d483536d3bf4c0582522d3ac62feef585c7f1f24" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang:scala-swing_2.11:1.0.1",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "da33c40bcbdbd4470471080939641ed456b9c9b6" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "org.scala-lang:scala-xml_2.11:1.0.2",
+      "url" : "http://ftb.cursecdn.com/FTB2/maven/",
+      "checksums" : [ "43d2adc971980f3e031174fad82384e664e4336c" ],
+      "serverreq":true,
+      "clientreq":true
+    },
+    {
+      "name": "lzma:lzma:0.0.1",
+      "download":true
+    }
+  ],
+  "mainClass": "net.minecraft.launchwrapper.Launch",
+  "id": "1.7.10-Forge10.13.4.1614-1.7.10:universal"
+  }

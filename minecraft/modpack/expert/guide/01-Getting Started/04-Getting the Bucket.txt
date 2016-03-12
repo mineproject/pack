@@ -1,0 +1,25 @@
+§2§lGetting the Bucket
+§0 After getting your first tools you will want to get a bucket so you can pick up lava and water to feed your farms and the smeltery.
+To get the bucket you will need to get Iron Plates.
+And here is how you do it:
+
+You will need 2 treated sticks:
+
+[treated]
+
+This requires creosote oil, a by product from transforming coal into coal coke in a coke oven.
+
+Then you can craft the IC2 Hammer:
+
+[hammer]
+
+Then you craft the Iron Plates:
+
+[ironplate]
+
+Then finally you can craft your bucket:
+
+[bucket]
+
+
+

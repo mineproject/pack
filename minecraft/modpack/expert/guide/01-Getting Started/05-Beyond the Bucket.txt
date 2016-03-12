@@ -1,0 +1,10 @@
+§2§lBeyond the Bucket
+§0
+You can now move liquids. Doesn't that feel good? Move that water. JUST MOVE IT. But now you can also get lava, which means you can finally make yourself some better tools.
+
+Here we have the recipe for Grout. You'll need a lot of this. A couple stacks will do you, but if you plan on using it for most of your metal production needs you may want to grab some more.
+
+[grout]
+
+Cook that up with some of your coal and build yourself a smeltery.  And now that you can get double ingots from your ores, it's time to think about power and basic machines if you choose to start with tech.  Or you can choose the magic route, the choice is yours!
+

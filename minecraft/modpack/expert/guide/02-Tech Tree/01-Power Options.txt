@@ -1,0 +1,24 @@
+§2§lFirst Power Options
+§0
+Several power options exist early on, all needing varying amounts of maintenance to work.
+
+Survivalist generators are probably the easiest, but they also deliver the lowest amount of power per tick. They're cheap and efficient, though, which can mean a lot early on.
+
+[survivalist]
+
+Hobbyist steam engines are an excellent early source of power once you get them going, producing a steady 20RF per tick at peak. You'll need to provide them with water, which lasts quite a while, and a solid fuel source.
+
+[hobby]
+
+Peat-fired engines produce good amounts of RF at a decent rate but require a peat-producing peat bog before they can be used. Surround a block of water with up to two blocks of bog earth. It can take up to two Minecraft days for the bog earth to become peat. Once it does, break the peat block to get a block of dirt and a brick of peat to go into your engines.
+
+[peat]
+
+Note: All gears will require the smeltery cast to be made. All other recipes have been disabled.
+
+[gears]
+
+Power cable options early on are Buildcraft kinesis pipes and Immersive Engineering cables and connectors. Buildcraft pipes have the benefit of being cheap and effective, but you need the redstone engine to use them. The Immersive Engineering connectors and cables are relatively inexpensive and have the benefit of being able to transfer both RF and EU.
+
+Note: All lava power generation has been disabled in Expert Mode.
+

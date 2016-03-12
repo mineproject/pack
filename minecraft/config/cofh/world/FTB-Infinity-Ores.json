@@ -1,0 +1,180 @@
+{
+
+"sulfur": {
+        "template": "uniform",
+        "block": "Railcraft:tile.railcraft.ore",
+        "material": "stone",
+        "clusterSize": 4,
+        "numClusters": 4,
+        "minHeight": 0,
+        "maxHeight": 24,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Yellorite": {
+        "template": "uniform",
+        "block": "BigReactors:YelloriteOre",
+        "material": "minecraft:stone",
+        "clusterSize": 5,
+        "numClusters": 10,
+        "minHeight": 0,
+        "maxHeight": 36,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"CertusQuartz": {
+        "template": "uniform",
+        "block": [
+            {"name": "appliedenergistics2:tile.OreQuartz", "weight":95},
+            {"name": "appliedenergistics2:tile.OreQuartzCharged", "weight":5}
+        ],
+        "clusterSize": 8,
+        "numClusters": 6,
+        "minHeight": 38,
+        "maxHeight": 54,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [
+            "all"
+        ],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Ruby": {
+        "template": "uniform",
+        "block": "ProjRed|Exploration:projectred.exploration.ore",
+        "material": "minecraft:stone",
+        "clusterSize": 4,
+        "numClusters": 3,
+        "minHeight": 0,
+        "maxHeight": 16,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Peridot": {
+        "template": "uniform",
+        "block": {"name": "ProjRed|Exploration:projectred.exploration.ore", "metadata": 2},
+        "material": "minecraft:stone",
+        "clusterSize": 4,
+        "numClusters": 3,
+        "minHeight": 32,
+        "maxHeight": 48,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Sapphire": {
+        "template": "uniform",
+        "block": {"name": "ProjRed|Exploration:projectred.exploration.ore", "metadata": 1},
+        "material": "minecraft:stone",
+        "clusterSize": 4,
+        "numClusters": 3,
+        "minHeight": 16,
+        "maxHeight": 32,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Aluminium": {
+        "template": "uniform",
+        "block": {"name": "TConstruct:SearedBrick", "metadata": 5},
+        "clusterSize": 6,
+        "numClusters": 6,
+        "minHeight": 40,
+        "maxHeight": 70,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [
+            "all"
+        ],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Apatite": {
+        "template": "uniform",
+        "block": "Forestry:resources",
+        "material": "stone",
+        "clusterSize": 10,
+        "numClusters": 7,
+        "minHeight": 48,
+        "maxHeight": 128,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Limestone": {
+        "template": "uniform",
+        "block": [
+            {"name": "chisel:limestone", "weight":90},
+            {"name": "harvestcraft:salt", "weight":10}
+        ],
+        "material": "stone",
+        "clusterSize": 25,
+        "numClusters": 7,
+        "minHeight": 32,
+        "maxHeight": 128,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "blacklist",
+        "dimensions": [
+            -1,
+            1
+        ]
+    },
+"Amethyst": {
+        "template": "uniform",
+        "block": "BiomesOPlenty:gemOre",
+        "material": "minecraft:end_stone",
+        "clusterSize": 4,
+        "numClusters": 24,
+        "minHeight": 5,
+        "maxHeight": 256,
+        "retrogen": "true",
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "whitelist",
+        "dimensions": [
+            1
+        ]
+    }
+}
