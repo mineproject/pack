@@ -9,11 +9,6 @@ val entry = <ore:blockMeatRaw>;
 entry.remove(<BiomesOPlenty:flesh>);
 
 #Recipe Conflicts
-recipes.remove(<ComputerCraft:CC-Cable:1>);
-recipes.addShaped(<ComputerCraft:CC-Cable:1>, [[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>], [<minecraft:stone>, <minecraft:redstone_block>, <minecraft:stone>], [<minecraft:stone>, <minecraft:stone>, <minecraft:stone>]]);
-
-recipes.remove(<runicdungeons:item.basicBelt>);
-recipes.addShaped(<runicdungeons:item.basicBelt>, [[null, <minecraft:leather>, null], [<minecraft:leather>, null, <minecraft:leather>], [<minecraft:gold_ingot>, null, <minecraft:gold_ingot>]]);
 
 recipes.remove(<Botany:trowelIron>);
 recipes.remove(<Botany:trowelGold>);
