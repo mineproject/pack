@@ -1,5 +1,6 @@
 #MultiMC things
 /patches/*
+/natives/*
 /minecraft/icon.png
 instance.cfg
 .packignore
