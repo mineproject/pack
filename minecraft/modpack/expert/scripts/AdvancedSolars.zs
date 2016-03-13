@@ -8,6 +8,9 @@ mods.buildcraft.AssemblyTable.addRecipe(<AdvancedSolarPanel:asp_crafting_items:2
 recipes.remove(<AdvancedSolarPanel:asp_crafting_items:12>);
 recipes.addShaped(<AdvancedSolarPanel:asp_crafting_items:12>, [[<AdvancedSolarPanel:asp_crafting_items:5>, <IC2:reactorReflectorThick:1>, <AdvancedSolarPanel:asp_crafting_items:5>], [<AdvancedSolarPanel:asp_crafting_items:5>, null, <AdvancedSolarPanel:asp_crafting_items:5>], [<AdvancedSolarPanel:asp_crafting_items:5>, <IC2:reactorReflectorThick:1>, <AdvancedSolarPanel:asp_crafting_items:5>]]);
 
+recipes.remove(<ore:craftingMolecularTransformer>);
+recipes.addShaped(<AdvancedSolarPanel:BlockMolecularTransformer>, [[<ore:circuitElite>, <gregtech:gt.neutronreflector>, <ore:circuitElite>], [<ore:craftingMTCore>, <gregtech:gt.blockmachines:14>, <ore:craftingMTCore>], [<gregtech:gt.blockmachines:24>, <gregtech:gt.neutronreflector>, <gregtech:gt.blockmachines:24>]]);
+
 #solar helmet fixes
 recipes.remove(<AdvancedSolarPanel:hybrid_solar_helmet>);
 recipes.remove(<AdvancedSolarPanel:advanced_solar_helmet>);

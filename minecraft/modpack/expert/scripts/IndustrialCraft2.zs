@@ -3,6 +3,11 @@
 
 print("Initializing 'IndustrialCraft2.zs'...");
 
+#Reactor reflector - Change by Georggi
+#According to wikipedia, graphite, beryllium, steel, tungsten carbide are neutron reflectors
+recipes.remove(<IC2:reactorReflector>);
+recipes.addShaped(<IC2:reactorReflector>, [[<ore:ingotGraphite>, <ore:ingotGraphite>, <ore:ingotGraphite>], [, <ore:plateDenseSteel>, <ore:ingotGraphite>], [<ore:ingotGraphite>, <ore:ingotGraphite>, <ore:ingotGraphite>]]);
+
 #basic machine frame
 recipes.remove(<IC2:blockMachine>);
 recipes.addShaped(<IC2:blockMachine>, [[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], [<ore:plateIron>, <ore:chipsetIron>, <ore:plateIron>], [<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]]);
