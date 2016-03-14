@@ -91,9 +91,6 @@ recipes.addShaped(<witchery:witchesovenidle>, [[null, <ore:barsIron>], [<ore:pla
 recipes.remove(<witchery:wolfaltar>);
 recipes.addShaped(<witchery:wolfaltar>, [[null, <witchery:wolfhead:*>], [<witchery:wolfhead:*>, <Thaumcraft:blockStoneDevice:2>, <witchery:wolfhead:*>], [<Thaumcraft:blockStoneDevice:2>, <witchery:ingredient:156>, <Thaumcraft:blockStoneDevice:2>]]);
 
-# -- Tool Forge - I'm a sneaky snowman, hehe >:)
-recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateStainlessSteel>, <TConstruct:ToolStationBlock>, <ore:plateStainlessSteel>], [<ore:plateStainlessSteel>, null, <ore:plateStainlessSteel>]]);
-
 # - Anointing Paste
 recipes.remove(<witchery:ingredient:153>);
 recipes.addShaped(<witchery:ingredient:153>, [[<witchery:seedsartichoke>, <ore:dyeCyan>, <witchery:seedsmandrake>], [<ore:dyeCyan>, <minecraft:potion>, <ore:dyeCyan>], [<witchery:seedsbelladonna>, <ore:dyeCyan>, <witchery:seedssnowbell>]]);
