@@ -19,7 +19,12 @@ recipes.remove(<TConstruct:ToolForgeBlock:3>);
 recipes.remove(<TConstruct:ToolForgeBlock:2>);
 recipes.remove(<TConstruct:ToolForgeBlock:1>);
 recipes.remove(<TConstruct:ToolForgeBlock:0>);
-recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateDenseSteel>, <TConstruct:ToolStationBlock>, <ore:plateDenseSteel>], [<ore:plateDenseSteel>, null, <ore:plateDenseSteel>]]);
+
+recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateDenseAluminium>, <TConstruct:ToolStationBlock>, <ore:plateDenseAluminium>], [<ore:plateDenseAluminium>, null, <ore:plateDenseAluminium>]]);
+
+#Grout
+recipes.remove(<TConstruct:CraftedSoil:1>);
+recipes.addShaped(<TConstruct:CraftedSoil:1> * 2, [[<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>], [<ore:dustCoal>, <ore:sand>, <ore:dustCoal>], [<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>]]);
 
 #silky jewel
 recipes.remove(<TConstruct:materials:26>);
@@ -30,18 +35,18 @@ mods.tconstruct.Smeltery.removeMelting(<ore:dustGlowstone>);
 mods.tconstruct.Smeltery.removeMelting(<ore:glowstone>);
 mods.tconstruct.Smeltery.removeMelting(<ore:dustRedstone>);
 mods.tconstruct.Smeltery.removeMelting(<ore:blockRedstone>);
-mods.tconstruct.Smeltery.removeMelting(<ore:pearlEnder>);
 mods.tconstruct.Smeltery.removeMelting(<minecraft:rail>);
 mods.tconstruct.Smeltery.removeMelting(<minecraft:minecart>);
-mods.tconstruct.Smeltery.removeMelting(<IC2:blockOreUran>);
-mods.tconstruct.Smeltery.removeMelting(<IC2:blockMetal:3>);
 
-#remove blocks from smeltery
-mods.tconstruct.Casting.removeBasinRecipe(<IC2:blockMetal:3>);
+#remove aluminium smelting
+mods.tconstruct.Casting.removeBasinRecipe(<ore:blockAluminium>);
+mods.tconstruct.Casting.removeTableRecipe(<ore:ingotAluminium>);
 
 #nerf patterns
 recipes.remove(<TConstruct:blankPattern>);
-recipes.addShapeless(<TConstruct:blankPattern>, [<ore:stickWood>, <ore:plankWood>, <ore:plankWood>, <ore:stickWood>]);
+recipes.remove(<gregtech:gt.metaitem.01:2338>);
+recipes.addShapeless(<gregtech:gt.metaitem.01:2338> * 2, [<ore:dustIron>, <ore:dustWood>, <ore:dustTinyGold>]);
+recipes.addShapeless(<TConstruct:blankPattern> * 2, [<ore:stickIronWood>, <ore:plateIronWood>, <ore:plateIronWood>, <ore:stickIronWood>]);
 
 #remove hardended glass from smeltery
 mods.tconstruct.Casting.removeBasinRecipe(<ThermalExpansion:Glass>);
@@ -67,11 +72,11 @@ val travelVestNBT = travelVest.withTag({TinkerArmor: {DamageReduction: 0, BaseDe
 val travelWings = <TConstruct:travelWings>;
 val travelWingsNBT = travelWings.withTag({TinkerArmor: {DamageReduction: 0, BaseDefense: 2, MaxDefense: 6, Damage: 0, TotalDurability: 1035, BaseDurability: 1035, BonusDurability: 0, ModDurability: 0, Modifiers: 3, Broken: 0, Built: 1}});
 
-recipes.addShaped(travelGogglesNBT, [[<ore:materialHardenedleather>, null, <ore:materialHardenedleather>], [<IC2:blockAlloyGlass>, <ore:materialHardenedleather>, <IC2:blockAlloyGlass>], [<ore:ingotGold>, null, <ore:ingotGold>]]);
-recipes.addShaped(travelBootsNBT, [[<ore:materialHardenedleather>, null, <ore:materialHardenedleather>], [<ore:materialHardenedleather>, <Thaumcraft:BootsTraveller>, <ore:materialHardenedleather>], [<ore:materialHardenedleather>, null, <ore:materialHardenedleather>]]);
-recipes.addShaped(travelVestNBT, [[<ore:materialHardenedleather>, <ore:blockClothRock>, <ore:materialHardenedleather>], [<ore:materialHardenedleather>, <ore:ingotAluminium>, <ore:materialHardenedleather>], [<ore:materialHardenedleather>, <ore:blockClothRock>, <ore:materialHardenedleather>]]);
-recipes.addShaped(travelBeltNBT, [[<ore:materialHardenedleather>, <ore:materialHardenedleather>, <harvestcraft:hardenedleatherItem>], [<ore:ingotAluminum>, <ThermalExpansion:Strongbox:3>, <ore:ingotAluminum>], [<ore:materialHardenedleather>, <harvestcraft:hardenedleatherItem>, <harvestcraft:hardenedleatherItem>]]);
-recipes.addShaped(travelGloveNBT, [[null, null, <ore:materialHardenedleather>], [<ore:materialHardenedleather>, <ore:materialHardenedleather>, <ore:materialHardenedleather>], [null, <ore:materialHardenedleather>, <ore:materialHardenedleather>]]);
-recipes.addShaped(travelWingsNBT, [[null, <ore:pearlEnder>, null], [<ore:ingotBronze>, <Botania:travelBelt>, <ore:ingotBronze>], [<ore:ingotBronze>, null, <ore:ingotBronze>]]);
+recipes.addShaped(travelGogglesNBT, [[<witchery:ingredient:72>, null, <witchery:ingredient:72>], [<IC2:blockAlloyGlass>, <witchery:ingredient:72>, <IC2:blockAlloyGlass>], [<ore:plateAluminium>, null, <ore:plateAluminium>]]);
+recipes.addShaped(travelBootsNBT, [[<ore:plateAluminium>, null, <ore:plateAluminium>], [<witchery:ingredient:72>, <Thaumcraft:BootsTraveller>, <witchery:ingredient:72>], [<witchery:ingredient:72>, null, <witchery:ingredient:72>]]);
+recipes.addShaped(travelVestNBT, [[<ore:plateAluminium>, <ore:blockClothRock>, <ore:plateAluminium>], [<witchery:ingredient:72>, <ore:ingotAluminium>, <witchery:ingredient:72>], [<witchery:ingredient:72>, <ore:blockClothRock>, <witchery:ingredient:72>]]);
+recipes.addShaped(travelBeltNBT, [[<witchery:ingredient:72>, <witchery:ingredient:72>, <witchery:ingredient:72>], [<ore:plateAluminium>, <ThermalExpansion:Strongbox:3>, <ore:plateAluminium>], [<witchery:ingredient:72>, <witchery:ingredient:72>, <witchery:ingredient:72>]]);
+recipes.addShaped(travelGloveNBT, [[null, null, <witchery:ingredient:72>], [<ore:plateAluminium>, <witchery:ingredient:72>, <ore:plateAluminium>], [null, <witchery:ingredient:72>, <witchery:ingredient:72>]]);
+recipes.addShaped(travelWingsNBT, [[null, <ore:plateEnderPearl>, null], [<ore:plateAluminium>, <ore:baubleBeltBase>, <ore:plateAluminium>], [<ore:plateEnderPearl>, null, <ore:plateEnderPearl>]]);
 
 print("Initialized 'TinkersConstruct.zs'");
