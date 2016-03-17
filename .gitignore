@@ -28,6 +28,8 @@ instance.cfg
 #Client configs
 /minecraft/GregTech.cfg
 /minecraft/options.txt
+/minecraft/usercache.json
+/minecraft/usernamecache.json
 
 #OpenComputers natives
 *.dll
