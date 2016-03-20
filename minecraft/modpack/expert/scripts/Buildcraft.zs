@@ -21,7 +21,7 @@ recipes.remove(<BuildCraft|Core:markerBlock>);
 recipes.remove(<BuildCraft|Builders:fillerBlock>);
 recipes.remove(<BuildCraft|Factory:floodGateBlock>);
 recipes.remove(<BuildCraft|Factory:pumpBlock>);
-recipes.addShaped(<BuildCraft|Factory:miningWellBlock>, [[<ore:plateDenseIron>, <ore:chipsetDiamond>, <ore:plateDenseIron>], [<ore:thermalexpansion:machineGold>, <ComputerCraft:CC-Computer>, <ore:thermalexpansion:machineGold>], [null, <IC2:itemToolDrill:*>, null]]);
+recipes.addShaped(<BuildCraft|Factory:miningWellBlock>, [[<ore:plateDenseIron>, <ore:chipsetDiamond>, <ore:plateDenseIron>], [<ore:thermalexpansion:machineGold>, <ore:oc:case1>, <ore:thermalexpansion:machineGold>], [null, <IC2:itemToolDrill:*>, null]]);
 recipes.addShaped(<BuildCraft|Builders:fillerBlock>, [[<BuildCraft|Core:markerBlock>, <ore:ingotTin>, <BuildCraft|Core:markerBlock>], [<ore:ingotTin>, <BuildCraft|Factory:miningWellBlock>, <ore:ingotTin>], [<ore:gearGold>, null, <ore:gearGold>]]);
 recipes.addShaped(<BuildCraft|Factory:floodGateBlock>, [[<ore:ingotIron>, <ore:gearSilver>, <ore:ingotIron>], [<ore:gearSilver>, <BuildCraft|Factory:pumpBlock>, <ore:gearSilver>], [<ore:ingotIron>, <ore:gearSilver>, <ore:ingotIron>]]);
 recipes.addShapeless(<BuildCraft|Core:markerBlock>, [<Forestry:thermionicTubes:11>, <minecraft:redstone_torch>]);
