@@ -8,8 +8,6 @@ furnace.remove(<gregtech:gt.metaitem.01:2865>);
 #fuel nerfs
 recipes.remove(<BigReactors:BRIngot>);
 #furnace.remove(<BigReactors:BRIngot>);
-mods.tconstruct.Smeltery.removeMelting(<BigReactors:YelloriteOre>);
-mods.tconstruct.Smeltery.removeMelting(<BigReactors:BRIngot:4>);
 mods.extraUtils.QED.removeRecipe(<BigReactors:BRIngot>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <BigReactors:YelloriteOre>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:512>, <BigReactors:YelloriteOre>);

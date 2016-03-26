@@ -29,6 +29,6 @@ recipes.addShaped(<BuildCraft|Factory:pumpBlock>, [[<OpenBlocks:tank>, <ore:chip
 
 #quarry
 recipes.remove(<BuildCraft|Builders:machineBlock>);
-recipes.addShaped(<BuildCraft|Builders:machineBlock>, [[<ore:chipsetDiamond>, <IC2:itemToolMiningLaser:*>, <Forestry:thermionicTubes:5>], [<ThermalExpansion:Frame:11>, <MineFactoryReloaded:machine.2:1>, <IC2:blockElectric:2>], [<EnderIO:itemBasicCapacitor:2>, <BuildCraft|Factory:miningWellBlock>, <EnderIO:itemBasicCapacitor:2>]]);
+recipes.addShaped(<BuildCraft|Builders:machineBlock>, [[<ore:chipsetDiamond>, <IC2:itemToolMiningLaser:*>, <Forestry:thermionicTubes:5>], [<ThermalExpansion:Frame:11>, <MineFactoryReloaded:machine.2:1>, <IC2:blockElectric:2>], [<ThermalExpansion:Cell:1>, <BuildCraft|Factory:miningWellBlock>, <ThermalExpansion:Cell:1>]]);
 
 print("Initialized 'Buildcraft.zs'");

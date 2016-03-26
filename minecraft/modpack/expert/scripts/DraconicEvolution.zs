@@ -38,14 +38,12 @@ recipes.remove(<DraconicEvolution:wyvernCore>);
 recipes.remove(<DraconicEvolution:draconium>);
 recipes.remove(<DraconicEvolution:safetyMatch:1000>);
 recipes.remove(<DraconicEvolution:generator:3>);
-mods.tconstruct.Casting.removeBasinRecipe(<DraconicEvolution:draconium>);
-
 
 recipes.addShaped(<DraconicEvolution:energyCrystal:1>, [[<ExtraUtilities:pureLove>, <DraconicEvolution:energyCrystal>, <ExtraUtilities:pureLove>], [<DraconicEvolution:energyCrystal>, <DraconicEvolution:awakenedCore>, <DraconicEvolution:energyCrystal>], [<ExtraUtilities:pureLove>, <DraconicEvolution:energyCrystal>, <ExtraUtilities:pureLove>]]);
 recipes.addShaped(<DraconicEvolution:energyInfuser>, [[<ore:blockEnderObsidian>, null, <ore:blockEnderObsidian>], [null, <WR-CBE|Core:retherPearl>, null], [<ExtraUtilities:decorativeBlock1:1>, <DraconicEvolution:draconium>, <ExtraUtilities:decorativeBlock1:1>]]);
 recipes.addShaped(<DraconicEvolution:grinder:3>, [[null, <DraconicEvolution:wyvernSword>, null], [<ThermalFoundation:material:516>, <IC2:itemRTGPellet>, <ThermalFoundation:material:516>], [<ThermalFoundation:material:516>, <DraconicEvolution:draconium>, <ThermalFoundation:material:516>]]);
 
-recipes.addShaped(<DraconicEvolution:draconiumChest>, [[<runicdungeons:tile.compressedObsidian>, <runicdungeons:tile.compressedObsidian>, <runicdungeons:tile.compressedObsidian>], [<IronChest:BlockIronChest:6>, <DraconicEvolution:draconium>, <IronChest:BlockIronChest:6>], [null, <IC2:itemRTGPellet>, null]]);
+recipes.addShaped(<DraconicEvolution:draconiumChest>, [[<TConstruct:heavyPlate:6>, <TConstruct:heavyPlate:6>, <TConstruct:heavyPlate:6>], [<IronChest:BlockIronChest:6>, <DraconicEvolution:draconium>, <IronChest:BlockIronChest:6>], [null, <IC2:itemRTGPellet>, null]]);
 recipes.addShaped(<DraconicEvolution:generator:3>, [[<minecraft:netherbrick>, <ore:ingotIron>, <minecraft:netherbrick>], [<ore:ingotIron>, <minecraft:furnace:*>, <ore:ingotIron>], [<minecraft:netherbrick>, <DraconicEvolution:wyvernCore>, <minecraft:netherbrick>]]);
 
 recipes.addShaped(<DraconicEvolution:sunDial>, [[null, <DraconicEvolution:draconiumFluxCapacitor:1>, null], [<ore:blockLumium>, <minecraft:dragon_egg>, <ore:blockLumium>], [<ore:blockLumium>, <DraconicEvolution:dragonHeart>, <ore:blockLumium>]]);
@@ -82,25 +80,22 @@ recipes.addShaped(<DraconicEvolution:awakenedCore>, [[<ore:ingotIridium>, <Draco
 recipes.addShaped(<DraconicEvolution:draconium>, [[<ore:ingotDraconium>, <ore:ingotDraconium>, <ore:ingotDraconium>], [<ore:ingotDraconium>, <DraconicEvolution:wyvernCore>, <ore:ingotDraconium>], [<ore:ingotDraconium>, <ore:ingotDraconium>, <ore:ingotDraconium>]]);
 recipes.addShaped(<DraconicEvolution:wyvernCore>, [[<ore:ingotElectrumFlux>, <DraconicEvolution:draconicCore>, <ore:ingotPhasedGold>], [<DraconicEvolution:draconicCore>, <ore:itemNetherStar>, <DraconicEvolution:draconicCore>], [<ore:ingotManasteel>, <DraconicEvolution:draconicCore>, <ore:ingotThaumium>]]);
 recipes.addShaped(<DraconicEvolution:safetyMatch:1000>, [[<ore:dyeOrange>, <minecraft:flint_and_steel>], [<ore:stickWood>, null]]);
-recipes.addShaped(<DraconicEvolution:infusedObsidian>, [[<minecraft:blaze_powder>, <EnderIO:blockReinforcedObsidian>, <minecraft:blaze_powder>], [<EnderIO:blockReinforcedObsidian>, <DraconicEvolution:draconiumDust>, <EnderIO:blockReinforcedObsidian>], [<minecraft:blaze_powder>, <EnderIO:blockReinforcedObsidian>, <minecraft:blaze_powder>]]);
+recipes.addShaped(<DraconicEvolution:infusedObsidian>, [[<minecraft:blaze_powder>, <ore:blockEnderObsidian>, <minecraft:blaze_powder>], [<ore:blockEnderObsidian>, <DraconicEvolution:draconiumDust>, <ore:blockEnderObsidian>], [<minecraft:blaze_powder>, <ore:blockEnderObsidian>, <minecraft:blaze_powder>]]);
 
 
 //smeltery recipes
-mods.tconstruct.Smeltery.addAlloy(<liquid:mana> * 288, [<liquid:xpjuice> * 1000, <liquid:draconium> * 288, <liquid:pokefennium.molten> * 144, <liquid:fairy.molten> * 144]);
-
 mods.tconstruct.Casting.addTableRecipe(<ThermalFoundation:material:516>, <liquid:mana> * 360, <ThermalFoundation:material:38>, true, 50);
 mods.tconstruct.Casting.addBasinRecipe(<ExtraUtilities:pureLove>, <liquid:mana> * 3240, <ThermalFoundation:Storage:6>, true, 300);
-
 mods.tconstruct.Casting.addTableRecipe(<DraconicEvolution:draconiumEnergyCore>, <liquid:redstone> * 7200, <DraconicEvolution:wyvernCore>, true, 200);
-mods.tconstruct.Casting.addTableRecipe(<DraconicEvolution:draconiumEnergyCore:1>, <liquid:draconium> * 5184, <DraconicEvolution:awakenedCore>, true, 300);
+mods.tconstruct.Casting.addTableRecipe(<DraconicEvolution:draconiumEnergyCore:1>, <liquid:mana> * 5184, <DraconicEvolution:awakenedCore>, true, 300);
 mods.tconstruct.Casting.addTableRecipe(<DraconicEvolution:energyCrystal>, <liquid:mana> * 720, <DraconicEvolution:wyvernCore>, true, 300);
 
 //rename love block
 <ExtraUtilities:pureLove>.displayName = "Pure Mana";
 
 //green heart
-recipes.addShapeless(<TConstruct:heartCanister:5>, [<ForbiddenMagic:StarBlock>, <StevesCarts:BlockMetalStorage:2>, <aobd:blockIridium>, <ExtraUtilities:block_bedrockium>]);
-recipes.addShapeless(<TConstruct:heartCanister:6>, [<TConstruct:heartCanister:5>, <TConstruct:heartCanister:4>, <harvestcraft:pineappleupsidedowncakeItem>]);
+recipes.addShapeless(<TConstruct:heartCanister:5>, [<ForbiddenMagic:StarBlock>, <StevesCarts:BlockMetalStorage:2>, <ore:blockIridium>, <ExtraUtilities:block_bedrockium>]);
+recipes.addShapeless(<TConstruct:heartCanister:6>, [<TConstruct:heartCanister:5>, <TConstruct:heartCanister:4>]);
 
 
 print("Initialized 'DraconicEvolution.zs'");
