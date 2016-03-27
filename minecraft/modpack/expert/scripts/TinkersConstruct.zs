@@ -37,10 +37,8 @@ mods.tconstruct.Smeltery.removeMelting(<ore:dustRedstone>);
 mods.tconstruct.Smeltery.removeMelting(<ore:blockRedstone>);
 mods.tconstruct.Smeltery.removeMelting(<minecraft:rail>);
 mods.tconstruct.Smeltery.removeMelting(<minecraft:minecart>);
-
-#remove aluminium smelting
-mods.tconstruct.Casting.removeBasinRecipe(<ore:blockAluminium>);
-mods.tconstruct.Casting.removeTableRecipe(<ore:ingotAluminium>);
+mods.tconstruct.Smeltery.removeAlloy(<liquid:enderium.molten>);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<ThermalFoundation:material:76>);
 
 #nerf patterns
 recipes.remove(<TConstruct:blankPattern>);
