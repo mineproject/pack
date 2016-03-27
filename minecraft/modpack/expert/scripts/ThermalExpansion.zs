@@ -43,25 +43,22 @@ recipes.addShaped(<ThermalExpansion:Dynamo:3>, [[null, <ore:chipsetIron>, null],
 recipes.addShaped(<ThermalExpansion:Dynamo:2>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearTin>, <ThermalExpansion:material:2>, <ore:gearTin>]]);
 
 #energy cells
-recipes.remove(<ThermalExpansion:Frame:6>);
-recipes.remove(<ThermalExpansion:Frame:8>);
-recipes.remove(<ThermalExpansion:Frame:9>);
 recipes.remove(<ThermalExpansion:Cell:4>);
 recipes.remove(<ThermalExpansion:Cell:2>);
 recipes.remove(<ThermalExpansion:Cell:1>);
 recipes.remove(<ThermalExpansion:Cell:3>);
-recipes.addShaped(<ThermalExpansion:Frame:8>, [[<ore:ingotEnderium>, <ore:blockGlassHardened>, <ore:ingotEnderium>], [<ore:blockGlassHardened>, <ore:gemEmerald>, <ore:blockGlassHardened>], [<ore:ingotEnderium>, <ore:blockGlassHardened>, <ore:ingotEnderium>]]);
-recipes.addShaped(<ThermalExpansion:Frame:6>, [[<ore:ingotElectrum>, <ore:blockGlassHardened>, <ore:ingotElectrum>], [<ore:blockGlassHardened>, <ore:gemDiamond>, <ore:blockGlassHardened>], [<ore:ingotElectrum>, <ore:blockGlassHardened>, <ore:ingotElectrum>]]);
-recipes.addShaped(<ThermalExpansion:Cell:2>, [[null, <IC2:itemPartCircuit>, null], [<Forestry:thermionicTubes:2>, <ThermalExpansion:Frame:5>, <Forestry:thermionicTubes:2>], [null, <ThermalExpansion:material:3>, null]]);
-recipes.addShaped(<ThermalExpansion:Cell:2>, [[<ore:ingotInvar>, <ore:circuitBasic>, <ore:ingotInvar>], [<Forestry:thermionicTubes:2>, <ThermalExpansion:Cell:1>, <Forestry:thermionicTubes:2>], [<ore:ingotInvar>, <ThermalExpansion:material:3>, <ore:ingotInvar>]]);
-recipes.addShaped(<ThermalExpansion:Cell:1>, [[<ore:ingotLead>, <ore:circuitBasic>, <ore:ingotLead>], [<Forestry:thermionicTubes:1>, <ThermalExpansion:Frame:4>, <Forestry:thermionicTubes:1>], [<ore:ingotLead>, <ThermalExpansion:material:3>, <ore:ingotLead>]]);
-recipes.addShaped(<ThermalExpansion:Cell:4>, [[null, <ore:circuitAdvanced>, null], [<Forestry:thermionicTubes:9>, <ThermalExpansion:Frame:9>, <Forestry:thermionicTubes:9>], [null, <EnderIO:itemBasicCapacitor:2>, null]]);
-recipes.addShaped(<ThermalExpansion:Cell:3>, [[null, <ore:circuitAdvanced>, null], [<Forestry:thermionicTubes:5>, <ThermalExpansion:Frame:7>, <Forestry:thermionicTubes:5>], [null, <EnderIO:itemBasicCapacitor:1>, null]]);
-recipes.addShaped(<ThermalExpansion:Cell:4>, [[<ore:ingotEnderium>, <ore:circuitAdvanced>, <ore:ingotEnderium>], [<Forestry:thermionicTubes:9>, <ThermalExpansion:Cell:3>, <Forestry:thermionicTubes:9>], [<ore:ingotEnderium>, <EnderIO:itemBasicCapacitor:2>, <ore:ingotEnderium>]]);
+recipes.addShaped(<ThermalExpansion:Cell:2>, [[<ore:plateAluminium>, <ore:chipsetGold>, <ore:plateAluminium>], [<Forestry:thermionicTubes:2>, <ore:frameMV>, <Forestry:thermionicTubes:2>], [<ore:plateAluminium>, <ore:capacitorMV>, <ore:plateAluminium>]]);
+recipes.addShaped(<ThermalExpansion:Cell:1>, [[<ore:plateSteel>, <ore:chipsetIron>, <ore:plateSteel>], [<Forestry:thermionicTubes:1>, <ore:frameLV>, <Forestry:thermionicTubes:1>], [<ore:plateSteel>, <ore:capacitorLV>, <ore:plateSteel>]]);
+recipes.addShaped(<ThermalExpansion:Cell:3>, [[<ore:ingotSignalum>, <ore:chipsetDiamond>, <ore:ingotSignalum>], [<Forestry:thermionicTubes:5>, <ore:frameHV>, <Forestry:thermionicTubes:5>], [<ore:ingotSignalum>, <ore:capacitorHV>, <ore:ingotSignalum>]]);
+recipes.addShaped(<ThermalExpansion:Cell:4>, [[<ore:plateEnderium>, <ore:chipsetEmerald>, <ore:plateEnderium>], [<Forestry:thermionicTubes:9>, <ore:frameIV>, <Forestry:thermionicTubes:9>], [<ore:plateEnderium>, <ore:capacitorIV>, <ore:plateEnderium>]]);
+
+#tesseract frame
+recipes.remove(<ThermalExpansion:Frame:10>);
+recipes.addShaped(<ThermalExpansion:Frame:10>, [[<ore:plateDiamond>, <ore:blockGlassHardened>, <ore:plateDiamond>], [<ore:blockGlassHardened>, <ore:frameIV>, <ore:blockGlassHardened>], [<ore:plateDiamond>, <ore:blockGlassHardened>, <ore:plateDiamond>]]);
 
 #tesseract
-recipes.remove(<ThermalExpansion:Frame:10>);
-recipes.addShaped(<ThermalExpansion:Frame:10>, [[<ore:ingotEnderium>, <EnderIO:itemBasicCapacitor:2>, <ore:ingotEnderium>], [<Forestry:thermionicTubes:12>, <IC2:blockMachine2>, <Forestry:thermionicTubes:12>], [<ore:ingotEnderium>, <EnderIO:itemBasicCapacitor:2>, <ore:ingotEnderium>]]);
+recipes.remove(<ThermalExpansion:Tesseract>);
+recipes.addShaped(<ThermalExpansion:Tesseract>, [[<ore:emitterMV>, <ore:pumpMV>, <ore:sensorMV>], [<Forestry:thermionicTubes:12>, <ThermalExpansion:Frame:11>, <Forestry:thermionicTubes:12>], [<ore:emitterMV>, <ore:pumpMV>, <ore:sensorMV>]]);
 
 #pyrotheum/cryotheum
 recipes.remove(<ThermalFoundation:material:513>);
@@ -117,10 +114,10 @@ recipes.remove(<ThermalExpansion:capacitor:5>);
 recipes.remove(<ThermalExpansion:capacitor:4>);
 recipes.remove(<ThermalExpansion:capacitor:3>);
 recipes.remove(<ThermalExpansion:capacitor:2>);
-recipes.addShaped(<ThermalExpansion:capacitor:5>, [[null, <ore:dustLithium>, null], [<ore:ingotEnderium>, <ThermalExpansion:capacitor:4>, <ore:ingotEnderium>], [<ore:dustLithium>, <ore:dustPyrotheum>, <ore:dustLithium>]]);
-recipes.addShaped(<ThermalExpansion:capacitor:4>, [[null, <ore:dustLithium>, null], [<ore:ingotElectrum>, <ThermalExpansion:capacitor:3>, <ore:ingotElectrum>], [<ore:dustLithium>, <ore:gemDiamond>, <ore:dustLithium>]]);
-recipes.addShaped(<ThermalExpansion:capacitor:3>, [[null, <ore:dustLithium>, null], [<ore:ingotInvar>, <ThermalExpansion:capacitor:2>, <ore:ingotInvar>], [<ore:dustLithium>, <ore:ingotTin>, <ore:dustLithium>]]);
-recipes.addShaped(<ThermalExpansion:capacitor:2>, [[null, <ore:dustLithium>, null], [<ore:ingotCopper>, <ore:ingotLead>, <ore:ingotCopper>], [<ore:dustLithium>, <ore:dustSulfur>, <ore:dustLithium>]]);
+recipes.addShaped(<ThermalExpansion:capacitor:5>, [[null, <ore:dustLithium>, null], [<ore:plateEnderium>, <ThermalExpansion:capacitor:4>, <ore:plateEnderium>], [<ore:dustLithium>, <ore:dustPyrotheum>, <ore:dustLithium>]]);
+recipes.addShaped(<ThermalExpansion:capacitor:4>, [[null, <ore:dustLithium>, null], [<ore:plateElectrum>, <ThermalExpansion:capacitor:3>, <ore:plateElectrum>], [<ore:dustLithium>, <ore:plateDiamond>, <ore:dustLithium>]]);
+recipes.addShaped(<ThermalExpansion:capacitor:3>, [[null, <ore:dustLithium>, null], [<ore:plateInvar>, <ThermalExpansion:capacitor:2>, <ore:plateInvar>], [<ore:dustLithium>, <ore:plateTin>, <ore:dustLithium>]]);
+recipes.addShaped(<ThermalExpansion:capacitor:2>, [[null, <ore:dustLithium>, null], [<ore:plateCopper>, <ore:plateLead>, <ore:plateCopper>], [<ore:dustLithium>, <ore:dustSulfur>, <ore:dustLithium>]]);
 
 #creative energy cell
 mods.avaritia.ExtremeCrafting.addShaped(<ThermalExpansion:Cell>, [[<ThermalFoundation:Storage:11>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <ThermalFoundation:Storage:11>], [<StevesCarts:BlockMetalStorage:2>, <IC2:itemRTGPellet>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <IC2:itemRTGPellet>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <IC2:itemRTGPellet>, <StevesCarts:BlockMetalStorage:2>], [<StevesCarts:BlockMetalStorage:2>, <ThermalExpansion:Frame:9>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <ThermalExpansion:Frame:9>, <StevesCarts:BlockMetalStorage:2>], [<StevesCarts:BlockMetalStorage:2>, <ThermalExpansion:Frame:9>, <DraconicEvolution:draconiumFluxCapacitor:1>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <DraconicEvolution:draconiumFluxCapacitor:1>, <ThermalExpansion:Frame:9>, <StevesCarts:BlockMetalStorage:2>], [<StevesCarts:BlockMetalStorage:2>, <IC2:itemRTGPellet>, <DraconicEvolution:draconiumFluxCapacitor:1>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <DraconicEvolution:draconiumFluxCapacitor:1>, <IC2:itemRTGPellet>, <StevesCarts:BlockMetalStorage:2>], [<StevesCarts:BlockMetalStorage:2>, <ThermalExpansion:Frame:9>, <DraconicEvolution:draconiumFluxCapacitor:1>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <AdvancedSolarPanel:BlockAdvSolarPanel:3>, <DraconicEvolution:draconiumFluxCapacitor:1>, <ThermalExpansion:Frame:9>, <StevesCarts:BlockMetalStorage:2>], [<StevesCarts:BlockMetalStorage:2>, <ThermalExpansion:Frame:9>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumFluxCapacitor:1>, <ThermalExpansion:Frame:9>, <StevesCarts:BlockMetalStorage:2>], [<StevesCarts:BlockMetalStorage:2>, <IC2:itemRTGPellet>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <IC2:itemRTGPellet>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <IC2:itemRTGPellet>, <StevesCarts:BlockMetalStorage:2>], [<ThermalFoundation:Storage:11>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <StevesCarts:BlockMetalStorage:2>, <ThermalFoundation:Storage:11>]]);
@@ -142,8 +139,8 @@ recipes.remove(<ThermalExpansion:Frame:2>);
 recipes.remove(<ThermalExpansion:Frame:3>);
 recipes.addShaped(<ThermalExpansion:Frame:0>, [[<ore:plateSteel>, pipeLead, <ore:plateSteel>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:21>, <TConstruct:GlassBlock>], [<ore:plateSteel>, <gregtech:gt.blockcasings2:3>, <ore:plateSteel>]]);
 recipes.addShaped(<ThermalExpansion:Frame:1>, [[<ore:plateAluminium>, pipeAdvLead, <ore:plateAluminium>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:22>, <TConstruct:GlassBlock>], [<ore:plateAluminium>, <gregtech:gt.blockcasings2:3>, <ore:plateAluminium>]]);
-recipes.addShaped(<ThermalExpansion:Frame:2>, [[<ore:plateStainlessSteel>, pipeRedstone, <ore:plateStainlessSteel>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:23>, <TConstruct:GlassBlock>], [<ore:plateStainlessSteel>, <gregtech:gt.blockcasings2:3>, <ore:plateStainlessSteel>]]);
-recipes.addShaped(<ThermalExpansion:Frame:3>, [[<ore:plateTitanium>, pipeResonant, <ore:plateTitanium>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:24>, <TConstruct:GlassBlock>], [<ore:plateTitanium>, <gregtech:gt.blockcasings2:4>, <ore:plateTitanium>]]);
+recipes.addShaped(<ThermalExpansion:Frame:2>, [[<ore:ingotSignalum>, pipeRedstone, <ore:ingotSignalum>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:23>, <TConstruct:GlassBlock>], [<ore:ingotInvar>, <gregtech:gt.blockcasings2:3>, <ore:ingotInvar>]]);
+recipes.addShaped(<ThermalExpansion:Frame:3>, [[<ore:plateEnderium>, pipeResonant, <ore:plateEnderium>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:24>, <TConstruct:GlassBlock>], [<ore:plateEnderium>, <gregtech:gt.blockcasings2:4>, <ore:plateEnderium>]]);
 
 #pulverizer
 recipes.remove(<ThermalExpansion:Machine:1>);

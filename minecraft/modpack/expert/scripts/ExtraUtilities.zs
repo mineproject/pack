@@ -62,11 +62,11 @@ recipes.remove(<ExtraUtilities:cobblestone_compressed:4>);
 
 #drum
 recipes.remove(<ExtraUtilities:drum>);
-recipes.addShaped(<ExtraUtilities:drum>, [[<ore:ingotSteel>, <minecraft:heavy_weighted_pressure_plate>, <ore:ingotSteel>], [<ore:ingotSteel>, <minecraft:cauldron>, <ore:ingotSteel>], [<ore:ingotSteel>, <minecraft:heavy_weighted_pressure_plate>, <ore:ingotSteel>]]);
+recipes.addShaped(<ExtraUtilities:drum>, [[<ore:ingotSteel>, <minecraft:heavy_weighted_pressure_plate>, <ore:ingotSteel>], [<ore:ingotSteel>, <minecraft:cauldron>, <ore:ingotSteel>], [<ore:plateSteel>, <minecraft:heavy_weighted_pressure_plate>, <ore:plateSteel>]]);
   
 #watering Can
 recipes.remove(<ExtraUtilities:watering_can:1>);
-recipes.addShaped(<ExtraUtilities:watering_can:1>, [[<ore:ingotSteel>, <minecraft:dye:15>, <minecraft:wheat_seeds>],  [<ore:ingotSteel>, <minecraft:bowl>, <ore:ingotSteel>], [<minecraft:pumpkin_seeds>, <ore:ingotSteel>, <minecraft:melon_seeds>]]);
+recipes.addShaped(<ExtraUtilities:watering_can:1>, [[<ore:plateSteel>, <minecraft:dye:15>, <minecraft:wheat_seeds>],  [<ore:plateSteel>, <minecraft:bowl>, <ore:plateSteel>], [<minecraft:pumpkin_seeds>, <ore:plateSteel>, <minecraft:melon_seeds>]]);
 
 #ender transmitter
 recipes.remove(<ExtraUtilities:nodeUpgrade:5>);
@@ -108,7 +108,7 @@ recipes.addShaped(<ExtraUtilities:endConstructor:2>, [[null, <ExtraUtilities:dec
 
 #qed
 recipes.remove(<ExtraUtilities:endConstructor>);
-recipes.addShaped(<ExtraUtilities:endConstructor>, [[<ore:blockEnderObsidian>, <ore:pearlEnderEye>, <ore:blockEnderObsidian>], [<ThermalExpansion:Cell:4>, <ThermalExpansion:Frame:3>, <ThermalExpansion:Cell:4>], [<ore:blockEnderObsidian>, <ore:chipsetRed>, <ore:blockEnderObsidian>]]);
+recipes.addShaped(<ExtraUtilities:endConstructor>, [[<ore:blockEnderObsidian>, <ore:plateEnderPearl>, <ore:blockEnderObsidian>], [<ThermalExpansion:Cell:4>, <ThermalExpansion:Frame:3>, <ThermalExpansion:Cell:4>], [<ore:blockEnderObsidian>, <ore:chipsetRed>, <ore:blockEnderObsidian>]]);
 
 #magnum torch
 mods.extraUtils.QED.removeRecipe(<ExtraUtilities:magnumTorch>);

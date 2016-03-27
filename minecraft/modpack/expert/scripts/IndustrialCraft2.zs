@@ -6,7 +6,7 @@ print("Initializing 'IndustrialCraft2.zs'...");
 #Reactor reflector
 #According to wikipedia, graphite, beryllium, steel, tungsten carbide are neutron reflectors
 recipes.remove(<IC2:reactorReflector>);
-recipes.addShaped(<IC2:reactorReflector>, [[<ore:ingotGraphite>, <ore:ingotGraphite>, <ore:ingotGraphite>], [<ore:ingotGraphite>, <ore:plateDenseSteel>, <ore:ingotGraphite>], [<ore:ingotGraphite>, <ore:ingotGraphite>, <ore:ingotGraphite>]]);
+recipes.addShaped(<IC2:reactorReflector>, [[<ore:plateGraphite>, <ore:plateGraphite>, <ore:plateGraphite>], [<ore:plateGraphite>, <ore:plateDenseSteel>, <ore:plateGraphite>], [<ore:plateGraphite>, <ore:plateGraphite>, <ore:plateGraphite>]]);
 
 #craftable iridium ore
 mods.buildcraft.AssemblyTable.addRecipe(<IC2:itemOreIridium>, 80000000, [<IC2:itemRTGPellet>, <IC2:itemMOX>]);
@@ -17,6 +17,6 @@ recipes.addShaped(<IC2:blockMachine2:11>, [[<IC2:itemPartAlloy>, <BuildCraft|Fac
 
 #re-batt
 recipes.remove(<IC2:itemBatREDischarged>);
-recipes.addShaped(<IC2:itemBatREDischarged>, [[null, <IC2:itemCable:13>, null], [<IC2:itemCasing:1>, <ore:dustElectrotine>, <IC2:itemCasing:1>], [<IC2:itemCasing:1>, <ore:dustElectrotine>, <IC2:itemCasing:1>]]);
+recipes.addShaped(<IC2:itemBatREDischarged>, [[null, <IC2:itemCable:13>, null], [<IC2:itemCasing:1>, <ore:dustLithium>, <IC2:itemCasing:1>], [<IC2:itemCasing:1>, <ore:dustLithium>, <IC2:itemCasing:1>]]);
 
 print("Initialized 'IndustrialCraft2.zs'");

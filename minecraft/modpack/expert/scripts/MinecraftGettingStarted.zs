@@ -284,18 +284,18 @@ recipes.addShapeless(<TConstruct:CraftedSoil:1>, [<ore:gravel>, <ore:itemClay>, 
 <minecraft:stone_shovel>.maxDamage = 63;
 <ThermalFoundation:tool.swordInvar>.maxDamage = 1;
 <ThermalFoundation:tool.axeInvar>.maxDamage = 1;
-<ProjRed|Exploration:projectred.exploration.rubyhelmet>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.rubychestplate>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.rubyleggings>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.rubyboots>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.sapphirehelmet>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.sapphirechestplate>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.sapphireleggings>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.sapphireboots>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.peridothelmet>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.peridotchestplate>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.peridotleggings>.maxDamage = 16;
-<ProjRed|Exploration:projectred.exploration.peridotboots>.maxDamage = 16;
+<ProjRed|Exploration:projectred.exploration.rubyhelmet>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.rubychestplate>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.rubyleggings>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.rubyboots>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.sapphirehelmet>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.sapphirechestplate>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.sapphireleggings>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.sapphireboots>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.peridothelmet>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.peridotchestplate>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.peridotleggings>.maxDamage = 128;
+<ProjRed|Exploration:projectred.exploration.peridotboots>.maxDamage = 128;
 
 #chest nerfs
 recipes.removeShaped(<minecraft:chest> * 4, [[<ore:logWood>, <ore:logWood>, <ore:logWood>], [<ore:logWood>, null, <ore:logWood>], [<ore:logWood>, <ore:logWood>, <ore:logWood>]]);

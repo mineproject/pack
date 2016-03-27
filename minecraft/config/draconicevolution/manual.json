@@ -95,7 +95,7 @@
     [
       "Tired of your slow, old diamond pick? Maybe it's time to upgrade! Wyvern tools run on RF and never break.",
       "All mining tools have an option to adjust mining speed, Dig AoE and AoE safe mode.",
-      "Dig AoE: Allows you to adjust the mining AoE of the tool. Wyvern AoE: 1x1 and 3x3.",
+      "Dig AoE: Allows you to adjust the mining AoE of the tool. Wyvern AoE: 1x1 and 3x3 (Upgradable)",
       "AoE Safe mode: If enabled the tool will check for any tile entities in the AoE and if it finds any the tool will not mine.",
       "[c]item.draconicevolution:wyvernPickaxe:0"
     ]
@@ -107,7 +107,7 @@
     [
       "Tired of your slow, old diamond shovel? Maybe it's time to upgrade! Wyvern tools run on RF and never break.",
       "All mining tools have an option to adjust mining speed, Dig AoE and AoE safe mode.",
-      "Dig AoE: Allows you to adjust the digging area of the tool. Wyvern AoE: 1x1 and 3x3.",
+      "Dig AoE: Allows you to adjust the digging area of the tool. Wyvern AoE: 1x1 and 3x3 (Upgradable)",
       "AoE Safe mode: If enabled the shovel will check for any tile entities in the AoE and if it finds any it will not dig.",
       "[c]item.draconicevolution:wyvernShovel:0"
     ]
@@ -118,9 +118,9 @@
     "content":
     [
       "Ordinary weaponry not good enough anymore? Using draconic knowledge you have found a way to imbue an ordinary diamond sword with the power of Draconium.",
-      "+20 Attack damage",
+      "+20 Attack damage (Upgradable)",
       "+10% Mob Health (Adds 10% of the mob's own health to the attack damage)",
-      "3x3 AoE Attack",
+      "3x3 AoE Attack (Upgradable)",
       "[c]item.draconicevolution:wyvernSword:0"
     ]
   },
@@ -129,10 +129,16 @@
     "images":[],
     "content":
     [
-      "Looking for a more powerful bow with some fancy features? This is the one for you. The Wyvern bow has 2 operating modes. Selectable with shift + right click.",
-      "Rapid Fire: As the name suggests, it fires arrows at a rather high rate and does moderate damage.",
-      "Sharp Shooter: Allows you to zoom in on your target and deal extremely high damage with pin point accuracy.",
-      "Enchantments are also twice as effective on this bow.",
+      "Looking for a more powerful bow with some fancy features? This is the one for you.",
+      "Adjustable Settings:",
+      "-[Base Damage] This multiplied by the arrows velocity on impact determines the inflicted damage",
+      "-[Arrow Velocity Modifier] +0 is equivalent to a vanilla bow.",
+      "-[Auto Fire] The bow will automatically fire when it reaches full draw.",
+      "-[Explosive Power] Exactly what it sounds like!",
+      "-[Magnification] Allows you to zoom in on your target for better accuracy.",
+      "The RF cost per shot if determined by multiplying the settings for Damage Velocity and Explosion power. This means that simply setting everything to Max requires exponentially more power then setting say damage to maximum.",
+      "Energy Capacity, Draw Speed, Arrow Velocity and Base Damage can all be upgraded",
+      "This bow is 10X more accurate then a vanilla bow. Meaning the arrow will land closer to where you were actually aiming and wont drift as much in flight",
       "[c]item.draconicevolution:wyvernBow:0"
     ]
   },
@@ -159,12 +165,29 @@
     ]
   },
   {
+    "name":"item.draconicevolution:magnet",
+    "nameL":"Item Dislocator",
+    "meta":1,
+    "images":[],
+    "content":
+    [
+      "Item Dislocator",
+      "You have found by combining the unique powers of the Dislocator and a simple magnet you can create a way to easily pick up items dropped on the ground.",
+      "[c]item.draconicevolution:magnet:0",
+      "",
+      "Awakened Item Dislocator",
+      "Further testing has revealed that upgrading the Item dislocator with a bit of power and Awakened Draconium can greatly increase the range and effectiveness.",
+      "[c]item.draconicevolution:magnet:1"
+    ]
+  },
+  {
     "name":"item.draconicevolution:wyvernHelm",
     "images":[],
     "content":
     [
       "Stronger than diamond - you can now withstand even greater blows.",
       "A full set gives total fire immunity.",
+      "+20 Base Shield Capacity",
       "[c]item.draconicevolution:wyvernHelm:0"
     ]
   },
@@ -175,6 +198,7 @@
     [
       "Infusing the armor with Draconium, you vastly improve its resistance.",
       "A full set gives total fire immunity.",
+      "+80 Base Shield Capacity",
       "[c]item.draconicevolution:wyvernChest:0"
     ]
   },
@@ -186,6 +210,7 @@
       "You feel even stronger and faster now that you have infused diamond leggings with Draconium.",
       "A full set gives total fire immunity.",
       "+ Speed boost",
+      "+80 Base Shield Capacity",
       "[c]item.draconicevolution:wyvernLeggs:0"
     ]
   },
@@ -198,6 +223,7 @@
       "A full set gives total fire immunity.",
       "+ Reduced fall damage",
       "+ Jump boost",
+      "+20 Base Shield Capacity",
       "[c]item.draconicevolution:wyvernBoots:0"
     ]
   },
@@ -258,7 +284,7 @@
   {
     "name":"tile.draconicevolution:dislocatorReceptacle",
     "nameL":"Draconic Portal",
-    "images":["http://i.imgur.com/hTLS3UK.png"],
+    "images":["https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/dislocatorReceptical.png"],
     "content":
     [
       "Like Obsidian, Infused Obsidian can be used to create a magical portal, but with some big differences. This portal can be any size between 1x1 and 150x150 blocks and using a dislocator to set the destination this portal can send you to any location.",
@@ -266,7 +292,7 @@
       "To activate the portal simply right-click the Receptacle with a Basic or Advanced Charm of Dislocation that is bound to a location.",
       "You can also pipe Dislocators in and out of the Receptacle with hoppers or other methods of automation.",
       "The portal can be either horizontal or vertical.",
-      "http://i.imgur.com/hTLS3UK.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/dislocatorReceptical.png",
       "[c]tile.draconicevolution:dislocatorReceptacle:0"
     ]
   },
@@ -364,8 +390,10 @@
     "content":
     [
       "Further Draconic research has shown you ways to even greater power...",
-      "Modes: Shift + right-click to switch modes: 1×1, 3×3, 5×5 and 7×7",
-      "Right-click to activate: Obliteration Mode – Destroys blocks that you specify.",
+      "Mining:",
+      "  1x1x1 to 5x5x1 Base AoE with depth independently adjustable (Upgradable)",
+      "  Junk filter",
+      "  AoE safe mode to ensure you don't accidentally mine your entire base",
       "[c]item.draconicevolution:draconicPickaxe:0"
     ]
   },
@@ -375,8 +403,10 @@
     "content":
     [
       "Further Draconic research has shown you ways to even greater power...",
-      "Modes: Shift + right-click to switch modes: 1×1, 3×3, 5×5 and 7×7",
-      "Right-click to activate: Obliteration Mode – Destroys blocks that you specify.",
+      "Mining:",
+      "  1x1x1 to 5x5x1 Base AoE with depth independently adjustable (Upgradable)",
+      "  Junk filter",
+      "  AoE safe mode to ensure you don't accidentally mine your entire base",
       "[c]item.draconicevolution:draconicShovel:0"
     ]
   },
@@ -386,7 +416,10 @@
     "content":
     [
       "Further Draconic research has shown you ways to even greater power...",
-      "This tool will harvest the entire tree and its leaves above.",
+      "Chopping:",
+      "  1x1x1 to 5x5x1 Base AoE with depth independently adjustable (Upgradable)",
+      "  Tree Mode (Chop down an entire tree in one swing)",
+      "  AoE safe mode to ensure you don't accidentally mine your entire base",
       "[c]item.draconicevolution:draconicAxe:0"
     ]
   },
@@ -396,8 +429,10 @@
     "content":
     [
       "Further Draconic research has shown you ways to even greater power...",
-      "This tool will till an entire 9×9 area - perfect for a full-size farm with water source.",
-      "It will also will dig or replace dirt (if you have dirt in your inventory) to make the full 9×9.",
+      "Further Draconic research has shown you ways to even greater power...",
+      "Tilling:",
+      "  1x1 to 7x7 Base AoE (Upgradable)",
+      "  will dig or replace dirt (if you have dirt in your inventory).",
       "[c]item.draconicevolution:draconicHoe:0"
     ]
   },
@@ -407,9 +442,9 @@
     "content":
     [
       "Seeking an even more powerful weapon you combine your Wyvern sword with Awakened Draconium to make the ultimate sword.",
-      "+40 Attack damage",
+      "+40 Attack damage (Upgradable)",
       "+20% Mob Health (Adds 20% of the mob's own health to the attack damage)",
-      "7x7 AoE Attack",
+      "5x5 AoE Attack (Upgradable)",
       "[c]item.draconicevolution:draconicSword:0"
     ]
   },
@@ -419,10 +454,17 @@
     "content":
     [
       "Further Draconic research has shown you ways to even greater power...",
-      "Sharpshooter – Zoom in on your target and deal extreme damage with pin point accuracy.",
-      "Rapid Fire – Barrage your enemies in a rain of arrows.",
-      "Explosive – With gunpowder in your inventory destroy an area slightly larger than TNT with your arrows.",
-      "Devastation (Creative Mode only) – Explosive + Double rapid fire",
+      "Adjustable Settings:",
+      "-[Base Damage] This multiplied by the arrows velocity on impact determines the inflicted damage",
+      "-[Arrow Velocity Modifier] +0 is equivalent to a vanilla bow.",
+      "-[Auto Fire] The bow will automatically fire when it reaches full draw.",
+      "-[Explosive Power] Exactly what it sounds like!",
+      "-[Shock Wave Power] The arrow will generate an extremely powerful shock wave on impact that will deal a large amount of damage to entities within the blast radius. This will not destroy blocks and is only possible with Arrow Of Draconic Fire enabled.",
+      "-[Arrow of Draconic Fire] Similar to Infinity this allows you to fire without needing arrows in your inventory. But it also increases inflicted damage by 10% allows you to use the Shock Wave effect and is 50% lighter meaning it is less effected by gravity in flight.",
+      "-[Magnification] Allows you to zoom in on your target for better accuracy.",
+      "The RF cost per shot if determined by multiplying the settings for Damage Velocity and Explosion power. This means that simply setting everything to Max requires exponentially more power then setting say damage to maximum.",
+      "Energy Capacity, Draw Speed, Arrow Velocity and Base Damage can all be upgraded",
+      "This bow is 10X more accurate then a vanilla bow. Meaning the arrow will land closer to where you were actually aiming and wont drift as much in flight",
       "[c]item.draconicevolution:draconicBow:0"
     ]
   },
@@ -434,13 +476,13 @@
       "After great pains you have mastered the powers of the Draconic and created the ultimate weapon and destructive tool!",
       "Mining:",
       "  Extreme mining speed",
-      "  1x1x1 to 9x9x9 AoE with depth independently adjustable",
+      "  1x1x1 to 7x7x7 Base AoE with depth independently adjustable (Upgradable)",
       "  Junk filter",
       "  AoE safe mode to ensure you don't accidentally mine your entire base",
       "Attack:",
-      "  +60 Attack damage",
+      "  +60 Attack damage (Upgradable)",
       "  +30% Mob Health (Adds 30% of the mob's own health to the attack damage)",
-      "  1x1 to 25x25 AOE Attack",
+      "  1x1 to 7x7 AOE Attack (Upgradable)",
       "[c]item.draconicevolution:draconicDistructionStaff:0"
     ]
   },
@@ -465,6 +507,7 @@
       "- Cures negative potion effects",
       "- Bypass suffocation and drowning damage",
       "- Removes mining slowdown under water (Aqua Affinity)",
+      "+60 Base Shield Capacity",
       "[c]item.draconicevolution:draconicHelm:0"
     ]
   },
@@ -477,6 +520,7 @@
       "- Flight",
       "- Removes mining slowdown while in the air",
       "- Fire immunity",
+      "+200 Base Shield Capacity",
       "[c]item.draconicevolution:draconicChest:0"
     ]
   },
@@ -487,6 +531,7 @@
     [
       "The soul of a dragon protects you and moves you even faster. Improved speed boost.",
       "- Speed boost",
+      "+180 Base Shield Capacity",
       "[c]item.draconicevolution:draconicLeggs:0"
     ]
   },
@@ -499,6 +544,7 @@
       "- Fall protection",
       "- Jump boost",
       "- Up Hill Step",
+      "+60 Base Shield Capacity",
       "[c]item.draconicevolution:draconicBoots:0"
     ]
   },
@@ -518,6 +564,20 @@
     [
       "Researching the dark energy of the chaos shards has lead you to the creation of an even more powerful core. But what could possibly utilize such a dark and powerful item?.",
       "[c]item.draconicevolution:chaoticCore:0"
+    ]
+  },
+  {
+    "name":"tile.draconicevolution:upgradeModifier",
+    "images":[],
+    "content":
+    [
+      "The upgrade modifier is a block that allows you to upgrade your tools and items.",
+      "When you place an upgradable item in the upgrade slot you will see a list of upgrade options in the bottom half of the gui. You will also see the tools current stats to the right of the gui.",
+      "Upgrading the items stats requires cores. You will see a list of core tiers that can be applied under each upgrade option. At the top left of teh gui you will see the Core \"Cap\" This is the maximum number of cores that can be installed on this item as well as the number of cores installed and the number of slots remaining",
+      "To add a core you just have to have it in your inventory and you can press the + button under the upgrade you want to apply the core or the - button to remove a core. The numbers on the cores under the upgrades show how many of that core tier are applied to that upgrade. If you hover your mouse over that number it will show how many points that core tier is worth",
+      "The number above each upgrade is the number of upgrade points currently applied. Each upgrade will have a base number of points that you can add to and this determines the base value for that stat. If you hover your cursor over the number you will see the base points, Max points and point cost.",
+      "Using higher tier cores to upgrade the items stats means you can achieve a better upgrade then you could with lower tier cores.",
+      "[c]tile.draconicevolution:upgradeModifier:0"
     ]
   },
   {
@@ -548,7 +608,7 @@
     [
       "Everyone needs effective mob farms. For the cost of a bit of solid fuel (coal, charcoal, etc.) or RF power, you can kill to your heart's content knowing the forces of the Draconic have your back!",
       "The grinder will kill all mobs in a 7x7 area in front of it. It is much more efficient and faster when powered by RF.",
-      "In order to reduce lag, experience orbs dropped by the grinder will despawn after 30 seconds if not collected. It is recommended that you use something like the Extra Utilities Vacuum Hopper to collect the experience orbs (if available).",
+      "In order to reduce lag, experience orbs dropped by the grinder will despawn after 30 seconds if not collected. It is recommended that you use something like the OpenBlocks Vacuum Hopper to collect the experience orbs (if available).",
       "[c]tile.draconicevolution:grinder:3"
     ]
   },
@@ -602,7 +662,16 @@
       "These devices are very simple to use. They have an input face (blue) and an output face (orange). When you place them the input face will always point towards you, similar to the way you place a piston. You can also rotate them with a wrench.",
       "The GUI is very simple with only 2 values for you to adjust. \"Redstone Signal High\" is the flow when a redstone signal of 15 is applied. \"Redstone Signal Low\" is the flow when no redstone signal is applied. You can apply a partial signal to vary the actual flow rate between these two numbers. The \"Flow\" indicator at the bottom shows how much energy or fluid is currently able to flow through the device as determined by the received redstone signal.",
       "[c]tile.draconicevolution:flowGate:0",
-      "[c]tile.draconicevolution:flowGate:6"
+      "[c]tile.draconicevolution:flowGate:6",
+      "ComputerCraft/Open Commuters methods:",
+      "getFlow() - Returns the current flow",
+      "setSignalHighFlow(integer)",
+      "getSignalHighFlow()",
+      "setSignalLowFlow(integer)",
+      "getSignalLowFlow()",
+      "setOverrideEnabled(boolean) - Setting this to true allows you to directly control the flow rate without any influence from redstone input",
+      "getOverrideEnabled()",
+      "setFlowOverride(integer) - If setOverrideEnabled is set to true this method allows you to set the flow rate. This rate can not be modified from within the gate's gui or by a redstone signal."
     ]
   },
   {
@@ -640,7 +709,7 @@
       "- Wyvern Core: Upgrades to tier 2 which increases spawn count and speed.",
       "- Awakened Core: Upgrades to tier 3 further increases spawn count and speed.",
       "- Nether Star: Removes the requirement for a player to be within 16 blocks of the spawner to function.",
-      "- Notch Apple: Makes the spawner ignore spawn requirements for the mob it is spawning e.g. it will make monsters spawn even when the light level is to0 high.",
+      "- Notch Apple: Makes the spawner ignore spawn requirements for the mob it is spawning e.g. it will make monsters spawn even when the light level is too high.",
       "When breaking it you will get back everything except the Mob Soul since it is too fragile and is destroyed in the process.",
       "[c]tile.draconicevolution:customSpawner:0"
     ]
@@ -720,9 +789,14 @@
 
       "Instability:",
       "[Not-Yet Implemented] (This may or may not be implemented in the future. Keep an eye out for this as it may or may not affect your reactors if/when it is implemented)",
+
       "Computercraft and Open Computers Integration:",
       "Simply attach a Computer to one of the Stabilizers or Energy Injectors and you will have access to all of the reactor information as well as the ability to turn the Reactor on and off remotely.  The methods for implementing this are pretty self-explanatory.",
-      "You can also use one of these Computers to control the Flux Gates."
+      "Methods:",
+      "getReactorInfo() - Returns and array containing [temperature, fieldStrength, maxFieldStrength, energySaturation, maxEnergySaturation, fuelConversion, maxFuelConversion, generationRate, fieldDrainRate, fuelConversionRate, status]",
+      "chargeReactor() - Dose exactly what the charge reactor button in the gui dose.",
+      "activateReactor() - Dose exactly what the activate reactor button in the gui dose.",
+      "stopReactor() - Dose exactly what the stop reactor button in the gui dose."
     ]
   },
   {
@@ -893,27 +967,41 @@
     ]
   },
   {
+    "name":"info.Draconic Shield",
+    "images":[],
+    "content":
+    [
+      "Both Wyvern and Draconic armor have a shield which is capable of absorbing damage.",
+      "Wearing any piece of Draconic or Wyvern armor will give you this shield but the more pieces you have the more damage the shield will be able to absorb and Draconic armor pieces give more absorption than Wyvern.",
+      "When your shield is active you will see its stats in a HUD that will by default be displayed to the left of your hot-bar (This can be configured in the HUD config screen which is accessed via the tool config gui)",
+      "The HUD shows three stats. Shield points (Large Red-Green bar), Entropy (Small Green bar) and the total remaining RF stored in your armor (Small Blue bar). The Numerical values for these stats will also be shown if enabled in the HUD config.",
+      "The Shield Points or Capacity is the number of damage points (Half a heart) the armor can absorb and this will drop when you take damage. As long as any piece of armor has power your shield points will regenerate at the cost of RF. The base regeneration rate is the equivalent of the entire capacity every 3 seconds.",
+      "Entropy ranges from 0 to 100%. It will increase each time you receive damage and will slowly decrease when you are not taking damage. Entropy reduces the rate at which your shield points regenerate. If your entropy reaches 100% your shield will not regenerate at all.",
+      "The shield can be upgraded using Upgrade Modifiers. Upgrading Shield Capacity will increase your shield points and upgrading Shield Recovery will increase the rate at which Entropy recovers. Note that the recovery rate is calculated by averaging the Recovery Points of all equipped armor pieces."
+    ]
+  },
+  {
     "name":"info.Energy Storage Multiblock",
     "images":[
-      "http://i.imgur.com/BXl1x7e.png",
-      "http://i.imgur.com/gmgDwH8.png",
-      "http://i.imgur.com/DyYw9Tr.png",
-      "http://i.imgur.com/46X3Kqd.png",
-      "http://i.imgur.com/SoAY47W.png",
-      "http://i.imgur.com/tmL6ot4.png",
-      "http://i.imgur.com/7rtdJV2.png",
-      "http://i.imgur.com/x4IxV9F.png",
-      "http://i.imgur.com/4FxoUvf.png",
-      "http://i.imgur.com/IagzpKW.png",
-      "http://i.imgur.com/1S6h9Po.png",
-      "http://i.imgur.com/MTmGhLv.png",
-      "http://i.imgur.com/crmnC6v.png",
-      "http://i.imgur.com/eH3OvhW.png",
-      "http://i.imgur.com/oEBI4lj.png",
-      "http://i.imgur.com/KSpFook.png",
-      "http://i.imgur.com/C7WwlAu.png",
-      "http://i.imgur.com/uC4b8AC.png",
-      "http://i.imgur.com/rS9rOoF.png"
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore2.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore3.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore4.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore5.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore6.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore7.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore8.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore9.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore10.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore11.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore12.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore13.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore14.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore15.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore16.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore17.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore18.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore19.png"
     ],
     "content":
     [
@@ -923,28 +1011,28 @@
       "The Energy core consists of the Energy Core (Block) at the centre surrounded by 4 Particle Generators. The generators must be directly in line with the core as shown in the following images. \nThe generators must be placed within 10 blocks of the core.",
       "The Core is then surrounded by a combination of Redstone Blocks and Draconium Blocks. The following images show the configuration of each tier as well as the material cost and storage capacity. Once the structure is built, simply shift right-click one of the particle generators with a empty hand to activate the core.",
       "Tier 1",
-      "http://i.imgur.com/BXl1x7e.png[>]http://i.imgur.com/gmgDwH8.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore2.png",
       "Redstone x0\nDraconium x0\nCapacity = 45.5Million RF",
       "Tier 2",
-      "http://i.imgur.com/BXl1x7e.png[>]http://i.imgur.com/DyYw9Tr.png[>]http://i.imgur.com/46X3Kqd.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore3.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore4.png",
       "Redstone x0\nDraconium x6\nCapacity = 273Million RF",
       "Tier 3",
-      "http://i.imgur.com/BXl1x7e.png[>]http://i.imgur.com/SoAY47W.png[>]http://i.imgur.com/tmL6ot4.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore5.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore6.png",
       "Redstone x0\nDraconium x26\nCapacity = 1.64Billion RF",
       "Tier 4",
-      "http://i.imgur.com/BXl1x7e.png[>]http://i.imgur.com/7rtdJV2.png[>]http://i.imgur.com/x4IxV9F.png[>]http://i.imgur.com/4FxoUvf.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore7.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore8.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore9.png",
       "Redstone x26\nDraconium x54\nCapacity = 9.88Billion RF",
       "Tier 5",
-      "http://i.imgur.com/BXl1x7e.png[>]http://i.imgur.com/7rtdJV2.png[>]http://i.imgur.com/IagzpKW.png[>]http://i.imgur.com/1S6h9Po.png[>]http://i.imgur.com/MTmGhLv.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore7.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore10.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore11.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore12.png",
       "Redstone x80\nDraconium x98\nCapacity = 59.3Billion RF",
       "Tier 6",
-      "http://i.imgur.com/BXl1x7e.png[>]http://i.imgur.com/7rtdJV2.png[>]http://i.imgur.com/IagzpKW.png[>]http://i.imgur.com/crmnC6v.png[>]http://i.imgur.com/eH3OvhW.png[>]http://i.imgur.com/oEBI4lj.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore7.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore10.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore13.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore14.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore15.png",
       "Redstone 133\nDraconium 150\nCapacity = 356Billion RF",
       "Tier 7",
-      "http://i.imgur.com/BXl1x7e.png[>]http://i.imgur.com/7rtdJV2.png[>]http://i.imgur.com/IagzpKW.png[>]http://i.imgur.com/crmnC6v.png[>]http://i.imgur.com/KSpFook.png[>]http://i.imgur.com/C7WwlAu.png[>]http://i.imgur.com/uC4b8AC.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore1.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore7.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore10.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore13.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore16.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore17.png[>]https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore18.png",
       "Redstone x328\nDraconium x218\nCapacity = 2.14Trillion RF",
       "To add and remove energy from the core you need to place energy pylons within 15 blocks of the core. To activate a pylon place a glass block either above or below it – depending on whether the pylon is placed below or above the core e.g. if you place the pylon on your roof you would place the glass block under it.",
-      "http://i.imgur.com/rS9rOoF.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/ECore/ECore19.png",
       "When the glass block is placed the pylon should immediately activate and link with a nearby Energy Core. The link is indicated by white energy particles and the glass should change to the renderer shown in the image above. You can shift right-click the pylon to change which core it is linked to if there is more than one within range.",
       "Energy is added and removed from the core using Energy Pylons. To toggle a Pylon between input and output mode simply right-click the sphere. The mode is identified by the colour of the Pylon (blue for input and orange for output).",
       "Energy Transfer between the pylon and the core is indicated by a stream of blue energy particles flowing between the Pylon sphere and the core. The amount of energy flowing is roughly indicated by the density of the particle stream.",
@@ -953,11 +1041,11 @@
   },
   {
     "name":"info.Ritual of Draconic Resurrection",
-    "images":["http://i.imgur.com/j2Hm0Am.png"],
+    "images":["https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/resurrectionRitual.png"],
     "content":
     [
       "The Ritual of Draconic Resurrection allows you to summon the Ender Dragon. To set it up you will need the following items.\n\n(1) Resurrection Stone\n(4) Glowstone Blocks\n(4) Obsidian\n(4) Diamond Blocks\n(4) Charged Draconium Blocks\n(12) Quartz Pillars\nset up in the following configuration.",
-      "http://i.imgur.com/j2Hm0Am.png",
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/resurrectionRitual.png",
       "The pillars dont have to be in that exact configuration as long as they are within 5 blocks of the Resurrection Stone. It also looks better if they are symmetrical. The ritual must be set up within 150 blocks of 0,0.",
       "Once you have that set up, simply right-click the Ritual stone and stand back. The ritual should start immediately. If it doesn't you have done something wrong.",
       "Right-clicking the Ritual Stone again will stop the ritual and drain the charge from the draconium blocks.",
@@ -975,19 +1063,19 @@
   },
   {
     "name":"info.Comets",
-    "images":["http://i.imgur.com/894RVmP.png"],
+    "images":["https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/comet.png"],
     "content":
     [
       "Mined out all of the Draconium Ore in The End? Get yourself some form of flight and go search the end. If you're lucky, you may come across an Ender Comet. These comets are comprised of End Stone, Obsidian and a significant amount of Draconium Ore. By default they have a 1 in 10000 chance to spawn in each chunk so you may need to search for a while. They come in various sizes.",
-      "http://i.imgur.com/894RVmP.png"
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/comet.png"
     ]
   },
   {
     "name":"info.Chaos Islands",
-    "images":["http://i.imgur.com/gL4T6dG.png"],
+    "images":["https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/chaosIsland.png"],
     "content":
     [
-      "Looking for §sa challenge?§r The fight of your life! The Ender Dragon wasn't hard enough? Maby try 100 ender dragons all at once plus maby a few dosen withers. And if thats still not hard enough then maby this is for you! If you travel to any multiple of 10,000 in The End (e.g. {x=0, z=10000}, {x=0, z=20000}, {x=10000, z=0} etc.) you will find a Chaos Island.",
+      "Looking for a challenge? The fight of your life! The Ender Dragon wasn't hard enough? Maby try 100 ender dragons all at once plus maby a few dosen withers. And if thats still not hard enough then maby this is for you! If you travel to any multiple of 10,000 in The End (e.g. {x=0, z=10000}, {x=0, z=20000}, {x=10000, z=0} etc.) you will find a Chaos Island.",
       "A Chaos island is a formation of end stone and obsidian formed over billions of years by dark energy. At its heart in an obsidian chamber is a crystal made from pure dark energy known as a Chaos Crystal.",
       "Chaos islands are protected by one of the most powerful mobs in existence. The Chaos Guardian. These guardians were once regular enderdragons but exposure to the dark energy of the chaos islands has mutated them into some of the deadliest killing machines of all time.",
       "The various attacks of the Chaos Guardian will cut through almost any armor with one exception being draconic armor with its ability to block piercing damage. However it has the ability to rabidly drain any RF powered armor of its charge so it will quickly render your armor useless if you don't keep it charged.",
@@ -995,9 +1083,7 @@
       "Be aware that when low on health the guardian will occasionally try to re ignite some of the disabled crystals.",
       "Once the guardian is defeated you can claim your reward. At the centre of the island several blocks below the surface you will find a chaos chamber containing a chaos crystal. When broken the chaos crystal will drop 5 chaos shards.",
       "§4Be Warned!§r When you destroy the crystal the energy field it was generating will collapse. This will result in the total animation of the island within a matter of seconds. Unless you are wearing full draconic armor you will only have a few seconds to collect the shards and escape the island before you are obliterated along with the island.",
-
-      "This image needs to be updated. The islands look very different now.",
-      "http://i.imgur.com/gL4T6dG.png"
+      "https://raw.githubusercontent.com/brandon3055/Random-Bits/master/DE%20Tablet%20Images/chaosIsland.png"
     ]
   },
   {
