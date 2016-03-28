@@ -20,11 +20,11 @@ recipes.remove(<TConstruct:ToolForgeBlock:2>);
 recipes.remove(<TConstruct:ToolForgeBlock:1>);
 recipes.remove(<TConstruct:ToolForgeBlock:0>);
 
-recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateDenseAluminium>, <TConstruct:ToolStationBlock>, <ore:plateDenseAluminium>], [<ore:plateDenseAluminium>, null, <ore:plateDenseAluminium>]]);
+recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateDenseSteel>, <TConstruct:ToolStationBlock>, <ore:plateDenseSteel>], [<ore:plateDenseSteel>, null, <ore:plateDenseSteel>]]);
 
 #Grout
 recipes.remove(<TConstruct:CraftedSoil:1>);
-recipes.addShaped(<TConstruct:CraftedSoil:1> * 2, [[<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>], [<ore:dustCoal>, <ore:sand>, <ore:dustCoal>], [<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>]]);
+recipes.addShaped(<TConstruct:CraftedSoil:1> * 6, [[<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>], [<ore:dustCoal>, <ore:sand>, <ore:dustCoal>], [<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>]]);
 
 #silky jewel
 recipes.remove(<TConstruct:materials:26>);
@@ -42,9 +42,7 @@ mods.immersiveengineering.ArcFurnace.removeRecipe(<ThermalFoundation:material:76
 
 #nerf patterns
 recipes.remove(<TConstruct:blankPattern>);
-recipes.remove(<gregtech:gt.metaitem.01:2338>);
-recipes.addShapeless(<gregtech:gt.metaitem.01:2338> * 2, [<ore:dustIron>, <ore:dustWood>, <ore:dustTinyGold>]);
-recipes.addShapeless(<TConstruct:blankPattern> * 2, [<ore:stickIronWood>, <ore:plateIronWood>, <ore:plateIronWood>, <ore:stickIronWood>]);
+recipes.addShapeless(<TConstruct:blankPattern>, [<ore:stickWood>, <ore:plankWood>, <ore:plankWood>, <ore:stickWood>]);
 
 #remove hardended glass from smeltery
 mods.tconstruct.Casting.removeBasinRecipe(<ThermalExpansion:Glass>);
