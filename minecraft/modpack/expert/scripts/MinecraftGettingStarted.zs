@@ -233,17 +233,6 @@ recipes.addShaped(<ImmersiveEngineering:stoneDecoration:2> * 4, [[<minecraft:har
 recipes.addShaped(<Railcraft:machine.alpha:12> * 4, [[<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>], [<ore:sand>, <minecraft:ender_pearl>, <ore:sand>], [<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>]]);
 recipes.addShaped(<Railcraft:machine.alpha:12> * 4, [[<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>], [<ore:sand>, <minecraft:tnt>, <ore:sand>], [<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>]]);
 
-#Wood Nerfs-all non-vanilla wood needs to be processed with TE Sawmill
-recipes.remove(<minecraft:stick>);
-recipes.addShapeless(<minecraft:stick> * 2, [<ore:plankWood>, <ore:plankWood>]);
-recipes.remove(<ore:plankWood>);
-recipes.addShapeless(<minecraft:planks> * 2, [<minecraft:log>]);
-recipes.addShapeless(<minecraft:planks:4> * 2, [<minecraft:log2>]);
-recipes.addShapeless(<minecraft:planks:5> * 2, [<minecraft:log2:1>]);
-recipes.addShapeless(<minecraft:planks:3> * 2, [<minecraft:log:3>]);
-recipes.addShapeless(<minecraft:planks:2> * 2, [<minecraft:log:2>]);
-recipes.addShapeless(<minecraft:planks:1> * 2, [<minecraft:log:1>]);
-
 #AE2 Grindstone Changes
 recipes.remove(<appliedenergistics2:tile.BlockCrank>);
 recipes.addShaped(<appliedenergistics2:tile.BlockCrank>, [[<ImmersiveEngineering:material>, <ImmersiveEngineering:material>, <ImmersiveEngineering:material>], [null, null, <ImmersiveEngineering:material>], [null, null, <ImmersiveEngineering:material>]]);
