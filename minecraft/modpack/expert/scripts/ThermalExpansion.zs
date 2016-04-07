@@ -38,6 +38,7 @@ recipes.remove(<ThermalExpansion:Dynamo:4>);
 recipes.remove(<ThermalExpansion:Dynamo:3>);
 recipes.remove(<ThermalExpansion:Dynamo:2>);
 recipes.remove(<ThermalExpansion:Dynamo>);
+recipes.addShaped(<ThermalExpansion:Dynamo:0>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearCopper>, <ore:coilRC>, <ore:gearCopper>]]);
 recipes.addShaped(<ThermalExpansion:Dynamo:4>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearElectrum>, <ThermalExpansion:material:2>, <ore:gearElectrum>]]);
 recipes.addShaped(<ThermalExpansion:Dynamo:3>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearBronze>, <ThermalExpansion:material:2>, <ore:gearBronze>]]);
 recipes.addShaped(<ThermalExpansion:Dynamo:2>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearTin>, <ThermalExpansion:material:2>, <ore:gearTin>]]);
