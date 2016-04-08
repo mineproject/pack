@@ -14,15 +14,15 @@ recipes.addShaped(<witchery:ingredient:10>, [[<witchery:ingredient:34>],[<ore:ge
 
 # -- Waystone
 recipes.remove(<witchery:ingredient:12>);
-recipes.addShaped(<witchery:ingredient:12>*4, [[<ore:plateInfusedAir>, <ore:plateInfusedAir>, <ore:plateInfusedAir>], [<ore:plateInfusedOrder>, <ore:itemFlient>, <ore:plateInfusedOrder>], [<ore:plateInfusedEarth>, <ore:plateInfusedEarth>, <ore:plateInfusedEarth>]]);
+recipes.addShaped(<witchery:ingredient:12>*4, [[<ore:gemInfusedAir>, <ore:gemInfusedAir>, <ore:gemInfusedAir>], [<ore:gemInfusedOrder>, <ore:itemFlient>, <ore:gemInfusedOrder>], [<ore:gemInfusedEarth>, <ore:gemInfusedEarth>, <ore:gemInfusedEarth>]]);
 
 # -- Fume Filter
 recipes.remove(<witchery:ingredient:73>);
-recipes.addShaped(<witchery:ingredient:73>, [[<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>], [<ore:plateTitanium>, <witchery:ingredient:11>, <ore:gearSteel>], [<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>]]);
+recipes.addShaped(<witchery:ingredient:73>, [[<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>], [<ore:plateSteel>, <witchery:ingredient:11>, <ore:gearSteel>], [<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>]]);
 
 # -- Quartz Sphere 
 recipes.remove(<witchery:ingredient:92>);
-recipes.addShaped(<witchery:ingredient:92>, [[<ore:gemQuartz>, <ore:blockQuartz>, <ore:gemQuartz>], [<ore:blockQuartz>, <ore:gemGlass>, <ore:blockQuartz>], [<ore:gemQuartz>, <ore:blockQuartz>, <ore:gemQuartz>]]);
+recipes.addShaped(<witchery:ingredient:92>, [[<ore:gemQuartz>, <ore:blockQuartz>, <ore:gemQuartz>], [<ore:blockQuartz>, <ore:plateNetherQuartz>, <ore:blockQuartz>], [<ore:gemQuartz>, <ore:blockQuartz>, <ore:gemQuartz>]]);
 
 # -- Null Catalyst
 recipes.remove(<witchery:ingredient:130>);
@@ -51,7 +51,7 @@ recipes.addShaped(<witchery:ingredient>, [[<Thaumcraft:blockCandle>, <Thaumcraft
 
 # -- Deviner
 recipes.remove(<witchery:divinerwater>);
-recipes.addShaped(<witchery:divinerwater>, [[<ore:shardWater>, <Railcraft:cube:8>, <ore:shardWater>], [<ore:plateInfusedWater>, <Railcraft:cube:8>, <ore:plateInfusedWater>], [<Railcraft:cube:8>, <witchery:ingredient:37>, <Railcraft:cube:8>]]);
+recipes.addShaped(<witchery:divinerwater>, [[<ore:shardWater>, <Railcraft:cube:8>, <ore:shardWater>], [<ore:gemInfusedWater>, <Railcraft:cube:8>, <ore:gemInfusedWater>], [<Railcraft:cube:8>, <witchery:ingredient:37>, <Railcraft:cube:8>]]);
 recipes.remove(<witchery:divinerlava>);
 recipes.addShaped(<witchery:divinerlava>, [[<ore:shardFire>, <ore:rodBlaze>, <ore:shardFire>], [<ore:gemFirestone>, <witchery:divinerwater>, <ore:gemFirestone>], [<ore:rodBlaze>, <ore:gemFirestone>, <ore:rodBlaze>]]);
 
