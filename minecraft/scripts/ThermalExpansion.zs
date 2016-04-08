@@ -147,9 +147,9 @@ recipes.addShaped(<ThermalExpansion:Frame:3> * 2, [[<ore:plateEnderium>, pipeRes
 #pulverizer
 recipes.remove(<ThermalExpansion:Machine:1>);
 recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:0}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
-recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:1}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>]], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
-recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:2}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>]], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
-recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:3}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>]], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:1}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:2}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:3}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
 
 #alloy smelter
 recipes.remove(<ThermalExpansion:Machine:3>);
