@@ -78,7 +78,7 @@ recipes.addShaped(<DraconicEvolution:wyvernBoots>, [[<DraconicEvolution:wyvernCo
 
 recipes.addShaped(<DraconicEvolution:awakenedCore>, [[<ore:ingotIridium>, <DraconicEvolution:wyvernCore>, <ExtraUtilities:bedrockiumIngot>], [<DraconicEvolution:wyvernCore>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:wyvernCore>], [<ore:ingotTerrasteel>, <DraconicEvolution:wyvernCore>, <ore:ingotVoid>]]);
 recipes.addShaped(<DraconicEvolution:draconium>, [[<ore:ingotDraconium>, <ore:ingotDraconium>, <ore:ingotDraconium>], [<ore:ingotDraconium>, <DraconicEvolution:wyvernCore>, <ore:ingotDraconium>], [<ore:ingotDraconium>, <ore:ingotDraconium>, <ore:ingotDraconium>]]);
-recipes.addShaped(<DraconicEvolution:wyvernCore>, [[<ore:ingotElectrumFlux>, <DraconicEvolution:draconicCore>, <ore:ingotGold>], [<DraconicEvolution:draconicCore>, <ore:itemNetherStar>, <DraconicEvolution:draconicCore>], [<ore:ingotSteel>, <DraconicEvolution:draconicCore>, <ore:ingotThaumium>]]);
+recipes.addShaped(<DraconicEvolution:wyvernCore>, [[<ore:ingotElectrum>, <DraconicEvolution:draconicCore>, <ore:ingotGold>], [<DraconicEvolution:draconicCore>, <ore:itemNetherStar>, <DraconicEvolution:draconicCore>], [<ore:ingotSteel>, <DraconicEvolution:draconicCore>, <ore:ingotThaumium>]]);
 recipes.addShaped(<DraconicEvolution:safetyMatch:1000>, [[<ore:dyeOrange>, <minecraft:flint_and_steel>], [<ore:stickWood>, null]]);
 recipes.addShaped(<DraconicEvolution:infusedObsidian>, [[<minecraft:blaze_powder>, <ore:blockEnderObsidian>, <minecraft:blaze_powder>], [<ore:blockEnderObsidian>, <DraconicEvolution:draconiumDust>, <ore:blockEnderObsidian>], [<minecraft:blaze_powder>, <ore:blockEnderObsidian>, <minecraft:blaze_powder>]]);
 
