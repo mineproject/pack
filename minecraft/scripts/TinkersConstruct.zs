@@ -22,10 +22,6 @@ recipes.remove(<TConstruct:ToolForgeBlock:0>);
 
 recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateDenseSteel>, <TConstruct:ToolStationBlock>, <ore:plateDenseSteel>], [<ore:plateDenseSteel>, null, <ore:plateDenseSteel>]]);
 
-#Grout
-recipes.remove(<TConstruct:CraftedSoil:1>);
-recipes.addShaped(<TConstruct:CraftedSoil:1> * 6, [[<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>], [<ore:dustCoal>, <ore:sand>, <ore:dustCoal>], [<ore:dustClay>, <ore:dustCoal>, <ore:dustClay>]]);
-
 #silky jewel
 recipes.remove(<TConstruct:materials:26>);
 recipes.addShaped(<TConstruct:materials:26>, [[null, <TConstruct:materials:25>, null], [<TConstruct:materials:25>, <ore:blockEmerald>, <TConstruct:materials:25>], [null, <TConstruct:materials:25>, null]]);
@@ -43,9 +39,6 @@ mods.immersiveengineering.ArcFurnace.removeRecipe(<ThermalFoundation:material:76
 #nerf patterns
 recipes.remove(<TConstruct:blankPattern>);
 recipes.addShapeless(<TConstruct:blankPattern>, [<ore:stickWood>, <ore:plankWood>, <ore:plankWood>, <ore:stickWood>]);
-
-#remove hardended glass from smeltery
-mods.tconstruct.Casting.removeBasinRecipe(<ThermalExpansion:Glass>);
 
 #traveller's armor
 recipes.remove(<TConstruct:travelGoggles>);

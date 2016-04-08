@@ -37,11 +37,12 @@ val chipRed = <ore:chipsetRed>;
 recipes.remove(<ThermalExpansion:Dynamo:4>);
 recipes.remove(<ThermalExpansion:Dynamo:3>);
 recipes.remove(<ThermalExpansion:Dynamo:2>);
+recipes.remove(<ThermalExpansion:Dynamo:1>);
 recipes.remove(<ThermalExpansion:Dynamo>);
-recipes.addShaped(<ThermalExpansion:Dynamo:0>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearCopper>, <ore:coilRC>, <ore:gearCopper>]]);
 recipes.addShaped(<ThermalExpansion:Dynamo:4>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearElectrum>, <ThermalExpansion:material:2>, <ore:gearElectrum>]]);
-recipes.addShaped(<ThermalExpansion:Dynamo:3>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearBronze>, <ThermalExpansion:material:2>, <ore:gearBronze>]]);
+recipes.addShaped(<ThermalExpansion:Dynamo:3>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearIron>, <ThermalExpansion:material:2>, <ore:gearIron>]]);
 recipes.addShaped(<ThermalExpansion:Dynamo:2>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearTin>, <ThermalExpansion:material:2>, <ore:gearTin>]]);
+recipes.addShaped(<ThermalExpansion:Dynamo>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearCopper>, <ThermalExpansion:material:2>, <ore:gearCopper>]]);
 
 #energy cells
 recipes.remove(<ThermalExpansion:Cell:4>);
@@ -138,98 +139,98 @@ recipes.remove(<ThermalExpansion:Frame>);
 recipes.remove(<ThermalExpansion:Frame:1>);
 recipes.remove(<ThermalExpansion:Frame:2>);
 recipes.remove(<ThermalExpansion:Frame:3>);
-recipes.addShaped(<ThermalExpansion:Frame:0>, [[<ore:plateSteel>, pipeLead, <ore:plateSteel>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:21>, <TConstruct:GlassBlock>], [<ore:plateSteel>, <gregtech:gt.blockcasings2:3>, <ore:plateSteel>]]);
-recipes.addShaped(<ThermalExpansion:Frame:1>, [[<ore:plateAluminium>, pipeAdvLead, <ore:plateAluminium>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:22>, <TConstruct:GlassBlock>], [<ore:plateAluminium>, <gregtech:gt.blockcasings2:3>, <ore:plateAluminium>]]);
-recipes.addShaped(<ThermalExpansion:Frame:2>, [[<ore:ingotSignalum>, pipeRedstone, <ore:ingotSignalum>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:23>, <TConstruct:GlassBlock>], [<ore:ingotInvar>, <gregtech:gt.blockcasings2:3>, <ore:ingotInvar>]]);
-recipes.addShaped(<ThermalExpansion:Frame:3>, [[<ore:plateEnderium>, pipeResonant, <ore:plateEnderium>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:24>, <TConstruct:GlassBlock>], [<ore:plateEnderium>, <gregtech:gt.blockcasings2:4>, <ore:plateEnderium>]]);
+recipes.addShaped(<ThermalExpansion:Frame:0> * 2, [[<ore:plateSteel>, pipeLead, <ore:plateSteel>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:21>, <TConstruct:GlassBlock>], [<ore:plateSteel>, <gregtech:gt.blockcasings2:3>, <ore:plateSteel>]]);
+recipes.addShaped(<ThermalExpansion:Frame:1> * 2, [[<ore:plateAluminium>, pipeAdvLead, <ore:plateAluminium>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:22>, <TConstruct:GlassBlock>], [<ore:plateAluminium>, <gregtech:gt.blockcasings2:3>, <ore:plateAluminium>]]);
+recipes.addShaped(<ThermalExpansion:Frame:2> * 2, [[<ore:ingotSignalum>, pipeRedstone, <ore:ingotSignalum>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:23>, <TConstruct:GlassBlock>], [<ore:ingotInvar>, <gregtech:gt.blockcasings2:3>, <ore:ingotInvar>]]);
+recipes.addShaped(<ThermalExpansion:Frame:3> * 2, [[<ore:plateEnderium>, pipeResonant, <ore:plateEnderium>], [<TConstruct:GlassBlock>, <gregtech:gt.blockmachines:24>, <TConstruct:GlassBlock>], [<ore:plateEnderium>, <gregtech:gt.blockcasings2:4>, <ore:plateEnderium>]]);
 
 #pulverizer
 recipes.remove(<ThermalExpansion:Machine:1>);
-recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:0}), [[<gregtech:gt.blockcasings2>, <ore:craftingGrinder>, <gregtech:gt.blockcasings2>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32642>], [chipDiamond, rCoil, chipDiamond]]);
-recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:1}), [[<gregtech:gt.blockcasings2>, <ore:craftingGrinder>, <gregtech:gt.blockcasings2>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32642>], [chipDiamond, rCoil, chipDiamond]]);
-recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:2}), [[<gregtech:gt.blockcasings2>, <ore:craftingGrinder>, <gregtech:gt.blockcasings2>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32642>], [chipDiamond, rCoil, chipDiamond]]);
-recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:3}), [[<gregtech:gt.blockcasings2>, <ore:craftingGrinder>, <gregtech:gt.blockcasings2>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32642>], [chipDiamond, rCoil, chipDiamond]]);
+recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:0}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:1}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>]], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:2}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>]], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:1>.withTag({Level:3}), [[<ore:blockSteel>, <ore:craftingGrinder>, <ore:blockSteel>]], [<gregtech:gt.metaitem.01:32602>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32642>], [rCoil2, chipGold, rCoil2]]);
 
 #alloy smelter
 recipes.remove(<ThermalExpansion:Machine:3>);
-recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:0}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:0>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:1}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:1>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:2}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:2>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:3}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:3>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
+recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:0}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:0>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:1}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:1>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:2}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:2>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:3>.withTag({Level:3}), [[heatproof, heatproof, heatproof], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:3>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
 
 #magma crucible
 recipes.remove(<ThermalExpansion:Machine:4>);
-recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:0}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:0>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:1}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:1>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:2}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:2>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:3}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:3>, <gregtech:gt.blockcasings:12>], [chipGold, rCoil2, chipGold]]);
+recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:0}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:0>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:1}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:1>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:2}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:2>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:4>.withTag({Level:3}), [[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockcasings3:14>, <gregtech:gt.metaitem.01:32611>], [<gregtech:gt.blockcasings:12>, <ThermalExpansion:Frame:3>, <gregtech:gt.blockcasings:12>], [rCoil, chipIron, rCoil]]);
 
 #furnace
 recipes.remove(<ThermalExpansion:Machine:0>);
-recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:0}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameLV>, <ore:wireGt04AnyCopper>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:1}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameMV>, <ore:wireGt04AnyCopper>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:2}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameHV>, <ore:wireGt04AnyCopper>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:3}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameIV>, <ore:wireGt04AnyCopper>], [chipIron, rCoil, chipIron]]);
+recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:0}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameLV>, <ore:wireGt04AnyCopper>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:1}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameMV>, <ore:wireGt04AnyCopper>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:2}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameHV>, <ore:wireGt04AnyCopper>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:0>.withTag({Level:3}), [[brick, brick, brick], [<ore:wireGt04AnyCopper>, <ore:frameIV>, <ore:wireGt04AnyCopper>], [rCoil, chipIron, rCoil]]);
 
 
 #sawmill
 recipes.remove(<ThermalExpansion:Machine:2>);
-recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:0}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32640>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:1}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32640>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:2}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32640>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:3}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32640>], [chipIron, rCoil, chipIron]]);
+recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:0}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32640>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:1}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32640>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:2}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32640>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:2>.withTag({Level:3}), [[brick, <minecraft:iron_axe>, brick], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32640>], [rCoil, chipIron, rCoil]]);
 
 #fluid transposer
 recipes.remove(<ThermalExpansion:Machine:5>);
-recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:0}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32610>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:1}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32610>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:2}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32610>], [chipIron, rCoil, chipIron]]);
-recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:3}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32610>], [chipIron, rCoil, chipIron]]);
+recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:0}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32610>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:1}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32610>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:2}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32610>], [rCoil, chipIron, rCoil]]);
+recipes.addShaped(<ThermalExpansion:Machine:5>.withTag({Level:3}), [[null, <minecraft:bucket>, null], [<gregtech:gt.metaitem.01:32600>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32610>], [rCoil, chipIron, rCoil]]);
 
 #ice maker
 recipes.remove(<ThermalExpansion:Machine:6>);
-recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:0}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
-recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:1}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
-recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:2}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
-recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:3}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
+recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:0}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
+recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:1}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
+recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:2}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
+recipes.addShaped(<ThermalExpansion:Machine:6>.withTag({Level:3}), [[<ore:blockIce>, <gregtech:gt.metaitem.01:32640>, <ore:blockIce>], [<ore:blockIce>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
 
 #igneous extruder
 recipes.remove(<ThermalExpansion:Machine:7>);
-recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:0}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
-recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:1}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
-recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:2}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
-recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:3}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32610>], [chipIron, <ThermalExpansion:material>, chipIron]]); 
+recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:0}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:0>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
+recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:1}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:1>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
+recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:2}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:2>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
+recipes.addShaped(<ThermalExpansion:Machine:7>.withTag({Level:3}), [[<ore:obsidian>, <gregtech:gt.metaitem.01:32640>, <ore:obsidian>], [<gregtech:gt.metaitem.01:32610>, <ThermalExpansion:Frame:3>, <gregtech:gt.metaitem.01:32610>], [<ThermalExpansion:material>, chipIron, <ThermalExpansion:material>]]); 
 
 #crafter
 recipes.remove(<ThermalExpansion:Machine:9>);
-recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:0}), [[null, <ore:armMV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:0>, <ThermalExpansion:Workbench:2>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:1}), [[null, <ore:armMV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:1>, <ThermalExpansion:Workbench:2>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:2}), [[null, <ore:armMV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:2>, <ThermalExpansion:Workbench:2>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:3}), [[null, <ore:armMV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:3>, <ThermalExpansion:Workbench:2>], [chipGold, rCoil2, chipGold]]);
+recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:0}), [[null, <ore:armLV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:0>, <ThermalExpansion:Workbench:2>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:1}), [[null, <ore:armLV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:1>, <ThermalExpansion:Workbench:2>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:2}), [[null, <ore:armLV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:2>, <ThermalExpansion:Workbench:2>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:9>.withTag({Level:3}), [[null, <ore:armLV>, null], [<ThermalExpansion:Workbench:2>, <ThermalExpansion:Frame:3>, <ThermalExpansion:Workbench:2>], [rCoil2, chipGold, rCoil2]]);
 
 #grower
 recipes.remove(<ThermalExpansion:Machine:11>);
-recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:0}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:0>, <ore:armMV>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:1}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:1>, <ore:armMV>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:2}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:2>, <ore:armMV>], [chipGold, rCoil2, chipGold]]);
-recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:3}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:3>, <ore:armMV>], [chipGold, rCoil2, chipGold]]);
+recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:0}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:0>, <ore:armMV>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:1}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:1>, <ore:armMV>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:2}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:2>, <ore:armMV>], [rCoil2, chipGold, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:11>.withTag({Level:3}), [[<ore:emitterMV>, <ore:gearLumium>, <ore:sensorMV>], [<ore:pumpMV>, <ThermalExpansion:Frame:3>, <ore:armMV>], [rCoil2, chipGold, rCoil2]]);
 
 #water creator
 recipes.remove(<ThermalExpansion:Machine:8>);
-recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:0}), [[<ore:pumpEV>, <ThermalExpansion:Tank:4>, <ore:pumpEV>], [<ore:pumpEV>, <ThermalExpansion:Frame:0>, <ore:pumpEV>], [<ore:chipsetEmerald>, rCoil2, <ore:chipsetEmerald>]]);
-recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:1}), [[<ore:pumpEV>, <ThermalExpansion:Tank:4>, <ore:pumpEV>], [<ore:pumpEV>, <ThermalExpansion:Frame:1>, <ore:pumpEV>], [<ore:chipsetEmerald>, rCoil2, <ore:chipsetEmerald>]]);
-recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:2}), [[<ore:pumpEV>, <ThermalExpansion:Tank:4>, <ore:pumpEV>], [<ore:pumpEV>, <ThermalExpansion:Frame:2>, <ore:pumpEV>], [<ore:chipsetEmerald>, rCoil2, <ore:chipsetEmerald>]]);
-recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:3}), [[<ore:pumpEV>, <ThermalExpansion:Tank:4>, <ore:pumpEV>], [<ore:pumpEV>, <ThermalExpansion:Frame:3>, <ore:pumpEV>], [<ore:chipsetEmerald>, rCoil2, <ore:chipsetEmerald>]]);
+recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:0}), [[<ore:pumpHV>, <ThermalExpansion:Tank:4>, <ore:pumpHV>], [<ore:pumpHV>, <ThermalExpansion:Frame:0>, <ore:pumpHV>], [rCoil2, <ore:chipsetDiamond>, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:1}), [[<ore:pumpHV>, <ThermalExpansion:Tank:4>, <ore:pumpHV>], [<ore:pumpHV>, <ThermalExpansion:Frame:1>, <ore:pumpHV>], [rCoil2, <ore:chipsetDiamond>, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:2}), [[<ore:pumpHV>, <ThermalExpansion:Tank:4>, <ore:pumpHV>], [<ore:pumpHV>, <ThermalExpansion:Frame:2>, <ore:pumpHV>], [rCoil2, <ore:chipsetDiamond>, rCoil2]]);
+recipes.addShaped(<ThermalExpansion:Machine:8>.withTag({Level:3}), [[<ore:pumpHV>, <ThermalExpansion:Tank:4>, <ore:pumpHV>], [<ore:pumpHV>, <ThermalExpansion:Frame:3>, <ore:pumpHV>], [rCoil2, <ore:chipsetDiamond>, rCoil2]]);
 
 #energetic infuser
 recipes.remove(<ThermalExpansion:Machine:10>);
-recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:0}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameLV>, <ore:coilRT>], [<ore:chipsetGold>, <ore:coilRC>, <ore:chipsetGold>]]);
-recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:1}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameMV>, <ore:coilRT>], [<ore:chipsetGold>, <ore:coilRC>, <ore:chipsetGold>]]);
-recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:2}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameHV>, <ore:coilRT>], [<ore:chipsetGold>, <ore:coilRC>, <ore:chipsetGold>]]);
-recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:3}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameIV>, <ore:coilRT>], [<ore:chipsetGold>, <ore:coilRC>, <ore:chipsetGold>]]);
+recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:0}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameLV>, <ore:coilRT>], [<ore:coilRC>, <ore:chipsetGold>, <ore:coilRC>]]);
+recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:1}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameMV>, <ore:coilRT>], [<ore:coilRC>, <ore:chipsetGold>, <ore:coilRC>]]);
+recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:2}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameHV>, <ore:coilRT>], [<ore:coilRC>, <ore:chipsetGold>, <ore:coilRC>]]);
+recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:3}), [[<ore:emitterMV>, <ThermalExpansion:Cell:2>, <ore:sensorMV>], [<ore:coilRT>, <ore:frameIV>, <ore:coilRT>], [<ore:coilRC>, <ore:chipsetGold>, <ore:coilRC>]]);
 
 #autonomous activator
 recipes.remove(<ThermalExpansion:Device:2>);
-recipes.addShaped(<ThermalExpansion:Device:2>, [[null, <ThermalExpansion:Strongbox:1>, null], [<ore:conveyorLV>, <ore:frameLV>, <ore:armLV>], [<ore:chipsetIron>, <ore:coilRR>, <ore:chipsetIron>]]);
+recipes.addShaped(<ThermalExpansion:Device:2>, [[null, <ThermalExpansion:Strongbox:1>, null], [<ore:conveyorLV>, <ore:frameLV>, <ore:armLV>], [<ore:coilRR>, <ore:chipsetIron>, <ore:coilRR>]]);
 
 print("Initialized 'ThermalExpansion.zs'");

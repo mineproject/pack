@@ -10,7 +10,7 @@ recipes.addShaped(<witchery:ingredient:8>, [[null, <Railcraft:cube:8>], [null, <
 
 # -- Attuned Stone
 recipes.remove(<witchery:ingredient:10>);
-recipes.addShaped(<witchery:ingredient:10>, [[<witchery:ingredient:34>],[<ore:craftingIndustrialDiamond>],[<minecraft:lava_bucket>]]);
+recipes.addShaped(<witchery:ingredient:10>, [[<witchery:ingredient:34>],[<ore:gemDiamond>],[<minecraft:lava_bucket>]]);
 
 # -- Waystone
 recipes.remove(<witchery:ingredient:12>);
@@ -18,7 +18,7 @@ recipes.addShaped(<witchery:ingredient:12>*4, [[<ore:plateInfusedAir>, <ore:plat
 
 # -- Fume Filter
 recipes.remove(<witchery:ingredient:73>);
-recipes.addShaped(<witchery:ingredient:73>, [[<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>], [<ore:plateTitanium>, <witchery:ingredient:11>, <ore:gearStainlessSteel>], [<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>]]);
+recipes.addShaped(<witchery:ingredient:73>, [[<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>], [<ore:plateTitanium>, <witchery:ingredient:11>, <ore:gearSteel>], [<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:8>, <ore:plateNetherQuartz>]]);
 
 # -- Quartz Sphere 
 recipes.remove(<witchery:ingredient:92>);
@@ -57,7 +57,7 @@ recipes.addShaped(<witchery:divinerlava>, [[<ore:shardFire>, <ore:rodBlaze>, <or
 
 # -- Distillery
 recipes.remove(<witchery:distilleryidle>);
-recipes.addShaped(<witchery:distilleryidle>, [[<witchery:ingredient:34>, <ore:plateStainlessSteel>, <witchery:ingredient:36>], [<ore:plateStainlessSteel>, <Thaumcraft:blockMetalDevice:1>, <ore:plateStainlessSteel>], [<ore:plateGold>, <witchery:ingredient:10>, <ore:plateGold>]]);
+recipes.addShaped(<witchery:distilleryidle>, [[<witchery:ingredient:34>, <ore:plateSteel>, <witchery:ingredient:36>], [<ore:plateSteel>, <Thaumcraft:blockMetalDevice:1>, <ore:plateSteel>], [<ore:plateGold>, <witchery:ingredient:10>, <ore:plateGold>]]);
 
 # -- Earmuffs
 recipes.remove(<witchery:earmuffs>);
@@ -65,27 +65,27 @@ recipes.addShaped(<witchery:earmuffs>, [[<witchery:ingredient:72>, <witchery:ing
 
 # -- Kettle
 recipes.remove(<witchery:kettle>);
-recipes.addShaped(<witchery:kettle>, [[<Railcraft:cube:8>, <ore:foilStainlessSteel>, <Railcraft:cube:8>], [<ore:foilStainlessSteel>, <witchery:ingredient:10>, <ore:foilStainlessSteel>], [null, <minecraft:cauldron>]]);
+recipes.addShaped(<witchery:kettle>, [[<Railcraft:cube:8>, <ore:plateSteel>, <Railcraft:cube:8>], [<ore:plateSteel>, <witchery:ingredient:10>, <ore:plateSteel>], [null, <minecraft:cauldron>, null]]);
 
 # -- Silver wat
 recipes.remove(<witchery:silvervat>);
-recipes.addShaped(<witchery:silvervat>, [[<ore:foilSilver>, <minecraft:cauldron>, <ore:foilSilver>], [<ore:plateSilver>, <minecraft:furnace>, <ore:plateSilver>], [<ore:plateStainlessSteel>, <ore:plateStainlessSteel>, <ore:plateStainlessSteel>]]);
+recipes.addShaped(<witchery:silvervat>, [[<ore:plateSilver>, <minecraft:cauldron>, <ore:plateSilver>], [<ore:plateSilver>, <minecraft:furnace>, <ore:plateSilver>], [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
 
 # -- Fume Funnel
 recipes.remove(<witchery:fumefunnel>);
-recipes.addShaped(<witchery:fumefunnel>, [[<ore:gemFirestone>, <ore:bucketLava>, <ore:gemFirestone>], [<ore:plateStainlessSteel>, <ore:glowstone>, <ore:plateStainlessSteel>], [<ore:blockCoal>, <ore:barsIron>, <ore:blockCoal>]]);
+recipes.addShaped(<witchery:fumefunnel>, [[<ore:gemFirestone>, <ore:bucketLava>, <ore:gemFirestone>], [<ore:plateSteel>, <ore:glowstone>, <ore:plateSteel>], [<ore:blockCoal>, <ore:barsIron>, <ore:blockCoal>]]);
 
 # -- Taglock Kits
 recipes.remove(<witchery:taglockkit>);
-recipes.addShaped(<witchery:taglockkit>, [[<ore:bottleEmpty>, <witchery:ingredient:7>], [<Thaumcraft:ItemResource:14>, <ore:itemSkull>]]);
+recipes.addShaped(<witchery:taglockkit>, [[<ore:bottleEmpty>, <witchery:ingredient:7>], [<Thaumcraft:ItemResource:14>, <minecraft:skull:*>]]);
 
 # -- Poppet Shelf Compass
 recipes.remove(<witchery:shelfcompass>);
-recipes.addShaped(<witchery:shelfcompass>, [[<ore:plateGold>, <ore:craftingIndustrialDiamond>, <ore:plateGold>], [<ore:craftingIndustrialDiamond>, <minecraft:clock>, <ore:craftingIndustrialDiamond>], [<ore:plateGold>, <witchery:ingredient:130>, <ore:plateGold>]]);
+recipes.addShaped(<witchery:shelfcompass>, [[<ore:plateGold>, <ore:craftingIndustrialDiamond>, <ore:plateGold>], [<ore:gemDiamond>, <minecraft:clock>, <ore:craftingIndustrialDiamond>], [<ore:plateGold>, <witchery:ingredient:130>, <ore:plateGold>]]);
 
 # -- Witches Oven
 recipes.remove(<witchery:witchesovenidle>);
-recipes.addShaped(<witchery:witchesovenidle>, [[null, <ore:barsIron>], [<ore:plateStainlessSteel>, <Thaumcraft:blockStoneDevice>, <ore:plateStainlessSteel>], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCrystal:1>, <Thaumcraft:blockCosmeticSolid:6>]]);
+recipes.addShaped(<witchery:witchesovenidle>, [[null, <ore:barsIron>], [<ore:plateSteel>, <Thaumcraft:blockStoneDevice>, <ore:plateSteel>], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCrystal:1>, <Thaumcraft:blockCosmeticSolid:6>]]);
 
 # -- Wolf's Altar
 recipes.remove(<witchery:wolfaltar>);

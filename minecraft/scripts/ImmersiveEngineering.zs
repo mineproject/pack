@@ -35,8 +35,8 @@ recipes.addShaped(<ImmersiveEngineering:metalMultiblock>, [[<ImmersiveEngineerin
 recipes.remove(<ImmersiveEngineering:coil:2>);
 recipes.remove(<ImmersiveEngineering:coil:1>);
 recipes.remove(<ImmersiveEngineering:coil>);
-recipes.addShaped(<ImmersiveEngineering:coil:2> * 2, [[null, <ore:plateSteel>, null], [<ore:plateSteel>, <ImmersiveEngineering:material>, <ore:plateSteel>], [null, <ore:plateSteel>, null]]);
-recipes.addShaped(<ImmersiveEngineering:coil:1> * 2, [[null, <ore:plateElectrum>, null], [<ore:plateElectrum>, <ImmersiveEngineering:material>, <ore:plateElectrum>], [null, <ore:plateElectrum>, null]]);
+recipes.addShaped(<ImmersiveEngineering:coil:2> * 2, [[null, <ore:plateElectrum>, null], [<ore:plateElectrum>, <ImmersiveEngineering:material>, <ore:plateElectrum>], [null, <ore:plateElectrum>, null]]);
+recipes.addShaped(<ImmersiveEngineering:coil:1> * 2, [[null, <ore:plateSteel>, null], [<ore:plateSteel>, <ImmersiveEngineering:material>, <ore:plateSteel>], [null, <ore:plateSteel>, null]]);
 recipes.addShaped(<ImmersiveEngineering:coil> * 2, [[null, <ore:plateCopper>, null], [<ore:plateCopper>, <ore:treatedStick>, <ore:plateCopper>], [null, <ore:plateCopper>, null]]);
 
 #powerGen
@@ -59,7 +59,7 @@ recipes.addShaped(<ImmersiveEngineering:drillhead>, [[<ore:plateSteel>, <ore:pla
 
 #light engineering block
 recipes.remove(<ImmersiveEngineering:metalDecoration:7>);
-recipes.addShaped(<ImmersiveEngineering:metalDecoration:7>, [[<ore:plateIron>, <ImmersiveEngineering:material:11>, <ore:plateIron>], [<ore:plateCopper>, <Railcraft:cube:4>, <ore:plateCopper>], [<ore:plateIron>, <ImmersiveEngineering:material:11>, <ore:plateIron>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:7> * 2, [[<ore:plateIron>, <ImmersiveEngineering:material:11>, <ore:plateIron>], [<ore:plateCopper>, <ore:dustObsidian>, <ore:plateCopper>], [<ore:plateIron>, <ImmersiveEngineering:material:11>, <ore:plateIron>]]);
 
 #blueprints
 recipes.addShaped(<ImmersiveEngineering:blueprint:2>, [[<ImmersiveEngineering:metal:20>, null, <ImmersiveEngineering:metal:20>], [<ImmersiveEngineering:metal:20>, <ImmersiveEngineering:blueprint>, <ImmersiveEngineering:metal:20>], [<ImmersiveEngineering:metal:20>, <minecraft:emerald_block>, <ImmersiveEngineering:metal:20>]]);

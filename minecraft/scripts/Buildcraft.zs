@@ -7,15 +7,15 @@ print("Initializing 'Buildcraft.zs'...");
 recipes.remove(<BuildCraft|Core:engineBlock:2>);
 recipes.remove(<BuildCraft|Core:engineBlock:1>);
 recipes.remove(<BuildCraft|Core:engineBlock>);
-recipes.addShaped(<BuildCraft|Core:engineBlock>, [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [null, <Forestry:chipsets>, null], [<ore:gearCopper>, <minecraft:sticky_piston>, <ore:gearCopper>]]);
+recipes.addShaped(<BuildCraft|Core:engineBlock>, [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [null, <Forestry:chipsets>, null], [<ore:gearWood>, <minecraft:sticky_piston>, <ore:gearWood>]]);
 recipes.addShaped(<BuildCraft|Core:engineBlock:1>, [[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], [null, <Forestry:chipsets:2>, null], [<ore:thermalexpansion:machineSilver>, <ore:pistonLV>, <ore:thermalexpansion:machineSilver>]]);
 recipes.addShaped(<BuildCraft|Core:engineBlock:2>, [[<ore:plateGold>, <ore:plateGold>, <ore:plateGold>], [null, <Forestry:chipsets:3>, null], [<ore:thermalexpansion:machineNickel>, <ore:pistonLV>, <ore:thermalexpansion:machineNickel>]]);
 
 #laser and assembling table
 recipes.remove(<BuildCraft|Silicon:laserBlock>);
 recipes.remove(<BuildCraft|Silicon:laserTableBlock>);
-recipes.addShaped(<BuildCraft|Silicon:laserBlock>, [[<ore:plateObsidian>, <ore:dustRedstone>, <ore:dustRedstone>], [<ore:plateObsidian>, <ore:emitterMV>, <ore:lensRuby>], [<ore:plateObsidian>, <ore:dustRedstone>, <ore:dustRedstone>]]);
-recipes.addShaped(<BuildCraft|Silicon:laserTableBlock>, [[<ore:plateObsidian>, <ore:sensorMV>, <ore:plateObsidian>], [<ore:plateObsidian>, <ore:gearDiamond>, <ore:plateObsidian>], [<ore:plateObsidian>, <ore:blockRedstone>, <ore:plateObsidian>]]);
+recipes.addShaped(<BuildCraft|Silicon:laserBlock>, [[<ore:plateObsidian>, <ore:dustRedstone>, <ore:dustRedstone>], [<ore:plateObsidian>, <ore:emitterLV>, <ore:lensRuby>], [<ore:plateObsidian>, <ore:dustRedstone>, <ore:dustRedstone>]]);
+recipes.addShaped(<BuildCraft|Silicon:laserTableBlock>, [[<ore:plateObsidian>, <ore:sensorLV>, <ore:plateObsidian>], [<ore:plateObsidian>, <ore:gearDiamond>, <ore:plateObsidian>], [<ore:plateObsidian>, <ore:blockRedstone>, <ore:plateObsidian>]]);
 
 
 #diamond gear
