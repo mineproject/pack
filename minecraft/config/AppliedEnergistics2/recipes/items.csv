@@ -4663,7 +4663,7 @@ extracells:vibrantchamberfluid, Fluid Vibration Chamber
 ExtraUtilities:chestMini, Mini-Chest
 ExtraUtilities:chestFull, Slightly Larger Chest
 ExtraUtilities:enderCollector, Ender Collector
-ExtraUtilities:endConstructor:0, QED (Quantum Entity Device)
+ExtraUtilities:endConstructor:0, QED (Quark/Electron Director)
 ExtraUtilities:endConstructor:2, Ender-Flux Crystal
 ExtraUtilities:endMarker, Ender-Marker
 ExtraUtilities:curtains, Blackout Curtains
@@ -8783,10 +8783,6 @@ gregtech:gt.blockreinforced:13, gt.blockreinforced.13.name
 gregtech:gt.blockreinforced:14, gt.blockreinforced.14.name
 gregtech:gt.blockreinforced:15, gt.blockreinforced.15.name
 GraviSuite:BlockRelocatorPortal, Unnamed Block, report to mod author.
-HatStand:hats.addon.hatstands.block, Hat Stand
-headcrumbs:betterSkull, tile.headcrumbs.betterSkull.name
-headcrumbs:player, tile.headcrumbs.player.name
-headcrumbs:empty, tile.headcrumbs.empty.name
 ImmersiveEngineering:ore:0, Copper Ore
 ImmersiveEngineering:ore:1, Bauxite Ore
 ImmersiveEngineering:ore:2, Lead Ore
@@ -8923,7 +8919,6 @@ IronChest:BlockIronChest:4, Silver Chest
 IronChest:BlockIronChest:5, Crystal Chest
 IronChest:BlockIronChest:6, Obsidian Chest
 IronChest:BlockIronChest:7, DirtChest 9000!
-JABBA:barrel, Better Barrel
 RedstoneArsenal:Storage:0, Fluxed Electrum Block
 RedstoneArsenal:Storage:1, Flux Crystal Block
 MineFactoryReloaded:conveyor:16, Conveyor Belt
@@ -21042,38 +21037,6 @@ IronChest:diamondCrystalUpgrade, Diamond to Crystal Chest Upgrade
 IronChest:woodIronUpgrade, Wood to Iron Chest Upgrade
 IronChest:woodCopperUpgrade, Wood to Copper Chest Upgrade
 IronChest:diamondObsidianUpgrade, Diamond to Obsidian Chest Upgrade
-JABBA:upgradeStructural:0, item.upgrade.structural.1.name
-JABBA:upgradeStructural:1, item.upgrade.structural.2.name
-JABBA:upgradeStructural:2, item.upgrade.structural.3.name
-JABBA:upgradeStructural:3, item.upgrade.structural.4.name
-JABBA:upgradeStructural:4, item.upgrade.structural.5.name
-JABBA:upgradeStructural:5, item.upgrade.structural.6.name
-JABBA:upgradeStructural:6, item.upgrade.structural.7.name
-JABBA:upgradeCore:0, Storage upgrade
-JABBA:upgradeCore:1, BSpace upgrade
-JABBA:upgradeCore:2, Redstone upgrade
-JABBA:upgradeCore:3, Hopper upgrade
-JABBA:upgradeCore:4, Storage upgrade x3
-JABBA:upgradeCore:5, Storage upgrade x9
-JABBA:upgradeCore:6, Storage upgrade x27
-JABBA:upgradeCore:7, Void upgrade
-JABBA:upgradeCore:8, Storage upgrade x81
-JABBA:upgradeCore:9, Storage upgrade x243
-JABBA:upgradeCore:10, Creative upgrade
-JABBA:upgradeSide:0, Sticker
-JABBA:upgradeSide:1, Hopper facade
-JABBA:upgradeSide:2, Redstone facade
-JABBA:mover, Dolly
-JABBA:moverDiamond, Diamond dolly
-JABBA:hammer:0, Barrel Hammer
-JABBA:hammer:1, Barrel Hammer(Resonating)
-JABBA:hammer:2, Barrel Hammer(Redstone)
-JABBA:hammer:3, Barrel Hammer(Hopping)
-JABBA:hammer:4, Barrel Hammer(Storage)
-JABBA:hammer:5, Barrel Hammer(Structural)
-JABBA:hammer:6, Barrel Hammer(Void)
-JABBA:hammer:7, Barrel Hammer(Creative)
-JABBA:tuningFork, B-Space tuning fork
 RedstoneArsenal:armor.helmetFlux, Flux-Infused Helm
 RedstoneArsenal:armor.plateFlux, Flux-Infused Chestplate
 RedstoneArsenal:armor.legsFlux, Flux-Infused Leggings
@@ -25562,7 +25525,6 @@ ThermalDynamics:cover:0, gt.blockreinforced.12.name Cover
 ThermalDynamics:cover:0, gt.blockreinforced.13.name Cover
 ThermalDynamics:cover:0, gt.blockreinforced.14.name Cover
 ThermalDynamics:cover:0, gt.blockreinforced.15.name Cover
-ThermalDynamics:cover:0, tile.headcrumbs.empty.name Cover
 ThermalDynamics:cover:0, Copper Ore Cover
 ThermalDynamics:cover:0, Bauxite Ore Cover
 ThermalDynamics:cover:0, Lead Ore Cover
