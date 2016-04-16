@@ -22,16 +22,11 @@ recipes.addShaped(<BuildCraft|Silicon:laserTableBlock>, [[<ore:plateObsidian>, <
 recipes.remove(<BuildCraft|Core:diamondGearItem>);
 
 #chipsets
-mods.buildcraft.AssemblyTable.removeRecipe(<BuildCraft|Silicon:redstoneChipset>);
-mods.buildcraft.AssemblyTable.removeRecipe(<BuildCraft|Silicon:redstoneChipset:1>);
 mods.buildcraft.AssemblyTable.removeRecipe(<BuildCraft|Silicon:redstoneChipset:2>);
 mods.buildcraft.AssemblyTable.removeRecipe(<BuildCraft|Silicon:redstoneChipset:3>);
 mods.buildcraft.AssemblyTable.removeRecipe(<BuildCraft|Silicon:redstoneChipset:7>);
-recipes.addShaped(<BuildCraft|Silicon:redstoneChipset>, [[<ore:stickIron>, <ore:stickIron>, <ore:stickIron>], [<ore:dustRedstone>, <ore:circuitPrimitive>, <ore:dustRedstone>], [<ore:stickIron>, <ore:stickIron>, <ore:stickIron>]]);
-recipes.addShaped(<BuildCraft|Silicon:redstoneChipset:1>, [[<ore:stickSteel>, <ore:stickSteel>, <ore:stickSteel>], [<ore:dustRedstone>, <ore:circuitBasic>, <ore:dustRedstone>], [<ore:stickSteel>, <ore:stickSteel>, <ore:stickSteel>]]);
-mods.buildcraft.AssemblyTable.addRecipe(<BuildCraft|Silicon:redstoneChipset:2>, 400000, [<gregtech:gt.metaitem.01:32702>, <minecraft:redstone> * 2, <gregtech:gt.metaitem.01:23019> * 6]);
-mods.buildcraft.AssemblyTable.addRecipe(<BuildCraft|Silicon:redstoneChipset:3>, 800000, [<gregtech:gt.metaitem.01:32703>, <minecraft:redstone> * 2, <gregtech:gt.metaitem.01:23306> * 6]);
-mods.buildcraft.AssemblyTable.addRecipe(<BuildCraft|Silicon:redstoneChipset:7>, 1200000, [<gregtech:gt.metaitem.01:32705>, <minecraft:redstone> * 2, <gregtech:gt.metaitem.01:23028> * 6]);
+recipes.addShaped(<BuildCraft|Silicon:redstoneChipset>, [[<ore:screwIron>, <ore:screwIron>, <ore:screwIron>], [<ore:dustRedstone>, <ore:plateRedAlloy>, <ore:dustRedstone>], [<ore:screwIron>, <ore:screwIron>, <ore:screwIron>]]);
+recipes.addShaped(<BuildCraft|Silicon:redstoneChipset:1>, [[<ore:screwSteel>, <ore:screwSteel>, <ore:screwSteel>], [<ore:dustRedstone>, <ore:circuitPrimitive>, <ore:dustRedstone>], [<ore:screwSteel>, <ore:screwSteel>, <ore:screwSteel>]]);
 
 #machines
 recipes.remove(<BuildCraft|Factory:miningWellBlock>);
