@@ -233,7 +233,4 @@ recipes.addShaped(<ThermalExpansion:Machine:10>.withTag({Level:3}), [[<ore:emitt
 recipes.remove(<ThermalExpansion:Device:2>);
 recipes.addShaped(<ThermalExpansion:Device:2>, [[null, <ThermalExpansion:Strongbox:1>, null], [<ore:conveyorLV>, <ore:frameLV>, <ore:armLV>], [<ore:coilRR>, <ore:chipsetIron>, <ore:coilRR>]]);
 
-#Silicon fix
-mods.thermalexpansion.Pulverizer.removeRecipe(<gregtech:gt.metaitem.01:17020>);
-
 print("Initialized 'ThermalExpansion.zs'");
