@@ -16,7 +16,7 @@ mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIn
 mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11324>], <liquid:molten.duranium> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
 mods.gregtech.FusionReactor.addRecipe(<liquid:molten.draconium> * 144, <liquid:molten.duranium> * 72, <liquid:molten.duranium> * 72, 1200, 100000, 500000000);
 mods.tconstruct.Casting.addTableRecipe(<TabulaRasa:RasaItem0>, <liquid:molten.draconium> * 144, <TConstruct:metalPattern>, false, 1200);
-mods.gregtech.VacuumFreezer.addRecipe(<TabulaRasa:RasaItem0>, <DraconicEvolution:draconiumIngot>, 1200);
+mods.gregtech.VacuumFreezer.addRecipe(<DraconicEvolution:draconiumIngot>, <TabulaRasa:RasaItem0>, 1200);
 <DraconicEvolution:draconiumIngot>.addTooltip(format.green("Draconium proccessing: "));
 <DraconicEvolution:draconiumIngot>.addTooltip(format.green("Draconium dust->molten duranium->molten draconium->hot draconium ingot in TConstruct casting table with ingot cast->draconium ingot"));
 <DraconicEvolution:draconiumIngot>.addTooltip(format.red("DON NOT USE FLUID SOLDIFIER TO MAKE DRACONIUM INGOT, YOU WILL NEED LOTS OF days!!!"));
