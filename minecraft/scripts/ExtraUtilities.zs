@@ -1,6 +1,8 @@
 #Name: ExtraUtilities.zs
 #Author: Feed the Beast
 
+import minetweaker.item.IItemStack;
+
 print("Initializing 'ExtraUtilities.zs'...");
 
 #quarry
@@ -114,5 +116,47 @@ recipes.addShaped(<ExtraUtilities:endConstructor>, [[<ore:blockEnderObsidian>, <
 mods.extraUtils.QED.removeRecipe(<ExtraUtilities:magnumTorch>);
 mods.extraUtils.QED.addShapedRecipe(<ExtraUtilities:magnumTorch>, [[<minecraft:potion:8229>, <ExtraUtilities:chandelier>, <minecraft:potion:8225>], [<ExtraUtilities:chandelier>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:chandelier>], [<ExtraUtilities:chandelier>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:chandelier>]]);
 mods.extraUtils.QED.addShapedRecipe(<ExtraUtilities:magnumTorch>, [[<minecraft:potion:8225>, <ExtraUtilities:chandelier>, <minecraft:potion:8229>], [<ExtraUtilities:chandelier>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:chandelier>], [<ExtraUtilities:chandelier>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:chandelier>]]);
+
+var Illuminators = [
+	<ProjRed|Illumination:projectred.illumination.lamp:16>,
+	<ProjRed|Illumination:projectred.illumination.lamp:17>,
+	<ProjRed|Illumination:projectred.illumination.lamp:18>,
+	<ProjRed|Illumination:projectred.illumination.lamp:19>,
+	<ProjRed|Illumination:projectred.illumination.lamp:20>,
+	<ProjRed|Illumination:projectred.illumination.lamp:21>,
+	<ProjRed|Illumination:projectred.illumination.lamp:22>,
+	<ProjRed|Illumination:projectred.illumination.lamp:23>,
+	<ProjRed|Illumination:projectred.illumination.lamp:24>,
+	<ProjRed|Illumination:projectred.illumination.lamp:25>,
+	<ProjRed|Illumination:projectred.illumination.lamp:26>,
+	<ProjRed|Illumination:projectred.illumination.lamp:27>,
+	<ProjRed|Illumination:projectred.illumination.lamp:28>,
+	<ProjRed|Illumination:projectred.illumination.lamp:29>,
+	<ProjRed|Illumination:projectred.illumination.lamp:30>,
+	<ProjRed|Illumination:projectred.illumination.lamp:31>
+] as IItemStack[];
+var Greenscreens = [
+	<ExtraUtilities:greenscreen:0>,
+	<ExtraUtilities:greenscreen:1>,
+	<ExtraUtilities:greenscreen:2>,
+	<ExtraUtilities:greenscreen:3>,
+	<ExtraUtilities:greenscreen:4>,
+	<ExtraUtilities:greenscreen:5>,
+	<ExtraUtilities:greenscreen:6>,
+	<ExtraUtilities:greenscreen:7>,
+	<ExtraUtilities:greenscreen:8>,
+	<ExtraUtilities:greenscreen:9>,
+	<ExtraUtilities:greenscreen:10>,
+	<ExtraUtilities:greenscreen:11>,
+	<ExtraUtilities:greenscreen:12>,
+	<ExtraUtilities:greenscreen:13>,
+	<ExtraUtilities:greenscreen:14>,
+	<ExtraUtilities:greenscreen:15>
+] as IItemStack[];
+
+for i, light in Illuminators {
+	recipes.removeShaped(Greenscreens[i]);
+	recipes.addShapeless(Greenscreens[i], [Illuminators[i]]);
+}
 
 print("Initialized 'ExtraUtilities.zs'");

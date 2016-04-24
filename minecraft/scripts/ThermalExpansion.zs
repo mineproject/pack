@@ -1,4 +1,8 @@
+import mods.MTUtils;
+import minetweaker.oredict.IOreDictEntry;
+
 print("Initializing 'ThermalExpansion.zs'...");
+
 
 #----------------------------------------------------#
 #ore dictionary
@@ -33,7 +37,113 @@ val chipIron = <ore:chipsetIron>;
 val chipDiamond = <ore:chipsetDiamond>;
 val chipRed = <ore:chipsetRed>;
 
-#dyanmos
+#Fuck the thermal
+mods.thermalexpansion.Smelter.removeRecipe(<ore:dustPyrotheum>, <*>);
+
+var HateThermal = [
+	<ore:ingotAnyIron>,
+	<ore:ingotGold>,
+	<ore:ingotCopper>,
+	<ore:ingotZinc>,
+	<ore:ingotTin>,
+	<ore:ingotUranium>,
+	<ore:ingotLead>,
+	<ore:ingotHeeEndium>,
+	<ore:ingotAluminum>,
+	<ore:ingotSilicon>,
+	<ore:ingotDesh>,
+	<ore:ingotSilver>,
+	<ore:ingotNickel>,
+	<ore:ingotPlatinum>,
+	<ore:ingotMithril>,
+	<ore:ingotLithium>,
+	<ore:ingotBeryllium>,
+	<ore:ingotScandium>,
+	<ore:ingotTitanium>,
+	<ore:ingotVanadium>,
+	<ore:ingotChrome>,
+	<ore:ingotManganese>,
+	<ore:ingotCobalt>,
+	<ore:ingotGallium>,
+	<ore:ingotArsenic>,
+	<ore:ingotRubidium>,
+	<ore:ingotYttrium>,
+	<ore:ingotNiobium>,
+	<ore:ingotMolybdenum>,
+	<ore:ingotPalladium>,
+	<ore:ingotIndium>,
+	<ore:ingotAntimony>,
+	<ore:ingotTellurium>,
+	<ore:ingotCaesium>,
+	<ore:ingotLanthanum>,
+	<ore:ingotCerium>,
+	<ore:ingotPraseodymium>,
+	<ore:ingotNeodymium>,
+	<ore:ingotPromethium>,
+	<ore:ingotSamarium>,
+	<ore:ingotEuropium>,
+	<ore:ingotGadolinium>,
+	<ore:ingotTerbium>,
+	<ore:ingotDysprosium>,
+	<ore:ingotHolmium>,
+	<ore:ingotErbium>,
+	<ore:ingotThulium>,
+	<ore:ingotYtterbium>,
+	<ore:ingotLutetium>,
+	<ore:ingotTantalum>,
+	<ore:ingotTungsten>,
+	<ore:ingotOsmium>,
+	<ore:ingotIridium>,
+	<ore:ingotBismuth>,
+	<ore:ingotThorium>,
+	<ore:ingotUranium235>,
+	<ore:ingotPlutonium>,
+	<ore:ingotPlutonium241>,
+	<ore:ingotAmericium>,
+	<ore:ingotNeutronium>,
+	<ore:ingotElectrum>,
+	<ore:ingotAdamantium>,
+	<ore:ingotInfusedGold>,
+	<ore:ingotNaquadah>,
+	<ore:ingotNaquadahEnriched>,
+	<ore:ingotNaquadria>,
+	<ore:ingotMidasium>,
+	<ore:ingotAstralSilver>,
+	<ore:ingotShadowIron>,
+	<ore:ingotMeteoricIron>,
+	<ore:ingotDarkIron>,
+	<ore:ingotDarkSteel>,
+	<ore:ingotVulcanite>,
+	<ore:ingotInfuscolium>,
+	<ore:ingotForce>,
+	<ore:ingotEndium>,
+	<ore:ingotDeepIron>,
+	<ore:ingotGraphite>,
+	<ore:ingotVyroxeres>,
+	<ore:ingotCeruclase>,
+	<ore:ingotInolashite>,
+	<ore:ingotSanguinite>,
+	<ore:ingotTartarite>,
+	<ore:ingotHepatizon>,
+	<ore:ingotAngmallen>,
+	<ore:ingotEximite>,
+	<ore:ingotPrometheum>,
+	<ore:ingotOureclase>,
+	<ore:ingotCarmot>,
+	<ore:ingotHaderoth>,
+	<ore:ingotCelenegil>,
+	<ore:ingotAtlarus>,
+	<ore:ingotOrichalcum>,
+	<ore:ingotDraconium>,
+	<ore:ingotArdite>,
+	<ore:ingotMagnesium>
+] as IOreDictEntry[];
+
+for ingot in HateThermal {
+	recipes.removeShapeless(ingot, [<*>, <ore:dustPyrotheum>], false);
+}
+
+#dynamos
 recipes.remove(<ThermalExpansion:Dynamo:4>);
 recipes.remove(<ThermalExpansion:Dynamo:3>);
 recipes.remove(<ThermalExpansion:Dynamo:2>);
@@ -131,7 +241,6 @@ mods.avaritia.ExtremeCrafting.addShaped(<ThermalExpansion:capacitor>, [[<Thermal
 mods.avaritia.ExtremeCrafting.addShaped(<ThermalExpansion:Tank>, [[<ThermalExpansion:Cell>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ThermalExpansion:Cell>], [<ExtraUtilities:drum:1>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <ExtraUtilities:drum:1>], [<ExtraUtilities:drum:1>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <ExtraUtilities:drum:1>], [<ExtraUtilities:drum:1>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <ExtraUtilities:drum:1>], [<ExtraUtilities:drum:1>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.enderTankController>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <ExtraUtilities:drum:1>], [<ExtraUtilities:drum:1>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <ExtraUtilities:drum:1>], [<ExtraUtilities:drum:1>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <ExtraUtilities:drum:1>], [<ExtraUtilities:drum:1>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <EnderTech:endertech.multiblockGlass>, <ExtraUtilities:drum:1>], [<ThermalExpansion:Cell>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ExtraUtilities:drum:1>, <ThermalExpansion:Cell>]]);
 
 #enderium smelting
-mods.thermalexpansion.Smelter.removeRecipe(<ore:dustPyrotheum>, <ore:dustEnderium>);
 mods.tconstruct.Smeltery.removeMelting(<ore:dustEnderium>);
 
 #machine frames

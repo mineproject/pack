@@ -3,11 +3,6 @@
 
 print("Initializing 'IndustrialCraft2.zs'...");
 
-#Reactor reflector
-#According to wikipedia, graphite, beryllium, steel, tungsten carbide are neutron reflectors
-recipes.remove(<IC2:reactorReflector>);
-recipes.addShaped(<IC2:reactorReflector>, [[<ore:plateGraphite>, <ore:plateGraphite>, <ore:plateGraphite>], [<ore:plateGraphite>, <ore:plateDenseSteel>, <ore:plateGraphite>], [<ore:plateGraphite>, <ore:plateGraphite>, <ore:plateGraphite>]]);
-
 #craftable iridium ore
 mods.buildcraft.AssemblyTable.addRecipe(<IC2:itemOreIridium>, 80000000, [<IC2:itemRTGPellet>, <IC2:itemMOX>]);
 
