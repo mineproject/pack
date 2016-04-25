@@ -13,13 +13,16 @@ mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <ore:oreDraconium>);
 mods.extraUtils.QED.removeRecipe(<ore:ingotDraconium>);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIngot>);
-mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11324>], <liquid:molten.duranium> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
-mods.gregtech.FusionReactor.addRecipe(<liquid:molten.draconium> * 144, <liquid:molten.duranium> * 72, <liquid:molten.duranium> * 72, 1200, 100000, 500000000);
+mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:1324>], <liquid:molten.duranium> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
+mods.gregtech.FusionReactor.addRecipe(<liquid:molten.draconium> * 144, <liquid:molten.duranium> * 144, <liquid:molten.neutronium> * 36, 1200, 100000, 500000000);
 mods.tconstruct.Casting.addTableRecipe(<TabulaRasa:RasaItem0>, <liquid:molten.draconium> * 144, <TConstruct:metalPattern>, false, 1200);
 mods.gregtech.VacuumFreezer.addRecipe(<DraconicEvolution:draconiumIngot>, <TabulaRasa:RasaItem0>, 1200);
 <DraconicEvolution:draconiumIngot>.addTooltip(format.green("Draconium proccessing: "));
-<DraconicEvolution:draconiumIngot>.addTooltip(format.green("Draconium dust->molten duranium->molten draconium->hot draconium ingot in TConstruct casting table with ingot cast->draconium ingot"));
-<DraconicEvolution:draconiumIngot>.addTooltip(format.red("DON NOT USE FLUID SOLDIFIER TO MAKE DRACONIUM INGOT, YOU WILL NEED LOTS OF days!!!"));
+<DraconicEvolution:draconiumIngot>.addTooltip(format.green("Draconium dust->molten duranium->molten draconium->"));
+<DraconicEvolution:draconiumIngot>.addTooltip(format.green("->hot draconium ingot in TConstruct"));
+<DraconicEvolution:draconiumIngot>.addTooltip(format.green("casting table with ingot cast->draconium ingot"));
+<DraconicEvolution:draconiumIngot>.addTooltip(format.red("DO NOT USE FLUID SOLDIFIER TO MAKE DRACONIUM INGOT,"));
+<DraconicEvolution:draconiumIngot>.addTooltip(format.red("YOU WILL NEED 58 days per ingot!!!"));
 
 recipes.remove(<ExtraUtilities:block_bedrockium>);
 mods.tconstruct.Casting.removeBasinRecipe(<ExtraUtilities:block_bedrockium>);
