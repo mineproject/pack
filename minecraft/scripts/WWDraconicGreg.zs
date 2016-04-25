@@ -13,7 +13,7 @@ mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <ore:oreDraconium>);
 mods.extraUtils.QED.removeRecipe(<ore:ingotDraconium>);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIngot>);
-mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:1324>], <liquid:molten.duranium> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
+mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:1324>] * 2, <liquid:molten.duranium> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
 mods.gregtech.FusionReactor.addRecipe(<liquid:molten.draconium> * 144, <liquid:molten.duranium> * 144, <liquid:molten.neutronium> * 36, 1200, 100000, 500000000);
 mods.tconstruct.Casting.addTableRecipe(<TabulaRasa:RasaItem0>, <liquid:molten.draconium> * 144, <TConstruct:metalPattern>, false, 1200);
 mods.gregtech.VacuumFreezer.addRecipe(<DraconicEvolution:draconiumIngot>, <TabulaRasa:RasaItem0>, 1200);
