@@ -30,7 +30,6 @@ mods.gregtech.ImplosionCompressor.addRecipe([<ExtraUtilities:block_bedrockium>],
 
 #Reactor reflector
 #According to wikipedia, graphite, beryllium, steel, tungsten carbide are neutron reflectors
-recipes.remove(<IC2:reactorReflector>);
 recipes.addShaped(<IC2:reactorReflector>, [[<ore:plateCarbon>, <ore:plateCarbon>, <ore:plateCarbon>], [<ore:plateCarbon>, <ore:plateDenseSteel>, <ore:plateCarbon>], [<ore:plateCarbon>, <ore:plateCarbon>, <ore:plateCarbon>]]);
 
 recipes.remove(<GalacticraftCore:tile.rocketWorkbench>);
@@ -46,3 +45,43 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:tile.rocketWorkbench>,
 		[<ExtraUtilities:block_bedrockium>, <gregtech:gt.neutronreflector>, <ExtraUtilities:block_bedrockium>, <IC2:reactorVentGold:1>, <IC2:reactorVentGold:1>, <IC2:reactorVentGold:1>, <ExtraUtilities:block_bedrockium>, <gregtech:gt.neutronreflector>, <ExtraUtilities:block_bedrockium>]
 	]
 );
+
+#Chipset
+mods.gregtech.FormingPress.addRecipe(<BuildCraft|Silicon:redstoneChipset:7>, <ore:plateEmerald>, <ore:chipsetRed>, 200, 480);
+#Ender Eye
+recipes.removeShapeless(<minecraft:ender_eye>);
+mods.gregtech.Mixer.addRecipe(<gregtech:gt.metaitem.01:2533>, null, [<gregtech:gt.metaitem.01:2330> * 2, <gregtech:gt.metaitem.01:2321> * 4, <witchery:ingredient:66> * 2, <witchery:ingredient:130>], <liquid:water> * 1000, 20, 480);
+mods.gregtech.Autoclave.addRecipe(<minecraft:ender_eye>, <gregtech:gt.metaitem.01:2533>, <liquid:water> * 200, 10000, 20, 480);
+
+recipes.removeShaped(<GalacticraftCore:tile.landingPad>);
+recipes.addShaped(<GalacticraftCore:tile.landingPad> * 9, [
+	[<ore:plateDenseTungsten>,<ore:plateDenseTungsten>,<ore:plateDenseTungsten>],
+	[<IC2:blockAlloy>,<IC2:blockAlloy>,<IC2:blockAlloy>],
+	[<ore:concrete>,<ore:concrete>,<ore:concrete>]
+]);
+
+#Gravi Suit
+recipes.removeShaped(<GraviSuite:graviChestPlate>);
+recipes.addShaped(<GraviSuite:graviChestPlate>, [
+	[<ore:itemSuperconductor>,<IC2:itemArmorQuantumChestplate>,<ore:itemSuperconductor>],
+	[<GraviSuite:itemSimpleItem:3>,<gregtech:gt.blockmachines:28>,<GraviSuite:itemSimpleItem:3>],
+	[<ore:itemSuperconductor>,<GraviSuite:ultimateLappack>,<ore:itemSuperconductor>]
+]);
+recipes.removeShaped(<GraviSuite:itemSimpleItem:1>);
+recipes.addShaped(<GraviSuite:itemSimpleItem:1>, [
+	[<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>],
+	[<ore:wireGt01Superconductor>,<ore:wireGt01Superconductor>,<ore:wireGt01Superconductor>],
+	[<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>]
+]);
+recipes.removeShaped(<GraviSuite:itemSimpleItem>);
+recipes.addShaped(<GraviSuite:itemSimpleItem>, [
+	[<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>],
+	[<ore:plateAlloyIridium>,<ore:plateAlloyIridium>,<ore:plateAlloyIridium>],
+	[<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>]
+]);
+recipes.removeShaped(<gregtech:gt.metaitem.01:32480>);
+recipes.addShaped(<gregtech:gt.metaitem.01:32480>, [
+	[<ore:plateIridium>,<ore:plateTungsten>,<ore:plateIridium>],
+	[<ore:plateTungsten>,<ore:plateTungstenSteel>,<ore:plateTungsten>],
+	[<ore:plateIridium>,<ore:plateTungsten>,<ore:plateIridium>]
+]);
