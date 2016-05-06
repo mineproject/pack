@@ -30,7 +30,7 @@ mods.gregtech.ImplosionCompressor.addRecipe([<ExtraUtilities:block_bedrockium>],
 
 #Reactor reflector
 #According to wikipedia, graphite, beryllium, steel, tungsten carbide are neutron reflectors
-recipes.addShaped(<IC2:reactorReflector>, [[<ore:plateCarbon>, <ore:plateCarbon>, <ore:plateCarbon>], [<ore:plateCarbon>, <ore:plateDenseSteel>, <ore:plateCarbon>], [<ore:plateCarbon>, <ore:plateCarbon>, <ore:plateCarbon>]]);
+recipes.addShaped(<IC2:reactorReflector:1>, [[<ore:plateCarbon>, <ore:plateCarbon>, <ore:plateCarbon>], [<ore:plateCarbon>, <ore:plateDenseSteel>, <ore:plateCarbon>], [<ore:plateCarbon>, <ore:plateCarbon>, <ore:plateCarbon>]]);
 
 recipes.remove(<GalacticraftCore:tile.rocketWorkbench>);
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:tile.rocketWorkbench>, [
@@ -52,6 +52,10 @@ mods.gregtech.FormingPress.addRecipe(<BuildCraft|Silicon:redstoneChipset:7>, <or
 recipes.removeShapeless(<minecraft:ender_eye>);
 mods.gregtech.Mixer.addRecipe(<gregtech:gt.metaitem.01:2533>, null, [<gregtech:gt.metaitem.01:2330> * 2, <gregtech:gt.metaitem.01:2321> * 4, <witchery:ingredient:66> * 2, <witchery:ingredient:130>], <liquid:water> * 1000, 20, 480);
 mods.gregtech.Autoclave.addRecipe(<minecraft:ender_eye>, <gregtech:gt.metaitem.01:2533>, <liquid:water> * 200, 10000, 20, 480);
+<minecraft:ender_eye>.addTooltip(format.green("Eye of Ender crafting: "));
+<minecraft:ender_eye>.addTooltip(format.green("Mix 2 thaumium dust, 4 enderium dust,"));
+<minecraft:ender_eye>.addTooltip(format.green("1 null catalist and 1 spectral dust in Mixer->"));
+<minecraft:ender_eye>.addTooltip(format.green("->Put eye of ender sut in autoclave"));
 
 recipes.removeShaped(<GalacticraftCore:tile.landingPad>);
 recipes.addShaped(<GalacticraftCore:tile.landingPad> * 9, [
