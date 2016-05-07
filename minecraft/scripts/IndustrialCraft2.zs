@@ -21,7 +21,7 @@ recipes.addShaped(<IC2:blockMachine2:11>, [
     [<IC2:itemPartAlloy>, <BuildCraft|Factory:miningWellBlock>, <IC2:itemPartAlloy>]
 ]);
 
-// re-batt
+// re-battery
 recipes.remove(<IC2:itemBatREDischarged>);
 recipes.addShaped(<IC2:itemBatREDischarged>, [
     [null, <IC2:itemCable:13>, null],
