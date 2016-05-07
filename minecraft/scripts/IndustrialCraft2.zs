@@ -21,7 +21,7 @@ recipes.addShaped(<IC2:blockMachine2:11>, [
     [<IC2:itemPartAlloy>, <BuildCraft|Factory:miningWellBlock>, <IC2:itemPartAlloy>]
 ]);
 
-// re-battery
+// re-batt
 recipes.remove(<IC2:itemBatREDischarged>);
 recipes.addShaped(<IC2:itemBatREDischarged>, [
     [null, <IC2:itemCable:13>, null],
@@ -36,6 +36,7 @@ recipes.addShaped(<IC2:itemBatREDischarged>, [
 val DynamoHatch_HV = <gregtech:gt.blockmachines:33>;
 val BatteryBuffer_HV_9x = <gregtech:gt.blockmachines:183>;
 val GearBox_Steel = <gregtech:gt.blockcasings2:3>;
+val GearBox_Titan = <gregtech:gt.blockcasings2:4>;
 val GT_GoldCable = <gregtech:gt.blockmachines:1426>;
 val AcidBattery_HV = <gregtech:gt.metaitem.01:32530>;
 val Shaft_RefinedIron = <IC2:itemRecipePart:12>;
@@ -77,7 +78,7 @@ KineticWindGenerator.addTooltip("");
 KineticWindGenerator.addTooltip(format.darkGray("Generates Kinetic Energy from wind power."));
 recipes.addShaped(KineticWindGenerator, [
     [<ore:plateStainlessSteel>, <ore:plateAlloyCarbon>, <ore:plateStainlessSteel>],
-    [<ore:conveyorEV>, GearBox_Steel, <ore:conveyorEV>],
+    [<ore:conveyorEV>, GearBox_Titan, <ore:conveyorEV>],
     [<ore:plateStainlessSteel>, <ore:plateAlloyCarbon>, <ore:plateStainlessSteel>]
 ]);
 
