@@ -7,15 +7,12 @@ furnace.remove(<gregtech:gt.metaitem.01:2865>);
 
 #fuel nerfs
 recipes.remove(<BigReactors:BRIngot>);
-#furnace.remove(<BigReactors:BRIngot>);
-mods.extraUtils.QED.removeRecipe(<BigReactors:BRIngot>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <BigReactors:YelloriteOre>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:512>, <BigReactors:YelloriteOre>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <BigReactors:YelloriteOre>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <BigReactors:YelloriteOre>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <BigReactors:BRIngot:4>);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<BigReactors:BRIngot>);
-#recipes.addShaped(<BigReactors:BRIngot> * 2, [[null, <ore:dustYellorium>, null], [<ore:dustYellorium>, <IC2:itemUran238>, <ore:dustYellorium>], [null, <ore:dustYellorium>, null]]);
 
 #reactor/turbine building materials
 recipes.remove(<BigReactors:BRReactorPart>);
@@ -34,10 +31,10 @@ recipes.remove(<BigReactors:BRReactorPart:7>);
 recipes.remove(<BigReactors:BRTurbinePart:5>);
 recipes.addShaped(<BigReactors:BRReactorPart:5>, [[<ore:turbineHousing>, <ore:turbineRotorShaft>, <ore:turbineHousing>], [<ore:ingotGold>, <ore:oc:circuiteChip3>, <ore:ingotGold>], [<ore:turbineHousing>, <ore:turbineRotorShaft>, <ore:turbineHousing>]]);
 recipes.addShaped(<BigReactors:BRReactorPart:7>, [[<ore:reactorCasing>, <ore:dustRedstone>, <ore:reactorCasing>], [<ore:ingotGold>, <ore:oc:circuiteChip3>, <ore:ingotGold>], [<ore:reactorCasing>, <ore:dustRedstone>, <ore:reactorCasing>]]);
-recipes.addShaped(<BigReactors:BRReactorPart> * 2, [[<ore:plateStainlessSteel>, <ore:ingotGraphite>, <ore:plateStainlessSteel>], [<ore:ingotElectricalSteel>, <ore:plateDenseLead>, <ore:ingotElectricalSteel>], [<ore:plateStainlessSteel>, <ore:ingotGraphite>, <ore:plateStainlessSteel>]]);
+recipes.addShaped(<BigReactors:BRReactorPart> * 2, [[<ore:plateStainlessSteel>, <ore:ingotGraphite>, <ore:plateStainlessSteel>], [<ore:ingotElectrum>, <ore:plateDenseLead>, <ore:ingotElectrum>], [<ore:plateStainlessSteel>, <ore:ingotGraphite>, <ore:plateStainlessSteel>]]);
 recipes.addShaped(<BigReactors:BRMultiblockGlass:1>, [[<ore:blockGlassHardened>, <BigReactors:BRTurbinePart>, <ore:blockGlassHardened>]]);
 recipes.addShaped(<BigReactors:BRMultiblockGlass>, [[<ore:blockGlassHardened>, <ore:reactorCasing>, <ore:blockGlassHardened>]]);
-recipes.addShaped(<BigReactors:BRTurbinePart> * 2, [[<ore:ingotSteel>, <minecraft:quartz>, <ore:ingotSteel>], [<ore:ingotPhasedGold>, <ore:ingotCyanite>, <ore:ingotPhasedGold>], [<ore:ingotSteel>, <minecraft:quartz>, <ore:ingotSteel>]]);
+recipes.addShaped(<BigReactors:BRTurbinePart> * 2, [[<ore:ingotSteel>, <minecraft:quartz>, <ore:ingotSteel>], [<ore:ingotElectrum>, <ore:ingotCyanite>, <ore:ingotElectrum>], [<ore:ingotSteel>, <minecraft:quartz>, <ore:ingotSteel>]]);
 recipes.addShaped(<BigReactors:BRTurbinePart:2>, [[<BigReactors:BRTurbinePart>, null, <BigReactors:BRTurbinePart>], [null, <IC2:blockElectric:2>, null], [<BigReactors:BRTurbinePart>, null, <BigReactors:BRTurbinePart>]]);
 recipes.addShaped(<BigReactors:BRReactorPart:2>, [[<BigReactors:BRReactorPart>, <ore:ingotGraphite>, <BigReactors:BRReactorPart>], [<ore:ingotGraphite>, <BuildCraft|Silicon:redstoneChipset>, <ore:ingotGraphite>], [<BigReactors:BRReactorPart>, <BuildCraft|Transport:pipeWire>, <BigReactors:BRReactorPart>]]);
 recipes.addShaped(<BigReactors:BRReactorPart:3>, [[<ore:reactorCasing>, <ore:WireGT04Copper>, <ore:reactorCasing>], [<ore:WireGT04Copper>, <IC2:blockElectric:1>, <ore:WireGT04Copper>], [<ore:reactorCasing>, <ore:WireGT04Copper>, <ore:reactorCasing>]]);

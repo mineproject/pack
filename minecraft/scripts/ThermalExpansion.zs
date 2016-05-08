@@ -37,6 +37,7 @@ val chipIron = <ore:chipsetIron>;
 val chipDiamond = <ore:chipsetDiamond>;
 val chipRed = <ore:chipsetRed>;
 
+
 #Fuck the thermal
 mods.thermalexpansion.Smelter.removeRecipe(<ore:dustPyrotheum>, <*>);
 
@@ -268,7 +269,7 @@ recipes.remove(<ThermalExpansion:Frame:10>);
 recipes.addShaped(<ThermalExpansion:Frame:10>, [[<ore:plateDiamond>, <ore:blockGlassHardened>, <ore:plateDiamond>], [<ore:blockGlassHardened>, <ore:frameIV>, <ore:blockGlassHardened>], [<ore:plateDiamond>, <ore:blockGlassHardened>, <ore:plateDiamond>]]);
 
 #tesseract
-recipes.remove(<ThermalExpansion:Tesseract>);
+recipes.removeShaped(<ThermalExpansion:Tesseract>);
 recipes.addShaped(<ThermalExpansion:Tesseract>, [[<ore:emitterMV>, <ore:pumpMV>, <ore:sensorMV>], [<Forestry:thermionicTubes:12>, <ThermalExpansion:Frame:11>, <Forestry:thermionicTubes:12>], [<ore:emitterMV>, <ore:pumpMV>, <ore:sensorMV>]]);
 
 #pyrotheum/cryotheum
