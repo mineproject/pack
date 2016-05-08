@@ -46,6 +46,7 @@ function ShowEnergyTooltip(Item as IItemStack, Power as float, ItIsGenerator as 
 	// Item.addShiftTooltip("");
 
 	if (ItIsGenerator == 1) {
+		// Generation
 		Item.addTooltip(format.darkGray("Power generation: ") + format.aqua(MTUtils.getStringFromFloat(Power)) + " AE/t max");
 	} else {
 		if (ItIsGenerator > 0) {
@@ -78,7 +79,7 @@ recipes.addShaped(Inscriber, [
 
 // ME_Controller.addTooltip(format.green("Removed " + recipes.remove(ME_Controller) + " recipe(-s)"));
 val ME_Controller = <appliedenergistics2:tile.BlockController>;
-ShowEnergyTooltip(ME_Controller, 6.0, 0, 0);
+ShowEnergyTooltip(ME_Controller, 3.0, 0, 0);
 recipes.remove(ME_Controller);
 recipes.addShaped(ME_Controller, [
 	[<ore:plateTripleVanadium>, <ore:circuitElite>, <ore:plateTripleVanadium>],
@@ -118,7 +119,7 @@ ShowEnergyTooltip(VibrationChamber, 10.0, 1, 0);
 recipes.remove(VibrationChamber);
 recipes.addShaped(VibrationChamber, [
 	[SkyStoneSlab, SkyStoneSlab, SkyStoneSlab],
-	[SkyStoneBlock, <minecraft:furnace>, SkyStoneBlock],
+	[SkyStoneBlock, <IC2:blockGenerator>, SkyStoneBlock],
 	[SkyStoneBlock, EnergyAcceptor, SkyStoneBlock]
 ]);
 
@@ -134,6 +135,7 @@ recipes.addShaped(CrystalGrowthAccelerator, [
 
 // ME_Drive.addTooltip(format.green("Removed " + recipes.remove(ME_Drive) + " recipe(-s)"));
 val ME_Drive = <appliedenergistics2:tile.BlockDrive>;
+ShowEnergyTooltip(ME_Drive, 2.0, 0, 1);
 recipes.remove(ME_Drive);
 recipes.addShaped(ME_Drive, [
 	[<ore:plateVanadium>, <ore:plateVanadiumSteel>, <ore:plateVanadium>],
@@ -143,6 +145,7 @@ recipes.addShaped(ME_Drive, [
 
 // ME_Chest.addTooltip(format.green("Removed " + recipes.remove(ME_Chest) + " recipe(-s)"));
 val ME_Chest = <appliedenergistics2:tile.BlockChest>;
+ShowEnergyTooltip(ME_Chest, 1.0, 0, 1);
 recipes.remove(ME_Chest);
 recipes.addShaped(ME_Chest, [
 	[<ore:plateVanadium>, ME_Terminal, <ore:plateVanadium>],
@@ -186,6 +189,20 @@ recipes.addShaped(DenseEnergyCell, [
 	[EnergyCell, <ore:circuitMaster>, EnergyCell],
 	[EnergyCell, EnergyCell, EnergyCell]
 ]);
+
+// CraftingUnit.addTooltip(format.green("Removed " + recipes.remove(CraftingUnit) + " recipe(-s)"));
+val CraftingUnit = <appliedenergistics2:tile.BlockCraftingUnit>;
+recipes.remove(CraftingUnit);
+recipes.addShaped(CraftingUnit, [
+	[<ore:plateVanadiumSteel>, CalculationProcessor, <ore:plateVanadiumSteel>],
+	[DenseCable, <ore:circuitData>, DenseCable],
+	[<ore:plateVanadiumSteel>, CalculationProcessor, <ore:plateVanadiumSteel>]
+]);
+
+// CraftingCoProcessingUnit.addTooltip(format.green("Removed " + recipes.remove(CraftingCoProcessingUnit) + " recipe(-s)"));
+val CraftingCoProcessingUnit = <appliedenergistics2:tile.BlockCraftingUnit:1>;
+
+
 
 #===============================================#
 # ITEMS
