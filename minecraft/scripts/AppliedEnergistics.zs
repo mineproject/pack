@@ -61,7 +61,7 @@ function ShowEnergyTooltip(Item as IItemStack, Power as float, ItIsGenerator as 
 		}
 	}
 
-	if (RequireChannels == 1) Item.addShiftTooltip(format.aqua("Require Channel"));
+	if (RequireChannels == 1) Item.addTooltip(format.aqua(format.italic("Require Channel")));
 }
 
 #===============================================#
