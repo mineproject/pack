@@ -61,7 +61,7 @@ function ShowEnergyTooltip(Item as IItemStack, Power as float, ItIsGenerator as 
 		}
 	}
 
-	if (RequireChannels == 1) Item.addTooltip(format.aqua("Require Channel"));
+	if (RequireChannels == 1) Item.addShiftTooltip(format.aqua("Require Channel"));
 }
 
 #===============================================#
@@ -164,7 +164,7 @@ recipes.addShaped(MolecularAssembler, [
 
 // EnergyCell.addTooltip(format.green("Removed " + recipes.remove(EnergyCell) + " recipe(-s)"));
 val EnergyCell = <appliedenergistics2:tile.BlockEnergyCell>;
-EnergyCell.addShiftTooltip("Capacity: 200000 AE");
+EnergyCell.addShiftTooltip(format.darkGray("Capacity: ") + format.aqua("200000 AE"));
 recipes.remove(EnergyCell);
 recipes.addShaped(EnergyCell.withTag({internalMaxPower: 200000.0, internalCurrentPower: 20000.0}), [
 	[<ore:wireFineVanadiumGallium>, FluixBlock, <ore:wireFineVanadiumGallium>],
@@ -182,7 +182,7 @@ recipes.addShaped(EnergyCell, [
  */
 // DenseEnergyCell.addTooltip(format.green("Removed " + recipes.remove(DenseEnergyCell) + " recipe(-s)"));
 val DenseEnergyCell = <appliedenergistics2:tile.BlockDenseEnergyCell>;
-DenseEnergyCell.addShiftTooltip("Capacity: 1600000 AE");
+DenseEnergyCell.addShiftTooltip(format.darkGray("Capacity: ") + format.aqua("1600000 AE"));
 recipes.remove(DenseEnergyCell);
 recipes.addShaped(DenseEnergyCell, [
 	[EnergyCell, EnergyCell, EnergyCell],
@@ -194,9 +194,9 @@ recipes.addShaped(DenseEnergyCell, [
 val CraftingUnit = <appliedenergistics2:tile.BlockCraftingUnit>;
 recipes.remove(CraftingUnit);
 recipes.addShaped(CraftingUnit, [
-	[<ore:plateVanadiumSteel>, CalculationProcessor, <ore:plateVanadiumSteel>],
+	[<ore:plateDoubleVanadiumSteel>, CalculationProcessor, <ore:plateDoubleVanadiumSteel>],
 	[DenseCable, <ore:circuitData>, DenseCable],
-	[<ore:plateVanadiumSteel>, CalculationProcessor, <ore:plateVanadiumSteel>]
+	[<ore:plateDoubleVanadiumSteel>, CalculationProcessor, <ore:plateDoubleVanadiumSteel>]
 ]);
 
 // CraftingCoProcessingUnit.addTooltip(format.green("Removed " + recipes.remove(CraftingCoProcessingUnit) + " recipe(-s)"));
