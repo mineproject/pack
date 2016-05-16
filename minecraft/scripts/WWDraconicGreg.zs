@@ -108,4 +108,33 @@ recipes.addShaped(<gregtech:gt.metaitem.01:2533> * 2, [
 ]);
 mods.gregtech.Autoclave.addRecipe(<minecraft:ender_eye>, <gregtech:gt.metaitem.01:2533>, <liquid:water> * 200, 10000, 20, 480);
 
-mods.gregtech.Assembler.addRecipe(<IC2:blockGenerator:3>, <gregtech:gt.metaitem.01:32750>, <gregtech:gt.blockmachines:10>, null, 20, 120);
+mods.gregtech.Assembler.addRecipe(<IC2:blockGenerator:3>, <gregtech:gt.metaitem.01:32750>, <gregtech:gt.blockmachines:11>, null, 20, 120);
+
+mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11081>);
+mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:48>);
+furnace.remove(<StevesCarts:ModuleComponents:49>);
+mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:46>);
+furnace.remove(<StevesCarts:ModuleComponents:47>);
+mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:47>, <gregtech:gt.metaitem.01:2816>], <liquid:oxygen> * 12000, [<StevesCarts:ModuleComponents:46>], 6000, 2000, 3000);
+mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:49>, <gregtech:gt.metaitem.01:2816>], <liquid:oxygen> * 24000, [<StevesCarts:ModuleComponents:48>], 12000, 2000, 3000);
+
+mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:ingot>);
+mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:cube:2>);
+mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:nugget:1> * 4);
+mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11305>);
+mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11346>);
+mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11322>);
+mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11341>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<ImmersiveEngineering:storage:7>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<ImmersiveEngineering:metal:7>);
+mods.railcraft.BlastFurnace.addRecipe(<minecraft:iron_ingot>, false, false, 3000, <gregtech:gt.metaitem.01:11305>);
+mods.railcraft.BlastFurnace.addRecipe(<minecraft:iron_block>, false, false, 27000, <Railcraft:cube:2>);
+mods.railcraft.BlastFurnace.addRecipe(<Railcraft:machine.beta>, false, false, 1334, <Railcraft:nugget:1> * 4);
+mods.railcraft.BlastFurnace.addRecipe(<Railcraft:machine.beta:1>, false, false, 1334, <Railcraft:nugget:1> * 4);
+mods.railcraft.BlastFurnace.addRecipe(<Railcraft:machine.beta:2>, false, false, 1334, <Railcraft:nugget:1> * 4);
+mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2305>, false, false, 3000, <gregtech:gt.metaitem.01:11305>);
+mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2355>, false, false, 3000, <gregtech:gt.metaitem.01:11305>);
+mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2322>, false, false, 3000, <gregtech:gt.metaitem.01:11322>);
+mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2346>, false, false, 3000, <gregtech:gt.metaitem.01:11346>);
+mods.immersiveengineering.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11305>, <minecraft:iron_ingot>, 3001, <ImmersiveEngineering:material:13>);
+mods.immersiveengineering.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11305>, <minecraft:iron_block>, 27001, <ImmersiveEngineering:material:13> * 9);
