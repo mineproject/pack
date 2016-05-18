@@ -294,14 +294,14 @@ function AddGeneralInformation(OreEntry as IOreDictEntry[], Product as IFormatte
 function AddVein(Ore as IOreDictEntry[], Indexes as int[], ClusterName as IFormattedText,
 	Height as int[], Weight as int, Density as int, Size as int, Dimensions as IFormattedText) {
 
-	val H = format.gray(MTUtils.getStringFromInt(Height[0]) + " - " + MTUtils.getStringFromInt(Height[1]) + ", ") as IFormattedText;
+	val H = format.gold(MTUtils.getStringFromInt(Height[0]) + " - " + MTUtils.getStringFromInt(Height[1]) + ", ") as IFormattedText;
 	var S = format.gold(MTUtils.getStringFromInt(Size)) as IFormattedText;
 	var W = format.red(MTUtils.getStringFromInt(Weight) + ", ") as IFormattedText;
-	val D = format.gray(MTUtils.getStringFromInt(Density)) as IFormattedText;
+	val D = format.gold(MTUtils.getStringFromInt(Density)) as IFormattedText;
 
 	// Size: 16, 24, 32
 	if (Size > 16) {
-		if (Weight > 24) {
+		if (Size > 24) {
 			S = format.green(MTUtils.getStringFromInt(Size));
 		} else {
 			S = format.yellow(MTUtils.getStringFromInt(Size));
@@ -323,7 +323,7 @@ function AddVein(Ore as IOreDictEntry[], Indexes as int[], ClusterName as IForma
 
 	for Index in Indexes {
 		Ore[Index].addShiftTooltip("");
-		Ore[Index].addShiftTooltip(format.gold("[ " + ClusterName + " Vein - " + Dimensions + " ]"));
+		Ore[Index].addShiftTooltip("" + format.white(ClusterName + " Vein") + format.gray(" - ") + format.white(Dimensions) + format.gray(""));
 		Ore[Index].addShiftTooltip(format.darkGray("- Height: ") + H + format.darkGray("Size: ") + S);
 		Ore[Index].addShiftTooltip(format.darkGray("- Weight: ") + W + format.darkGray("Density: ") + D);
 	}
@@ -340,10 +340,10 @@ AddVein(OreEntry, [0, 1, 3], "Gold", [60, 80], 160, 3, 32, "Overworld");
 AddVein(OreEntry, [4, 5, 6, 7], "Iron", [10, 40], 120, 4, 24, "Overworld, Nether");
 AddVein(OreEntry, [8, 9], "Lignite", [50, 130], 100, 8, 32, "Overworld");
 AddVein(OreEntry, [9, 8], "Coal", [50, 80], 80, 6, 32, "Overworld");
-AddVein(OreEntry, [10, 11], "Coal", [40, 120], 100, 5, 32, "Overworld");
+AddVein(OreEntry, [10, 11], "Cassiterite", [40, 120], 100, 5, 32, "Overworld");
 AddVein(OreEntry, [12], "Oilsands", [50, 80], 80, 6, 32, "Overworld");
-AddVein(OreEntry, [13, 1, 14, 15], "Copper", [10, 30], 80, 4, 24, "Overworld, Nether");
-AddVein(OreEntry, [16, 14, 17], "Tetrahedrite", [80, 120], 70, 4, 24, "Overworld, Nether");
+AddVein(OreEntry, [13, 2, 14, 15], "Copper", [10, 30], 80, 4, 24, "Overworld, Nether");
+AddVein(OreEntry, [16, 15, 17], "Tetrahedrite", [80, 120], 70, 4, 24, "Overworld, Nether");
 AddVein(OreEntry, [18, 19, 20], "Bauxite", [50, 90], 80, 4, 24, "Overworld");
 AddVein(OreEntry, [21, 22, 23], "Redstone", [10, 40], 60, 3, 24, "Overworld, Nether");
 AddVein(OreEntry, [24, 25, 26, 27], "Salts", [50, 60], 50, 3, 24, "Overworld");
