@@ -6,6 +6,12 @@ import minetweaker.item.IItemStack;
 import minetweaker.formatting.IFormattedText;
 import mods.MTUtils;
 
+import mods.ic2.Compressor;
+import mods.ic2.Macerator;
+import mods.thermalexpansion.Pulverizer;
+import mods.railcraft.RockCrusher;
+import mods.immersiveengineering.Crusher;
+
 print("Initializing 'AppliedEnergistics.zs'...");
 
 #===============================================#
@@ -13,33 +19,27 @@ print("Initializing 'AppliedEnergistics.zs'...");
 // Variables
 val SkyStoneBlock = <appliedenergistics2:tile.BlockSkyStone:1>;
 val SkyStoneSlab = <appliedenergistics2:tile.SkyStoneBlockSlabBlock>;
-val SkyStoneBlockChest = <appliedenergistics2:tile.BlockSkyChest:1>;
-val DenseCable = <appliedenergistics2:item.ItemMultiPart:76>;
+val SkyStoneChest = <appliedenergistics2:tile.BlockSkyChest:*>;
 val SmartCablePurple = <appliedenergistics2:item.ItemMultiPart:50>;
-val CoveredCable = <appliedenergistics2:item.ItemMultiPart:36>;
-val GlassCable = <appliedenergistics2:item.ItemMultiPart:16>;
 val ME_Transformator = <immersiveintegration:meTransformer>;
 val FluixWireCoil = <immersiveintegration:aeDecoration>;
-val FluixBlock = <appliedenergistics2:tile.BlockFluix>;
 val QuartzGlass = <appliedenergistics2:tile.BlockQuartzGlass>;
+val QuartzFiber = <appliedenergistics2:item.ItemMultiPart:140>;
 val ComputerMonitor = <gregtech:gt.metaitem.01:32740>;
 val EngravedLapotronChip = <gregtech:gt.metaitem.01:32714>;
 
-val AnnihilationCore = <appliedenergistics2:item.ItemMultiMaterial:44>;
 val FormationCore = <appliedenergistics2:item.ItemMultiMaterial:43>;
-val EngineeringProcessor = <appliedenergistics2:item.ItemMultiMaterial:24>;
-val LogicProcessor = <appliedenergistics2:item.ItemMultiMaterial:22>;
+val AnnihilationCore = <appliedenergistics2:item.ItemMultiMaterial:44>;
 val CalculationProcessor = <appliedenergistics2:item.ItemMultiMaterial:23>;
+val LogicProcessor = <appliedenergistics2:item.ItemMultiMaterial:22>;
+val EngineeringProcessor = <appliedenergistics2:item.ItemMultiMaterial:24>;
 
-val ME_Terminal = <appliedenergistics2:item.ItemMultiPart:380>;
-val ME_PatternTerminal = <appliedenergistics2:item.ItemMultiPart:340>;
-val FormationPlane = <appliedenergistics2:item.ItemMultiPart:320>;
-val AnnihilationPlane = <appliedenergistics2:item.ItemMultiPart:300>;
+val StorageComponent_1 = <appliedenergistics2:item.ItemMultiMaterial:35>;
+val StorageComponent_16 = <appliedenergistics2:item.ItemMultiMaterial:37>;
 
 #===============================================#
-# FUNCTIONS
 
-function ShowEnergyTooltip(Item as IItemStack, Power as float, ItIsGenerator as int, RequireChannels as int) {
+function ShowEnergyTooltip(Item as IItemStack, Power as float, ItIsGenerator as int, RequiresChannels as int) {
 	val AE_EnergyMultiplier = 2.0 as float;
 
 	// Item.addTooltip(format.darkGray("Press ") + format.aqua("Shift") + format.darkGray(" for Details"));
@@ -54,15 +54,353 @@ function ShowEnergyTooltip(Item as IItemStack, Power as float, ItIsGenerator as 
 			Item.addTooltip(format.darkGray("Power usage: ") + format.aqua(MTUtils.getStringFromFloat(Power)) + " AE/t max");
 			Item.addTooltip(format.darkGray("Energy: ") + format.aqua(MTUtils.getStringFromInt(ItIsGenerator)) + " AE "
 				+ format.darkGray("per operation"));
-		} else {
-			// Power Consumpsion per tick
-			Item.addTooltip(format.darkGray("Power usage: ") + format.aqua(MTUtils.getStringFromFloat(Power)) + " AE/t "
+		} if (ItIsGenerator == 0) {
+			// Passive Drain per tick
+			Item.addTooltip(format.darkGray("Passive Drain: ") + format.aqua(MTUtils.getStringFromFloat(Power)) + " AE/t "
 			+ format.darkGray("<") + format.aqua("x") + MTUtils.getStringFromFloat(AE_EnergyMultiplier) + format.darkGray(">"));
+		} if (ItIsGenerator < 0) {
+			Item.addTooltip(format.darkGray("Has no Passive Drain"));
 		}
 	}
 
-	if (RequireChannels == 1) Item.addTooltip(format.aqua(format.italic("Require Channel")));
+	if (RequiresChannels == 1) Item.addTooltip(format.aqua(format.italic("Requires Channel")));
 }
+
+
+#===============================================#
+# ITEMS & CRAFTING COMPONENTS
+
+// FluixCrystal.addTooltip(format.green("Removed " + recipes.remove(FluixCrystal) + " recipe(-s)"));
+val FluixCrystal = <appliedenergistics2:item.ItemMultiMaterial:7>;
+recipes.remove(FluixCrystal);
+
+// FluixBlock.addTooltip(format.green("Removed " + recipes.remove(FluixBlock) + " recipe(-s)"));
+val FluixBlock = <appliedenergistics2:tile.BlockFluix>;
+Compressor.addRecipe(FluixBlock, FluixCrystal * 9);
+Compressor.addRecipe(FluixBlock, <appliedenergistics2:item.ItemMultiMaterial:12> * 18);
+recipes.remove(FluixBlock);
+
+val FluixDust = <appliedenergistics2:item.ItemMultiMaterial:8>;
+Macerator.addRecipe(FluixDust * 8, FluixBlock);
+Pulverizer.addRecipe(7200, FluixBlock, FluixDust * 8, FluixDust, 25);
+RockCrusher.addRecipe(FluixBlock, true, false, [FluixDust * 8, FluixDust], [1.0, 0.25]);
+Crusher.addRecipe(FluixDust * 8, FluixBlock, 7200, FluixDust, 0.25);
+
+val WirelessReciever = <appliedenergistics2:item.ItemMultiMaterial:41>;
+recipes.remove(WirelessReciever);
+recipes.addShapeless(WirelessReciever, [<IC2NuclearControl:KitAppeng>]);
+
+// SpatialComponent_2.addTooltip(format.green("Removed " + recipes.remove(SpatialComponent_2) + " recipe(-s)"));
+val SpatialComponent_2 = <appliedenergistics2:item.ItemMultiMaterial:32>;
+recipes.remove(SpatialComponent_2);
+recipes.addShaped(SpatialComponent_2, [
+	[<ore:wireFineNiobium>, <ore:pearlFluix>, <ore:wireFineNiobium>],
+	[<ore:pearlFluix>, <gregtech:gt.metaitem.01:32704>, <ore:pearlFluix>],
+	[<ore:wireFineNiobium>, <ore:pearlFluix>, <ore:wireFineNiobium>]
+]);
+
+// SpatialComponent_16.addTooltip(format.green("Removed " + recipes.remove(SpatialComponent_16) + " recipe(-s)"));
+val SpatialComponent_16 = <appliedenergistics2:item.ItemMultiMaterial:33>;
+recipes.remove(SpatialComponent_16);
+recipes.addShaped(SpatialComponent_16, [
+	[SpatialComponent_2, SpatialComponent_2, SpatialComponent_2],
+	[SpatialComponent_2, <ore:circuitElite>, SpatialComponent_2],
+	[SpatialComponent_2, SpatialComponent_2, SpatialComponent_2]
+]); /*
+recipes.addShaped(SpatialComponent_16, [
+	[<ore:wireFineNiobium>, SpatialComponent_2, <ore:wireFineNiobium>],
+	[SpatialComponent_2, <ore:circuitElite>, SpatialComponent_2],
+	[<ore:wireFineNiobium>, SpatialComponent_2, <ore:wireFineNiobium>]
+]); */
+
+// SpatialComponent_128.addTooltip(format.green("Removed " + recipes.remove(SpatialComponent_128) + " recipe(-s)"));
+val SpatialComponent_128 = <appliedenergistics2:item.ItemMultiMaterial:34>;
+recipes.remove(SpatialComponent_128);
+recipes.addShaped(SpatialComponent_128, [
+	[SpatialComponent_16, SpatialComponent_16, SpatialComponent_16],
+	[SpatialComponent_16, <ore:circuitUltimate>, SpatialComponent_16],
+	[SpatialComponent_16, SpatialComponent_16, SpatialComponent_16]
+]); /*
+recipes.addShaped(SpatialComponent_128, [
+	[<ore:wireFineNiobium>, SpatialComponent_16, <ore:wireFineNiobium>],
+	[SpatialComponent_16, <ore:circuitUltimate>, SpatialComponent_16],
+	[<ore:wireFineNiobium>, SpatialComponent_16, <ore:wireFineNiobium>]
+]); */
+
+# CABLES
+
+// GlassCable.addTooltip(format.green("Removed " + recipes.remove(GlassCable) + " recipe(-s)"));
+val GlassCable = <appliedenergistics2:item.ItemMultiPart:16>;
+recipes.remove(GlassCable);
+recipes.addShaped(GlassCable * 4, [
+	[QuartzFiber, FluixCrystal, FluixCrystal]
+]);
+recipes.addShaped(GlassCable * 4, [
+	[QuartzFiber, <ore:crystalPureFluix>, <ore:crystalPureFluix>]
+]);
+
+// CoveredCable.addTooltip(format.green("Removed " + recipes.remove(CoveredCable) + " recipe(-s)"));
+val CoveredCable = <appliedenergistics2:item.ItemMultiPart:36>;
+recipes.remove(CoveredCable);
+
+// SmartCable.addTooltip(format.green("Removed " + recipes.remove(SmartCable) + " recipe(-s)"));
+val SmartCable = <appliedenergistics2:item.ItemMultiPart:56>;
+recipes.remove(SmartCable);
+
+// DenseCable.addTooltip(format.green("Removed " + recipes.remove(DenseCable) + " recipe(-s)"));
+val DenseCable = <appliedenergistics2:item.ItemMultiPart:76>;
+recipes.remove(DenseCable);
+
+val GlassCables = [
+	<appliedenergistics2:item.ItemMultiPart:0>,
+	<appliedenergistics2:item.ItemMultiPart:1>,
+	<appliedenergistics2:item.ItemMultiPart:2>,
+	<appliedenergistics2:item.ItemMultiPart:3>,
+	<appliedenergistics2:item.ItemMultiPart:4>,
+	<appliedenergistics2:item.ItemMultiPart:5>,
+	<appliedenergistics2:item.ItemMultiPart:6>,
+	<appliedenergistics2:item.ItemMultiPart:7>,
+	<appliedenergistics2:item.ItemMultiPart:8>,
+	<appliedenergistics2:item.ItemMultiPart:9>,
+	<appliedenergistics2:item.ItemMultiPart:10>,
+	<appliedenergistics2:item.ItemMultiPart:11>,
+	<appliedenergistics2:item.ItemMultiPart:12>,
+	<appliedenergistics2:item.ItemMultiPart:13>,
+	<appliedenergistics2:item.ItemMultiPart:14>,
+	<appliedenergistics2:item.ItemMultiPart:15>,
+	<appliedenergistics2:item.ItemMultiPart:16>
+] as IItemStack[];
+
+val CoveredCables = [
+	<appliedenergistics2:item.ItemMultiPart:20>,
+	<appliedenergistics2:item.ItemMultiPart:21>,
+	<appliedenergistics2:item.ItemMultiPart:22>,
+	<appliedenergistics2:item.ItemMultiPart:23>,
+	<appliedenergistics2:item.ItemMultiPart:24>,
+	<appliedenergistics2:item.ItemMultiPart:25>,
+	<appliedenergistics2:item.ItemMultiPart:26>,
+	<appliedenergistics2:item.ItemMultiPart:27>,
+	<appliedenergistics2:item.ItemMultiPart:28>,
+	<appliedenergistics2:item.ItemMultiPart:29>,
+	<appliedenergistics2:item.ItemMultiPart:30>,
+	<appliedenergistics2:item.ItemMultiPart:31>,
+	<appliedenergistics2:item.ItemMultiPart:32>,
+	<appliedenergistics2:item.ItemMultiPart:33>,
+	<appliedenergistics2:item.ItemMultiPart:34>,
+	<appliedenergistics2:item.ItemMultiPart:35>,
+	<appliedenergistics2:item.ItemMultiPart:36>
+] as IItemStack[];
+
+val SmartCables = [
+	<appliedenergistics2:item.ItemMultiPart:40>,
+	<appliedenergistics2:item.ItemMultiPart:41>,
+	<appliedenergistics2:item.ItemMultiPart:42>,
+	<appliedenergistics2:item.ItemMultiPart:43>,
+	<appliedenergistics2:item.ItemMultiPart:44>,
+	<appliedenergistics2:item.ItemMultiPart:45>,
+	<appliedenergistics2:item.ItemMultiPart:46>,
+	<appliedenergistics2:item.ItemMultiPart:47>,
+	<appliedenergistics2:item.ItemMultiPart:48>,
+	<appliedenergistics2:item.ItemMultiPart:49>,
+	<appliedenergistics2:item.ItemMultiPart:50>,
+	<appliedenergistics2:item.ItemMultiPart:51>,
+	<appliedenergistics2:item.ItemMultiPart:52>,
+	<appliedenergistics2:item.ItemMultiPart:53>,
+	<appliedenergistics2:item.ItemMultiPart:54>,
+	<appliedenergistics2:item.ItemMultiPart:55>,
+	<appliedenergistics2:item.ItemMultiPart:56>
+] as IItemStack[];
+
+val DenseCables = [
+	<appliedenergistics2:item.ItemMultiPart:60>,
+	<appliedenergistics2:item.ItemMultiPart:61>,
+	<appliedenergistics2:item.ItemMultiPart:62>,
+	<appliedenergistics2:item.ItemMultiPart:63>,
+	<appliedenergistics2:item.ItemMultiPart:64>,
+	<appliedenergistics2:item.ItemMultiPart:65>,
+	<appliedenergistics2:item.ItemMultiPart:66>,
+	<appliedenergistics2:item.ItemMultiPart:67>,
+	<appliedenergistics2:item.ItemMultiPart:68>,
+	<appliedenergistics2:item.ItemMultiPart:69>,
+	<appliedenergistics2:item.ItemMultiPart:70>,
+	<appliedenergistics2:item.ItemMultiPart:71>,
+	<appliedenergistics2:item.ItemMultiPart:72>,
+	<appliedenergistics2:item.ItemMultiPart:73>,
+	<appliedenergistics2:item.ItemMultiPart:74>,
+	<appliedenergistics2:item.ItemMultiPart:75>,
+	<appliedenergistics2:item.ItemMultiPart:76>
+] as IItemStack[];
+
+for i, Cable in GlassCables {
+	<ore:cableAEGlass>.add(Cable);
+	<ore:cableAECovered>.add(CoveredCables[i]);
+	<ore:cableAESmart>.add(SmartCables[i]);
+	<ore:cableAEDense>.add(DenseCables[i]);
+
+	recipes.addShapeless(CoveredCables[i], [Cable, <ore:plateSilicon>]);
+	recipes.addShaped(SmartCables[i], [
+		[<ore:wireFineSilicon>, <ore:wireFineLumium>, <ore:wireFineSilicon>],
+		[<ore:wireFineLumium>, CoveredCables[i], <ore:wireFineLumium>],
+		[<ore:wireFineSilicon>, <ore:wireFineLumium>, <ore:wireFineSilicon>]
+	]);
+	recipes.addShaped(SmartCables[i], [
+		[<ore:dustSmallSilicon>, <ore:wireFineLumium>, <ore:dustSmallSilicon>],
+		[<ore:wireFineLumium>, CoveredCables[i], <ore:wireFineLumium>],
+		[<ore:dustSmallSilicon>, <ore:wireFineLumium>, <ore:dustSmallSilicon>]
+	]);
+	recipes.addShapeless(SmartCables[i] * 4, [DenseCables[i]]);
+	recipes.addShapeless(DenseCables[i], [SmartCables[i], SmartCables[i], SmartCables[i], SmartCables[i]]);
+}
+
+// Colored cables washing
+recipes.addShapeless(GlassCable, [<ore:cableAEGlass>, <minecraft:water_bucket>]);
+recipes.addShapeless(CoveredCable, [<ore:cableAECovered>, <minecraft:water_bucket>]);
+recipes.addShapeless(SmartCable, [<ore:cableAESmart>, <minecraft:water_bucket>]);
+recipes.addShapeless(DenseCable, [<ore:cableAEDense>, <minecraft:water_bucket>]);
+
+
+#===============================================#
+# PANELS
+
+// ME_ToggleBus.addTooltip(format.green("Removed " + recipes.remove(ME_ToggleBus) + " recipe(-s)"));
+val ME_ToggleBus = <appliedenergistics2:item.ItemMultiPart:80>;
+val ME_InvertedToggleBus = <appliedenergistics2:item.ItemMultiPart:100>;
+ME_ToggleBus.addTooltip(format.darkGray("Toggles network connection via redstone"));
+ME_InvertedToggleBus.addTooltip(format.darkGray("Toggles network connection via redstone"));
+recipes.remove(ME_ToggleBus);
+recipes.addShaped(ME_ToggleBus * 2, [
+	[null, <ore:dustGlowstone>, null],
+	[GlassCable, <minecraft:lever>, GlassCable],
+	[null, <ore:dustRedstone>, null]
+]);
+
+val ME_Terminal = <appliedenergistics2:item.ItemMultiPart:380>;
+val ME_CraftingTerminal = <appliedenergistics2:item.ItemMultiPart:360>;
+val ME_PatternTerminal = <appliedenergistics2:item.ItemMultiPart:340>;
+val ME_InterfaceTerminal = <appliedenergistics2:item.ItemMultiPart:480>;
+val ME_StorageMonitor = <appliedenergistics2:item.ItemMultiPart:400>;
+val ME_ConversionMonitor = <appliedenergistics2:item.ItemMultiPart:420>;
+ShowEnergyTooltip(ME_Terminal, 0.5, 0, 1);
+ShowEnergyTooltip(ME_CraftingTerminal, 0.5, 0, 1);
+ShowEnergyTooltip(ME_PatternTerminal, 0.5, 0, 1);
+ShowEnergyTooltip(ME_InterfaceTerminal, 0.5, 0, 1);
+ShowEnergyTooltip(ME_StorageMonitor, 0.5, 0, 1);
+ShowEnergyTooltip(ME_ConversionMonitor, 0.5, 0, 1);
+
+recipes.remove(ME_CraftingTerminal);
+recipes.addShapeless(ME_CraftingTerminal, [<ore:itemIlluminatedPanel>, <gregtech:gt.metaitem.01:32744>, CalculationProcessor]);
+
+val ME_Interface = <appliedenergistics2:item.ItemMultiPart:440>;
+ShowEnergyTooltip(ME_Interface, 1.0, 0, 1);
+recipes.remove(ME_Interface);
+recipes.addShaped(ME_Interface, [
+	[AnnihilationCore, <ore:wireFineVanadium>, null],
+	[<ore:plateVanadiumSteel>, CalculationProcessor, ME_ToggleBus],
+	[FormationCore, <ore:wireFineVanadium>, null]
+]);
+
+val ME_ImportBus = <appliedenergistics2:item.ItemMultiPart:240>;
+val ME_ExportBus = <appliedenergistics2:item.ItemMultiPart:260>;
+val ME_StorageBus = <appliedenergistics2:item.ItemMultiPart:220>;
+val ME_LevelEmitter = <appliedenergistics2:item.ItemMultiPart:280>;
+ShowEnergyTooltip(ME_ImportBus, 1.0, 0, 1);
+ShowEnergyTooltip(ME_ExportBus, 1.0, 0, 1);
+ShowEnergyTooltip(ME_StorageBus, 1.0, 0, 1);
+ShowEnergyTooltip(ME_LevelEmitter, 1.0, 0, 1);
+
+recipes.remove(ME_ExportBus);
+recipes.addShaped(ME_ExportBus, [
+	[FormationCore, <ore:wireFineVanadium>, null],
+	[<ore:plateVanadiumSteel>, <minecraft:piston>, ME_ToggleBus],
+	[FormationCore, <ore:wireFineVanadium>, null]
+]);
+recipes.addShaped(ME_ExportBus, [
+	[FormationCore, <ore:plateVanadiumSteel>, FormationCore],
+	[<ore:wireFineVanadium>, <minecraft:piston>, <ore:wireFineVanadium>],
+	[null, ME_ToggleBus, null]
+]);
+
+recipes.remove(ME_ImportBus);
+recipes.addShaped(ME_ImportBus, [
+	[AnnihilationCore, <ore:wireFineVanadium>, null],
+	[<ore:plateVanadiumSteel>, <minecraft:sticky_piston>, ME_ToggleBus],
+	[AnnihilationCore, <ore:wireFineVanadium>, null]
+]);
+recipes.addShaped(ME_ImportBus, [
+	[AnnihilationCore, <ore:plateVanadiumSteel>, AnnihilationCore],
+	[<ore:wireFineVanadium>, <minecraft:sticky_piston>, <ore:wireFineVanadium>],
+	[null, ME_ToggleBus, null]
+]);
+
+val ME_P2P_EU = <appliedenergistics2:item.ItemMultiPart:465>;
+val ME_P2P_Item = <appliedenergistics2:item.ItemMultiPart:462>;
+val ME_P2P_Light = <appliedenergistics2:item.ItemMultiPart:467>;
+val ME_P2P_Fluid = <appliedenergistics2:item.ItemMultiPart:463>;
+val ME_P2P_OpenComputers = <appliedenergistics2:item.ItemMultiPart:468>;
+val ME_P2P_RF = <appliedenergistics2:item.ItemMultiPart:466>;
+val ME_P2P_Redstone = <appliedenergistics2:item.ItemMultiPart:461>;
+val ME_P2P_ME = <appliedenergistics2:item.ItemMultiPart:460>;
+recipes.remove(ME_P2P_ME);
+recipes.addShaped(ME_P2P_ME, [
+	[FluixCrystal, AnnihilationCore, null],
+	[<ore:itemIlluminatedPanel>, FluixCrystal, EngineeringProcessor],
+	[FluixCrystal, FormationCore, null]
+]);
+
+ShowEnergyTooltip(ME_P2P_EU, 1.0, 0, 1);
+ShowEnergyTooltip(ME_P2P_Item, 1.0, 0, 1);
+ShowEnergyTooltip(ME_P2P_Light, 1.0, 0, 1);
+ShowEnergyTooltip(ME_P2P_Fluid, 1.0, 0, 1);
+ShowEnergyTooltip(ME_P2P_ME, 1.0, 0, 1);
+ShowEnergyTooltip(ME_P2P_OpenComputers, 1.0, 0, 1);
+ShowEnergyTooltip(ME_P2P_RF, 1.0, 0, 1);
+ShowEnergyTooltip(ME_P2P_Redstone, 1.0, 0, 1);
+
+val IlluminatedPanel = <appliedenergistics2:item.ItemMultiPart:180>;
+for Panel in <ore:itemIlluminatedPanel>.items {ShowEnergyTooltip(Panel, 0.06, 0, 0);}
+recipes.remove(IlluminatedPanel);
+recipes.addShapedMirrored(IlluminatedPanel, [
+	[<ore:gemFluix>, <ore:wireFineVanadium>, null],
+	[QuartzGlass, <ore:dustLumium>, ME_ToggleBus],
+	[<ore:gemFluix>, <ore:wireFineVanadium>, null]
+]);
+recipes.addShaped(IlluminatedPanel, [
+	[null, <ore:wireFineVanadium>, <ore:gemFluix>],
+	[ME_ToggleBus, <ore:dustLumium>, QuartzGlass],
+	[null, <ore:wireFineVanadium>, <ore:gemFluix>]
+]);
+
+val ME_FormationPlane = <appliedenergistics2:item.ItemMultiPart:320>;
+val ME_AnnihilationPlane = <appliedenergistics2:item.ItemMultiPart:300>;
+val ME_IdentityAnnihilationPlane = <appliedenergistics2:item.ItemMultiPart:301>;
+ShowEnergyTooltip(ME_FormationPlane, 1.0, 0, 1);
+ShowEnergyTooltip(ME_AnnihilationPlane, 1.0, 0, 1);
+ShowEnergyTooltip(ME_IdentityAnnihilationPlane, 1.0, 0, 1);
+
+recipes.remove(ME_FormationPlane);
+recipes.addShaped(ME_FormationPlane, [
+	[FormationCore, FluixCrystal, null],
+	[FormationCore, <ore:plateVanadiumSteel>, ME_ToggleBus],
+	[FormationCore, FluixCrystal, null]
+]);
+recipes.addShaped(ME_FormationPlane, [
+	[FormationCore, FormationCore, FormationCore],
+	[FluixCrystal, <ore:plateVanadiumSteel>, FluixCrystal],
+	[null, ME_ToggleBus, null]
+]);
+
+recipes.remove(ME_AnnihilationPlane);
+recipes.addShaped(ME_AnnihilationPlane, [
+	[AnnihilationCore, FluixCrystal, null],
+	[AnnihilationCore, <ore:plateVanadium>, ME_ToggleBus],
+	[AnnihilationCore, FluixCrystal, null]
+]);
+recipes.addShaped(ME_AnnihilationPlane, [
+	[AnnihilationCore, AnnihilationCore, AnnihilationCore],
+	[FluixCrystal, <ore:plateVanadium>, FluixCrystal],
+	[null, ME_ToggleBus, null]
+]);
+
 
 #===============================================#
 # BLOCKS
@@ -72,24 +410,9 @@ val Inscriber = <appliedenergistics2:tile.BlockInscriber>;
 ShowEnergyTooltip(Inscriber, 10.0, 1000, 0);
 recipes.remove(Inscriber);
 recipes.addShaped(Inscriber, [
-	[<ore:plateDoubleVanadium>, <ore:pistonHV>, <ore:plateDoubleVanadium>],
-	[SkyStoneSlab, <ore:conveyorHV>, SkyStoneSlab],
+	[<ore:plateDoubleVanadium>, <ore:pistonLV>, <ore:plateDoubleVanadium>],
+	[SkyStoneSlab, <ore:conveyorLV>, SkyStoneSlab],
 	[SkyStoneBlock, SkyStoneBlock, SkyStoneBlock]
-]);
-
-// ME_Controller.addTooltip(format.green("Removed " + recipes.remove(ME_Controller) + " recipe(-s)"));
-val ME_Controller = <appliedenergistics2:tile.BlockController>;
-ShowEnergyTooltip(ME_Controller, 3.0, 0, 0);
-recipes.remove(ME_Controller);
-recipes.addShaped(ME_Controller, [
-	[<ore:plateTripleVanadium>, <ore:circuitElite>, <ore:plateTripleVanadium>],
-	[DenseCable, <ore:frameGtVanadiumSteel>, DenseCable],
-	[<ore:plateTripleVanadium>, <ore:circuitElite>, <ore:plateTripleVanadium>]
-]);
-recipes.addShapedMirrored(ME_Controller, [
-	[<ore:plateTripleVanadium>, DenseCable, <ore:plateTripleVanadium>],
-	[<ore:circuitElite>, <ore:frameGtVanadiumSteel>, <ore:circuitElite>],
-	[<ore:plateTripleVanadium>, DenseCable, <ore:plateTripleVanadium>]
 ]);
 
 // Charger.addTooltip(format.green("Removed " + recipes.remove(Charger) + " recipe(-s)"));
@@ -97,9 +420,19 @@ val Charger = <appliedenergistics2:tile.BlockCharger>;
 ShowEnergyTooltip(Charger, 100.0, 1500, 0);
 recipes.remove(Charger);
 recipes.addShaped(Charger, [
-	[SkyStoneBlock, <ore:emitterHV>, <ore:foilVanadium>],
+	[SkyStoneBlock, <ore:emitterEV>, <ore:foilVanadium>],
 	[<ore:plateDoubleVanadium>, <ore:gemFluix>, null],
-	[SkyStoneBlock, <ore:sensorHV>, <ore:foilVanadium>]
+	[SkyStoneBlock, <ore:sensorEV>, <ore:foilVanadium>]
+]);
+
+// CrystalGrowthAccelerator.addTooltip(format.green("Removed " + recipes.remove(CrystalGrowthAccelerator) + " recipe(-s)"));
+val CrystalGrowthAccelerator = <appliedenergistics2:tile.BlockQuartzGrowthAccelerator>;
+ShowEnergyTooltip(CrystalGrowthAccelerator, 8.0, 0, 0);
+recipes.remove(CrystalGrowthAccelerator);
+recipes.addShaped(CrystalGrowthAccelerator, [
+	[<ore:wireFineVanadiumGallium>, FluixBlock, <ore:wireFineVanadiumGallium>],
+	[<ore:emitterEV>, FluixWireCoil, <ore:emitterEV>],
+	[<ore:wireFineVanadiumGallium>, FluixBlock, <ore:wireFineVanadiumGallium>]
 ]);
 
 // EnergyAcceptor.addTooltip(format.green("Removed " + recipes.remove(EnergyAcceptor) + " recipe(-s)"));
@@ -108,9 +441,14 @@ EnergyAcceptor.addTooltip(format.darkGray("Power convertion ratio: ")
 	+ format.aqua("1 AE") + format.darkGray(" = ") + format.aqua("2 RF") + format.darkGray(" = ") + format.aqua("0.5 EU"));
 recipes.remove(EnergyAcceptor);
 recipes.addShaped(EnergyAcceptor, [
-	[<ore:plateDoubleVanadiumSteel>, SmartCablePurple, <ore:plateDoubleVanadiumSteel>],
-	[SmartCablePurple, FluixWireCoil, SmartCablePurple],
-	[<ore:plateDoubleVanadiumSteel>, SmartCablePurple, <ore:plateDoubleVanadiumSteel>]
+	[<ore:plateVanadiumSteel>, SmartCablePurple, <ore:plateVanadiumSteel>],
+	[<ore:gemFluix>, <ore:frameGtVanadiumSteel>, <ore:gemFluix>],
+	[<ore:plateVanadiumSteel>, SmartCablePurple, <ore:plateVanadiumSteel>]
+]);
+recipes.addShaped(EnergyAcceptor, [
+	[<ore:plateVanadiumSteel>, <ore:gemFluix>, <ore:plateVanadiumSteel>],
+	[SmartCablePurple, <ore:frameGtVanadiumSteel>, SmartCablePurple],
+	[<ore:plateVanadiumSteel>, <ore:gemFluix>, <ore:plateVanadiumSteel>]
 ]);
 
 // VibrationChamber.addTooltip(format.green("Removed " + recipes.remove(VibrationChamber) + " recipe(-s)"));
@@ -123,14 +461,19 @@ recipes.addShaped(VibrationChamber, [
 	[SkyStoneBlock, EnergyAcceptor, SkyStoneBlock]
 ]);
 
-// CrystalGrowthAccelerator.addTooltip(format.green("Removed " + recipes.remove(CrystalGrowthAccelerator) + " recipe(-s)"));
-val CrystalGrowthAccelerator = <appliedenergistics2:tile.BlockQuartzGrowthAccelerator>;
-ShowEnergyTooltip(CrystalGrowthAccelerator, 8.0, 0, 0);
-recipes.remove(CrystalGrowthAccelerator);
-recipes.addShaped(CrystalGrowthAccelerator, [
-	[<ore:wireFineVanadiumGallium>, FluixBlock, <ore:wireFineVanadiumGallium>],
-	[<ore:emitterEV>, FluixWireCoil, <ore:emitterEV>],
-	[<ore:wireFineVanadiumGallium>, FluixBlock, <ore:wireFineVanadiumGallium>]
+// ME_Controller.addTooltip(format.green("Removed " + recipes.remove(ME_Controller) + " recipe(-s)"));
+val ME_Controller = <appliedenergistics2:tile.BlockController>;
+ShowEnergyTooltip(ME_Controller, 3.0, 0, 0);
+recipes.remove(ME_Controller);
+recipes.addShapedMirrored(ME_Controller, [
+	[<ore:plateDoubleVanadium>, DenseCable, <ore:plateDoubleVanadium>],
+	[<ore:circuitElite>, <ore:frameGtVanadiumSteel>, <ore:circuitElite>],
+	[<ore:plateDoubleVanadium>, DenseCable, <ore:plateDoubleVanadium>]
+]);
+recipes.addShaped(ME_Controller, [
+	[<ore:plateDoubleVanadium>, <ore:circuitElite>, <ore:plateDoubleVanadium>],
+	[DenseCable, <ore:frameGtVanadiumSteel>, DenseCable],
+	[<ore:plateDoubleVanadium>, <ore:circuitElite>, <ore:plateDoubleVanadium>]
 ]);
 
 // ME_Drive.addTooltip(format.green("Removed " + recipes.remove(ME_Drive) + " recipe(-s)"));
@@ -145,21 +488,22 @@ recipes.addShaped(ME_Drive, [
 
 // ME_Chest.addTooltip(format.green("Removed " + recipes.remove(ME_Chest) + " recipe(-s)"));
 val ME_Chest = <appliedenergistics2:tile.BlockChest>;
-ShowEnergyTooltip(ME_Chest, 1.0, 0, 1);
+ShowEnergyTooltip(ME_Chest, 1.5, 0, 1);
 recipes.remove(ME_Chest);
 recipes.addShaped(ME_Chest, [
 	[<ore:plateVanadium>, ME_Terminal, <ore:plateVanadium>],
 	[LogicProcessor, <OpenComputers:diskDrive>, LogicProcessor],
-	[<ore:plateDoubleVanadium>, CoveredCable, <ore:plateDoubleVanadium>]
+	[<ore:plateDoubleVanadium>, SmartCable, <ore:plateDoubleVanadium>]
 ]);
 
 // MolecularAssembler.addTooltip(format.green("Removed " + recipes.remove(MolecularAssembler) + " recipe(-s)"));
 val MolecularAssembler = <appliedenergistics2:tile.BlockMolecularAssembler>;
+ShowEnergyTooltip(MolecularAssembler, 0.0, -1, 1);
 recipes.remove(MolecularAssembler);
 recipes.addShaped(MolecularAssembler, [
-	[QuartzGlass, FormationPlane, QuartzGlass],
+	[QuartzGlass, ME_FormationPlane, QuartzGlass],
 	[CalculationProcessor, ME_PatternTerminal, CalculationProcessor],
-	[QuartzGlass, AnnihilationPlane, QuartzGlass]
+	[QuartzGlass, ME_AnnihilationPlane, QuartzGlass]
 ]);
 
 // EnergyCell.addTooltip(format.green("Removed " + recipes.remove(EnergyCell) + " recipe(-s)"));
@@ -177,8 +521,33 @@ recipes.addShaped(EnergyCell, [
 	[<ore:wireFineVanadiumGallium>, <ore:crystalFluix>, <ore:wireFineVanadiumGallium>]
 ]);
 
+// ME_Interface_Block.addTooltip(format.green("Removed " + recipes.remove(ME_Interface_Block) + " recipe(-s)"));
+val ME_Interface_Block = <appliedenergistics2:tile.BlockInterface>;
+ShowEnergyTooltip(ME_Interface_Block, 1.0, 0, 1);
+recipes.remove(ME_Interface_Block);
+recipes.addShaped(ME_Interface_Block, [
+	[<ore:wireFineVanadium>, CalculationProcessor, <ore:wireFineVanadium>],
+	[AnnihilationCore, <ore:frameGtVanadiumSteel>, FormationCore],
+	[<ore:wireFineVanadium>, LogicProcessor, <ore:wireFineVanadium>]
+]);
+recipes.addShapeless(ME_Interface_Block, [ME_Interface, ME_Interface]);
+recipes.addShapeless(ME_Interface * 2, [ME_Interface_Block]);
+
+// MatterCondenser.addTooltip(format.green("Removed " + recipes.remove(MatterCondenser) + " recipe(-s)"));
+val MatterCondenser = <appliedenergistics2:tile.BlockCondenser>;
+recipes.remove(MatterCondenser);
+recipes.addShaped(MatterCondenser, [
+	[AnnihilationCore, SpatialComponent_2, AnnihilationCore],
+	[SpatialComponent_2, MolecularAssembler, SpatialComponent_2],
+	[AnnihilationCore, SpatialComponent_2, AnnihilationCore]
+]);
+
+// WirelessAccessPoint.addTooltip(format.green("Removed " + recipes.remove(WirelessAccessPoint) + " recipe(-s)"));
+val WirelessAccessPoint = <appliedenergistics2:tile.BlockWireless>;
+ShowEnergyTooltip(WirelessAccessPoint, 8.0, 0, 1);
+
 /* 
- * TODO: Make output item charge exact as the total charge of ingredients.
+ * TODO: Make output item charge exact to the total charge of ingredients.
  */
 // DenseEnergyCell.addTooltip(format.green("Removed " + recipes.remove(DenseEnergyCell) + " recipe(-s)"));
 val DenseEnergyCell = <appliedenergistics2:tile.BlockDenseEnergyCell>;
@@ -194,30 +563,86 @@ recipes.addShaped(DenseEnergyCell, [
 val CraftingUnit = <appliedenergistics2:tile.BlockCraftingUnit>;
 recipes.remove(CraftingUnit);
 recipes.addShaped(CraftingUnit, [
-	[<ore:plateDoubleVanadiumSteel>, CalculationProcessor, <ore:plateDoubleVanadiumSteel>],
-	[DenseCable, <ore:circuitData>, DenseCable],
-	[<ore:plateDoubleVanadiumSteel>, CalculationProcessor, <ore:plateDoubleVanadiumSteel>]
+	[<ore:plateVanadiumSteel>, CalculationProcessor, <ore:plateVanadiumSteel>],
+	[<ore:circuitElite>, <ore:frameGtVanadiumSteel>, <ore:circuitElite>],
+	[<ore:plateVanadiumSteel>, DenseCable, <ore:plateVanadiumSteel>]
 ]);
 
 // CraftingCoProcessingUnit.addTooltip(format.green("Removed " + recipes.remove(CraftingCoProcessingUnit) + " recipe(-s)"));
 val CraftingCoProcessingUnit = <appliedenergistics2:tile.BlockCraftingUnit:1>;
+recipes.remove(CraftingCoProcessingUnit);
+recipes.addShapeless(CraftingCoProcessingUnit, [CraftingUnit, EngineeringProcessor, LogicProcessor, CalculationProcessor]);
 
 
+// SecurityTerminal.addTooltip(format.green("Removed " + recipes.remove(SecurityTerminal) + " recipe(-s)"));
+val SecurityTerminal = <appliedenergistics2:tile.BlockSecurity>;
+ShowEnergyTooltip(SecurityTerminal, 2.0, 0, 1);
+recipes.remove(SecurityTerminal);
+recipes.addShaped(SecurityTerminal, [
+	[<ore:dyeOrange>, ME_InterfaceTerminal, <ore:dyeOrange>],
+	[LogicProcessor, ME_Chest, LogicProcessor],
+	[DenseCable, StorageComponent_16, DenseCable]
+]);
 
-#===============================================#
-# ITEMS
+// CellWorkbench.addTooltip(format.green("Removed " + recipes.remove(CellWorkbench) + " recipe(-s)"));
+val CellWorkbench = <appliedenergistics2:tile.BlockCellWorkbench>;
+recipes.remove(CellWorkbench);
+recipes.addShaped(CellWorkbench, [
+	[<ore:dyeBlue>, StorageComponent_1, <ore:dyeBlue>],
+	[CalculationProcessor, ME_Chest, CalculationProcessor]
+]);
 
-// ME_Terminal
+// ME_IO_Port.addTooltip(format.green("Removed " + recipes.remove(ME_IO_Port) + " recipe(-s)"));
+val ME_IO_Port = <appliedenergistics2:tile.BlockIOPort>;
+ShowEnergyTooltip(ME_IO_Port, 1.0, 0, 1);
+recipes.remove(ME_IO_Port);
+recipes.addShaped(ME_IO_Port, [
+	[CalculationProcessor, ME_InterfaceTerminal, CalculationProcessor],
+	[StorageComponent_16, ME_Drive, StorageComponent_16],
+	[<ore:plateVanadium>, DenseCable, <ore:plateVanadium>]
+]);
 
+# QUANTUM THINGS
 
-// ME_PatternTerminal
+// SpatialIOPort.addTooltip(format.green("Removed " + recipes.remove(SpatialIOPort) + " recipe(-s)"));
+val SpatialIOPort = <appliedenergistics2:tile.BlockSpatialIOPort>;
+ShowEnergyTooltip(SpatialIOPort, 1.0, 0, 1);
+recipes.remove(SpatialIOPort);
+recipes.addShaped(SpatialIOPort, [
+	[WirelessReciever, null, WirelessReciever],
+	[SpatialComponent_16, DenseEnergyCell, SpatialComponent_16],
+	[DenseCable, ME_IO_Port, DenseCable]
+]);
 
+// QuantumLinkChamber.addTooltip(format.green("Removed " + recipes.remove(QuantumLinkChamber) + " recipe(-s)"));
+val QuantumLinkChamber = <appliedenergistics2:tile.BlockQuantumLinkChamber>;
+ShowEnergyTooltip(QuantumLinkChamber, 22, 0, 0);
+recipes.remove(QuantumLinkChamber);
+recipes.addShaped(QuantumLinkChamber, [
+	[<ore:wireFineEuropium>, SpatialComponent_16, <ore:wireFineEuropium>],
+	[SpatialComponent_16, MolecularAssembler, SpatialComponent_16],
+	[<ore:wireFineEuropium>, SpatialComponent_16, <ore:wireFineEuropium>]
+]);
 
-// FormationPlane
+// QuantumRing.addTooltip(format.green("Removed " + recipes.remove(QuantumRing) + " recipe(-s)"));
+val QuantumRing = <appliedenergistics2:tile.BlockQuantumRing>;
+ShowEnergyTooltip(QuantumRing, 22, 0, 0);
+recipes.remove(QuantumRing);
+recipes.addShaped(QuantumRing, [
+	[<ore:wireFineNaquadah>, StorageComponent_16, <ore:wireFineNaquadah>],
+	[StorageComponent_16, ME_Controller, StorageComponent_16],
+	[<ore:wireFineNaquadah>, StorageComponent_16, <ore:wireFineNaquadah>]
+]);
 
-
-// AnnihilationPlane
-
+// SpatialPylon.addTooltip(format.green("Removed " + recipes.remove(SpatialPylon) + " recipe(-s)"));
+val SpatialPylon = <appliedenergistics2:tile.BlockSpatialPylon>;
+ShowEnergyTooltip(SpatialPylon, 0.5, 0, 1);
+recipes.remove(SpatialPylon);
+recipes.addShaped(SpatialPylon, [
+	[<ore:plateNiobiumTitanium>, <ore:emitterIV>, <ore:plateNiobiumTitanium>],
+	[SpatialComponent_2, <ore:frameGtEuropium>, SpatialComponent_2],
+	[<ore:plateNiobiumTitanium>, <ore:sensorIV>, <ore:plateNiobiumTitanium>]
+]);
 
 
 #===============================================#
