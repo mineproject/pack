@@ -55,6 +55,34 @@ recipes.addShaped(KineticGearboxRotor_Carbon.withTag({advDmg: 0}), [
     [<ore:screwTungsten>, RotorBlade_Carbon, <ore:craftingToolWrench>.reuse()]
 ]);
 
+
+/* Transformers & Energy Storages */
+
+val Transformer_LV_GT = <gregtech:gt.blockmachines:21>;
+val Transformer_LV_IC2 = <IC2:blockElectric:3>;
+recipes.remove(Transformer_LV_IC2);
+recipes.addShapeless(Transformer_LV_IC2, [Transformer_LV_GT]);
+recipes.addShapeless(Transformer_LV_GT, [Transformer_LV_IC2]);
+
+val Transformer_MV_GT = <gregtech:gt.blockmachines:22>;
+val Transformer_MV_IC2 = <IC2:blockElectric:4>;
+recipes.remove(Transformer_MV_IC2);
+recipes.addShapeless(Transformer_MV_IC2, [Transformer_MV_GT]);
+recipes.addShapeless(Transformer_MV_GT, [Transformer_MV_IC2]);
+
+val Transformer_HV_GT = <gregtech:gt.blockmachines:23>;
+val Transformer_HV_IC2 = <IC2:blockElectric:5>;
+recipes.remove(Transformer_HV_IC2);
+recipes.addShapeless(Transformer_HV_IC2, [Transformer_HV_GT]);
+recipes.addShapeless(Transformer_HV_GT, [Transformer_HV_IC2]);
+
+val Transformer_EV_GT = <gregtech:gt.blockmachines:24>;
+val Transformer_EV_IC2 = <IC2:blockElectric:6>;
+recipes.remove(Transformer_EV_IC2);
+recipes.addShapeless(Transformer_EV_IC2, [Transformer_EV_GT]);
+recipes.addShapeless(Transformer_EV_GT, [Transformer_EV_IC2]);
+
+
 /* Kinetic Machines */
 
 val KineticGenerator = <IC2:blockGenerator:9>;
@@ -91,6 +119,7 @@ recipes.addShaped(ElectricKineticGenerator, [
     [<ore:motorHV>, <ore:motorHV>, <ore:motorHV>],
     [GT_GoldCable, BatteryBuffer_HV_9x, GT_GoldCable]
 ]);
+
 
 /* Heat Machines */
 

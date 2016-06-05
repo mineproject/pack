@@ -138,3 +138,8 @@ mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2322>, false, fal
 mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2346>, false, false, 3000, <gregtech:gt.metaitem.01:11346>);
 mods.immersiveengineering.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11305>, <minecraft:iron_ingot>, 3001, <ImmersiveEngineering:material:13>);
 mods.immersiveengineering.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11305>, <minecraft:iron_block>, 27001, <ImmersiveEngineering:material:13> * 9);
+
+recipes.removeShaped(<OpenBlocks:sky>);
+recipes.addShaped(<OpenBlocks:sky>, [[<minecraft:glass>,<minecraft:ender_pearl>,<minecraft:glass>],[<minecraft:glass>,<minecraft:end_stone>,<minecraft:glass>],[<minecraft:glass>,<minecraft:ender_pearl>,<minecraft:glass>]]);
+
+mods.gregtech.Pulverizer.addRecipe([<TConstruct:materials:38> * 2, <gregtech:gt.metaitem.01:2033>, <gregtech:gt.metaitem.01:2807>], <TConstruct:SearedBrick:2>, [10000, 1000, 5000], 4000, 2);
