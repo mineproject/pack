@@ -1,28 +1,6 @@
 #Name: WWDraconicGreg.zs
 #Author: Fuck The Beast
 
-furnace.remove(<ore:ingotDraconium>);
-mods.thermalexpansion.Furnace.removeRecipe(<ore:dustDraconium>);
-mods.thermalexpansion.Furnace.removeRecipe(<ore:oreDraconium>);
-mods.thermalexpansion.Furnace.removeRecipe(<ore:blockDraconium>);
-mods.thermalexpansion.Furnace.removeRecipe(<DraconicEvolution:draconiumBlend>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustDraconium>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreDraconium>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:blockDraconium>);
-mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore:oreDraconium>);
-mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <ore:oreDraconium>);
-mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIngot>);
-mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:1324> * 2], <liquid:molten.duranium> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
-mods.gregtech.FusionReactor.addRecipe(<liquid:molten.draconium> * 144, <liquid:molten.duranium> * 144, <liquid:molten.neutronium> * 36, 1200, 100000, 500000000);
-mods.tconstruct.Casting.addTableRecipe(<TabulaRasa:RasaItem0>, <liquid:molten.draconium> * 144, <TConstruct:metalPattern>, false, 1200);
-mods.gregtech.VacuumFreezer.addRecipe(<DraconicEvolution:draconiumIngot>, <TabulaRasa:RasaItem0>, 1200);
-<DraconicEvolution:draconiumIngot>.addTooltip(format.green("Draconium proccessing: "));
-<DraconicEvolution:draconiumIngot>.addTooltip(format.green("Draconium dust->molten duranium->molten draconium->"));
-<DraconicEvolution:draconiumIngot>.addTooltip(format.green("->hot draconium ingot in TConstruct"));
-<DraconicEvolution:draconiumIngot>.addTooltip(format.green("casting table with ingot cast->draconium ingot"));
-<DraconicEvolution:draconiumIngot>.addTooltip(format.red("DO NOT USE FLUID SOLDIFIER TO MAKE DRACONIUM INGOT,"));
-<DraconicEvolution:draconiumIngot>.addTooltip(format.red("YOU WILL NEED 58 days per ingot!!!"));
-
 recipes.remove(<ExtraUtilities:block_bedrockium>);
 mods.tconstruct.Casting.removeBasinRecipe(<ExtraUtilities:block_bedrockium>);
 mods.gregtech.ImplosionCompressor.addRecipe([<ExtraUtilities:block_bedrockium>], <ExtraUtilities:bedrockiumIngot> * 9, 64);
@@ -138,3 +116,8 @@ mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2322>, false, fal
 mods.railcraft.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:2346>, false, false, 3000, <gregtech:gt.metaitem.01:11346>);
 mods.immersiveengineering.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11305>, <minecraft:iron_ingot>, 3001, <ImmersiveEngineering:material:13>);
 mods.immersiveengineering.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11305>, <minecraft:iron_block>, 27001, <ImmersiveEngineering:material:13> * 9);
+
+recipes.removeShaped(<OpenBlocks:sky>);
+recipes.addShaped(<OpenBlocks:sky>, [[<minecraft:glass>,<minecraft:ender_pearl>,<minecraft:glass>],[<minecraft:glass>,<minecraft:end_stone>,<minecraft:glass>],[<minecraft:glass>,<minecraft:ender_pearl>,<minecraft:glass>]]);
+
+mods.gregtech.Pulverizer.addRecipe([<TConstruct:materials:38> * 2, <gregtech:gt.metaitem.01:2033>, <gregtech:gt.metaitem.01:2807>], <TConstruct:SearedBrick:2>, [10000, 1000, 5000], 4000, 2);
