@@ -74,6 +74,13 @@ print("Initializing 'GregTech.zs'...");
 <ore:sensorEV>.add(<gregtech:gt.metaitem.01:32693>);
 <ore:sensorIV>.add(<gregtech:gt.metaitem.01:32694>);
 
+//field
+<ore:fieldLV>.add(<gregtech:gt.metaitem.01:32670>);
+<ore:fieldMV>.add(<gregtech:gt.metaitem.01:32671>);
+<ore:fieldHV>.add(<gregtech:gt.metaitem.01:32672>);
+<ore:fieldEV>.add(<gregtech:gt.metaitem.01:32673>);
+<ore:fieldIV>.add(<gregtech:gt.metaitem.01:32674>);
+
 #==================================================================#
 #Tooltips
 
