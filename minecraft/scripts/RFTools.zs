@@ -10,13 +10,15 @@ print("Initializing 'RFTools.zs'...");
 #Variables
 
 val ResonantMachineFrame = <ThermalExpansion:Frame:3>;
+val ReinforcedMachineFrame = <ThermalExpansion:Frame:2>;
 val MachineFrame = <ThermalExpansion:Frame:0>;
 val EnergyCell = <ThermalExpansion:Cell:4>;
 val CryoFlaxduct = <ThermalDynamics:ThermalDynamics_0:6>;
-val RedstonePlate = <ThermalExpansion:Plate:2>;
+val RedstonePlate = <ThermalExpansion:Plate:1>;
 val ResonantCapacitor = <ThermalExpansion:capacitor:5>;
 val HardenedCapacitor = <ThermalExpansion:capacitor:3>;
 
+val Syringe = <rftools:syringeItem>;
 val MatterTransmetter = <rftools:matterTransmitterBlock>;
 val MatterReceiver = <rftools:matterReceiverBlock>;
 val DialingDevice = <rftools:dialingDeviceBlock>;
@@ -33,12 +35,32 @@ val Timer = <rftools:timerBlock>;
 val RedstoneTransmitter = <rftools:redstoneTransmitterBlock>;
 val RedstoneReceiver = <rftools:redstoneReceiverBlock>;
 val InfusedDiamond = <rftools:infusedDiamondItem>;
+val RFMonitor = <rftools:rfMonitorBlock>;
+val LiquidMonitor = <rftools:liquidMonitorBlock>;
+val CrafterT1 = <rftools:crafterBlock1>;
+val CrafterT2 = <rftools:crafterBlock2>;
+val CrafterT3 = <rftools:crafterBlock3>;
+val PowerRelay = <rftools:relayBlock>;
+val StorageScanner = <rftools:storageScannerBlock>;
+val ItemFilter = <rftools:itemFilterBlock>;
+val Spawner = <rftools:spawnerBlock>;
+val MatterBeamer = <rftools:matterBeamerBlock>;
+val ShieldProjectorT1 = <rftools:shieldBlock>;
+val ShieldProjectorT2 = <rftools:shieldBlock2>;
+val ShieldProjectorT3 = <rftools:shieldBlock3>;
+val ShieldProjectorT4 = <rftools:shieldBlock4>;
+val ShieldTemplate = <rftools:shieldTemplateBlock>;
 
 val AnnihilationPlate = <appliedenergistics2:item.ItemMultiPart:300>;
 val FormationPlate = <appliedenergistics2:item.ItemMultiPart:320>;
 val MolecularAssembler = <appliedenergistics2:tile.BlockMolecularAssembler>;
 val CalculationProcessor = <appliedenergistics2:item.ItemMultiMaterial:23>;
 val LogicProcessor = <appliedenergistics2:item.ItemMultiMaterial:22>;
+val SpartialCell128 = <appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>;
+val SpartialPylon = <appliedenergistics2:tile.BlockSpatialPylon>;
+val QuantumRing = <appliedenergistics2:tile.BlockQuantumRing>;
+val QuantumChamber = <appliedenergistics2:tile.BlockQuantumLinkChamber>;
+val QuantumEntangled = <appliedenergistics2:item.ItemMultiMaterial:48>;
 
 val AdvancedScanner2 = <gregtech:gt.blockmachines:344>;
 val DataOrb = <gregtech:gt.metaitem.01:32707>;
@@ -48,12 +70,18 @@ val EnergyCircuit = <gregtech:gt.metaitem.01:32706>;
 val Emitter = <gregtech:gt.metaitem.01:32683>;
 val Sensor = <gregtech:gt.metaitem.01:32693>;
 val SensorLV = <gregtech:gt.metaitem.01:32690>;
+val FieldMV = <gregtech:gt.metaitem.01:32671>;
+val FieldHV = <gregtech:gt.metaitem.01:32672>;
+val FieldEV = <gregtech:gt.metaitem.01:32673>;
+val FieldIV = <gregtech:gt.metaitem.01:32674>;
 val Monitor = <gregtech:gt.metaitem.01:32740>;
 val DoublePromethiumPlate = <gregtech:gt.metaitem.01:18068>;
 val LongErbiumRod = <gregtech:gt.metaitem.02:22075>;
 val QuantumCore = <AdvancedSolarPanel:asp_crafting_items:13>;
 val MachineHull = <gregtech:gt.blockmachines:10>;
-
+val MachineHullLV = <gregtech:gt.blockmachines:11>;
+val MachineHullMV = <gregtech:gt.blockmachines:12>;
+val MachineHullHV = <gregtech:gt.blockmachines:13>;
 
 
 #==================================================================#
@@ -62,6 +90,115 @@ val MachineHull = <gregtech:gt.blockmachines:10>;
 //Remove base craft blocks. All machine will be craft from MachineFrame from TE
 recipes.remove(<rftools:machineBase>);
 recipes.remove(<rftools:machineFrame>);
+
+//Remove unusible blocks
+recipes.remove(<rftools:environmentalControllerBlock>);
+recipes.remove(<rftools:screenBlock>);
+recipes.remove(<rftools:screenControllerBlock>);
+
+recipes.remove(<rftools:endergenicBlock>);
+recipes.remove(<rftools:pearlInjectorBlock>);
+recipes.remove(<rftools:enderMonitorBlock>);
+
+recipes.remove(<rftools:biomeAbsorberBlock>);
+recipes.remove(<rftools:materialAbsorberBlock>);
+recipes.remove(<rftools:liquidAbsorberBlock>);
+recipes.remove(<rftools:timeAbsorberBlock>);
+recipes.remove(<rftools:energyExtractorBlock>);
+
+recipes.remove(<rftools:spaceChamberBlock>);
+recipes.remove(<rftools:spaceChamberControllerBlock>);
+recipes.remove(<rftools:spaceProjectorBlock>);
+recipes.remove(<rftools:builderBlock>);
+
+recipes.remove(<rftools:blockProtectorBlock>);
+recipes.remove(<rftools:modularStorageBlock>);
+recipes.remove(<rftools:remoteStorageBlock>);
+recipes.remove(<rftools:securityManagerBlock>);
+
+#============== Symple Block Section ==============#
+
+//RF Monitor
+recipes.remove(RFMonitor);
+recipes.addShaped(RFMonitor,[
+	[null, <ore:circuitBasic>, null],
+	[<minecraft:comparator>, MachineHullLV, SensorLV],
+	[null, <ore:coilRR>, null]
+]);
+
+//Liquid Monitor
+recipes.remove(LiquidMonitor);
+recipes.addShaped(LiquidMonitor,[
+	[null, <ore:circuitBasic>, null],
+	[<minecraft:comparator>, MachineHullLV, SensorLV],
+	[null, <ore:pipeSmallBronze>, null]
+]);
+
+//Crafter Tier 1
+recipes.remove(CrafterT1);
+recipes.addShaped(CrafterT1,[
+	[<ore:armLV>, <gregtech:gt.metaitem.01:32744>, <ore:armLV>],
+	[<ore:circuitBasic>, MachineHullLV, <ore:circuitBasic>],
+	[<ore:chestWood>, <ore:coilRC>, <ore:chestWood>]
+]);
+
+//Crafter Tier 2
+recipes.remove(CrafterT2);
+recipes.addShaped(CrafterT2,[
+	[<ore:armMV>, <gregtech:gt.metaitem.01:32744>, <ore:armMV>],
+	[<ore:circuitGood>, MachineHullMV, <ore:circuitGood>],
+	[<ore:chestWood>, <ore:coilRC>, <ore:chestWood>]
+]);
+
+//Crafter Tier 3
+recipes.remove(CrafterT3);
+recipes.addShaped(CrafterT3,[
+	[<ore:armMV>, <gregtech:gt.metaitem.01:32744>, <ore:armMV>],
+	[<ore:circuitAdvanced>, MachineHullMV, <ore:circuitAdvanced>],
+	[<ore:chestWood>, <ore:coilRC>, <ore:chestWood>]
+]);
+
+//Power Relay
+recipes.remove(PowerRelay);
+recipes.addShaped(PowerRelay,[
+	[<ore:coilRC>, CalculationProcessor, <ore:coilRT>],
+	[<Forestry:chipsets:1>, MachineHullLV, <Forestry:chipsets:1>],
+	[<ore:coilRT>, SensorLV, <ore:coilRC>]
+]);
+
+//Storage Scanner
+recipes.remove(StorageScanner);
+recipes.addShaped(StorageScanner,[
+	[<ore:sensorMV>, Monitor, <ore:emitterMV>],
+	[<ore:circuitAdvanced>, MachineHullMV, <ore:circuitAdvanced>],
+	[LogicProcessor, <ore:coilRC>, LogicProcessor]
+]);
+
+//Item Filter
+recipes.remove(ItemFilter);
+recipes.addShaped(ItemFilter,[
+	[<minecraft:paper>, <ore:chestWood>, <minecraft:paper>],
+	[<ore:conveyorLV>, MachineHull, <ore:conveyorLV>],
+	[<minecraft:paper>, <Forestry:chipsets:3>, <minecraft:paper>]
+]);
+
+#============= Spawner System Section =============#
+
+//Spawner
+recipes.remove(Spawner);
+recipes.addShaped(Spawner,[
+	[<ore:emitterHV>, FormationPlate, <ore:emitterHV>],
+	[<ore:circuitElite>, ResonantMachineFrame, <ore:circuitElite>],
+	[<ore:coilRC>, CalculationProcessor, <ore:coilRC>]
+]);
+
+//Matter Beamer
+recipes.remove(MatterBeamer);
+recipes.addShaped(MatterBeamer,[
+	[<ore:emitterHV>, <ore:craftingLensRed>, <ore:emitterHV>],
+	[LogicProcessor, ResonantMachineFrame, LogicProcessor],
+	[<ore:coilRC>, <ore:circuitUltimate>, <ore:coilRC>]
+]);
 
 #========== Teleportation System Section ==========#
 
@@ -157,10 +294,126 @@ recipes.addShaped(RedstoneReceiver,[
 
 #============== Shield System Section =============#
 
+//Shield Projector Tier 1
+recipes.remove(ShieldProjectorT1);
+recipes.addShaped(ShieldProjectorT1,[
+	[<ore:plateVanadium>, FieldMV, <ore:plateVanadium>],
+	[<ore:circuitAdvanced>, ReinforcedMachineFrame, DataChip],
+	[<ore:plateVanadium>, <ore:coilRC>, <ore:plateVanadium>]
+]);
 
+//Shield Projector Tier 2
+recipes.remove(ShieldProjectorT2);
+recipes.addShaped(ShieldProjectorT2,[
+	[<ore:plateTungstenSteel>, FieldHV, <ore:plateTungstenSteel>],
+	[<ore:circuitAdvanced>, ResonantMachineFrame, DataChip],
+	[<ore:plateTungstenSteel>, <ore:coilRC>, <ore:plateTungstenSteel>]
+]);
+
+//Shield Projector Tier 3
+recipes.remove(ShieldProjectorT3);
+recipes.addShaped(ShieldProjectorT3,[
+	[<ore:plateAmericium>, FieldEV, <ore:plateAmericium>],
+	[DataCircuit, ResonantMachineFrame, DataOrb],
+	[<ore:plateAmericium>, CryoFlaxduct, <ore:plateAmericium>]
+]);
+
+//Shield Projector Tier 4
+recipes.remove(ShieldProjectorT4);
+recipes.addShaped(ShieldProjectorT4,[
+	[<ore:plateNeutronium>, FieldIV, <ore:plateNeutronium>],
+	[DataCircuit, ResonantMachineFrame, DataOrb],
+	[<ore:plateNeutronium>, CryoFlaxduct, <ore:plateNeutronium>]
+]);
+
+//Shield Template
+recipes.remove(ShieldTemplate);
+recipes.addShaped(ShieldTemplate * 4,[
+	[<ore:stickLapis>, <ExtraUtilities:etherealglass>, <ore:stickLapis>],
+	[<ExtraUtilities:etherealglass>, <ore:frameGtMolybdenum>, <ExtraUtilities:etherealglass>],
+	[<ore:stickLapis>, <ExtraUtilities:etherealglass>, <ore:stickLapis>]
+]);
+
+#============= Dimension System Section ===========#
+
+//Dimlet Researcher
+recipes.remove(<rftools:dimletResearcherBlock>);
+recipes.addShaped(<rftools:dimletResearcherBlock>,[
+	[DataChip, <ore:sensorHV>, DataChip],
+	[<ore:paperEmpty>, <rftools:unknownDimlet>, <ore:paperEmpty>],
+	[<ore:circuitAdvanced>, <ore:frameHV>, <ore:circuitAdvanced>]
+]);
+
+//Dimlet Scrambler
+recipes.remove(<rftools:dimletScramblerBlock>);
+recipes.addShaped(<rftools:dimletScramblerBlock>,[
+	[DataChip, <ore:emitterHV>, DataChip],
+	[<ore:paperEmpty>, <rftools:unknownDimlet>, <ore:paperEmpty>],
+	[<ore:circuitAdvanced>, <ore:frameHV>, <ore:circuitAdvanced>]
+]);
+
+//Dimension Enscriber
+recipes.remove(<rftools:dimensionEnscriberBlock>);
+recipes.addShaped(<rftools:dimensionEnscriberBlock>,[
+	[DataCircuit, <ore:emitterIV>, DataCircuit],
+	[<ore:plateProtoAdamantium>, <gregtech:gt.blockmachines:16>, <ore:plateProtoAdamantium>],
+	[<ore:armIV>, <appliedenergistics2:item.ItemBasicStorageCell.4k>, <ore:armIV>]
+]);
+
+//Dimension Builder
+recipes.remove(<rftools:dimensionBuilderBlock>);
+recipes.addShaped(<rftools:dimensionBuilderBlock>,[
+	[<ore:emitterIV>, DataOrb, <ore:emitterIV>],
+	[<ore:plateProtoAdamantium>, <gregtech:gt.blockmachines:485>, <ore:plateProtoAdamantium>],
+	[CryoFlaxduct, <ore:plateProtoAdamantium>, CryoFlaxduct]
+]);
+
+//Dimension Editor
+recipes.remove(<rftools:dimensionEditorBlock>);
+recipes.addShaped(<rftools:dimensionEditorBlock>,[
+	[<ore:armIV>, <appliedenergistics2:item.ItemBasicStorageCell.1k>, <ore:armIV>],
+	[<ore:plateProtoAdamantium>, <gregtech:gt.blockmachines:15>, <ore:plateProtoAdamantium>],
+	[CryoFlaxduct, <ore:plateProtoAdamantium>, CryoFlaxduct]
+]);
+
+//Dimension Monitor
+recipes.remove(<rftools:dimensionMonitorBlock>);
+recipes.addShaped(<rftools:dimensionMonitorBlock>,[
+	[null, <ore:sensorIV>, null],
+	[<minecraft:comparator>, <ore:frameHV>, RedstonePlate],
+	[null, DataCircuit, null]
+]);
+
+//Machine Infuser
+recipes.remove(<rftools:machineInfuserBlock>);
+recipes.addShaped(<rftools:machineInfuserBlock>,[
+	[<rftools:dimensionalShardItem>, <ore:armIV>, <rftools:dimensionalShardItem>],
+	[<ore:conveyorIV>, <ore:frameIV>, <ore:conveyorIV>],
+	[<ore:plateDoubleProtoAdamantium>, CryoFlaxduct, <ore:plateDoubleProtoAdamantium>]
+]);
+
+//Activity Probe
+recipes.remove(<rftools:activityProbeBlock>);
+recipes.addShaped(<rftools:activityProbeBlock>,[
+	[<rftools:dimensionalShardItem>, <ore:sensorIV>, <rftools:dimensionalShardItem>],
+	[<ore:plateDoubleProtoAdamantium>, <ore:frameIV>, <ore:plateDoubleProtoAdamantium>],
+	[<rftools:dimensionalShardItem>, <ore:plateDoubleProtoAdamantium>, <rftools:dimensionalShardItem>]
+]);
+
+//Dimlet Workbench
+recipes.remove(<rftools:dimletWorkbenchBlock>);
+recipes.addShaped(<rftools:dimletWorkbenchBlock>,[
+	[<ore:emitterIV>, InfusedDiamond, <ore:armIV>],
+	[<gregtech:gt.blockmachines:455>, <ore:conveyorIV>, <gregtech:gt.blockmachines:215>],
+	[<ore:plateDoubleProtoAdamantium>, <appliedenergistics2:item.ItemBasicStorageCell.64k>, <ore:plateDoubleProtoAdamantium>]
+]);
 
 #==================================================================#
 #Items
+
+//Infused Diamond
+recipes.remove(InfusedDiamond);
+mods.gregtech.ChemicalReactor.addRecipe(InfusedDiamond, null, <minecraft:diamond>, <rftools:dimensionalShardItem> * 8, <liquid:molten.neutronium> * 144, 1200);
 
 //Charged Porter
 recipes.remove(ChargedPorter);
@@ -194,6 +447,44 @@ recipes.addShaped(NetworkMonitor,[
 	[<ore:plateSteel>, <ore:circuitBasic>, <ore:plateSteel>]
 ]);
 
+//Syringe
+recipes.remove(Syringe);
+recipes.addShaped(Syringe,[
+	[<ore:stickSteel>, null, null],
+	[null, <ore:cellEmpty>, null],
+	[null, null, <ore:cellEmpty>]
+]);
+
+//Empty Dimension Tab
+recipes.remove(<rftools:emptyDimensionTab>);
+mods.avaritia.ExtremeCrafting.addShaped(<rftools:emptyDimensionTab>, [
+		[<ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>],
+		[<ore:plateQuadrupleProtoAdamantium>, SpartialCell128, SpartialPylon, SpartialPylon, <ore:fieldIV>, SpartialPylon, SpartialPylon, SpartialCell128, <ore:plateQuadrupleProtoAdamantium>],
+		[<ore:plateQuadrupleProtoAdamantium>, DataOrb, SpartialPylon, QuantumRing, QuantumChamber, QuantumRing, SpartialPylon, DataOrb, <ore:plateQuadrupleProtoAdamantium>],
+		[<ore:plateQuadrupleProtoAdamantium>, DataCircuit, <ore:fieldIV>, QuantumChamber, QuantumEntangled, QuantumChamber, <ore:fieldIV>, DataCircuit, <ore:plateQuadrupleProtoAdamantium>],
+		[<ore:plateQuadrupleProtoAdamantium>, DataOrb, SpartialPylon, QuantumRing, QuantumChamber, QuantumRing, SpartialPylon, DataOrb, <ore:plateQuadrupleProtoAdamantium>],
+		[<ore:plateQuadrupleProtoAdamantium>, SpartialCell128, SpartialPylon, SpartialPylon, <ore:fieldIV>, SpartialPylon, SpartialPylon, SpartialCell128, <ore:plateQuadrupleProtoAdamantium>],		
+		[<ore:plateQuadrupleProtoAdamantium>, <ore:cableGt12Naquadah>, <ore:batteryUltimate>, <gregtech:gt.blockmachines:26>, EnergyCircuit, <gregtech:gt.blockmachines:26>, <ore:batteryUltimate>, <ore:cableGt12Naquadah>, <ore:plateQuadrupleProtoAdamantium>],
+		[<ore:plateQuadrupleProtoAdamantium>, ResonantMachineFrame, <ore:cableGt12Naquadah>, <ore:batteryUltimate>, <gregtech:gt.blockmachines:1195>, <ore:batteryUltimate>, <ore:cableGt12Naquadah>, ResonantMachineFrame, <ore:plateQuadrupleProtoAdamantium>],
+		[<ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateQuadrupleProtoAdamantium>]
+	]
+);
+
+//Dimension Monitor
+recipes.remove(<rftools:dimensionMonitorItem>);
+recipes.addShaped(<rftools:dimensionMonitorItem>,[
+	[null, Monitor, <ore:sensorHV>],
+	[<ore:stickProtoAdamantium>, <rftools:unknownDimlet>, <ore:stickProtoAdamantium>],
+	[null, CalculationProcessor, null]
+]);
+
+//Phased Field Generator
+recipes.remove(<rftools:phasedFieldGeneratorItem>);
+recipes.addShaped(<rftools:phasedFieldGeneratorItem>,[
+	[<ore:plateProtoAdamantium>, <ore:emitterIV>, <ore:plateProtoAdamantium>],
+	[<ore:fieldIV>, InfusedDiamond, <ore:fieldIV>],
+	[<ore:plateProtoAdamantium>, <DraconicEvolution:draconiumFluxCapacitor:0>, <ore:plateProtoAdamantium>]
+]);
 
 #==================================================================#
 
