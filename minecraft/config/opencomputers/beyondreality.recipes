@@ -294,7 +294,7 @@ case2 {
 }
 case3 {
   input: [[screwTitanium , "oc:materialCircuitBoardPrinted", craftingToolWrench]
-          [{item="ic2.reactorVentDiamond", subID=1}, subID=1", "oc:case2", {item="ic2.reactorVentDiamond", subID=1}]
+          [{item="ic2.reactorVentDiamond", subID=1}, "oc:case2", {item="ic2.reactorVentDiamond", subID=1}]
           [screwTitanium, "oc:circuitChip3", craftingToolScrewdriver]]
 }
 diskDrive {
