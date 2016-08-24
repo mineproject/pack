@@ -53,8 +53,9 @@ recipes.remove(<ExtraUtilities:block_bedrockium>);
 furnace.remove(<ExtraUtilities:block_bedrockium>);
 recipes.remove(<ExtraUtilities:bedrockiumIngot>);
 mods.thermalexpansion.Furnace.removeRecipe(<ExtraUtilities:cobblestone_compressed:7>);
-recipes.addShaped(<ExtraUtilities:block_bedrockium>, [[<ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>], [<ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>], [<ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>]]);
+//recipes.addShaped(<ExtraUtilities:block_bedrockium>, [[<ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>], [<ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>], [<ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>, <ExtraUtilities:bedrockiumIngot>]]);
 furnace.addRecipe(<ExtraUtilities:bedrockiumIngot>, <IC2:itemMOX>);
+mods.thermalexpansion.Furnace.addRecipe(1600, <IC2:itemMOX>, <ExtraUtilities:bedrockiumIngot>);
 
 #remove high level compressed cobble
 recipes.remove(<ExtraUtilities:cobblestone_compressed:7>);
