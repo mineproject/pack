@@ -121,3 +121,27 @@ recipes.removeShaped(<OpenBlocks:sky>);
 recipes.addShaped(<OpenBlocks:sky>, [[<minecraft:glass>,<minecraft:ender_pearl>,<minecraft:glass>],[<minecraft:glass>,<minecraft:end_stone>,<minecraft:glass>],[<minecraft:glass>,<minecraft:ender_pearl>,<minecraft:glass>]]);
 
 mods.gregtech.Pulverizer.addRecipe([<TConstruct:materials:38> * 2, <gregtech:gt.metaitem.01:2033>, <gregtech:gt.metaitem.01:2807>], <TConstruct:SearedBrick:2>, [10000, 1000, 5000], 4000, 2);
+
+
+#Open Computers recipes
+recipes.remove(<OpenComputers:item:29>);
+recipes.remove(<OpenComputers:item:42>);
+recipes.remove(<OpenComputers:item:43>);
+#CPUs
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:29>, [[<ore:oc:circuitChip2>, <ore:oc:materialALU>, <ore:oc:circuitChip2>], [<ore:plateAluminium>, <ore:oc:materialCU>, <ore:plateAluminium>], [<ore:wireFineCopper>, <ore:oc:ram2>, <ore:wireFineCopper>]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:42>, [[<ore:oc:circuitChip2>, <ore:oc:materialALU>, <ore:oc:circuitChip2>], [<ore:plateStainlessSteel>, <ore:oc:materialCU>, <ore:plateStainlessSteel>], [<ore:wireFineGold>, <ore:oc:ram4>, <ore:wireFineGold>]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:43>, [[<ore:oc:circuitChip3>, <ore:oc:materialALU>, <ore:oc:circuitChip3>], [<ore:plateTitanium>, <ore:oc:materialCU>, <ore:plateTitanium>], [<ore:wireFinePlatinum>, <ore:oc:ram6>, <ore:wireFinePlatinum>]]);
+
+#GPUs
+recipes.remove(<OpenComputers:item:8>);
+recipes.remove(<OpenComputers:item:9>);
+recipes.remove(<OpenComputers:item:10>);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:8>, [[<ore:oc:circuitChip1>,<ore:oc:materialALU>,<ore:oc:circuitChip1>],[<ore:oc:ram2>,<ore:oc:materialCard>,<ore:oc:ram2>],[null,null,null]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:9>, [[<ore:oc:circuitChip2>,<ore:oc:materialALU>,<ore:oc:circuitChip2>],[<ore:oc:ram4>,<ore:oc:materialCard>,<ore:oc:ram4>],[null,null,null]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:10>, [[<ore:oc:circuitChip3>,<ore:oc:materialALU>,<ore:oc:circuitChip3>],[<ore:oc:ram6>,<ore:oc:materialCard>,<ore:oc:ram6>],[null,null,null]]);
+recipes.removeShaped(<OpenComputers:item:5>);
+recipes.removeShaped(<OpenComputers:item:6>);
+recipes.removeShaped(<OpenComputers:item:7>);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:5>, [[<ore:oc:ram1>,<ore:oc:materialDisk>,<ore:oc:ram1>],[<ore:oc:ram1>,<ore:oc:materialDisk>,<ore:oc:ram1>],[<ore:oc:circuitChip1>,<ore:screwAluminium>,<ore:oc:circuitChip1>]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:6>, [[<ore:oc:ram2>,<ore:oc:materialDisk>,<ore:oc:ram2>],[<ore:oc:ram2>,<ore:oc:materialDisk>,<ore:oc:ram2>],[<ore:oc:circuitChip2>,<ore:screwTitanium>,<ore:oc:circuitChip2>]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:7>, [[<ore:oc:ram3>,<ore:oc:materialDisk>,<ore:oc:ram3>],[<ore:oc:ram3>,<ore:oc:materialDisk>,<ore:oc:ram3>],[<ore:oc:circuitChip3>,<ore:screwTungstenSteel>,<ore:oc:circuitChip3>]]);

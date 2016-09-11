@@ -59,35 +59,45 @@ server3 {
 
 ram1 {
   type: gt_assembler
-  input: ["oc:circuitChip1", "oc:materialCircuitBoardPrinted"]
-  count: [3, 3]
-  eu: 32
-  time: 250
+  input: [circuitGood, "oc:materialCircuitBoardPrinted"]
+  count: [20, 3]
+  eu: 30
+  time: 200
 }
 ram2 {
-  input: [["oc:circuitChip1", "oc:circuitChip1", "oc:circuitChip1"]
-          ["oc:ram1", "oc:materialCircuitBoardPrinted", "oc:ram1"]
-          ["", craftingToolWrench, ""]]
+  type: gt_assembler
+  input: [circuitAdvanced, "oc:materialCircuitBoardPrinted"]
+  count: [16, 3]
+  eu: 60
+  time: 300
 }
 ram3 {
-  input: [["oc:circuitChip2", "oc:circuitChip2", "oc:circuitChip2"]
-          ["oc:ram2", "oc:materialCircuitBoardPrinted", "oc:ram2"]
-          [circuitElite, craftingToolWrench, circuitElite]]
+  type: gt_assembler
+  input: [circuitData, "oc:materialCircuitBoardPrinted"]
+  count: [12, 3]
+  eu: 120
+  time: 500
 }
 ram4 {
-  input: [["oc:circuitChip2", "oc:circuitChip2", "oc:circuitChip2"]
-          ["oc:ram3", "oc:materialCircuitBoardPrinted", "oc:ram3"]
-          [circuitElite, craftingToolWrench, circuitElite]]
+  type: gt_assembler
+  input: [circuitElite, "oc:materialCircuitBoardPrinted"]
+  count: [10, 3]
+  eu: 240
+  time: 700
 }
 ram5 {
-  input: [["oc:circuitChip3", "oc:circuitChip3", "oc:circuitChip3"]
-          ["oc:ram4", "oc:materialCircuitBoardPrinted", "oc:ram4"]
-          [circuitUltimate, craftingToolWrench, circuitUltimate]]
+  type: gt_assembler
+  input: [circuitMaster, "oc:materialCircuitBoardPrinted"]
+  count: [8, 3]
+  eu: 480
+  time: 1000
 }
 ram6 {
-  input: [["oc:circuitChip3", "oc:circuitChip3", "oc:circuitChip3"]
-          ["oc:ram5", "oc:materialCircuitBoardPrinted", "oc:ram5"]
-          [circuitUltimate, craftingToolWrench, circuitUltimate]]
+  type: gt_assembler
+  input: [circuitUltimate, "oc:materialCircuitBoardPrinted"]
+  count: [4, 3]
+  eu: 1920
+  time: 2000
 }
 
 floppy {
@@ -220,7 +230,7 @@ alu {
 cpu1 {
   input: [["oc:circuitChip2", "oc:materialALU", "oc:circuitChip2"]
           [plateAluminium, "oc:materialCU", plateAluminium]
-          [screwAluminium, craftingToolScrewdriver, screwAluminium]]
+          [wireFineGold, craftingToolScrewdriver, wireFineGold]]
 }
 cpu2 {
   input: [["oc:circuitChip2", plateStainlessSteel, "oc:circuitChip2"]
