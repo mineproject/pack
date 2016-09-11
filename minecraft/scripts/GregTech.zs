@@ -140,6 +140,20 @@ print("Initializing 'GregTech.zs'...");
 #==================================================================#
 #Items
 
+//Fix Titanium
+furnace.remove(<gregtech:gt.metaitem.01:11028>,<ore:shardTitanium>);
+furnace.remove(<gregtech:gt.metaitem.01:11028>,<ore:oreIlmenite>);
+mods.thermalexpansion.Furnace.removeRecipe(<GalacticraftMars:tile.asteroidsBlock:4>);
+mods.thermalexpansion.Furnace.removeRecipe(<ore:shardTitanium>);
+
+//Fix Aluminium
+mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustAluminium> * 2);
+mods.thermalexpansion.Smelter.removeRecipe(<*>, <ore:oreAluminium>);
+mods.thermalexpansion.Furnace.removeRecipe(<ore:dustAluminium>);
+mods.thermalexpansion.Furnace.removeRecipe(<ore:oreAluminium>);
+#Del Induction Furnace
+recipes.removeShaped(<ProjRed|Expansion:projectred.expansion.machine1>);
+
 //Fix Draconium
 furnace.remove(<ore:ingotDraconium>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:dustDraconium>);

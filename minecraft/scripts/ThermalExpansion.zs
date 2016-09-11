@@ -254,15 +254,66 @@ recipes.addShaped(<ThermalExpansion:Dynamo:3>, [[null, <ore:chipsetIron>, null],
 recipes.addShaped(<ThermalExpansion:Dynamo:2>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearTin>, <ThermalExpansion:material:2>, <ore:gearTin>]]);
 recipes.addShaped(<ThermalExpansion:Dynamo>, [[null, <ore:chipsetIron>, null], [<Forestry:chipsets:2>, <ore:pistonLV>, <Forestry:chipsets:2>], [<ore:gearCopper>, <ThermalExpansion:material:2>, <ore:gearCopper>]]);
 
+#energy frame
+recipes.removeShaped(<ThermalExpansion:Frame:4>);
+recipes.removeShaped(<ThermalExpansion:Frame:5>);
+recipes.removeShaped(<ThermalExpansion:Frame:6>);
+recipes.removeShaped(<ThermalExpansion:Frame:8>);
+recipes.removeShaped(<ThermalExpansion:Frame:9>);
+
+recipes.addShaped(<ThermalExpansion:Frame:4>, [
+[<ore:plateLead>, <ore:blockGlass>, <ore:plateLead>],
+[<ore:blockGlass>, <ore:frameLV>, <ore:blockGlass>],
+[<ore:plateLead>, <ore:blockGlass>, <ore:plateLead>]
+]);
+
+recipes.addShaped(<ThermalExpansion:Frame:5>, [
+[<ore:plateInvar>, <ExtraUtilities:decorativeBlock2>, <ore:plateInvar>],
+[<ExtraUtilities:decorativeBlock2>, <ore:frameMV>, <ExtraUtilities:decorativeBlock2>],
+[<ore:plateInvar>, <ExtraUtilities:decorativeBlock2>, <ore:plateInvar>]
+]);
+
+recipes.addShaped(<ThermalExpansion:Frame:6>, [
+[<ore:plateLumium>, <ore:blockGlassHardened>, <ore:plateLumium>],
+[<ore:blockGlassHardened>, <ore:frameHV>, <ore:blockGlassHardened>],
+[<ore:plateLumium>, <ore:blockGlassHardened>, <ore:plateLumium>]
+]);
+
+recipes.addShaped(<ThermalExpansion:Frame:8>, [
+[<ore:plateEnderium>, <ExtraUtilities:etherealglass>, <ore:plateEnderium>],
+[<ExtraUtilities:etherealglass>, <ore:frameIV>, <ExtraUtilities:etherealglass>],
+[<ore:plateEnderium>, <ExtraUtilities:etherealglass>, <ore:plateEnderium>]
+]);
+
 #energy cells
 recipes.remove(<ThermalExpansion:Cell:4>);
 recipes.remove(<ThermalExpansion:Cell:2>);
 recipes.remove(<ThermalExpansion:Cell:1>);
 recipes.remove(<ThermalExpansion:Cell:3>);
-recipes.addShaped(<ThermalExpansion:Cell:2>, [[<ore:plateAluminium>, <ore:chipsetGold>, <ore:plateAluminium>], [<Forestry:thermionicTubes:2>, <ore:frameMV>, <Forestry:thermionicTubes:2>], [<ore:plateAluminium>, <ore:capacitorMV>, <ore:plateAluminium>]]);
-recipes.addShaped(<ThermalExpansion:Cell:1>, [[<ore:plateSteel>, <ore:chipsetIron>, <ore:plateSteel>], [<Forestry:thermionicTubes:1>, <ore:frameLV>, <Forestry:thermionicTubes:1>], [<ore:plateSteel>, <ore:capacitorLV>, <ore:plateSteel>]]);
-recipes.addShaped(<ThermalExpansion:Cell:3>, [[<ore:ingotSignalum>, <ore:chipsetDiamond>, <ore:ingotSignalum>], [<Forestry:thermionicTubes:5>, <ore:frameHV>, <Forestry:thermionicTubes:5>], [<ore:ingotSignalum>, <ore:capacitorHV>, <ore:ingotSignalum>]]);
-recipes.addShaped(<ThermalExpansion:Cell:4>, [[<ore:plateEnderium>, <ore:chipsetEmerald>, <ore:plateEnderium>], [<Forestry:thermionicTubes:9>, <ore:frameIV>, <Forestry:thermionicTubes:9>], [<ore:plateEnderium>, <ore:capacitorIV>, <ore:plateEnderium>]]);
+
+recipes.addShaped(<ThermalExpansion:Cell:2>, [
+[<ore:plateAluminium>, <ore:chipsetGold>, <ore:plateAluminium>],
+[<Forestry:thermionicTubes:2>, <ThermalExpansion:Frame:5>, <Forestry:thermionicTubes:2>],
+[<ore:plateAluminium>, <ore:capacitorMV>, <ore:plateAluminium>]
+]);
+
+recipes.addShaped(<ThermalExpansion:Cell:1>, [
+[<ore:plateSteel>, <ore:chipsetIron>, <ore:plateSteel>],
+[<Forestry:thermionicTubes:1>, <ThermalExpansion:Frame:4>, <Forestry:thermionicTubes:1>],
+[<ore:plateSteel>, <ore:capacitorLV>, <ore:plateSteel>]
+]);
+
+recipes.addShaped(<ThermalExpansion:Cell:3>, [
+[<ore:plateSignalum>, <ore:chipsetDiamond>, <ore:plateSignalum>],
+[<Forestry:thermionicTubes:5>, <ThermalExpansion:Frame:7>, <Forestry:thermionicTubes:5>],
+[<ore:plateSignalum>, <ore:capacitorHV>, <ore:plateSignalum>]
+]);
+
+recipes.addShaped(<ThermalExpansion:Cell:4>, [
+[<ore:plateEnderium>, <ore:chipsetEmerald>, <ore:plateEnderium>],
+[<Forestry:thermionicTubes:9>, <ThermalExpansion:Frame:9>, <Forestry:thermionicTubes:9>],
+[<ore:plateEnderium>, <ore:capacitorIV>, <ore:plateEnderium>]
+]);
 
 #tesseract frame
 recipes.remove(<ThermalExpansion:Frame:10>);
