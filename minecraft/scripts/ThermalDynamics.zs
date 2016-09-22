@@ -70,7 +70,7 @@ val LumiumWire = <ore:wireFineLumium>;
 #Fluxduct
 
 //Leadstone
-recipes.remove(LeadstoneFluxduct);
+recipes.remove(LeadstoneFluxduct * 6);
 recipes.addShaped(LeadstoneFluxduct,[
 [<minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>],
 [LeadPlate, <ore:blockGlass>, LeadPlate],

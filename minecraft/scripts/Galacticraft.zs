@@ -37,7 +37,7 @@ mods.thermalexpansion.Smelter.removeRecipe(<gregtech:gt.metaitem.01:32306>, <ore
 
 mods.gregtech.Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2340> * 2, <gregtech:gt.metaitem.01:2085>, <gregtech:gt.metaitem.01:2084>], <GalacticraftCore:item.meteoricIronRaw>, [10000, 1500, 1000], 20, 120);
 
-mods.gregtech.BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:12340>], <liquid:oxygen> * 5000, [<gregtech:gt.metaitem.01:2340>], 1200, 512, 3200);
+mods.gregtech.BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:12340>], <liquid:oxygen> * 5000, [<gregtech:gt.metaitem.01:2340>], 1200, 488, 3200);
 mods.gregtech.VacuumFreezer.addRecipe(<gregtech:gt.metaitem.01:11340>, <gregtech:gt.metaitem.01:12340>, 2000);
 NEI.overrideName(<gregtech:gt.metaitem.01:12340>, "Hot Meteoric Iron Ingot");
 <ore:ingotHotMeteoricIron>.add(<gregtech:gt.metaitem.01:12340>);
@@ -71,7 +71,7 @@ mods.thermalexpansion.Smelter.removeRecipe(<ore:crystalCinnabar>, <ore:oreDesh>)
 mods.thermalexpansion.Smelter.removeRecipe(<gregtech:gt.metaitem.01:32306>, <ore:dustSmallDesh> * 4);
 mods.thermalexpansion.Smelter.removeRecipe(<gregtech:gt.metaitem.01:32306>, <ore:dustTinyDesh> * 9);
 
-mods.gregtech.BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:12884>], <liquid:nitrogen> * 3000, [<gregtech:gt.metaitem.01:2884>], 1500, 8192, 3500);
+mods.gregtech.BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:12884>], <liquid:nitrogen> * 3000, [<gregtech:gt.metaitem.01:2884>], 1500, 8050, 3500);
 mods.gregtech.VacuumFreezer.addRecipe(<gregtech:gt.metaitem.01:11884>, <gregtech:gt.metaitem.01:12884>, 6000);
 NEI.overrideName(<gregtech:gt.metaitem.01:12884>, "Hot Desh Ingot");
 <ore:ingotHotDesh>.add(<gregtech:gt.metaitem.01:12884>);
