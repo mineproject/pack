@@ -13,17 +13,17 @@ print("Initializing 'GregTech.zs'...");
 #==================================================================#
 #Ore Dictionary
 
-//Proto Adamantiumium
-<ore:ingotProtoAdamantiumium>.add(<TabulaRasa:RasaItem1>);
-<ore:ingotHotProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:1>);
-<ore:plateProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:2>);
-<ore:ingotDoubleProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:3>);
-<ore:plateDoubleProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:4>);
-<ore:ingotTripleProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:5>);
-<ore:plateTripleProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:6>);
-<ore:ingotQuadrupleProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:7>);
-<ore:plateQuadrupleProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:8>);
-<ore:stickProtoAdamantiumium>.add(<TabulaRasa:RasaItem1:9>);
+//Proto Adamantium
+<ore:ingotProtoAdamantium>.add(<TabulaRasa:RasaItem1>);
+<ore:ingotHotProtoAdamantium>.add(<TabulaRasa:RasaItem1:1>);
+<ore:plateProtoAdamantium>.add(<TabulaRasa:RasaItem1:2>);
+<ore:ingotDoubleProtoAdamantium>.add(<TabulaRasa:RasaItem1:3>);
+<ore:plateDoubleProtoAdamantium>.add(<TabulaRasa:RasaItem1:4>);
+<ore:ingotTripleProtoAdamantium>.add(<TabulaRasa:RasaItem1:5>);
+<ore:plateTripleProtoAdamantium>.add(<TabulaRasa:RasaItem1:6>);
+<ore:ingotQuadrupleProtoAdamantium>.add(<TabulaRasa:RasaItem1:7>);
+<ore:plateQuadrupleProtoAdamantium>.add(<TabulaRasa:RasaItem1:8>);
+<ore:stickProtoAdamantium>.add(<TabulaRasa:RasaItem1:9>);
 
 //motors
 <ore:motorLV>.add(<gregtech:gt.metaitem.01:32600>);
@@ -210,7 +210,6 @@ mods.thermalexpansion.Furnace.removeRecipe(<ore:shardTitanium>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustAluminium> * 2);
 mods.thermalexpansion.Smelter.removeRecipe(<*>, <ore:oreAluminium>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:dustAluminium>);
-mods.thermalexpansion.Furnace.removeRecipe(<ore:oreAluminium>);
 #Del Induction Furnace
 recipes.removeShaped(<ProjRed|Expansion:projectred.expansion.machine1>);
 
@@ -222,7 +221,6 @@ mods.thermalexpansion.Furnace.removeRecipe(<ore:blockDraconium>);
 mods.thermalexpansion.Furnace.removeRecipe(<DraconicEvolution:draconiumBlend>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreDraconium>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:blockDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore:oreDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <ore:oreDraconium>);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIngot>);
@@ -233,48 +231,51 @@ mods.gregtech.VacuumFreezer.addRecipe(<DraconicEvolution:draconiumIngot>, <Tabul
 
 //Fix Adamantium recipes with Blast Furnace
 mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11319>);
-mods.thermalexpansion.Furnace.removeRecipe(<WitchingGadgets:item.WG_Cluster:27>);
 mods.gregtech.BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:11319>], null, [<gregtech:gt.metaitem.01:2319>], 4000, 420, 2500);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11319>);
 mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:11319>, <gregtech:gt.metaitem.01:2319>, null, 8000, 2048);
 
-//Proto Adamantiumium and staff Recipes
+//Promethium recipes with Blast Furnace
+mods.gregtech.BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:11068>], null, [<gregtech:gt.metaitem.01:2068>], 4000, 420, 7000);
+
+//Proto Adamantium and staff Recipes
 #Ingot
 mods.gregtech.BlastFurnace.addRecipe([<TabulaRasa:RasaItem1:1> * 2], <liquid:nitrogendioxide> * 4000, [<gregtech:gt.metaitem.01:11319>, <gregtech:gt.metaitem.01:11068>], 4800, 1600, 3500);
 mods.gregtech.VacuumFreezer.addRecipe(<TabulaRasa:RasaItem1>, <TabulaRasa:RasaItem1:1>, 600);
 #Plate
-recipes.addShaped(<TabulaRasa:RasaItem1:2>,[[<ore:craftingToolHardHammer>],[<ore:ingotProtoAdamantiumium>],[<ore:ingotProtoAdamantiumium>]]);
-recipes.addShaped(<TabulaRasa:RasaItem1:2>,[[<ore:craftingToolHardHammer>],[<ore:ingotDoubleProtoAdamantiumium>]]);
-mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:2>, <ore:ingotProtoAdamantiumium>, 15, 3650);
-mods.gregtech.Extruder.addRecipe(<TabulaRasa:RasaItem1:2>, <ore:ingotProtoAdamantiumium>, <gregtech:gt.metaitem.01:32350> * 0, 20, 4200);
-mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:2>, <ore:ingotProtoAdamantiumium>, <ImmersiveEngineering:mold>, 2000);
+recipes.addShaped(<TabulaRasa:RasaItem1:2>,[[<ore:craftingToolHardHammer>],[<ore:ingotProtoAdamantium>],[<ore:ingotProtoAdamantium>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:2>,[[<ore:craftingToolHardHammer>],[<ore:ingotDoubleProtoAdamantium>]]);
+mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:2>, <ore:ingotProtoAdamantium>, 15, 3650);
+mods.gregtech.Extruder.addRecipe(<TabulaRasa:RasaItem1:2>, <ore:ingotProtoAdamantium>, <gregtech:gt.metaitem.01:32350> * 0, 20, 4200);
+mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:2>, <ore:ingotProtoAdamantium>, <ImmersiveEngineering:mold>, 2000);
 #Double Ingot
-recipes.addShaped(<TabulaRasa:RasaItem1:3>,[[<ore:ingotProtoAdamantiumium>],[<ore:ingotProtoAdamantiumium>],[<ore:craftingToolHardHammer>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:3>,[[<ore:ingotProtoAdamantium>],[<ore:ingotProtoAdamantium>],[<ore:craftingToolHardHammer>]]);
 #Double Plate
-recipes.addShaped(<TabulaRasa:RasaItem1:4>,[[<ore:plateProtoAdamantiumium>],[<ore:plateProtoAdamantiumium>],[<ore:craftingToolHardHammer>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:4>,[[<ore:plateProtoAdamantium>],[<ore:plateProtoAdamantium>],[<ore:craftingToolHardHammer>]]);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:4>, <TabulaRasa:RasaItem1:2> * 2, 30, 3650);
-mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:4>, <ore:ingotDoubleProtoAdamantiumium>, 15, 3650);
+mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:4>, <ore:ingotDoubleProtoAdamantium>, 15, 3650);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:4>, <TabulaRasa:RasaItem1> * 2, 30, 3650);
-mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:4>, <ore:ingotDoubleProtoAdamantiumium>, <ImmersiveEngineering:mold>, 2000);
+mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:4>, <ore:ingotDoubleProtoAdamantium>, <ImmersiveEngineering:mold>, 2000);
 #Triple Ingot
-recipes.addShaped(<TabulaRasa:RasaItem1:5>,[[<ore:ingotDoubleProtoAdamantiumium>],[<ore:ingotProtoAdamantiumium>],[<ore:craftingToolHardHammer>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:5>,[[<ore:ingotDoubleProtoAdamantium>],[<ore:ingotProtoAdamantium>],[<ore:craftingToolHardHammer>]]);
 #Triple Plate
-recipes.addShaped(<TabulaRasa:RasaItem1:6>,[[<ore:plateDoubleProtoAdamantiumium>],[<ore:plateProtoAdamantiumium>],[<ore:craftingToolHardHammer>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:6>,[[<ore:plateDoubleProtoAdamantium>],[<ore:plateProtoAdamantium>],[<ore:craftingToolHardHammer>]]);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:6>, <TabulaRasa:RasaItem1:2> * 3, 45, 3650);
-mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:6>, <ore:ingotTripleProtoAdamantiumium>, 15, 3650);
+mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:6>, <ore:ingotTripleProtoAdamantium>, 15, 3650);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:6>, <TabulaRasa:RasaItem1> * 3, 45, 3650);
-mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:6>, <ore:ingotTripleProtoAdamantiumium>, <ImmersiveEngineering:mold>, 2000);
+mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:6>, <ore:ingotTripleProtoAdamantium>, <ImmersiveEngineering:mold>, 2000);
 #Quadruple Ingot
-recipes.addShaped(<TabulaRasa:RasaItem1:7>,[[<ore:ingotTripleProtoAdamantiumium>],[<ore:ingotProtoAdamantiumium>],[<ore:craftingToolHardHammer>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:7>,[[<ore:ingotTripleProtoAdamantium>],[<ore:ingotProtoAdamantium>],[<ore:craftingToolHardHammer>]]);
 #Quadruple Plate
-recipes.addShaped(<TabulaRasa:RasaItem1:8>,[[<ore:plateTripleProtoAdamantiumium>],[<ore:plateProtoAdamantiumium>],[<ore:craftingToolHardHammer>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:8>,[[<ore:plateTripleProtoAdamantium>],[<ore:plateProtoAdamantium>],[<ore:craftingToolHardHammer>]]);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:8>, <TabulaRasa:RasaItem1:2> * 4, 60, 3650);
-mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:8>, <ore:ingotQuadrupleProtoAdamantiumium>, 15, 3650);
+mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:8>, <ore:ingotQuadrupleProtoAdamantium>, 15, 3650);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:8>, <TabulaRasa:RasaItem1> * 4, 60, 3650);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:8>, <TabulaRasa:RasaItem1:3> * 2, 30, 3650);
 mods.gregtech.PlateBender.addRecipe(<TabulaRasa:RasaItem1:8>, <TabulaRasa:RasaItem1:4> * 2, 30, 3650);
-mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:8>, <ore:ingotQuadrupleProtoAdamantiumium>, <ImmersiveEngineering:mold>, 2000);
+mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:8>, <ore:ingotQuadrupleProtoAdamantium>, <ImmersiveEngineering:mold>, 2000);
 #Rod
-recipes.addShaped(<TabulaRasa:RasaItem1:9>,[[<ore:craftingToolFile>],[null,<ore:ingotProtoAdamantiumium>]]);
+recipes.addShaped(<TabulaRasa:RasaItem1:9>,[[<ore:craftingToolFile>],[null,<ore:ingotProtoAdamantium>]]);
 mods.gregtech.Lathe.addRecipe([<TabulaRasa:RasaItem1:9>], <TabulaRasa:RasaItem1>, 600, 24);
 mods.gregtech.Extruder.addRecipe(<TabulaRasa:RasaItem1:9> * 2, <TabulaRasa:RasaItem1>, <gregtech:gt.metaitem.01:32351> * 0, 120, 320);
 mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:9> * 2, <TabulaRasa:RasaItem1>, <ImmersiveEngineering:mold:2>, 2000);
