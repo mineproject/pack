@@ -100,8 +100,6 @@ mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:ingot>);
 mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:cube:2>);
 mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:nugget:1> * 4);
 mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11305>);
-mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11346>);
-mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11322>);
 mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11341>);
 mods.immersiveengineering.BlastFurnace.removeRecipe(<ImmersiveEngineering:storage:7>);
 mods.immersiveengineering.BlastFurnace.removeRecipe(<ImmersiveEngineering:metal:7>);
