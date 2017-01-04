@@ -25,15 +25,9 @@ mods.thermalexpansion.Furnace.removeRecipe(<gregtech:gt.blockores:3340>);
 mods.thermalexpansion.Furnace.removeRecipe(<gregtech:gt.blockores:4340>);
 mods.thermalexpansion.Furnace.removeRecipe(<GalacticraftCore:item.meteoricIronRaw>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreMeteoricIron>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <gregtech:gt.blockores:3340>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <gregtech:gt.blockores:4340>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreEndstoneMeteoricIron>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreNetherrackMeteoricIron>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustMeteoricIron>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore:oreMeteoricIron>);
 mods.thermalexpansion.Smelter.removeRecipe(<ore:crystalCinnabar>, <ore:oreMeteoricIron>);
-mods.thermalexpansion.Smelter.removeRecipe(<gregtech:gt.metaitem.01:32306>, <ore:dustSmallMeteoricIron> * 4);
-mods.thermalexpansion.Smelter.removeRecipe(<gregtech:gt.metaitem.01:32306>, <ore:dustTinyMeteoricIron> * 9);
 
 mods.gregtech.Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2340> * 2, <gregtech:gt.metaitem.01:2085>, <gregtech:gt.metaitem.01:2084>], <GalacticraftCore:item.meteoricIronRaw>, [10000, 1500, 1000], 20, 120);
 
@@ -61,15 +55,9 @@ mods.thermalexpansion.Furnace.removeRecipe(<gregtech:gt.blockores:2884>);
 mods.thermalexpansion.Furnace.removeRecipe(<gregtech:gt.blockores:3884>);
 mods.thermalexpansion.Furnace.removeRecipe(<gregtech:gt.blockores:4884>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreDesh>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <gregtech:gt.blockores:3884>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <gregtech:gt.blockores:4884>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreEndstoneDesh>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreNetherrackDesh>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustDesh>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore:oreDesh>);
 mods.thermalexpansion.Smelter.removeRecipe(<ore:crystalCinnabar>, <ore:oreDesh>);
-mods.thermalexpansion.Smelter.removeRecipe(<gregtech:gt.metaitem.01:32306>, <ore:dustSmallDesh> * 4);
-mods.thermalexpansion.Smelter.removeRecipe(<gregtech:gt.metaitem.01:32306>, <ore:dustTinyDesh> * 9);
 
 mods.gregtech.BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:12884>], <liquid:nitrogen> * 3000, [<gregtech:gt.metaitem.01:2884>], 1500, 8050, 3500);
 mods.gregtech.VacuumFreezer.addRecipe(<gregtech:gt.metaitem.01:11884>, <gregtech:gt.metaitem.01:12884>, 6000);
