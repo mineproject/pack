@@ -34,12 +34,6 @@ recipes.addShaped(<GalacticraftCore:tile.landingPad> * 9, [
 ]);
 
 #Gravi Suit
-recipes.removeShaped(<GraviSuite:graviChestPlate>);
-recipes.addShaped(<GraviSuite:graviChestPlate>, [
-	[<ore:itemSuperconductor>,<IC2:itemArmorQuantumChestplate>,<ore:itemSuperconductor>],
-	[<GraviSuite:itemSimpleItem:3>,<gregtech:gt.blockmachines:28>,<GraviSuite:itemSimpleItem:3>],
-	[<ore:itemSuperconductor>,<GraviSuite:ultimateLappack>,<ore:itemSuperconductor>]
-]);
 recipes.removeShaped(<GraviSuite:itemSimpleItem:1>);
 recipes.addShaped(<GraviSuite:itemSimpleItem:1>, [
 	[<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>],

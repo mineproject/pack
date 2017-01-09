@@ -5,6 +5,9 @@ import minetweaker.item.IItemStack;
 
 print("Initializing 'ExtraUtilities.zs'...");
 
+#healing axe
+recipes.remove(<ExtraUtilities:defoliageAxe>);
+
 #quarry
 recipes.remove(<ExtraUtilities:enderQuarry>);
 recipes.addShaped(<ExtraUtilities:enderQuarry>, [[<BuildCraft|Silicon:redstoneChipset:7>, <IC2:itemToolMiningLaser:*>, <Forestry:thermionicTubes:9>], [<ThermalExpansion:Frame:11>, <MineFactoryReloaded:machine.2:1>, <IC2:blockElectric:2>], [<ThermalExpansion:Cell:2>, <BuildCraft|Factory:miningWellBlock>, <ThermalExpansion:Cell:2>]]);

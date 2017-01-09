@@ -217,6 +217,28 @@ mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:12374>, 
 #====================
 #Metall Press fix
 
+//Recipes Iron components
+mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:30>);
+mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:material:14>);
+mods.immersiveengineering.MetalPress.removeRecipe(<TConstruct:toolRod:2>);
+mods.immersiveengineering.MetalPress.removeRecipe(<ThermalFoundation:material:12>);
+
+//Recipes Steel components
+mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:38>);
+mods.immersiveengineering.MetalPress.removeRecipe(<IC2:itemPlates:5>);
+mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:material:15>);
+mods.immersiveengineering.MetalPress.removeRecipe(<TConstruct:toolRod:16>);
+mods.immersiveengineering.MetalPress.addRecipe(<Railcraft:part.plate:1>, <gregtech:gt.metaitem.01:11305>, <ImmersiveEngineering:mold>, 2000);
+
+//Recipes Aluminium components
+mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:32>);
+mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:material:16>);
+
+//Recipes Lead components
+mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:33>);
+mods.immersiveengineering.MetalPress.removeRecipe(<IC2:itemPlates:6>);
+mods.immersiveengineering.MetalPress.addRecipe(<gregtech:gt.metaitem.01:17089>, <gregtech:gt.metaitem.01:11089>, <ImmersiveEngineering:mold>, 2000);
+
 //Recipes Wrought Iron components
 mods.immersiveengineering.MetalPress.removeRecipe(<IC2:itemPlates:4>);
 mods.immersiveengineering.MetalPress.addRecipe(<Railcraft:part.plate>, <minecraft:iron_ingot>, <ImmersiveEngineering:mold>, 2000);
