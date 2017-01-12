@@ -27,10 +27,10 @@ recipes.remove(<TConstruct:materials:26>);
 recipes.addShaped(<TConstruct:materials:26>, [[null, <TConstruct:materials:25>, null], [<TConstruct:materials:25>, <ore:blockEmerald>, <TConstruct:materials:25>], [null, <TConstruct:materials:25>, null]]);
 
 #remove alloys
-mods.tconstruct.Smeltery.removeMelting(<ore:dustGlowstone>);
-mods.tconstruct.Smeltery.removeMelting(<ore:glowstone>);
-mods.tconstruct.Smeltery.removeMelting(<ore:dustRedstone>);
-mods.tconstruct.Smeltery.removeMelting(<ore:blockRedstone>);
+//mods.tconstruct.Smeltery.removeMelting(<ore:dustGlowstone>);
+//mods.tconstruct.Smeltery.removeMelting(<ore:glowstone>);
+//mods.tconstruct.Smeltery.removeMelting(<ore:dustRedstone>);
+//mods.tconstruct.Smeltery.removeMelting(<ore:blockRedstone>);
 mods.tconstruct.Smeltery.removeMelting(<minecraft:rail>);
 mods.tconstruct.Smeltery.removeMelting(<minecraft:minecart>);
 mods.tconstruct.Smeltery.removeAlloy(<liquid:enderium.molten>);
