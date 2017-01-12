@@ -33,25 +33,6 @@ recipes.addShaped(<GalacticraftCore:tile.landingPad> * 9, [
 	[<ore:concrete>,<ore:concrete>,<ore:concrete>]
 ]);
 
-#Gravi Suit
-recipes.removeShaped(<GraviSuite:graviChestPlate>);
-recipes.addShaped(<GraviSuite:graviChestPlate>, [
-	[<ore:itemSuperconductor>,<IC2:itemArmorQuantumChestplate>,<ore:itemSuperconductor>],
-	[<GraviSuite:itemSimpleItem:3>,<gregtech:gt.blockmachines:28>,<GraviSuite:itemSimpleItem:3>],
-	[<ore:itemSuperconductor>,<GraviSuite:ultimateLappack>,<ore:itemSuperconductor>]
-]);
-recipes.removeShaped(<GraviSuite:itemSimpleItem:1>);
-recipes.addShaped(<GraviSuite:itemSimpleItem:1>, [
-	[<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>],
-	[<ore:wireGt01Superconductor>,<ore:wireGt01Superconductor>,<ore:wireGt01Superconductor>],
-	[<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>]
-]);
-recipes.removeShaped(<GraviSuite:itemSimpleItem>);
-recipes.addShaped(<GraviSuite:itemSimpleItem>, [
-	[<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>],
-	[<ore:plateAlloyIridium>,<ore:plateAlloyIridium>,<ore:plateAlloyIridium>],
-	[<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>,<ore:plateNiobiumTitanium>]
-]);
 recipes.removeShaped(<gregtech:gt.metaitem.01:32480>);
 recipes.addShaped(<gregtech:gt.metaitem.01:32480>, [
 	[<ore:plateIridium>,<ore:plateTungsten>,<ore:plateIridium>],

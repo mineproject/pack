@@ -44,6 +44,13 @@ recipes.removeShapeless(<ThermalFoundation:material:43>);
 #IT'S NOT FUCKING WORK WITH COPPER!!!!#
 mods.gregtech.Mixer.addRecipe(<ThermalFoundation:material:43> * 4, null, [<gregtech:gt.metaitem.01:2057> * 2, <gregtech:gt.metaitem.01:2054>, <gregtech:gt.metaitem.01:2085>], <liquid:glowstone> * 1000, 200, 32);
 mods.gregtech.Mixer.addRecipe(<ThermalFoundation:material:42> * 4, null, [<gregtech:gt.metaitem.01:2054> * 2, <gregtech:gt.metaitem.01:2033> * 2], <liquid:redstone> * 1000, 400, 32);
+mods.gregtech.Mixer.addRecipe(<ThermalFoundation:material:43> * 4, null, [<gregtech:gt.metaitem.01:2057> * 2, <gregtech:gt.metaitem.01:2054>, <gregtech:gt.metaitem.01:2085>], <liquid:molten.glowstone> * 576, 200, 32);
+mods.gregtech.Mixer.addRecipe(<ThermalFoundation:material:42> * 4, null, [<gregtech:gt.metaitem.01:2054> * 2, <gregtech:gt.metaitem.01:2033> * 2], <liquid:molten.redstone> * 1440, 400, 32);
+
+//Smelting Redstone and Glowstone in Smeltery
+mods.tconstruct.Smeltery.addMelting(<minecraft:redstone>, <liquid:redstone> * 200, 400, <minecraft:redstone_block>);
+mods.tconstruct.Smeltery.addMelting(<minecraft:glowstone_dust>, <liquid:glowstone> * 250, 400, <minecraft:glowstone>);
+mods.tconstruct.Smeltery.addMelting(<minecraft:glowstone>, <liquid:glowstone> * 1000, 400, <minecraft:glowstone>);
 
 //Change Smeltery recipes
 mods.tconstruct.Smeltery.removeAlloy(<liquid:signalum.molten>);
