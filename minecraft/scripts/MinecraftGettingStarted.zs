@@ -38,17 +38,13 @@ recipes.remove(<IC2:itemDust>);
 recipes.remove(<Forestry:bronzeShovel>);
 recipes.remove(<Forestry:bronzePickaxe>);
 recipes.remove(<BiomesOPlenty:swordMud>);
-recipes.remove(<minecraft:stone_hoe>);
 recipes.remove(<minecraft:wooden_hoe>);
 recipes.remove(<minecraft:iron_hoe>);
 recipes.remove(<minecraft:stone_hoe>);
 recipes.remove(<minecraft:wooden_axe>);
 recipes.remove(<minecraft:wooden_shovel>);
 recipes.remove(<minecraft:wooden_sword>);
-recipes.remove(<minecraft:stone_pickaxe>);
-recipes.remove(<minecraft:stone_shovel>);
 recipes.remove(<minecraft:stone_sword>);
-recipes.remove(<minecraft:stone_axe>);
 recipes.remove(<ThermalFoundation:tool.pickaxeTin>);
 recipes.remove(<ThermalFoundation:tool.shovelTin>);
 recipes.remove(<ThermalFoundation:tool.swordTin>);
@@ -174,10 +170,6 @@ recipes.addShapeless(<TConstruct:CraftedSoil:1>, [<ore:gravel>, <ore:itemClay>, 
 <IC2:itemToolBronzeAxe>.maxDamage = 1;
 <IC2:itemToolBronzeSpade>.maxDamage = 1;
 <IC2:itemToolBronzeHoe>.maxDamage = 1;
-<minecraft:wooden_pickaxe>.maxDamage = 5;
-<minecraft:stone_pickaxe>.maxDamage = 1;
-<minecraft:stone_axe>.maxDamage = 1;
-<minecraft:stone_shovel>.maxDamage = 1;
 <ThermalFoundation:tool.swordInvar>.maxDamage = 1;
 <ThermalFoundation:tool.axeInvar>.maxDamage = 1;
 
