@@ -20,9 +20,32 @@ recipes.addShaped(<GraviSuite:itemSimpleItem:6>, [[<ore:dustGlowstone>, <IC2:ite
 recipes.remove(<GraviSuite:itemSimpleItem:2>);
 recipes.addShaped(<GraviSuite:itemSimpleItem:2>, [[<IC2:reactorCoolantSix:1>, <IC2:reactorHeatSwitchDiamond:1>, <IC2:reactorCoolantSix:1>], [<IC2:reactorPlatingHeat>, <IC2:itemPartIridium>, <IC2:reactorPlatingHeat>], [<IC2:reactorCoolantSix:1>, <IC2:reactorHeatSwitchDiamond:1>, <IC2:reactorCoolantSix:1>]]);
 
+#Superconductor Wire with He-N(GT)
+recipes.removeShaped(<gregtech:gt.blockmachines:2020> * 3);
+recipes.addShaped(<gregtech:gt.blockmachines:2020> * 3, [
+	[<ore:cellNitrogen>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>],
+	[<ore:wireGt01NiobiumTitanium>, <ore:wireGt01NiobiumTitanium>, <ore:wireGt01NiobiumTitanium>],
+	[<ore:cellHelium>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>]
+]);
+recipes.addShaped(<gregtech:gt.blockmachines:2020> * 3, [
+	[<ore:cellNitrogen>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>],
+	[<ore:wireGt01VanadiumGallium>, <ore:wireGt01VanadiumGallium>, <ore:wireGt01VanadiumGallium>],
+	[<ore:cellHelium>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>]
+]);
+recipes.addShaped(<gregtech:gt.blockmachines:2020> * 3, [
+	[<ore:cellNitrogen>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>],
+	[<ore:wireGt01YttriumBariumCuprate>, <ore:wireGt01YttriumBariumCuprate>, <ore:wireGt01YttriumBariumCuprate>],
+	[<ore:cellHelium>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>]
+]);
+recipes.addShaped(<gregtech:gt.blockmachines:2020> * 3, [
+	[<ore:cellNitrogen>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>],
+	[<ore:wireGt01HSSG>, <ore:wireGt01HSSG>, <ore:wireGt01HSSG>],
+	[<ore:cellHelium>, <ore:pumpLV>, <ore:pipeTinyTungstenSteel>]
+]);
+
 #Superconductor
 recipes.removeShaped(<GraviSuite:itemSimpleItem:1>);
-recipes.addShaped(<GraviSuite:itemSimpleItem:1>, [
+recipes.addShaped(<GraviSuite:itemSimpleItem:1> * 3, [
 	[<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>],
 	[<ore:wireGt01Superconductor>,<ore:wireGt01Superconductor>,<ore:wireGt01Superconductor>],
 	[<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>,<GraviSuite:itemSimpleItem>]
