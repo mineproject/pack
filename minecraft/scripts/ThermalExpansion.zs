@@ -327,7 +327,7 @@ recipes.addShaped(<ThermalExpansion:Tesseract>, [[<ore:emitterMV>, <ore:pumpMV>,
 recipes.remove(<ThermalFoundation:material:513>);
 recipes.remove(<ThermalFoundation:material:512>);
 recipes.addShapeless(<ThermalFoundation:material:513>, [<minecraft:snowball>, <ore:dustSaltpeter>, <ore:dustElectrotine>, <ore:dustBlizz>]);
-recipes.addShapeless(<ThermalFoundation:material:512>, [<ore:dustCoal>, <ore:dustSulfur>, <ore:itemBlazePowder>, <ore:dustElectrotine>]);
+recipes.addShapeless(<ThermalFoundation:material:512>, [<ore:dustCoal>, <ore:dustSulfur>, <ore:dustBlaze>, <ore:dustElectrotine>]);
 
 #augments
 recipes.remove(<ThermalExpansion:augment:65>);
