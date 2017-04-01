@@ -14,7 +14,7 @@ recipes.addShaped(<witchery:ingredient:10>, [[<witchery:ingredient:34>],[<ore:ge
 
 # -- Waystone
 recipes.remove(<witchery:ingredient:12>);
-recipes.addShaped(<witchery:ingredient:12>*4, [[<ore:gemInfusedAir>, <ore:gemInfusedAir>, <ore:gemInfusedAir>], [<ore:gemInfusedOrder>, <ore:itemFlient>, <ore:gemInfusedOrder>], [<ore:gemInfusedEarth>, <ore:gemInfusedEarth>, <ore:gemInfusedEarth>]]);
+recipes.addShaped(<witchery:ingredient:12>*4, [[<ore:gemInfusedAir>, <ore:gemInfusedAir>, <ore:gemInfusedAir>], [<ore:gemInfusedOrder>, <ore:itemFlint>, <ore:gemInfusedOrder>], [<ore:gemInfusedEarth>, <ore:gemInfusedEarth>, <ore:gemInfusedEarth>]]);
 
 # -- Fume Filter
 recipes.remove(<witchery:ingredient:73>);
@@ -73,7 +73,7 @@ recipes.addShaped(<witchery:silvervat>, [[<ore:plateSilver>, <minecraft:cauldron
 
 # -- Fume Funnel
 recipes.remove(<witchery:fumefunnel>);
-recipes.addShaped(<witchery:fumefunnel>, [[<ore:gemFirestone>, <ore:bucketLava>, <ore:gemFirestone>], [<ore:plateSteel>, <ore:glowstone>, <ore:plateSteel>], [<ore:blockCoal>, <ore:barsIron>, <ore:blockCoal>]]);
+recipes.addShaped(<witchery:fumefunnel>, [[<ore:gemFirestone>, <ore:bucketLava>, <ore:gemFirestone>], [<ore:plateSteel>, <ore:glowstone>, <ore:plateSteel>], [<ore:blockCoal>, <minecraft:iron_bars>, <ore:blockCoal>]]);
 
 # -- Taglock Kits
 recipes.remove(<witchery:taglockkit>);
@@ -85,7 +85,7 @@ recipes.addShaped(<witchery:shelfcompass>, [[<ore:plateGold>, <ore:craftingIndus
 
 # -- Witches Oven
 recipes.remove(<witchery:witchesovenidle>);
-recipes.addShaped(<witchery:witchesovenidle>, [[null, <ore:barsIron>], [<ore:plateSteel>, <Thaumcraft:blockStoneDevice>, <ore:plateSteel>], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCrystal:1>, <Thaumcraft:blockCosmeticSolid:6>]]);
+recipes.addShaped(<witchery:witchesovenidle>, [[null, <minecraft:iron_bars>], [<ore:plateSteel>, <Thaumcraft:blockStoneDevice>, <ore:plateSteel>], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCrystal:1>, <Thaumcraft:blockCosmeticSolid:6>]]);
 
 # -- Wolf's Altar
 recipes.remove(<witchery:wolfaltar>);
