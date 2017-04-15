@@ -366,11 +366,6 @@ recipes.addShapeless(ME_CraftingTerminal, [ME_Terminal, <gregtech:gt.metaitem.01
 val ME_Interface = <appliedenergistics2:item.ItemMultiPart:440>;
 ShowEnergyTooltip(ME_Interface, 1.0, 0, 1);
 recipes.remove(ME_Interface);
-recipes.addShaped(ME_Interface, [
-	[AnnihilationCore, <ore:wireFineVanadium>, null],
-	[<ore:plateVanadiumSteel>, CalculationProcessor, ME_ToggleBus],
-	[FormationCore, <ore:wireFineVanadium>, null]
-]);
 
 val ME_ImportBus = <appliedenergistics2:item.ItemMultiPart:240>;
 val ME_ExportBus = <appliedenergistics2:item.ItemMultiPart:260>;
@@ -725,9 +720,9 @@ val QuantumRing = <appliedenergistics2:tile.BlockQuantumRing>;
 ShowEnergyTooltip(QuantumRing, 22, 0, 0);
 recipes.remove(QuantumRing);
 recipes.addShaped(QuantumRing, [
-	[<ore:wireFineNaquadahEnriched>, StorageComponent_16k, <ore:wireFineNaquadahEnriched>],
+	[<ore:wireFineNaquadah>, StorageComponent_16k, <ore:wireFineNaquadah>],
 	[StorageComponent_16k, ME_Controller, StorageComponent_16k],
-	[<ore:wireFineNaquadahEnriched>, StorageComponent_16k, <ore:wireFineNaquadahEnriched>]
+	[<ore:wireFineNaquadah>, StorageComponent_16k, <ore:wireFineNaquadah>]
 ]);
 
 // SpatialPylon.addTooltip(format.green("Removed " + recipes.remove(SpatialPylon) + " recipe(-s)"));
