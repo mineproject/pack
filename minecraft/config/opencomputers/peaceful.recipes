@@ -8,6 +8,7 @@ wlanCard {
   input: [[gemDiamond, "oc:circuitChip2", ""]
           ["", "oc:materialCard", ""]]
 }
+
 linkedCard {
   input: [[gemDiamond, "", gemDiamond]
           ["oc:lanCard", "oc:materialInterweb", "oc:lanCard"]
