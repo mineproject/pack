@@ -130,6 +130,11 @@ mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11067
 mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11324>);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11326>);
 
+//Remove Adamanrium, Erbium, Prometium
+mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11319>);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11075>);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11068>);
+
 //Recipes Ingot from dust
 //Titan
 mods.immersiveengineering.ArcFurnace.removeRecipe(<GalacticraftMars:item.itemBasicAsteroids:5>);
@@ -151,6 +156,7 @@ mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11052
 mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:12052>, <gregtech:gt.metaitem.01:2052>, null, 856, 1024);
 //Iridium
 mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11084>);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<AdvancedSolarPanel:asp_crafting_items:10>);
 mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:12084>, <gregtech:gt.metaitem.01:2084>, null, 1270, 2048);
 //Osmium
 mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11083>);
@@ -222,6 +228,13 @@ mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:30
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:material:14>);
 mods.immersiveengineering.MetalPress.removeRecipe(<TConstruct:toolRod:2>);
 mods.immersiveengineering.MetalPress.removeRecipe(<ThermalFoundation:material:12>);
+
+//Recipes Tin components
+mods.immersiveengineering.MetalPress.removeRecipe(<IC2:itemPlates:1>);
+mods.immersiveengineering.MetalPress.addRecipe(<gregtech:gt.metaitem.01:17057>, <gregtech:gt.metaitem.01:11057>, <ImmersiveEngineering:mold>, 2000);
+
+mods.immersiveengineering.MetalPress.removeRecipe(<ThermalFoundation:material:129>);
+mods.immersiveengineering.MetalPress.addRecipe(<gregtech:gt.metaitem.02:31057>, <gregtech:gt.metaitem.01:11057> * 4, <ImmersiveEngineering:mold:1>, 2000);
 
 //Recipes Steel components
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:38>);

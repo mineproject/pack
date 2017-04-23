@@ -163,11 +163,8 @@ mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.blockcasings4:8> * 2, [
 );
 
 recipes.removeShaped(<gregtech:gt.blockcasings4:7>);
-recipes.addShaped(<gregtech:gt.blockcasings4:7>, [
-	[<ore:sensorZPM>,<ore:itemSuperconductor>,<ore:emitterZPM>],
-	[<ore:fieldZPM>,null,<ore:fieldZPM>],
-	[<ore:emitterZPM>,<ore:itemSuperconductor>,<ore:sensorZPM>]
-]);
+mods.gregtech.AssemblyLine.addRecipe(<gregtech:gt.blockcasings:15>, 180000, [<gregtech:gt.blockcasings:15>, <GraviSuite:itemSimpleItem> * 4, <gregtech:gt.metaitem.01:32684>, <gregtech:gt.metaitem.01:32694>], [<liquid:cryotheum> * 4000, <liquid:molten.solderingalloy> * 576], <gregtech:gt.blockcasings4:7>, 1200, 480);
+
 
 #==================================================================#
 #Items

@@ -101,6 +101,21 @@ recipes.addShaped(<OpenBlocks:sky>, [[<minecraft:glass>,<minecraft:ender_pearl>,
 
 mods.gregtech.Pulverizer.addRecipe([<TConstruct:materials:38> * 2, <gregtech:gt.metaitem.01:2033>, <gregtech:gt.metaitem.01:2807>], <TConstruct:SearedBrick:2>, [10000, 1000, 5000], 4000, 2);
 
+#TimeCard
+recipes.remove(<IC2NuclearControl:ItemTimeCard>);
+recipes.addShaped(<IC2NuclearControl:ItemTimeCard>, [
+	[null,<ore:circuitBasic>,null],
+	[<minecraft:paper>,<ore:cableGt01Tin>,<minecraft:paper>],
+	[null,<minecraft:clock>,null]
+]);
+
+#Rock Crusher
+recipes.remove(<Railcraft:machine.alpha:15>);
+recipes.addShaped(<Railcraft:machine.alpha:15>, [
+	[<ore:craftingPiston>,<ore:gemDiamond>,<ore:craftingPiston>],
+	[<ore:gemDiamond>,<ore:blockSteel>,<ore:gemDiamond>],
+	[<ore:craftingPiston>,<ore:gemDiamond>,<ore:craftingPiston>]
+]);
 
 #Open Computers recipes
 recipes.remove(<OpenComputers:item:29>);
