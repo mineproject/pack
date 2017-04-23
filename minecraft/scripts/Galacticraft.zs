@@ -115,23 +115,23 @@ mods.gregtech.ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:30105>, <liquid
 mods.gregtech.ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:30497> * 3, <liquid:custommat01> * 4000, <gregtech:gt.metaitem.01:30012> * 2, <gregtech:gt.metaitem.01:30013> * 3, <liquid:methane> * 3000, 400, 1920); # 2 cells wasted
 mods.gregtech.ChemicalReactor.addRecipe(<IC2:itemCellEmpty> * 2, <liquid:custommat02> * 1000, null, <gregtech:gt.metaitem.01:30001> * 2, <liquid:custommat00> * 1000, 400, 1920);
 mods.gregtech.ChemicalReactor.addRecipe(<IC2:itemCellEmpty> * 5, <liquid:custommat03> * 2000, null, <gregtech:gt.metaitem.01:30107> * 4, <liquid:custommat01> * 2000, 400, 1920);
-mods.gregtech.ChemicalBath.addRecipe([<gregtech:gt.metaitem.01:2109> * 2, <IC2:itemCellEmpty> * 2], <gregtech:gt.metaitem.01:30012> * 2, <liquid:oxygen> * 3000,[10000], 400, 1920);
+mods.gregtech.ChemicalBath.addRecipe([<gregtech:gt.metaitem.01:2109>, <IC2:itemCellEmpty>], <gregtech:gt.metaitem.01:30012>, <liquid:oxygen> * 1500,[10000, 10000], 400, 1920);
 mods.gregtech.ChemicalReactor.addRecipe(null, <liquid:custommat05> * 2000, null, <gregtech:gt.metaitem.01:2109>, <liquid:water> * 1000, 400, 1920);
 mods.gregtech.ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:30111>, <liquid:water> * 1000, null, <gregtech:gt.metaitem.01:30108>, <liquid:custommat05> * 1000, 400, 1920);
 mods.gregtech.ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:30112>, <liquid:water> * 1000, null, <gregtech:gt.metaitem.01:30111>, <liquid:hydrogen> * 2000, 400, 1920);
 mods.gregtech.ChemicalReactor.addRecipe(<IC2:itemCellEmpty>, <liquid:fuelgc> * 1000, null, <gregtech:gt.metaitem.01:30112>, <liquid:holywater> * 1000, 400, 1920);
 
-mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30105>,<liquid:custommat00>,null);
-mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30106>,<liquid:custommat01>,null);
-mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30107>,<liquid:custommat02>,null);
-mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30108>,<liquid:custommat03>,null);
-mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30110>,<liquid:custommat05>,null);
-mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30111>,<liquid:custommat06>,null);
-mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30112>,<liquid:custommat07>,null);
-mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30105>,<IC2:itemCellEmpty>,null,<liquid:custommat00>);
-mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30106>,<IC2:itemCellEmpty>,null,<liquid:custommat01>);
-mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30107>,<IC2:itemCellEmpty>,null,<liquid:custommat02>);
-mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30108>,<IC2:itemCellEmpty>,null,<liquid:custommat03>);
-mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30110>,<IC2:itemCellEmpty>,null,<liquid:custommat05>);
-mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30111>,<IC2:itemCellEmpty>,null,<liquid:custommat06>);
-mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30112>,<IC2:itemCellEmpty>,null,<liquid:custommat07>);
+mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30105>,<liquid:custommat00>,null,20,2);
+mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30106>,<liquid:custommat01>,null,20,2);
+mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30107>,<liquid:custommat02>,null,20,2);
+mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30108>,<liquid:custommat03>,null,20,2);
+mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30110>,<liquid:custommat05>,null,20,2);
+mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30111>,<liquid:custommat06>,null,20,2);
+mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30112>,<liquid:custommat07>,null,20,2);
+mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30105>,<IC2:itemCellEmpty>,null,<liquid:custommat00>,20,2);
+mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30106>,<IC2:itemCellEmpty>,null,<liquid:custommat01>,20,2);
+mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30107>,<IC2:itemCellEmpty>,null,<liquid:custommat02>,20,2);
+mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30108>,<IC2:itemCellEmpty>,null,<liquid:custommat03>,20,2);
+mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30110>,<IC2:itemCellEmpty>,null,<liquid:custommat05>,20,2);
+mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30111>,<IC2:itemCellEmpty>,null,<liquid:custommat06>,20,2);
+mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30112>,<IC2:itemCellEmpty>,null,<liquid:custommat07>,20,2);
