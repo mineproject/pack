@@ -76,7 +76,7 @@ ram2 {
 ram3 {
   type: gt_assembler
   input: [circuitAdvanced, "oc:materialCircuitBoardPrinted"]
-  count: [6 3]
+  count: [6, 3]
   eu: 120
   time: 400
   inputFluid: {name="molten.solderingalloy", amount="144"}
@@ -110,21 +110,6 @@ floppy {
   input: [[screwAluminium, lever, screwAluminium]
           [plateAluminium, "oc:materialDisk", plateAluminium]
           [screwAluminium, craftingToolScrewdriver, screwAluminium]]
-}
-hdd1 {
-  input: [["oc:ram1", "oc:materialDisk", "oc:ram1"]
-          ["oc:ram1", "oc:materialDisk", "oc:ram1"]
-          [screwAluminium, craftingToolScrewdriver, "oc:circuitChip2"]]
-}
-hdd2 {
-  input: [["oc:hdd1", "oc:materialCircuitBoardPrinted" , "oc:hdd1"]
-          ["oc:circuitChip2", screwTitanium, "oc:circuitChip2"]
-          [screwTitanium, craftingToolScrewdriver, screwTitanium]]
-}
-hdd3 {
-  input: [["oc:hdd2", "oc:materialCircuitBoardPrinted", "oc:hdd2"]
-          ["oc:circuitChip3", screwTungstenSteel, "oc:circuitChip3"]
-          [screwTungstenSteel , craftingToolScrewdriver, screwTungstenSteel]]
 }
 raid {
   input: [[nuggetIron, "oc:cpu2", nuggetIron]
