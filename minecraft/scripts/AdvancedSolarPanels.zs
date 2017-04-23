@@ -12,11 +12,8 @@ val QuantumSolarPanel = <AdvancedSolarPanel:BlockAdvSolarPanel:3>;
 val IrradiantUranium = <AdvancedSolarPanel:asp_crafting_items:2>;
 val EnrichedSunnarium = <AdvancedSolarPanel:asp_crafting_items:3>;
 val EnrichedSunnariumAlloy = <AdvancedSolarPanel:asp_crafting_items:4>;
-val IrradiantGlassPane = <AdvancedSolarPanel:asp_crafting_items:5>;
-val IrradiantReinforcedPlate = <AdvancedSolarPanel:asp_crafting_items:8>;
 val CoalChunk = <IC2:itemPartCoalChunk>;
 val MT_Core = <AdvancedSolarPanel:asp_crafting_items:12>;
-val EngravedLapotronChip = <gregtech:gt.metaitem.01:32714>;
 val QuantumCore = <AdvancedSolarPanel:asp_crafting_items:13>;
 
 
@@ -50,29 +47,27 @@ recipes.remove(<AdvancedSolarPanel:advanced_solar_helmet>);
 recipes.remove(<AdvancedSolarPanel:hybrid_solar_helmet>);
 recipes.remove(<AdvancedSolarPanel:ultimate_solar_helmet>);
 
-recipes.addShaped(<AdvancedSolarPanel:advanced_solar_helmet>,[
-	[null, AdvancedSolarPanel, null],
-	[<IC2:itemPartCircuitAdv>, <IC2:itemArmorNanoHelmet:*>, <IC2:itemPartCircuitAdv>],
-	[<IC2:itemCable:3>, <IC2:blockElectric:3>, <IC2:itemCable:3>]
-]);
-
-recipes.addShaped(<AdvancedSolarPanel:hybrid_solar_helmet>,[
-	[null, HybridSolarPanel, null],
-	[<IC2:itemPartCircuitAdv>, <IC2:itemArmorQuantumHelmet:*>, <IC2:itemPartCircuitAdv>],
-	[<IC2:itemCable:9>, <IC2:blockElectric:5>, <IC2:itemCable:9>]
-]);
-
-recipes.addShaped(<AdvancedSolarPanel:ultimate_solar_helmet>,[
-	[null, UltimateSolarPanel, null],
-	[<IC2:itemPartCircuitAdv>, <IC2:itemArmorQuantumHelmet:*>, <IC2:itemPartCircuitAdv>],
-	[<IC2:itemCable:9>, <IC2:blockElectric:5>, <IC2:itemCable:9>]
-]);
-
-recipes.addShaped(<AdvancedSolarPanel:ultimate_solar_helmet>,[
-	[UltimateSolarPanel],
-	[<AdvancedSolarPanel:hybrid_solar_helmet:*>]
-]);
-
+mods.gregtech.AssemblyLine.addRecipe(<gregtech:gt.metaitem.01:32750>, 144000,[
+										<AdvancedSolarPanel:BlockAdvSolarPanel>,
+										<ore:circuitAdvanced> * 2,
+										<IC2:itemArmorNanoHelmet:*>,
+										<gregtech:gt.blockmachines:1426> * 2,
+										<gregtech:gt.blockmachines:22>],
+[<liquid:molten.solderingalloy> * 288], <AdvancedSolarPanel:advanced_solar_helmet>, 1200, 480);
+mods.gregtech.AssemblyLine.addRecipe(<gregtech:gt.metaitem.01:32751>, 144000,[
+										<AdvancedSolarPanel:BlockAdvSolarPanel:1>,
+										<ore:circuitData> * 2,
+										<IC2:itemArmorQuantumHelmet:*>,
+										<gregtech:gt.blockmachines:1586> * 2,
+										<gregtech:gt.blockmachines:23>],
+[<liquid:molten.solderingalloy> * 288], <AdvancedSolarPanel:hybrid_solar_helmet>, 900, 1920);
+mods.gregtech.AssemblyLine.addRecipe(<gregtech:gt.metaitem.01:32752>, 144000,[
+										<AdvancedSolarPanel:BlockAdvSolarPanel:2>,
+										<ore:circuitElite> * 2,
+										<IC2:itemArmorQuantumHelmet:*>,
+										<gregtech:gt.blockmachines:1686> * 2,
+										<gregtech:gt.blockmachines:24>],
+[<liquid:molten.solderingalloy> * 288], <AdvancedSolarPanel:ultimate_solar_helmet>, 600, 7680);
 
 #=================================================================#
 # SOLAR PANELS RECIPES
@@ -81,38 +76,42 @@ recipes.addShaped(<AdvancedSolarPanel:ultimate_solar_helmet>,[
 // recipes.removeShaped(HybridSolarPanel * 8, [[UltimateSolarPanel]]);
 
 recipes.remove(AdvancedSolarPanel); // just for oredict circuits
-recipes.addShaped(AdvancedSolarPanel,[
-	[IrradiantGlassPane, IrradiantGlassPane, IrradiantGlassPane],
-	[<ore:plateAlloyAdvanced>, <IC2:blockGenerator:3>, <ore:plateAlloyAdvanced>],
-	[<ore:circuitGood>, IrradiantReinforcedPlate, <ore:circuitGood>]
-]);
+mods.gregtech.AssemblyLine.addRecipe(<IC2:blockGenerator:3>, 144000,[
+										<AdvancedSolarPanel:asp_crafting_items:5> * 3,
+										<ore:plateAlloyAdvanced> * 2,
+										<IC2:blockGenerator:3>,
+										<ore:circuitGood> * 2,
+										<AdvancedSolarPanel:asp_crafting_items:8>],
+[<liquid:molten.solderingalloy> * 576], AdvancedSolarPanel:BlockAdvSolarPanel, 200, 120);
 
 recipes.remove(HybridSolarPanel);
-recipes.addShaped(HybridSolarPanel,[
-	[<ore:plateAlloyIridium>, <minecraft:lapis_block>, <ore:plateAlloyIridium>],
-	[<ore:plateAlloyIridium>, AdvancedSolarPanel, <ore:plateAlloyIridium>],
-	[EnrichedSunnarium, <ore:circuitAdvanced>, EnrichedSunnarium]
-]);
+mods.gregtech.AssemblyLine.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel>, 144000,[
+										<AdvancedSolarPanel:BlockAdvSolarPanel>,
+										<ore:plateAlloyIridium> * 4,
+										<minecraft:lapis_block>,
+										<AdvancedSolarPanel:asp_crafting_items:3> * 2,
+										<ore:circuitAdvanced> * 2],
+[<liquid:molten.solderingalloy> * 576], <AdvancedSolarPanel:BlockAdvSolarPanel:1>, 300, 480);
 
 recipes.remove(UltimateSolarPanel);
-recipes.addShaped(UltimateSolarPanel,[
-	[EnrichedSunnariumAlloy, <minecraft:lapis_block>, EnrichedSunnariumAlloy],
-	[CoalChunk, AdvancedSolarPanel, CoalChunk],
-	[EnrichedSunnariumAlloy, CoalChunk, EnrichedSunnariumAlloy]
-]);
-recipes.addShaped(UltimateSolarPanel,[
-	[HybridSolarPanel, HybridSolarPanel, HybridSolarPanel],
-	[HybridSolarPanel, EngravedLapotronChip, HybridSolarPanel],
-	[HybridSolarPanel, HybridSolarPanel, HybridSolarPanel]
-]);
+mods.gregtech.AssemblyLine.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:1>, 144000,[
+										<AdvancedSolarPanel:BlockAdvSolarPanel:1>,
+										<AdvancedSolarPanel:asp_crafting_items:4> * 4,
+										<IC2:itemPartCoalChunk> * 3,
+										<minecraft:lapis_block>,
+										<ore:circuitData> * 2],
+[<liquid:molten.solderingalloy> * 576], <AdvancedSolarPanel:BlockAdvSolarPanel:2>, 400, 1920);
 
 recipes.remove(QuantumSolarPanel);
-recipes.addShaped(QuantumSolarPanel,[
-	[UltimateSolarPanel, <ore:glassReinforced>, UltimateSolarPanel],
-	[UltimateSolarPanel, QuantumCore, UltimateSolarPanel],
-	[<ore:circuitMaster>, <ore:batteryUltimate>, <ore:circuitMaster>]
-]);
-
+mods.gregtech.AssemblyLine.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:2>, 144000,[
+										<AdvancedSolarPanel:BlockAdvSolarPanel:2> * 4,
+										<ore:circuitElite> * 2,
+										<AdvancedSolarPanel:asp_crafting_items:13>,
+										<gregtech:gt.blockmachines:1686> * 2,
+										<ore:batteryUltimate>,
+										<ore:circuitMaster> * 2,
+										<ore:glassReinforced> * 1],
+[<liquid:molten.solderingalloy> * 576], <AdvancedSolarPanel:BlockAdvSolarPanel:3>, 600, 7680);
 
 #=================================================================#
 # TOOLTIPS

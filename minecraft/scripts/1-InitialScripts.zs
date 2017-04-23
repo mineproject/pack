@@ -57,10 +57,6 @@ shardBalance.add(<Thaumcraft:ItemShard:6>);
 recipes.remove(<minecraft:brewing_stand>);
 recipes.addShaped(<minecraft:brewing_stand>, [[null], [null, <ore:rodBlaze>], [<ore:slabStone>, <ore:slabStone>, <ore:slabStone>]]);
 
-# -- Cauldron
-recipes.remove(<minecraft:cauldron>);
-recipes.addShaped(<minecraft:cauldron>, [[<ore:plateIron>, null, <ore:plateIron>], [<ore:plateIron>, null, <ore:plateIron>], [<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]]);
-
 # -- Web (Only obtainable via Spinning wheel from witchery)
 recipes.remove(<minecraft:web>);
 mods.thaumcraft.Crucible.removeRecipe(<minecraft:web>);

@@ -107,9 +107,9 @@ recipes.remove(<OpenComputers:item:29>);
 recipes.remove(<OpenComputers:item:42>);
 recipes.remove(<OpenComputers:item:43>);
 #CPUs
-mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:29>, [[<ore:oc:circuitChip2>, <ore:oc:materialALU>, <ore:oc:circuitChip2>], [<ore:plateAluminium>, <ore:oc:materialCU>, <ore:plateAluminium>], [<ore:wireFineCopper>, <ore:oc:ram2>, <ore:wireFineCopper>]]);
-mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:42>, [[<ore:oc:circuitChip2>, <ore:oc:materialALU>, <ore:oc:circuitChip2>], [<ore:plateStainlessSteel>, <ore:oc:materialCU>, <ore:plateStainlessSteel>], [<ore:wireFineGold>, <ore:oc:ram4>, <ore:wireFineGold>]]);
-mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:43>, [[<ore:oc:circuitChip3>, <ore:oc:materialALU>, <ore:oc:circuitChip3>], [<ore:plateTitanium>, <ore:oc:materialCU>, <ore:plateTitanium>], [<ore:wireFinePlatinum>, <ore:oc:ram6>, <ore:wireFinePlatinum>]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:29>, [[<ore:oc:circuitChip2>, <ore:oc:materialALU>, <ore:oc:circuitChip2>], [<ore:plateAluminium>, <ore:oc:materialCU>, <ore:plateAluminium>], [<ore:wireFineCopper>, <ore:oc:ram1>, <ore:wireFineCopper>]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:42>, [[<ore:oc:circuitChip2>, <ore:oc:materialALU>, <ore:oc:circuitChip2>], [<ore:plateStainlessSteel>, <ore:oc:materialCU>, <ore:plateStainlessSteel>], [<ore:wireFineGold>, <ore:oc:ram3>, <ore:wireFineGold>]]);
+mods.extraUtils.QED.addShapedRecipe(<OpenComputers:item:43>, [[<ore:oc:circuitChip3>, <ore:oc:materialALU>, <ore:oc:circuitChip3>], [<ore:plateTitanium>, <ore:oc:materialCU>, <ore:plateTitanium>], [<ore:wireFinePlatinum>, <ore:oc:ram5>, <ore:wireFinePlatinum>]]);
 
 #GPUs
 recipes.remove(<OpenComputers:item:8>);

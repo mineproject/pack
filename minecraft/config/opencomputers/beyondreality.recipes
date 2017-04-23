@@ -59,45 +59,51 @@ server3 {
 
 ram1 {
   type: gt_assembler
-  input: [circuitGood, "oc:materialCircuitBoardPrinted"]
-  count: [20, 3]
+  input: [circuitBasic, "oc:materialCircuitBoardPrinted"]
+  count: [10, 3]
   eu: 30
   time: 200
+  inputFluid: {name="molten.solderingalloy", amount="144"}
 }
 ram2 {
   type: gt_assembler
-  input: [circuitAdvanced, "oc:materialCircuitBoardPrinted"]
-  count: [16, 3]
+  input: [circuitGood, "oc:materialCircuitBoardPrinted"]
+  count: [20, 6]
   eu: 60
   time: 300
+  inputFluid: {name="molten.solderingalloy", amount="288"}
 }
 ram3 {
   type: gt_assembler
-  input: [circuitData, "oc:materialCircuitBoardPrinted"]
-  count: [12, 3]
+  input: [circuitAdvanced, "oc:materialCircuitBoardPrinted"]
+  count: [6 3]
   eu: 120
-  time: 500
+  time: 400
+  inputFluid: {name="molten.solderingalloy", amount="144"}
 }
 ram4 {
   type: gt_assembler
-  input: [circuitElite, "oc:materialCircuitBoardPrinted"]
-  count: [10, 3]
+  input: [circuitData, "oc:materialCircuitBoardPrinted"]
+  count: [12, 6]
   eu: 240
-  time: 700
+  time: 500
+  inputFluid: {name="molten.solderingalloy", amount="288"}
 }
 ram5 {
   type: gt_assembler
-  input: [circuitMaster, "oc:materialCircuitBoardPrinted"]
-  count: [8, 3]
+  input: [circuitElite, "oc:materialCircuitBoardPrinted"]
+  count: [4, 3]
   eu: 480
-  time: 1000
+  time: 600
+  inputFluid: {name="molten.solderingalloy", amount="144"}
 }
 ram6 {
   type: gt_assembler
-  input: [circuitUltimate, "oc:materialCircuitBoardPrinted"]
-  count: [4, 3]
-  eu: 1920
-  time: 2000
+  input: [circuitMaster, "oc:materialCircuitBoardPrinted"]
+  count: [8, 6]
+  eu: 960
+  time: 800
+  inputFluid: {name="molten.solderingalloy", amount="288"}
 }
 
 floppy {
@@ -119,6 +125,11 @@ hdd3 {
   input: [["oc:hdd2", "oc:materialCircuitBoardPrinted", "oc:hdd2"]
           ["oc:circuitChip3", screwTungstenSteel, "oc:circuitChip3"]
           [screwTungstenSteel , craftingToolScrewdriver, screwTungstenSteel]]
+}
+raid {
+  input: [[nuggetIron, "oc:cpu2", nuggetIron]
+          ["oc:ram1", "oc:diskDrive", "oc:ram1"]
+          [nuggetIron, "oc:circuitChip2", nuggetIron]]
 }
 
 # graphicsCard1 { fallback to default }

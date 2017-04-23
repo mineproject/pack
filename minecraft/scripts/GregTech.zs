@@ -118,34 +118,6 @@ print("Initializing 'GregTech.zs'...");
 <DraconicEvolution:draconiumIngot>.addShiftTooltip("");
 <DraconicEvolution:draconiumIngot>.addShiftTooltip(format.darkPurple("You embark on a slippery-slope road to nowhere!"));
 
-//Adamantium
-<gregtech:gt.metaitem.01:2319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:11319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:13319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:14319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:15319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:16319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:17319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:18319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:19319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:20319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:21319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:22319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:23319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:25319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:26319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:27319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:28319>.addTooltip("Ad");
-<gregtech:gt.metaitem.01:29319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:16319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:19319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:20319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:21319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:22319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:23319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:24319>.addTooltip("Ad");
-<gregtech:gt.metaitem.02:31319>.addTooltip("Ad");
-
 //Proto Adamantiumium
 <TabulaRasa:RasaItem1>.addTooltip("Ad(NO2)2Pm");
 <TabulaRasa:RasaItem1:1>.addTooltip("Ad(NO2)2Pm");
@@ -162,7 +134,7 @@ print("Initializing 'GregTech.zs'...");
 #Blocks
 //Fusion Casing MK1
 recipes.remove(<gregtech:gt.blockcasings4:6>);
-mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.blockcasings4:6>, [
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.blockcasings4:6> * 2, [
 		[null, null, null, <ore:circuitMaster>, <ore:itemSuperconductor>, <ore:circuitMaster>, null, null, null],
 		[null, null, <ore:plateDoublePromethium>, <ore:fieldLuV>, <gregtech:gt.blockcasings:6>, <ore:fieldLuV>, <ore:plateDoublePromethium>, null, null],
 		[null, <ore:plateDoublePromethium>, <ore:pumpLuV>, <ore:plateQuadrupleTungstenSteel>, <gregtech:gt.neutronreflector>, <ore:plateQuadrupleTungstenSteel>, <ore:emitterLuV>, <ore:plateDoublePromethium>, null],
@@ -177,7 +149,7 @@ mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.blockcasings4:6>, [
 
 //Fusion Casing MK2
 recipes.remove(<gregtech:gt.blockcasings4:8>);
-mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.blockcasings4:8>, [
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.blockcasings4:8> * 2, [
 		[null, null, null, <ore:circuitUltimate>, <ore:itemSuperconductor>, <ore:circuitUltimate>, null, null, null],
 		[null, null, <ore:plateDoubleAmericium>, <ore:fieldZPM>, <gregtech:gt.blockcasings:7>, <ore:fieldZPM>, <ore:plateDoubleAmericium>, null, null],
 		[null, <ore:plateDoubleAmericium>, <ore:pumpZPM>, <ore:plateQuadrupleProtoAdamantium>, <ore:plateDenseNaquadahAlloy>, <ore:plateQuadrupleProtoAdamantium>, <ore:emitterZPM>, <ore:plateDoubleAmericium>, null],

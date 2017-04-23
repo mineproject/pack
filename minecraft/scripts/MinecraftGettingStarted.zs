@@ -121,20 +121,6 @@ recipes.remove(<minecraft:furnace>);
 recipes.addShaped(<minecraft:furnace>, [[<ExtraUtilities:cobblestone_compressed>, <ExtraUtilities:cobblestone_compressed>, <ExtraUtilities:cobblestone_compressed>], [<ExtraUtilities:cobblestone_compressed>, null, <ExtraUtilities:cobblestone_compressed>], [<ExtraUtilities:cobblestone_compressed>, <ExtraUtilities:cobblestone_compressed>, <ExtraUtilities:cobblestone_compressed>]]);
 recipes.remove(<TConstruct:FurnaceSlab>);
 recipes.addShaped(<TConstruct:FurnaceSlab>, [[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>], [<ore:cobblestone>, null, <ore:cobblestone>], [<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>]]);
-recipes.remove(<minecraft:flint_and_steel>);
-recipes.addShapeless(<minecraft:flint_and_steel>, [<ore:ingotSteel>, <minecraft:flint>]);
-recipes.remove(<minecraft:bucket>);
-recipes.addShaped(<minecraft:bucket>, [[<ore:plateIron>, null, <ore:plateIron>], [null, <ore:plateIron>, null]]);
-
-#Early Steel Production non-nether materials
-recipes.remove(<Railcraft:machine.alpha:12>);
-recipes.remove(<ImmersiveEngineering:stoneDecoration:2>);
-recipes.addShaped(<Railcraft:machine.alpha:12> * 4, [[<minecraft:brick_block>, <minecraft:sand>, <minecraft:brick_block>], [<minecraft:sand>, <TConstruct:materials:36>, <minecraft:sand>], [<minecraft:brick_block>, <minecraft:sand>, <minecraft:brick_block>]]);
-recipes.addShaped(<ImmersiveEngineering:stoneDecoration:2> * 4, [[<ore:hardenedClay>, <ore:sand>, <ore:hardenedClay>], [<ore:sand>, <TConstruct:materials:36>, <ore:sand>], [<ore:hardenedClay>, <ore:sand>, <ore:hardenedClay>]]);
-recipes.addShaped(<ImmersiveEngineering:stoneDecoration:2> * 4, [[<minecraft:hardened_clay>, <ore:sand>, <minecraft:hardened_clay>], [<ore:sand>, <minecraft:ender_pearl>, <ore:sand>], [<minecraft:hardened_clay>, <ore:sand>, <minecraft:hardened_clay>]]);
-recipes.addShaped(<ImmersiveEngineering:stoneDecoration:2> * 4, [[<minecraft:hardened_clay>, <ore:sand>, <minecraft:hardened_clay>], [<ore:sand>, <minecraft:tnt>, <ore:sand>], [<minecraft:hardened_clay>, <ore:sand>, <minecraft:hardened_clay>]]);
-recipes.addShaped(<Railcraft:machine.alpha:12> * 4, [[<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>], [<ore:sand>, <minecraft:ender_pearl>, <ore:sand>], [<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>]]);
-recipes.addShaped(<Railcraft:machine.alpha:12> * 4, [[<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>], [<ore:sand>, <minecraft:tnt>, <ore:sand>], [<minecraft:brick_block>, <ore:sand>, <minecraft:brick_block>]]);
 
 #AE2 Grindstone Changes
 recipes.remove(<appliedenergistics2:tile.BlockCrank>);
@@ -144,7 +130,8 @@ recipes.addShaped(<appliedenergistics2:tile.BlockGrinder>, [[<ore:stone>, <ore:g
 
 #Tic Grout reduction
 recipes.remove(<TConstruct:CraftedSoil:1>);
-recipes.addShapeless(<TConstruct:CraftedSoil:1>, [<ore:gravel>, <ore:itemClay>, <ore:sand>]);
+mods.tconstruct.Casting.removeTableRecipe(<TConstruct:materials:2>, <liquid:stone.seared>, <TConstruct:metalPattern>);
+recipes.addShapeless(<TConstruct:CraftedSoil:1>, [<ore:gravel>, <minecraft:clay>, <ore:sand>, <ore:dustBronze>, <ore:dustBronze>]);
 
 #vanilla tool nerfs
 <minecraft:golden_axe>.maxDamage = 1;
