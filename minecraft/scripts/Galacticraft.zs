@@ -120,7 +120,7 @@ mods.gregtech.ChemicalReactor.addRecipe(null, <liquid:custommat05> * 2000, null,
 mods.gregtech.ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:30111>, <liquid:water> * 1000, null, <gregtech:gt.metaitem.01:30108>, <liquid:custommat05> * 1000, 400, 1920);
 mods.gregtech.ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:30112>, <liquid:water> * 1000, null, <gregtech:gt.metaitem.01:30111>, <liquid:hydrogen> * 2000, 400, 1920);
 mods.gregtech.ChemicalReactor.addRecipe(<IC2:itemCellEmpty>, <liquid:fuelgc> * 1000, null, <gregtech:gt.metaitem.01:30112>, <liquid:holywater> * 8000, 400, 1920);
-mods.gregtech.ChemicalReactor.addRecipe(null, <liquid:holywater> * 8000, <minecraft:golden_apple>, <witchery:silversword>, <liquid:water> * 16000, 2400, 1920)
+mods.gregtech.ChemicalReactor.addRecipe(null, <liquid:holywater> * 8000, <minecraft:golden_apple>, <witchery:silversword>, <liquid:water> * 16000, 2400, 1920);
 
 mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30105>,<liquid:custommat00>,null,20,2);
 mods.gregtech.FluidCanner.addRecipe(<IC2:itemCellEmpty>,<gregtech:gt.metaitem.01:30106>,<liquid:custommat01>,null,20,2);
