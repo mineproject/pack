@@ -47,6 +47,7 @@ recipes.removeShaped(<gregtech:gt.metaitem.01:23019> * 4, [[<ore:ingotAluminium>
 <ore:GemPureNetherQuartz>.add(<appliedenergistics2:item.ItemMultiMaterial:11>);
 
 #Enderium
+recipes.removeShapeless(<ThermalFoundation:material:44> * 4);
 recipes.removeShapeless(<gregtech:gt.metaitem.01:2321> * 4);
 recipes.removeShapeless(<minecraft:ender_eye>);
 for dustPlatinum in <ore:dustPlatinum>.items {

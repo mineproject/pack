@@ -36,4 +36,8 @@ mods.thermalexpansion.Furnace.removeRecipe(<gregtech:gt.metaitem.01:11880>);
 mods.thermalexpansion.Furnace.removeRecipe(<MineFactoryReloaded:rubber.bar>);
 mods.thermalexpansion.Furnace.removeRecipe(<IC2:itemRubber>);
 
+#Polyethylene dupe fix
+recipes.removeShaped(<MineFactoryReloaded:plastic>)
+recipes.addShaped(<MineFactoryReloaded:plastic>, [[<ore:platePlastic>,<ore:platePlastic>,<ore:platePlastic>],[<ore:platePlastic>,<ore:platePlastic>,<ore:platePlastic>],[<ore:platePlastic>,<ore:platePlastic>,<ore:platePlastic>]])
+furnace.remove(<MineFactoryReloaded:plastic.raw> * 4, <MineFactoryReloaded:plastic>)
 print("Initialized 'MineFactoryReloaded.zs'");
