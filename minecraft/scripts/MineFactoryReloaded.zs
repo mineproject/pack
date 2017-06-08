@@ -40,4 +40,7 @@ mods.thermalexpansion.Furnace.removeRecipe(<IC2:itemRubber>);
 recipes.removeShaped(<MineFactoryReloaded:plastic>)
 recipes.addShaped(<MineFactoryReloaded:plastic>, [[<ore:platePlastic>,<ore:platePlastic>,<ore:platePlastic>],[<ore:platePlastic>,<ore:platePlastic>,<ore:platePlastic>],[<ore:platePlastic>,<ore:platePlastic>,<ore:platePlastic>]])
 furnace.remove(<MineFactoryReloaded:plastic.raw> * 4, <MineFactoryReloaded:plastic>)
+
+#Remove laser drill
+recipes.remove(<MineFactoryReloaded:machine.2>);
 print("Initialized 'MineFactoryReloaded.zs'");
