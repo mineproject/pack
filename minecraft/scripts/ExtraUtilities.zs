@@ -75,6 +75,7 @@ recipes.addShaped(<ExtraUtilities:drum>, [[<ore:ingotSteel>, <minecraft:heavy_we
 #watering Can
 recipes.remove(<ExtraUtilities:watering_can:1>);
 recipes.addShaped(<ExtraUtilities:watering_can:1>, [[<ore:plateSteel>, <minecraft:dye:15>, <minecraft:wheat_seeds>],  [<ore:plateSteel>, <minecraft:bowl>, <ore:plateSteel>], [<minecraft:pumpkin_seeds>, <ore:plateSteel>, <minecraft:melon_seeds>]]);
+recipes.addShaped(<ExtraUtilities:watering_can:3>, [[<ore:plateEuropium>, <minecraft:dye:15>, <minecraft:wheat_seeds>],  [<ore:plateEuropium>, <ExtraUtilities:mini-soul>, <ore:plateEuropium>], [<minecraft:pumpkin_seeds>, <ore:plateEuropium>, <minecraft:melon_seeds>]]);
 
 #ender transmitter
 recipes.remove(<ExtraUtilities:nodeUpgrade:5>);
@@ -164,5 +165,21 @@ for i, light in Illuminators {
 	recipes.removeShaped(Greenscreens[i]);
 	recipes.addShapeless(Greenscreens[i], [Illuminators[i]]);
 }
+
+//Unstable/Stable ingot
+recipes.removeShaped(<ExtraUtilities:unstableingot>.withTag({Bug: 1 as byte}));
+recipes.removeShaped(<ExtraUtilities:defoliageAxe>);
+recipes.removeShaped(<ExtraUtilities:temporalHoe>);
+recipes.removeShaped(<ExtraUtilities:lawSword>);
+recipes.removeShaped(<ExtraUtilities:destructionpickaxe>.withTag({ench: [{lvl: 10 as short, id: 32 as short}]}));
+recipes.removeShaped(<ExtraUtilities:erosionShovel>.withTag({ench: [{lvl: 10 as short, id: 32 as short}]}));
+recipes.removeShaped(<ExtraUtilities:shears>);
+
+//Golden bag
+recipes.removeShaped(<ExtraUtilities:golden_bag>);
+recipes.addShaped(<ExtraUtilities:golden_bag>, [[<TConstruct:materials:25>, <minecraft:light_weighted_pressure_plate>, <TConstruct:materials:25>], [<gregtech:gt.metaitem.01:17086>, <Thaumcraft:FocusPouch>, <gregtech:gt.metaitem.01:17086>], [<TConstruct:materials:25>, <gregtech:gt.metaitem.01:17086>, <TConstruct:materials:25>]]);
+
+
+recipes.addShaped(<ExtraUtilities:unstableingot>.withTag({Bug: 1 as byte}), [[<minecraft:iron_ingot>], [<ExtraUtilities:divisionSigil>.withTag({damage: 256})], [<minecraft:diamond>]]);
 
 print("Initialized 'ExtraUtilities.zs'");

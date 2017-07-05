@@ -112,11 +112,21 @@ print("Initializing 'GregTech.zs'...");
 <DraconicEvolution:draconiumIngot>.addTooltip("Hold " + format.aqua(format.italic("Shift")) + format.gray(" for Proccessing"));
 <DraconicEvolution:draconiumIngot>.addShiftTooltip(format.darkAqua("Detail recipes you may see in NEI"));
 <DraconicEvolution:draconiumIngot>.addShiftTooltip(format.white("1) ") + format.darkGreen("Draconium Dust") + format.white(" in ") + format.darkRed("Plasma Arc Furnace") + format.white(" = ") + format.gold("Molten Tartarite"));
-<DraconicEvolution:draconiumIngot>.addShiftTooltip(format.white("2) ") + format.darkGreen("Molten Tartarite") + format.white(" in ") + format.darkRed("Fusion Reactor T3") + format.white(" = ") + format.gold("Molten Draconium"));
-<DraconicEvolution:draconiumIngot>.addShiftTooltip(format.white("3) ") + format.darkGreen("Molten Draconium") + format.white(" in ") + format.darkRed("Fluid Solidifier") + format.white(" = ") + format.gold("Hot Draconium Ingot"));
+<DraconicEvolution:draconiumIngot>.addShiftTooltip(format.white("2) ") + format.darkGreen("Molten Tartarite") + format.white(" in ") + format.darkRed("Fusion Reactor T3") + format.white(" = ") + format.gold("Plasma Draconium"));
+<DraconicEvolution:draconiumIngot>.addShiftTooltip(format.white("3) ") + format.darkGreen("Plasma Draconium") + format.white(" in ") + format.darkRed("Fluid Solidifier") + format.white(" = ") + format.gold("Hot Draconium Ingot"));
 <DraconicEvolution:draconiumIngot>.addShiftTooltip(format.white("4) ") + format.darkGreen("Hot Draconium Ingot") + format.white(" in ") + format.darkRed("Vacuum Freezer") + format.white(" = ") + format.gold("Draconium Ingot"));
 <DraconicEvolution:draconiumIngot>.addShiftTooltip("");
 <DraconicEvolution:draconiumIngot>.addShiftTooltip(format.darkPurple("You embark on a slippery-slope road to nowhere!"));
+
+<gregtech:gt.metaitem.01:11386>.addTooltip("Hold " + format.aqua(format.italic("Shift")) + format.gray(" for Proccessing"));
+<gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.darkAqua("Detail recipes you may see in NEI"));
+<gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.white("1) ") + format.darkGreen("Draconium Dust") + format.white(" in ") + format.darkRed("Plasma Arc Furnace") + format.white(" = ") + format.gold("Molten Tartarite"));
+<gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.white("2) ") + format.darkGreen("Molten Tartarite") + format.white(" in ") + format.darkRed("Fusion Reactor T3") + format.white(" = ") + format.gold("Plasma Draconium"));
+<gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.white("3) ") + format.darkGreen("Plasma Draconium") + format.white(" in ") + format.darkRed("Fluid Solidifier") + format.white(" = ") + format.gold("Hot Draconium Ingot"));
+<gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.white("4) ") + format.darkGreen("Hot Draconium Ingot") + format.white(" in ") + format.darkRed("Vacuum Freezer") + format.white(" = ") + format.gold("Draconium Ingot"));
+<gregtech:gt.metaitem.01:11386>.addShiftTooltip("");
+<gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.darkPurple("You embark on a slippery-slope road to nowhere!"));
+
 
 //Proto Adamantiumium
 <TabulaRasa:RasaItem1>.addTooltip("Ad(NO2)2Pm");
@@ -193,10 +203,11 @@ mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreDraconium>)
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore:oreDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <ore:oreDraconium>);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIngot>);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11386>);
 mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:1324> * 2], <liquid:molten.tartarite> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
-mods.gregtech.FusionReactor.addRecipe(<liquid:molten.draconium> * 144, <liquid:molten.tartarite> * 144, <liquid:molten.neutronium> * 36, 1200, 100000, 500000000);
-mods.gregtech.FluidSolidifier.addRecipe(<TabulaRasa:RasaItem0>, <gregtech:gt.metaitem.01:32306> * 0, <liquid:molten.draconium> * 144, 200, 16);
-mods.gregtech.VacuumFreezer.addRecipe(<DraconicEvolution:draconiumIngot>, <TabulaRasa:RasaItem0>, 1200);
+mods.gregtech.FusionReactor.addRecipe(<liquid:plasma.draconium> * 144, <liquid:molten.tartarite> * 144, <liquid:molten.neutronium> * 36, 1200, 100000, 500000000);
+mods.gregtech.FluidSolidifier.addRecipe(<gregtech:gt.metaitem.01:12386>, <gregtech:gt.metaitem.01:32306> * 0, <liquid:plasma.draconium> * 144, 200, 16);
+mods.gregtech.VacuumFreezer.addRecipe(<gregtech:gt.metaitem.01:11386>, <TabulaRasa:RasaItem0>, 4800);
 
 //Fix Adamantium recipes with Blast Furnace
 mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11319>);

@@ -22,9 +22,6 @@ recipes.remove(<TConstruct:ToolForgeBlock:0>);
 
 recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateDenseSteel>, <TConstruct:ToolStationBlock>, <ore:plateDenseSteel>], [<ore:plateDenseSteel>, null, <ore:plateDenseSteel>]]);
 
-#silky jewel
-recipes.remove(<TConstruct:materials:26>);
-recipes.addShaped(<TConstruct:materials:26>, [[null, <TConstruct:materials:25>, null], [<TConstruct:materials:25>, <ore:blockEmerald>, <TConstruct:materials:25>], [null, <TConstruct:materials:25>, null]]);
 
 #remove alloys
 //mods.tconstruct.Smeltery.removeMelting(<ore:dustGlowstone>);
