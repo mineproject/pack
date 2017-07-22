@@ -31,6 +31,7 @@ mods.tconstruct.Smeltery.removeMelting(<Railcraft:dust>);
 mods.tconstruct.Smeltery.removeMelting(<ThermalFoundation:material:4>);
 mods.tconstruct.Smeltery.removeMelting(<TConstruct:decoration.multibrick>);
 mods.tconstruct.Smeltery.removeMelting(<TConstruct:decoration.multibrickfancy>);
+mods.immersiveengineering.MetalPress.removeRecipe(<TConstruct:toolRod:6>);
 
 #remove alloys
 //mods.tconstruct.Smeltery.removeMelting(<ore:dustGlowstone>);
