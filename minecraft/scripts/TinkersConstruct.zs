@@ -22,6 +22,15 @@ recipes.remove(<TConstruct:ToolForgeBlock:0>);
 
 recipes.addShaped(<TConstruct:ToolForgeBlock>, [[<TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>, <TConstruct:Smeltery:2>], [<ore:plateDenseSteel>, <TConstruct:ToolStationBlock>, <ore:plateDenseSteel>], [<ore:plateDenseSteel>, null, <ore:plateDenseSteel>]]);
 
+#Fix Infinite obsidian
+mods.tconstruct.Smeltery.removeMelting(<gregtech:gt.metaitem.01:2804>);
+mods.tconstruct.Smeltery.removeMelting(<IC2:itemDust:11>);
+mods.tconstruct.Smeltery.removeMelting(<TConstruct:materials:18>);
+mods.tconstruct.Smeltery.removeMelting(<TConstruct:materials:27>);
+mods.tconstruct.Smeltery.removeMelting(<Railcraft:dust>);
+mods.tconstruct.Smeltery.removeMelting(<ThermalFoundation:material:4>);
+mods.tconstruct.Smeltery.removeMelting(<TConstruct:decoration.multibrick>);
+mods.tconstruct.Smeltery.removeMelting(<TConstruct:decoration.multibrickfancy>);
 
 #remove alloys
 //mods.tconstruct.Smeltery.removeMelting(<ore:dustGlowstone>);
