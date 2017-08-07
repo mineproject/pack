@@ -208,6 +208,7 @@ mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:12360>, 
 mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:12360> * 2, <gregtech:gt.metaitem.01:11047>, null, 1300, 2048, [<gregtech:gt.metaitem.01:11028>]);
 //Tungstencarbide
 mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11370>);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:12370>);
 mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:12370>, <gregtech:gt.metaitem.01:2370>, null, 1150, 1024);
 mods.immersiveengineering.ArcFurnace.addRecipe(<gregtech:gt.metaitem.01:12370>, <gregtech:gt.metaitem.01:11081>, null, 2306, 2048, [<gregtech:gt.metaitem.01:2010>]);
 //HHS-G
