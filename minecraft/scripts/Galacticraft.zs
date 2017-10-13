@@ -136,3 +136,6 @@ mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30108>,<IC2:itemCel
 mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30110>,<IC2:itemCellEmpty>,null,<liquid:custommat05>* 1000);
 mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30111>,<IC2:itemCellEmpty>,null,<liquid:custommat06>* 1000);
 mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30112>,<IC2:itemCellEmpty>,null,<liquid:custommat07>* 1000);
+
+recipes.remove(<GalacticraftCore:tile.spinThruster>);
+recipes.addShaped(<GalacticraftCore:tile.spinThruster>, [[null,null,null],[<GalacticraftCore:item.fuelCanisterPartial:1>,<ore:waferAdvanced>,<GalacticraftCore:item.engine>],[<ore:compressedSteel>,<ore:ingotMeteoricIron>,<ore:compressedSteel>]]);

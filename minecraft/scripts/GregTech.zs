@@ -180,8 +180,8 @@ mods.gregtech.AssemblyLine.addRecipe(<gregtech:gt.blockcasings:15>, 180000, [<gr
 #Items
 
 //Fix Titanium
-furnace.remove(<gregtech:gt.metaitem.01:11028>,<ore:shardTitanium>);
-furnace.remove(<gregtech:gt.metaitem.01:11028>,<ore:oreIlmenite>);
+#furnace.remove(<gregtech:gt.metaitem.01:11028>,<ore:shardTitanium>);
+#furnace.remove(<gregtech:gt.metaitem.01:11028>,<ore:oreIlmenite>);
 mods.thermalexpansion.Furnace.removeRecipe(<GalacticraftMars:tile.asteroidsBlock:4>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:shardTitanium>);
 
@@ -194,11 +194,11 @@ recipes.removeShaped(<ProjRed|Expansion:projectred.expansion.machine1>);
 
 //Fix Draconium
 furnace.remove(<ore:ingotDraconium>);
-mods.thermalexpansion.Furnace.removeRecipe(<ore:dustDraconium>);
+#mods.thermalexpansion.Furnace.removeRecipe(<ore:dustDraconium>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:oreDraconium>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:blockDraconium>);
 mods.thermalexpansion.Furnace.removeRecipe(<DraconicEvolution:draconiumBlend>);
-mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustDraconium>);
+#mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore:oreDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <ore:oreDraconium>);
