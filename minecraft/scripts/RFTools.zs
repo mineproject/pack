@@ -64,9 +64,9 @@ val QuantumEntangled = <appliedenergistics2:item.ItemMultiMaterial:48>;
 
 val AdvancedScanner2 = <gregtech:gt.blockmachines:344>;
 val DataOrb = <gregtech:gt.metaitem.01:32707>;
-val DataCircuit = <gregtech:gt.metaitem.01:32705>;
-val DataChip = <gregtech:gt.metaitem.01:32704>;
-val EnergyCircuit = <gregtech:gt.metaitem.01:32706>;
+val DataCircuit = <ore:circuitElite>;
+val DataChip = <ore:circuitData>;
+val EnergyCircuit = <ore:circuitMaster>;
 val Emitter = <gregtech:gt.metaitem.01:32683>;
 val Sensor = <gregtech:gt.metaitem.01:32693>;
 val SensorLV = <gregtech:gt.metaitem.01:32690>;
@@ -91,7 +91,7 @@ val MachineHullHV = <gregtech:gt.blockmachines:13>;
 recipes.remove(<rftools:machineBase>);
 recipes.remove(<rftools:machineFrame>);
 
-//Remove unusible blocks
+//Remove unusable blocks
 recipes.remove(<rftools:environmentalControllerBlock>);
 recipes.remove(<rftools:screenBlock>);
 recipes.remove(<rftools:screenControllerBlock>);

@@ -43,8 +43,6 @@ recipes.remove(<minecraft:iron_hoe>);
 recipes.remove(<minecraft:stone_hoe>);
 recipes.remove(<minecraft:wooden_axe>);
 recipes.remove(<minecraft:wooden_shovel>);
-recipes.remove(<minecraft:wooden_sword>);
-recipes.remove(<minecraft:stone_sword>);
 recipes.remove(<ThermalFoundation:tool.pickaxeTin>);
 recipes.remove(<ThermalFoundation:tool.shovelTin>);
 recipes.remove(<ThermalFoundation:tool.swordTin>);

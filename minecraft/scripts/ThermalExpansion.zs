@@ -509,4 +509,6 @@ recipes.addShaped(<ThermalExpansion:Device:2>, [[null, <ThermalExpansion:Strongb
 mods.thermalexpansion.Transposer.removeFillRecipe(<ore:dustElectrum>, <liquid:redstone>);
 mods.gregtech.Mixer.addRecipe(<gregtech:gt.metaitem.01:2320>, null, [<gregtech:gt.metaitem.01:2303>], <liquid:redstone> * 200, 100, 16);
 
+recipes.remove(<ThermalFoundation:lexicon>);
+
 print("Initialized 'ThermalExpansion.zs'");

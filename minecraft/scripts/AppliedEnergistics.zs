@@ -113,7 +113,7 @@ val SpatialComponent_2 = <appliedenergistics2:item.ItemMultiMaterial:32>;
 recipes.remove(SpatialComponent_2);
 recipes.addShaped(SpatialComponent_2, [
 	[<ore:wireFineNiobium>, <ore:pearlFluix>, <ore:wireFineNiobium>],
-	[<ore:pearlFluix>, <gregtech:gt.metaitem.01:32704>, <ore:pearlFluix>],
+	[<ore:pearlFluix>, <ore:circuitData>, <ore:pearlFluix>],
 	[<ore:wireFineNiobium>, <ore:pearlFluix>, <ore:wireFineNiobium>]
 ]);
 
