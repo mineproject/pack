@@ -41,3 +41,8 @@ instance.cfg
 /minecraft/config/fastcraft.ini
 /minecraft/config/splash.properties
 /minecraft/mods/carpentersblocks/CarpentersBlocksCachedResources.zip
+/minecraft/DynmapModScraper/*
+/minecraft/config/CustomSpawner/*
+/minecraft/config/DynmapModScraper.cfg
+/minecraft/config/UniqueNames.txt
+/minecraft/visualvm_139/*
