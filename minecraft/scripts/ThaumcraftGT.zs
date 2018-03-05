@@ -43,12 +43,12 @@ recipes.remove(<Thaumcraft:blockCrystal:5>);
 recipes.remove(<Thaumcraft:blockCrystal:6>);
 
 
-mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal>, <Thaumcraft:ItemShard>*6, <liquid:water> * 100, 10000, 400, 32);
-mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:1>, <Thaumcraft:ItemShard:1>*6, <liquid:water> * 100, 10000, 400, 32);
-mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:2>, <Thaumcraft:ItemShard:2>*6, <liquid:water> * 100, 10000, 400, 32);
-mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:3>, <Thaumcraft:ItemShard:3>*6, <liquid:water> * 100, 10000, 400, 32);
-mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:4>, <Thaumcraft:ItemShard:4>*6, <liquid:water> * 100, 10000, 400, 32);
-mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:5>, <Thaumcraft:ItemShard:5>*6, <liquid:water> * 100, 10000, 400, 32);
+mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal>, <Thaumcraft:ItemShard>*6, <liquid:water> * 100, 10000, 800, 30);
+mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:1>, <Thaumcraft:ItemShard:1>*6, <liquid:water> * 100, 10000, 800, 30);
+mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:2>, <Thaumcraft:ItemShard:2>*6, <liquid:water> * 100, 10000, 800, 30);
+mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:3>, <Thaumcraft:ItemShard:3>*6, <liquid:water> * 100, 10000, 800, 30);
+mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:4>, <Thaumcraft:ItemShard:4>*6, <liquid:water> * 100, 10000, 800, 30);
+mods.gregtech.Autoclave.addRecipe(<Thaumcraft:blockCrystal:5>, <Thaumcraft:ItemShard:5>*6, <liquid:water> * 100, 10000, 800, 30);
 
 recipes.addShaped(<Thaumcraft:blockCrystal:6>, [[<Thaumcraft:blockCrystal>, <ore:plateAmber>, <Thaumcraft:blockCrystal:1>], [<Thaumcraft:blockCrystal:2>, <Thaumcraft:ItemShard:6>, <Thaumcraft:blockCrystal:3>], [<Thaumcraft:blockCrystal:4>, <ore:plateAmber>, <Thaumcraft:blockCrystal:5>]]);
 
@@ -58,14 +58,14 @@ mods.thaumcraft.Research.refreshResearchRecipe("ORE");
 //Recipes for "DECONSTRUCTOR"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockTable:14>);
 mods.thaumcraft.Arcane.addShaped("DECONSTRUCTOR", <Thaumcraft:blockTable:14>, "perditio 20", [[<ore:screwThaumium>, <Thaumcraft:ItemThaumometer>, <ore:screwThaumium>], [<gregtech:gt.metaitem.01:32650>, <Thaumcraft:blockTable>, <gregtech:gt.metaitem.01:32650>], [<ore:screwThaumium>, <ore:craftingToolScrewdriver>, <ore:screwThaumium>]]);
-
 mods.thaumcraft.Research.refreshResearchRecipe("DECONSTRUCTOR");
+mods.thaumcraft.Warp.addToResearch("DECONSTRUCTOR", 1);
 
 //---THAUMATURGY---
 //Recipes for "BASICTHAUMATURGY"
 
 recipes.remove(<Thaumcraft:WandCap>);
-recipes.addShaped(<Thaumcraft:WandCap>, [[<ore:screwIron>, <ore:ringIron>, <ore:screwIron>], [<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:29305>, <ore:craftingToolScrewdriver>], [<ore:screwIron>, <ore:ringIron>, <ore:screwIron>]]);
+recipes.addShaped(<Thaumcraft:WandCap>, [[<ore:screwIron>, <ore:ringSteek>, <ore:screwIron>], [<ore:craftingToolHardHammer>, <ore:foilSteel>, <ore:craftingToolScrewdriver>], [<ore:screwIron>, <ore:ringSteel>, <ore:screwIron>]]);
 
 recipes.remove(<Thaumcraft:WandCasting>.withTag({aqua: 2500, terra: 2500, ignis: 2500, ordo: 2500, perditio: 2500, aer: 2500}));
 recipes.addShaped(<Thaumcraft:WandCasting>.withTag({aqua: 2500, terra: 2500, ignis: 2500, ordo: 2500, perditio: 2500, aer: 2500}), [[<ore:screwSteel>, <gregtech:gt.metaitem.01:29032>, <Thaumcraft:WandCap>], [<gregtech:gt.metaitem.01:29032>, <ore:stickWood>, <gregtech:gt.metaitem.01:29032>], [<Thaumcraft:WandCap>, <gregtech:gt.metaitem.01:29032>, <ore:screwSteel>]]);
@@ -74,35 +74,35 @@ mods.thaumcraft.Research.refreshResearchRecipe("BASICTHAUMATURGY");
 
 //Recipes for "CAP_copper"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:3>);
-mods.thaumcraft.Arcane.addShaped("CAP_copper", <Thaumcraft:WandCap:3>, "ordo 2, ignis 2, aer 2", [[<ore:screwCopper>, <ore:ringSteel>, <ore:screwCopper>], [<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:29035>, <ore:craftingToolScrewdriver>], [<ore:screwCopper>, <ore:ringSteel>, <ore:screwCopper>]]);
+mods.thaumcraft.Arcane.addShaped("CAP_copper", <Thaumcraft:WandCap:3>, "ordo 6, ignis 6, aer 6", [[<ore:screwCopper>, <ore:ringAluminium>, <ore:screwCopper>], [<ore:craftingToolHardHammer>, <ore:foilAluminium>, <ore:craftingToolScrewdriver>], [<ore:screwCopper>, <ore:ringAluminium>, <ore:screwCopper>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("CAP_copper");
 
 
 //Recipes for "CAP_gold"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:1>);
-mods.thaumcraft.Arcane.addShaped("CAP_gold", <Thaumcraft:WandCap:1>, "ordo 3, ignis 3, aer 3", [[<ore:screwGold>, <ore:ringSteel>, <ore:screwGold>], [<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:29086>, <ore:craftingToolScrewdriver>], [<ore:screwGold>, <ore:ringSteel>, <ore:screwGold>]]);
+mods.thaumcraft.Arcane.addShaped("CAP_gold", <Thaumcraft:WandCap:1>, "ordo 12, ignis 12, aer 12", [[<ore:screwGold>, <ore:ringAluminium>, <ore:screwGold>], [<ore:craftingToolHardHammer>, <ore:foilAluminium>, <ore:craftingToolScrewdriver>], [<ore:screwGold>, <ore:ringAluminium>, <ore:screwGold>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("CAP_gold");
 
 
 //Recipes for "CAP_silver"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:5>);
-mods.thaumcraft.Arcane.addShaped("CAP_silver", <Thaumcraft:WandCap:5>, "ordo 4, ignis 4, aer 4", [[<ore:screwSilver>, <ore:ringSteel>, <ore:screwSilver>], [<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:29086>, <ore:craftingToolScrewdriver>], [<ore:screwSilver>, <ore:ringSteel>, <ore:screwSilver>]]);
+mods.thaumcraft.Arcane.addShaped("CAP_silver", <Thaumcraft:WandCap:5>, "ordo 18, ignis 18, aer 18", [[<ore:screwSilver>, <ore:ringAluminium>, <ore:screwSilver>], [<ore:craftingToolHardHammer>, <ore:foilAluminium>, <ore:craftingToolScrewdriver>], [<ore:screwSilver>, <ore:ringAluminium>, <ore:screwSilver>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("CAP_silver");
 
 
 //Recipes for "CAP_thaumium"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:6>);
-mods.thaumcraft.Arcane.addShaped("CAP_thaumium", <Thaumcraft:WandCap:6>, "ordo 6, ignis 6, aer 6", [[<ore:screwThaumium>, <ore:ringAluminium>, <ore:screwThaumium>], [<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:29019>, <ore:craftingToolScrewdriver>], [<ore:screwThaumium>, <ore:ringAluminium>, <ore:screwThaumium>]]);
-
+mods.thaumcraft.Arcane.addShaped("CAP_thaumium", <Thaumcraft:WandCap:6>, "ordo 24, ignis 24, aer 24", [[<ore:screwThaumium>, <ore:ringStainlessSteel>, <ore:screwThaumium>], [<ore:craftingToolHardHammer>, <ore:foilStainlessSteel>, <ore:craftingToolScrewdriver>], [<ore:screwThaumium>, <ore:ringStainlessSteel>, <ore:screwThaumium>]]);
 mods.thaumcraft.Research.refreshResearchRecipe("CAP_thaumium");
+mods.thaumcraft.Warp.addToResearch("CAP_thaumium", 1);
 
 
 //Recipes for "FOCUSPOUCH"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:FocusPouch>);
-mods.thaumcraft.Arcane.addShaped("FOCUSPOUCH", <Thaumcraft:FocusPouch>, "terra 10, ordo 10, perditio 10", [[<ore:screwAluminium>, <ore:plateGold>, <ore:screwAluminium>], [<witchery:ingredient:72>, <ore:craftingToolScrewdriver>, <witchery:ingredient:72>], [<witchery:ingredient:72>, <Thaumcraft:ItemBaubleBlanks:2>, <witchery:ingredient:72>]]);
+mods.thaumcraft.Arcane.addShaped("FOCUSPOUCH", <Thaumcraft:FocusPouch>, "terra 10, ordo 10, perditio 10", [[<ore:screwAluminium>, <ore:plateGold>, <ore:screwAluminium>], [<minecraft:leather>, <ore:craftingToolScrewdriver>, <minecraft:leather>], [<minecraft:leather>, <Thaumcraft:ItemBaubleBlanks:2>, <minecraft:leather>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("FOCUSPOUCH");
 
@@ -110,6 +110,7 @@ mods.thaumcraft.Research.refreshResearchRecipe("FOCUSPOUCH");
 mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:WandRod:2>);
 mods.thaumcraft.Infusion.addRecipe("ROD_silverwood", <gregtech:gt.metaitem.02:22306>, [<Thaumcraft:blockMagicalLog:1>, <Thaumcraft:blockCrystal:6>, <Thaumcraft:blockCrystal:6>, <Thaumcraft:blockCrystal:6>, <Thaumcraft:blockMagicalLog:1>, <Thaumcraft:blockCrystal:6>, <Thaumcraft:blockCrystal:6>, <Thaumcraft:blockCrystal:6>], "aer 12, aqua 12, ignis 12, ordo 12, perditio 12, praecantatio 12, terra 12", <Thaumcraft:WandRod:2>, 5);
 mods.thaumcraft.Research.refreshResearchRecipe("ROD_silverwood");
+mods.thaumcraft.Warp.addToResearch("ROD_silverwood", 2);
 
 //Recipes for "NODESTABILIZER"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:9>);
@@ -135,7 +136,55 @@ mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:blockStoneDevice:5>);
 mods.thaumcraft.Infusion.addRecipe("WANDPED", <Thaumcraft:blockStoneDevice:1>, [<gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.02:29500>, <Thaumcraft:ItemResource:15>, <gregtech:gt.metaitem.02:29500>, <gregtech:gt.metaitem.01:17542>], "auram 10, permutatio 10, praecantatio 10", <Thaumcraft:blockStoneDevice:5>, 5);
 mods.thaumcraft.Research.refreshResearchRecipe("WANDPED");
 
+//Recipes for "FOCUSFIRE"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:FocusFire>);
+mods.thaumcraft.Arcane.addShaped("FOCUSFIRE", <Thaumcraft:FocusFire>, "ignis 26, perditio 20", [[<ore:plateInfusedFire>, <ore:plateNetherQuartz>, <ore:plateInfusedFire>], [<ore:plateNetherQuartz>, <minecraft:fire_charge>, <ore:plateNetherQuartz>], [<ore:plateInfusedFire>, <ore:plateNetherQuartz>, <ore:plateInfusedFire>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSFIRE");
 
+//Recipes for "FOCUSFIRE"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:FocusExcavation>);
+mods.thaumcraft.Arcane.addShaped("FOCUSEXCAVATION", <Thaumcraft:FocusExcavation>, "terra 26, perditio 10, ordo 10", [[<ore:plateInfusedEarth>, <ore:plateNetherQuartz>, <ore:plateInfusedEarth>], [<ore:plateNetherQuartz>, <gregtech:gt.metaitem.02:29501>, <ore:plateNetherQuartz>], [<ore:plateInfusedEarth>, <ore:plateNetherQuartz>, <ore:plateInfusedEarth>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSEXCAVATION");
+
+//Recipes for "FOCUSFROST"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:FocusFrost>);
+mods.thaumcraft.Arcane.addShaped("FOCUSFROST", <Thaumcraft:FocusFrost>, "aqua 20, perditio 10, ordo 10", [[<ore:plateInfusedWater>, <ore:plateNetherQuartz>, <ore:plateInfusedWater>], [<ore:plateNetherQuartz>, <gregtech:gt.metaitem.02:29500>, <ore:plateNetherQuartz>], [<ore:plateInfusedWater>, <ore:plateNetherQuartz>, <ore:plateInfusedWater>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSFROST");
+
+//Recipes for "FOCUSSHOCK"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:FocusShock>);
+mods.thaumcraft.Arcane.addShaped("FOCUSSHOCK", <Thaumcraft:FocusShock>, "aer 20, perditio 10, ordo 10", [[<ore:plateInfusedAir>, <ore:plateNetherQuartz>, <ore:plateInfusedAir>], [<ore:plateNetherQuartz>, <gregtech:gt.metaitem.02:29503>, <ore:plateNetherQuartz>], [<ore:plateInfusedAir>, <ore:plateNetherQuartz>, <ore:plateInfusedAir>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSSHOCK");
+
+//Recipes for "FOCUSSHOCK"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:FocusTrade>);
+mods.thaumcraft.Arcane.addShaped("FOCUSSHOCK", <Thaumcraft:FocusTrade>, "terra 10, perditio 20, ordo 20", [[<Thaumcraft:ItemShard:6>, <ore:plateNetherQuartz>, <Thaumcraft:ItemShard:6>], [<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:3>, <ore:plateNetherQuartz>], [<Thaumcraft:ItemShard:6>, <ore:plateNetherQuartz>, <Thaumcraft:ItemShard:6>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSSHOCK");
+
+//Recipes for "FOCUSPORTABLEHOLE"
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:FocusPortableHole>);
+mods.thaumcraft.Infusion.addRecipe("FOCUSPORTABLEHOLE", <gregtech:gt.metaitem.02:30500>, [<gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17540>, <gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17544>], "iter 30, perditio 30, alienis 15, permutatio 15", <Thaumcraft:FocusPortableHole>, 5);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSPORTABLEHOLE");
+
+//Recipes for "FOCUSWARDING"
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:FocusWarding>);
+mods.thaumcraft.Infusion.addRecipe("FOCUSWARDING", <gregtech:gt.metaitem.01:24506>, [<Thaumcraft:ItemResource:3>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17545>, <Thaumcraft:ItemResource:3>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17545>], "terra 30, tutamen 30, ordo 25, cognitio 20", <Thaumcraft:FocusWarding>, 5);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSWARDING");
+
+//Recipes for "WANDPEDFOC"
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:blockStoneDevice:8>);
+mods.thaumcraft.Infusion.addRecipe("WANDPEDFOC", <minecraft:comparator>, [<gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:27306>, <Thaumcraft:ItemResource:8>, <gregtech:gt.metaitem.01:27306>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:27306>, <Thaumcraft:ItemResource:8>, <gregtech:gt.metaitem.01:27306>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:27306>, <Thaumcraft:ItemResource:8>, <gregtech:gt.metaitem.01:27306>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:27306>, <Thaumcraft:ItemResource:8>, <gregtech:gt.metaitem.01:27306>], "ordo 20, permutatio 20, praecantatio 25", <Thaumcraft:blockStoneDevice:8>, 5);
+mods.thaumcraft.Research.refreshResearchRecipe("WANDPEDFOC");
+
+//Recipes for "FOCALMANIPULATION"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:13>);
+mods.thaumcraft.Arcane.addShaped("FOCALMANIPULATION", <Thaumcraft:blockStoneDevice:13>, "ignis 40, aer 40, perditio 40, terra 40, aqua 40, ordo 40", [[<ore:plateSteel>, <Thaumcraft:blockCosmeticSlabStone>, <ore:plateSteel>], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:ItemResource:15>, <Thaumcraft:blockCosmeticSolid:6>], [<ore:plateGold>, <Thaumcraft:blockTable>, <ore:plateGold>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCALMANIPULATION");
+
+//Recipes for "FOCUSHELLBAT"
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:FocusHellbat>);
+mods.thaumcraft.Infusion.addRecipe("FOCUSHELLBAT", <gregtech:gt.metaitem.02:30502>, [<gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17541>, <gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17540>, <gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:17544>], "ordo 20, permutatio 20, praecantatio 25", <Thaumcraft:FocusHellbat>, 5);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSHELLBAT");
 
 //---ALCHEMY---
 
@@ -177,7 +226,7 @@ mods.thaumcraft.Research.refreshResearchRecipe("TUBEFILTER");
 
 //Recipes for "CENTRIFUGE"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockTube:2>);
-mods.thaumcraft.Arcane.addShaped("CENTRIFUGE", <Thaumcraft:blockTube:2>, "ordo 10, aqua 10, perditio 10", [[<ore:screwThaumium>, <Thaumcraft:blockMetalDevice:1>, <ore:screwThaumium>], [<Thaumcraft:blockTube>, <Thaumcraft:blockMetalDevice:9>, <Thaumcraft:blockTube>], [<ore:screwThaumium>, <gregtech:gt.metaitem.01:32641>, <ore:screwThaumium>]]);
+mods.thaumcraft.Arcane.addShaped("CENTRIFUGE", <Thaumcraft:blockTube:2>, "ordo 10, aqua 10, perditio 10", [[<ore:screwThaumium>, <Thaumcraft:blockMetalDevice:1>, <ore:screwThaumium>], [<Thaumcraft:blockTube>, <Thaumcraft:blockMetalDevice:9>, <Thaumcraft:blockTube>], [<ore:screwThaumium>, <ore:gearAluminium>, <ore:screwThaumium>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("CENTRIFUGE");
 
@@ -187,6 +236,7 @@ mods.thaumcraft.Crucible.removeRecipe(<Thaumcraft:ItemResource:2>);
 mods.thaumcraft.Crucible.addRecipe("THAUMIUM", <Thaumcraft:ItemResource:2>, <ore:ingotSteel>, "praecantatio 4");
 
 mods.thaumcraft.Research.refreshResearchRecipe("THAUMIUM");
+mods.thaumcraft.Warp.addToResearch("THAUMIUM", 1);
 
 
 //Recipes for "NITOR"
@@ -206,7 +256,7 @@ mods.thaumcraft.Research.refreshResearchRecipe("ALUMENTUM");
 
 //Recipes for "ESSENTIACRYSTAL"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockTube:7>);
-mods.thaumcraft.Arcane.addShaped("ESSENTIACRYSTAL", <Thaumcraft:blockTube:7>, "terra 15, aqua 10, ordo 5", [[<ore:plateThaumium>, <gregtech:gt.metaitem.01:32641>, <ore:plateThaumium>], [<Thaumcraft:ItemShard:6>, <Thaumcraft:blockMetalDevice:9>, <Thaumcraft:ItemShard:6>], [<ore:plateThaumium>, <Thaumcraft:blockTube>, <ore:plateThaumium>]]);
+mods.thaumcraft.Arcane.addShaped("ESSENTIACRYSTAL", <Thaumcraft:blockTube:7>, "terra 20, aqua 20, ordo 14", [[<ore:plateThaumium>, <ore:gearThaumium>, <ore:gearSmallSteel>], [<Thaumcraft:ItemShard:6>, <Thaumcraft:blockMetalDevice:9>, <Thaumcraft:ItemShard:6>], [<ore:plateThaumium>, <Thaumcraft:blockTube>, <ore:plateThaumium>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("ESSENTIACRYSTAL");
 
@@ -219,10 +269,17 @@ mods.thaumcraft.Research.refreshResearchRecipe("PHIAL");
 
 
 //Recipes for "JARLABEL"
+recipes.remove(<BiomesOPlenty:jarEmpty>);
+recipes.addShaped(<BiomesOPlenty:jarEmpty>*3, [[null, <IC2:itemHarz>, null], [<ore:blockGlass>, <ore:craftingToolSoftHammer>, <ore:blockGlass>], [null, <ore:blockGlass>, null]]);
+recipes.addShaped(<BiomesOPlenty:jarEmpty>*3, [[null, <MineFactoryReloaded:rubber.raw>, null], [<ore:blockGlass>, <ore:craftingToolSoftHammer>, <ore:blockGlass>], [null, <ore:blockGlass>, null]]);
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockJar>);
-mods.thaumcraft.Arcane.addShaped("JARLABEL", <Thaumcraft:blockJar>, "aqua 1", [[<ore:plateGlass>, <ore:plateRubber>, <ore:plateGlass>], [<ore:plateGlass>, null, <ore:plateGlass>], [<ore:plateGlass>, <ore:plateGlass>, <ore:plateGlass>]]);
-
+mods.thaumcraft.Crucible.addRecipe("JARLABEL", <Thaumcraft:blockJar>, <BiomesOPlenty:jarEmpty>, "aqua 1");
 mods.thaumcraft.Research.refreshResearchRecipe("JARLABEL");
+
+//Recipes for "ARCANESPA"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:12>);
+mods.thaumcraft.Arcane.addShaped("ARCANESPA", <Thaumcraft:blockStoneDevice:12>, "aqua 20, ordo 10, terra 8", [[<minecraft:quartz_block>, <minecraft:iron_bars>, <minecraft:quartz_block>], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockJar>, <Thaumcraft:blockCosmeticSolid:6>], [<Thaumcraft:blockCosmeticSolid:6>, <gregtech:gt.metaitem.01:32640>, <Thaumcraft:blockCosmeticSolid:6>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("ARCANESPA");
 
 
 //Recipes for "THAUMATORIUM"
@@ -243,7 +300,7 @@ recipes.remove(<Thaumcraft:ItemBaubleBlanks:1>);
 recipes.addShaped(<Thaumcraft:ItemBaubleBlanks:1>, [[<ore:screwStainlessSteel>, <ore:plateGold>, <ore:screwStainlessSteel>], [<ore:plateGold>, <ore:craftingToolScrewdriver>, <ore:plateGold>], [<ore:screwStainlessSteel>, <ore:plateGold>, <ore:screwStainlessSteel>]]);
 
 recipes.remove(<Thaumcraft:ItemBaubleBlanks:2>);
-recipes.addShaped(<Thaumcraft:ItemBaubleBlanks:2>, [[<witchery:ingredient:72>, <simplyjetpacks:components>, <witchery:ingredient:72>], [<witchery:ingredient:72>, <ore:craftingToolScrewdriver>, <witchery:ingredient:72>], [<ore:screwStainlessSteel>, <Thaumcraft:ItemBaubleBlanks:1>, <ore:screwStainlessSteel>]]);
+recipes.addShaped(<Thaumcraft:ItemBaubleBlanks:2>, [[<minecraft:leather>, <simplyjetpacks:components>, <minecraft:leather>], [<minecraft:leather>, <ore:craftingToolScrewdriver>, <minecraft:leather>], [<ore:screwStainlessSteel>, <Thaumcraft:ItemBaubleBlanks:1>, <ore:screwStainlessSteel>]]);
 
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemResource:10>);
 mods.thaumcraft.Arcane.addShaped("BASICARTIFACE", <Thaumcraft:ItemResource:10>, "terra 20, ignis 20", [[<ore:screwStainlessSteel>, <Thaumcraft:ItemResource:3>, <ore:screwStainlessSteel>], [<ore:craftingToolHardHammer>, <ore:plateGlass>, <ore:craftingToolScrewdriver>], [<ore:screwStainlessSteel>, <ore:plateSilver>, <ore:screwStainlessSteel>]]);
@@ -253,9 +310,10 @@ mods.thaumcraft.Research.refreshResearchRecipe("BASICARTIFACE");
 
 //Recipes for "GOGGLES"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemGoggles>);
-mods.thaumcraft.Arcane.addShaped("GOGGLES", <Thaumcraft:ItemGoggles>, "aer 25, terra 25, ignis 25, aqua 25, ordo 25, perditio 25", [[<IC2:reactorHeatSwitchDiamond:1>, <Thaumcraft:ItemBaubleBlanks:2>, <IC2:reactorHeatSwitchDiamond:1>], [<gregtech:gt.metaitem.01:32692>, <ore:craftingToolScrewdriver>, <gregtech:gt.metaitem.01:32692>], [<Thaumcraft:ItemThaumometer>, <ore:plateDoubleGold>, <Thaumcraft:ItemThaumometer>]]);
+mods.thaumcraft.Arcane.addShaped("GOGGLES", <Thaumcraft:ItemGoggles>, "aer 25, terra 25, ignis 25, aqua 25, ordo 25, perditio 25", [[<IC2:reactorHeatSwitchDiamond:1>, <Thaumcraft:ItemBaubleBlanks:2>, <IC2:reactorHeatSwitchDiamond:1>], [<ore:ringThaumium>, <ore:craftingToolScrewdriver>, <ore:ringThaumium>], [<Thaumcraft:ItemThaumometer>, <ore:plateDoubleGold>, <Thaumcraft:ItemThaumometer>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("GOGGLES");
+mods.thaumcraft.Warp.addToResearch("GOGGLES", 2);
 
 
 //Recipes for "ARCANESTONE"
@@ -269,6 +327,7 @@ mods.thaumcraft.Research.refreshResearchRecipe("ARCANESTONE");
 
 
 //Recipes for "INFUSION"
+<Thaumcraft:blockStoneDevice:2>.addTooltip(format.green("Look recipe in NEI"));
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:2>);
 mods.thaumcraft.Arcane.addShaped("INFUSION", <Thaumcraft:blockStoneDevice:2>, "aer 40, ordo 40, perditio 40", [[<Thaumcraft:blockCosmeticSolid:7>, <ore:plateInfusedAir>, <Thaumcraft:blockCosmeticSolid:7>], [<ore:plateInfusedAir>, <gregtech:gt.metaitem.01:24532>, <ore:plateInfusedAir>], [<Thaumcraft:blockCosmeticSolid:7>, <ore:plateInfusedAir>, <Thaumcraft:blockCosmeticSolid:7>]]);
 mods.thaumcraft.Arcane.addShaped("INFUSION", <Thaumcraft:blockStoneDevice:2>, "aer 40, ordo 40, perditio 40", [[<Thaumcraft:blockCosmeticSolid:7>, <ore:plateInfusedFire>, <Thaumcraft:blockCosmeticSolid:7>], [<ore:plateInfusedFire>, <gregtech:gt.metaitem.01:24532>, <ore:plateInfusedFire>], [<Thaumcraft:blockCosmeticSolid:7>, <ore:plateInfusedFire>, <Thaumcraft:blockCosmeticSolid:7>]]);
@@ -278,9 +337,10 @@ mods.thaumcraft.Arcane.addShaped("INFUSION", <Thaumcraft:blockStoneDevice:2>, "a
 mods.thaumcraft.Arcane.addShaped("INFUSION", <Thaumcraft:blockStoneDevice:2>, "aer 40, ordo 40, perditio 40", [[<Thaumcraft:blockCosmeticSolid:7>, <ore:plateInfusedOrder>, <Thaumcraft:blockCosmeticSolid:7>], [<ore:plateInfusedOrder>, <gregtech:gt.metaitem.01:24532>, <ore:plateInfusedOrder>], [<Thaumcraft:blockCosmeticSolid:7>, <ore:plateInfusedOrder>, <Thaumcraft:blockCosmeticSolid:7>]]);
 
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:1>);
-mods.thaumcraft.Arcane.addShaped("INFUSION", <Thaumcraft:blockStoneDevice:1>, "aer 5", [[<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>], [null, <Thaumcraft:blockCosmeticSolid:7>, null], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>]]);
+mods.thaumcraft.Arcane.addShaped("INFUSION", <Thaumcraft:blockStoneDevice:1>, "aer 10, terra 6", [[<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>], [<ore:craftingToolFile>, <Thaumcraft:blockCosmeticSolid:7>, <ore:craftingToolHardHammer>], [<Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>, <Thaumcraft:blockCosmeticSolid:6>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("INFUSION");
+mods.thaumcraft.Warp.addToResearch("INFUSION", 2);
 
 
 //Recipes for "TABLE"
@@ -291,8 +351,9 @@ mods.thaumcraft.Research.refreshResearchRecipe("TABLE");
 
 //Recipes for "LEVITATOR"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockLifter>);
-mods.thaumcraft.Arcane.addShaped("LEVITATOR", <Thaumcraft:blockLifter>, "aer 10, terra 10, perditio 10", [[<Thaumcraft:blockWoodenDevice:6>, <ore:plateInfusedEarth>, <Thaumcraft:blockWoodenDevice:6>], [<ore:plateStainlessSteel>, <Thaumcraft:ItemResource:1>, <ore:plateStainlessSteel>], [<Thaumcraft:blockWoodenDevice:6>, <ore:plateInfusedAir>, <Thaumcraft:blockWoodenDevice:6>]]);
+mods.thaumcraft.Arcane.addShaped("LEVITATOR", <Thaumcraft:blockLifter>, "aer 20, terra 16, perditio 16", [[<Thaumcraft:blockWoodenDevice:6>, <ore:plateInfusedEarth>, <Thaumcraft:blockWoodenDevice:6>], [<ore:plateDoubleStainlessSteel>, <Thaumcraft:ItemResource:1>, <ore:plateDoubleStainlessSteel>], [<Thaumcraft:blockWoodenDevice:6>, <ore:plateInfusedAir>, <Thaumcraft:blockWoodenDevice:6>]]);
 mods.thaumcraft.Research.refreshResearchRecipe("LEVITATOR");
+mods.thaumcraft.Warp.addToResearch("LEVITATOR", 1);
 
 
 //Recipes for "BELLOWS"
@@ -309,18 +370,20 @@ mods.thaumcraft.Research.refreshResearchRecipe("MIRRORESSENTIA");
 
 //Recipes for "BOOTSTRAVELLER"
 mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:BootsTraveller>);
-mods.thaumcraft.Infusion.addRecipe("BOOTSTRAVELLER", <MineFactoryReloaded:plastic.boots>, [<gregtech:gt.metaitem.01:18330>, <gregtech:gt.metaitem.01:17540>, <Thaumcraft:ItemResource:7>, <minecraft:feather>, <gregtech:gt.metaitem.01:32641>, <gregtech:gt.metaitem.01:32641>, <minecraft:feather>, <Thaumcraft:ItemResource:7>, <gregtech:gt.metaitem.01:17540>], "iter 40, volatus 40, fabrico 15", <Thaumcraft:BootsTraveller>, 4);
+mods.thaumcraft.Infusion.addRecipe("BOOTSTRAVELLER", <MineFactoryReloaded:plastic.boots>, [<gregtech:gt.metaitem.01:18330>, <gregtech:gt.metaitem.01:17540>, <Thaumcraft:ItemResource:7>, <minecraft:feather>, <gregtech:gt.metaitem.01:18305>, <gregtech:gt.metaitem.01:18305>, <minecraft:feather>, <Thaumcraft:ItemResource:7>, <gregtech:gt.metaitem.01:17540>], "iter 40, volatus 40, fabrico 15", <Thaumcraft:BootsTraveller>, 4);
 mods.thaumcraft.Research.refreshResearchRecipe("BOOTSTRAVELLER");
+mods.thaumcraft.Warp.addToResearch("BOOTSTRAVELLER", 1);
 
 
 //Recipes for "ARCANEBORE"
 mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:blockWoodenDevice:5>);
-mods.thaumcraft.Infusion.addRecipe("ARCANEBORE", <gregtech:gt.metaitem.01:32642>, [<Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:24500>, <Thaumcraft:blockCrystal>, <Thaumcraft:ItemShovelThaumium>, <Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.01:17086>, <Thaumcraft:blockCrystal:3>, <gregtech:gt.metaitem.01:24500>, <Thaumcraft:ItemPickThaumium>], "machina 64, motus 32, perfodio 32, potentia 32, vacuos 32", <Thaumcraft:blockWoodenDevice:5>, 5);
+mods.thaumcraft.Infusion.addRecipe("ARCANEBORE", <gregtech:gt.metaitem.01:32640>, [<Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.02:29500>, <Thaumcraft:blockCrystal>, <Thaumcraft:ItemShovelThaumium>, <Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.01:17086>, <Thaumcraft:blockCrystal:3>, <gregtech:gt.metaitem.02:29500>, <Thaumcraft:ItemPickThaumium>], "machina 64, motus 32, perfodio 32, potentia 32, vacuos 32", <Thaumcraft:blockWoodenDevice:5>, 5);
 
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockWoodenDevice:4>);
-mods.thaumcraft.Arcane.addShaped("ARCANEBORE", <Thaumcraft:blockWoodenDevice:4>, "aer 20, ordo 20, perditio 20", [[<Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.02:31305>, <Thaumcraft:blockWoodenDevice:6>], [<ore:plateSteel>, <gregtech:gt.metaitem.01:32641>, <gregtech:gt.metaitem.01:32611>], [<Thaumcraft:blockWoodenDevice:6>, <ore:plateSteel>, <Thaumcraft:blockWoodenDevice:6>]]);
+mods.thaumcraft.Arcane.addShaped("ARCANEBORE", <Thaumcraft:blockWoodenDevice:4>, "aer 20, ordo 20, perditio 20", [[<Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.02:31305>, <Thaumcraft:blockWoodenDevice:6>], [<ore:plateSteel>, <minecraft:piston>, <gregtech:gt.blockmachines:5132>], [<Thaumcraft:blockWoodenDevice:6>, <ore:plateSteel>, <Thaumcraft:blockWoodenDevice:6>]]);
 
 mods.thaumcraft.Research.refreshResearchRecipe("ARCANEBORE");
+mods.thaumcraft.Warp.addToResearch("ARCANEBORE", 1);
 
 
 //Recipes for "ELEMENTALPICK"
@@ -356,8 +419,9 @@ mods.thaumcraft.Research.refreshResearchRecipe("ELEMENTALHOE");
 
 //Recipes for "HOVERHARNESS"
 mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:HoverHarness>);
-mods.thaumcraft.Infusion.addRecipe("HOVERHARNESS", <simplyjetpacks:jetpacks:1>, [<gregtech:gt.metaitem.01:18330>, <gregtech:gt.metaitem.01:17540>, <Thaumcraft:blockWoodenDevice:6>, <minecraft:feather>, <gregtech:gt.metaitem.01:32681>, <gregtech:gt.metaitem.01:32681>, <minecraft:feather>, <Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.01:17540>], "iter 40, volatus 40, machina 30, cognitio 15", <Thaumcraft:HoverHarness>, 4);
+mods.thaumcraft.Infusion.addRecipe("HOVERHARNESS", <simplyjetpacks:jetpacks:1>, [<gregtech:gt.metaitem.01:18330>, <gregtech:gt.metaitem.01:17540>, <Thaumcraft:blockWoodenDevice:6>, <minecraft:feather>, <gregtech:gt.blockmachines:5133>, <gregtech:gt.blockmachines:5133>, <minecraft:feather>, <Thaumcraft:blockWoodenDevice:6>, <gregtech:gt.metaitem.01:17540>], "iter 40, volatus 40, machina 30, cognitio 15", <Thaumcraft:HoverHarness>, 4);
 mods.thaumcraft.Research.refreshResearchRecipe("HOVERHARNESS");
+mods.thaumcraft.Warp.addToResearch("HOVERHARNESS", 1);
 
 
 //Recipes for "MIRROR"
@@ -371,10 +435,10 @@ mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemHelmetFortress>);
 mods.thaumcraft.Infusion.addRecipe("ARMORFORTRESS", <Thaumcraft:ItemHelmetThaumium>, [<gregtech:gt.metaitem.02:29501>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17086>], "metallum 24, praecantatio 16, tutamen 16", <Thaumcraft:ItemHelmetFortress>, 5);
 
 mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemChestplateFortress>);
-mods.thaumcraft.Infusion.addRecipe("ARMORFORTRESS", <Thaumcraft:ItemChestplateThaumium>, [<gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17086>, <witchery:ingredient:72>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>], "metallum 24, praecantatio 16, tutamen 16", <Thaumcraft:ItemChestplateFortress>, 5);
+mods.thaumcraft.Infusion.addRecipe("ARMORFORTRESS", <Thaumcraft:ItemChestplateThaumium>, [<gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17086>, <minecraft:leather>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>], "metallum 24, praecantatio 16, tutamen 16", <Thaumcraft:ItemChestplateFortress>, 5);
 
 mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemLeggingsFortress>);
-mods.thaumcraft.Infusion.addRecipe("ARMORFORTRESS", <Thaumcraft:ItemLeggingsThaumium>, [<gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <witchery:ingredient:72>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>], "metallum 24, praecantatio 16, tutamen 16", <Thaumcraft:ItemLeggingsFortress>, 5);
+mods.thaumcraft.Infusion.addRecipe("ARMORFORTRESS", <Thaumcraft:ItemLeggingsThaumium>, [<gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>, <minecraft:leather>, <gregtech:gt.metaitem.01:17330>, <gregtech:gt.metaitem.01:17330>], "metallum 24, praecantatio 16, tutamen 16", <Thaumcraft:ItemLeggingsFortress>, 5);
 
 mods.thaumcraft.Research.refreshResearchRecipe("ARMORFORTRESS");
 
@@ -384,12 +448,30 @@ mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockMetalDevice:7>);
 mods.thaumcraft.Arcane.addShaped("ARCANELAMP", <Thaumcraft:blockMetalDevice:7>, "aer 10, ignis 10, aqua 10, perditio 10", [[<ore:plateSteel>, <minecraft:daylight_detector>, <ore:plateSteel>], [<IC2:blockAlloyGlass>, <Thaumcraft:blockCosmeticOpaque:1>, <IC2:blockAlloyGlass>], [<ore:plateSteel>, <Thaumcraft:ItemResource:1>, <ore:plateSteel>]]);
 mods.thaumcraft.Research.refreshResearchRecipe("ARCANELAMP");
 
+//Recipe for "LAMPGROWTH"
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:blockMetalDevice:8>);
+mods.thaumcraft.Infusion.addRecipe("LAMPGROWTH", <Thaumcraft:blockMetalDevice:7>, [<gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:27019>, <IC2:itemFertilizer>, <gregtech:gt.metaitem.01:17542>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17542>, <IC2:itemFertilizer>, <gregtech:gt.metaitem.01:27019>], "herba 20, victus 18, lux 16", <Thaumcraft:blockMetalDevice:8>, 5);
+mods.thaumcraft.Research.refreshResearchRecipe("LAMPGROWTH");
+
+
+//Recipe for "LAMPFERTILITY"
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:blockMetalDevice:13>);
+mods.thaumcraft.Infusion.addRecipe("LAMPFERTILITY", <Thaumcraft:blockMetalDevice:7>, [<gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:27019>, <minecraft:carrot>, <gregtech:gt.metaitem.01:17541>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:17541>, <minecraft:wheat>, <gregtech:gt.metaitem.01:27019>], "bestia 20, victus 18, lux 16", <Thaumcraft:blockMetalDevice:13>, 5);
+mods.thaumcraft.Research.refreshResearchRecipe("LAMPFERTILITY");
+
+
+//Recipes for "ARCANEEAR"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockWoodenDevice:1>);
+mods.thaumcraft.Arcane.addShaped("ARCANEEAR", <Thaumcraft:blockWoodenDevice:1>, "aer 16, ordo 16, perditio 10", [[<ore:plateGold>, <gregtech:gt.metaitem.01:32690>, <ore:plateGold>], [<ore:plateGold>, <Thaumcraft:ItemZombieBrain>, <ore:plateGold>], [<Thaumcraft:blockWoodenDevice:6>, <ore:plateRedAlloy>, <Thaumcraft:blockWoodenDevice:6>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("ARCANEEAR");
+
 
 //---GOLEMANCE---
 //COREGATHER
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemGolemCore:100>);
-mods.thaumcraft.Arcane.addShaped("COREGATHER", <Thaumcraft:ItemGolemCore:100>, "ordo 5, ignis 5", [[<gregtech:gt.metaitem.01:32650>, <minecraft:brick>, <gregtech:gt.metaitem.01:32650>], [<minecraft:brick>, <Thaumcraft:ItemResource:1>, <minecraft:brick>], [<gregtech:gt.metaitem.01:32630>, <ore:circuitBasic>, <gregtech:gt.metaitem.01:32630>]]);
+mods.thaumcraft.Arcane.addShaped("COREGATHER", <Thaumcraft:ItemGolemCore:100>, "ordo 10, ignis 10", [[<gregtech:gt.metaitem.02:20305>, <minecraft:brick>, <gregtech:gt.metaitem.02:20305>], [<minecraft:brick>, <Thaumcraft:ItemResource:1>, <minecraft:brick>], [<gregtech:gt.metaitem.02:20305>, <minecraft:brick>, <gregtech:gt.metaitem.02:20305>]]);
 mods.thaumcraft.Research.refreshResearchRecipe("COREGATHER");
+mods.thaumcraft.Warp.addToResearch("COREGATHER", 1);
 
 //GOLEMBELL
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:GolemBell>);
@@ -431,6 +513,28 @@ recipes.addShaped(<Thaumcraft:ItemBootsVoid>, [[<ore:plateVoid>, <ore:craftingTo
 
 mods.thaumcraft.Research.refreshResearchRecipe("VOIDMETAL");
 
+// --- Void Inert Wand Cap
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:8>);
+mods.thaumcraft.Research.clearPages("CAP_void");
+mods.thaumcraft.Research.addPage("CAP_void", "tc.research_page.CAP_void.1");
+mods.thaumcraft.Arcane.addShaped("CAP_void", <Thaumcraft:WandCap:8>, "ordo 40, ignis 40, aer 40, perditio 40", [
+[<ore:screwVoid>, <ore:ringTitanium>, <ore:screwVoid>],
+[<ore:craftingToolHardHammer>, <ore:foilTitanium>, <ore:craftingToolScrewdriver>],
+[<ore:screwVoid>, <ore:ringTitanium>, <ore:screwVoid>]]);
+// -
+mods.thaumcraft.Research.addArcanePage("CAP_void", <Thaumcraft:WandCap:8>);
+mods.thaumcraft.Warp.addToResearch("CAP_void", 3);
+
+// --- Charged Void Cap
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:WandCap:7>);
+mods.thaumcraft.Infusion.addRecipe("CAP_void", <Thaumcraft:WandCap:8>, 
+[<Thaumcraft:ItemResource:14>, <Thaumcraft:ItemResource:17>, <Thaumcraft:ItemResource:14>, <Thaumcraft:ItemResource:17>, <Thaumcraft:ItemResource:14>, <Thaumcraft:ItemResource:17>], 
+"alienis 32, auram 32, potentia 32, vacuos 32", <Thaumcraft:WandCap:7>, 8);
+mods.thaumcraft.Research.addInfusionPage("CAP_void", <Thaumcraft:WandCap:7>);
+// -
+mods.thaumcraft.Research.setAspects("CAP_void", "auram 12, vacuos 12, alienis 9, praecantatio 9, instrumentum 6, terra 6, tenebrae 3");
+mods.thaumcraft.Research.setComplexity("CAP_void", 3);
+
 
 //Recipes for "ADVALCHEMYFURNACE"
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockMetalDevice:3>);
@@ -450,6 +554,37 @@ mods.thaumcraft.Research.refreshResearchRecipe("ARMORVOIDFORTRESS");
 mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:blockEssentiaReservoir>);
 mods.thaumcraft.Infusion.addRecipe("ESSENTIARESERVOIR", <Thaumcraft:blockTube:4>, [<gregtech:gt.metaitem.01:17389>, <Thaumcraft:blockJar>, <Thaumcraft:blockJar>, <gregtech:gt.metaitem.01:17389>, <Thaumcraft:blockJar>, <Thaumcraft:blockJar>], "aqua 16, permutatio 16, praecantatio 16, vacuos 24", <Thaumcraft:blockEssentiaReservoir>, 7);
 mods.thaumcraft.Research.refreshResearchRecipe("ESSENTIARESERVOIR");
+mods.thaumcraft.Warp.addToResearch("ESSENTIARESERVOIR", 1);
+
+
+//Recipes for "ENCHFABRIC"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemResource:7>);
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemChestplateRobe>);
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemLeggingsRobe>);
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemBootsRobe>);
+mods.thaumcraft.Arcane.addShaped("ENCHFABRIC", <Thaumcraft:ItemResource:7>, "aer 5, terra 5, ignis 5, aqua 5, ordo 5, perditio 5", [[<minecraft:string>, <ore:foilPlastic>, <minecraft:string>], [<ore:foilPlastic>, <minecraft:wool>, <ore:foilPlastic>], [<minecraft:string>, <ore:foilPlastic>, <minecraft:string>]]);
+mods.thaumcraft.Arcane.addShaped("ENCHFABRIC", <Thaumcraft:ItemChestplateRobe>, "aer 10", [[<Thaumcraft:ItemResource:7>, <ore:screwAluminium>, <Thaumcraft:ItemResource:7>], [<Thaumcraft:ItemResource:7>, <ore:plateAluminium>, <Thaumcraft:ItemResource:7>], [<Thaumcraft:ItemResource:7>, <Thaumcraft:ItemResource:7>, <Thaumcraft:ItemResource:7>]]);
+mods.thaumcraft.Arcane.addShaped("ENCHFABRIC", <Thaumcraft:ItemLeggingsRobe>, "aqua 10", [[<Thaumcraft:ItemResource:7>, <ore:plateAluminium>, <Thaumcraft:ItemResource:7>], [<Thaumcraft:ItemResource:7>, <ore:screwAluminium>, <Thaumcraft:ItemResource:7>], [<Thaumcraft:ItemResource:7>, null, <Thaumcraft:ItemResource:7>]]);
+mods.thaumcraft.Arcane.addShaped("ENCHFABRIC", <Thaumcraft:ItemBootsRobe>, "terra 10", [[<Thaumcraft:ItemResource:7>, <ore:plateAluminium>, <Thaumcraft:ItemResource:7>], [<Thaumcraft:ItemResource:7>, <ore:screwAluminium>, <Thaumcraft:ItemResource:7>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("ENCHFABRIC");
+
+//Recipes for "ADVALCHEMYFURNACE"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockMetalDevice:3>);
+mods.thaumcraft.Arcane.addShaped("ADVALCHEMYFURNACE", <Thaumcraft:blockMetalDevice:3>*4, "ordo 40, terra 40, aqua 40", [[<ore:plateVoid>, <Thaumcraft:blockMetalDevice:9>, <ore:plateVoid>], [<Thaumcraft:blockMetalDevice:9>, <Thaumcraft:ItemEldritchObject:3>, <Thaumcraft:blockMetalDevice:9>], [<ore:plateVoid>, <Thaumcraft:blockMetalDevice:9>, <ore:plateVoid>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("ADVALCHEMYFURNACE");
+mods.thaumcraft.Warp.addToResearch("ADVALCHEMYFURNACE", 2);
+
+
+//Recipes for "FOCUSPRIMAL"
+mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:FocusPrimal>);
+mods.thaumcraft.Arcane.addShaped("FOCUSPRIMAL", <Thaumcraft:FocusPrimal>, "terra 40, perditio 40, ordo 40, aer 40, ignis 40, aqua 40", [[<gregtech:gt.metaitem.02:28500>, <ore:plateNetherQuartz>, <gregtech:gt.metaitem.02:28500>], [<ore:plateNetherQuartz>, <Thaumcraft:ItemResource:15>, <ore:plateNetherQuartz>], [<gregtech:gt.metaitem.02:28500>, <ore:plateNetherQuartz>, <gregtech:gt.metaitem.02:28500>]]);
+mods.thaumcraft.Research.refreshResearchRecipe("FOCUSPRIMAL");
+
+
+//Recipes for "OCULUS"
+mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemEldritchObject>);
+mods.thaumcraft.Infusion.addRecipe("OCULUS", <gregtech:gt.metaitem.01:24533>, [<gregtech:gt.metaitem.01:17389>, <gregtech:gt.metaitem.01:23351>, <gregtech:gt.metaitem.01:23351>, <gregtech:gt.metaitem.01:17389>, <gregtech:gt.metaitem.01:23351>, <gregtech:gt.metaitem.01:23351>], "alienis 64, vacuos 26, tenebrae 26, iter 24", <Thaumcraft:ItemEldritchObject>, 5);
+mods.thaumcraft.Research.refreshResearchRecipe("OCULUS");
 
 
 //---WITCHGADG---
@@ -469,8 +604,6 @@ mods.thaumcraft.Research.refreshResearchRecipe("PRIMORDIALARMOR");
 mods.thaumcraft.Infusion.removeRecipe(<WitchingGadgets:item.WG_PrimordialGlove>);
 mods.thaumcraft.Infusion.addRecipe("PRIMORDIALGLOVE", <Thaumcraft:blockStoneDevice:11>, [<WitchingGadgets:item.WG_Material:5>, <gregtech:gt.metaitem.01:17389>, <gregtech:gt.metaitem.01:17389>, <Thaumcraft:ItemEldritchObject:3>, <gregtech:gt.metaitem.01:17389>, <gregtech:gt.metaitem.01:17389>], "praecantatio 64, vitreus 32, instrumentum 16, aer 16, ignis 16, aqua 16, terra 16, ordo 16, perditio 16", <WitchingGadgets:item.WG_PrimordialGlove>, 7);
 mods.thaumcraft.Research.refreshResearchRecipe("PRIMORDIALGLOVE");
-
-
 
 
 //---When guides don't help---
@@ -735,23 +868,10 @@ mods.thaumcraft.Research.addPage("MARSH", "derp.research_page.MARSH");
 game.setLocalization("en_US", "derp.research_page.MARSH", "Marshmallow! <BR>Your first marshmallow!");
 
 mods.thaumcraft.Infusion.addRecipe("MARSH", <TConstruct:diamondApple>, [<MineFactoryReloaded:meat.ingot.cooked>, <minecraft:cake>, <MineFactoryReloaded:meat.ingot.cooked>, <minecraft:cake>], "fames 10, messis 10, sano 10, praecantatio 10, permutatio 10, luxuria 10", <DraconicEvolution:dezilsMarshmallow>*2, 5);
-
 mods.thaumcraft.Research.addInfusionPage("MARSH", <DraconicEvolution:dezilsMarshmallow>);
-
 mods.thaumcraft.Research.addPrereq("MARSH", "DIAMONDAPPLE", false);
 
-//Stable ingot
-mods.thaumcraft.Research.addResearch("STABLE", "When guides don't help", "metallum 10, tempestas 10, mortuus 10", 2, 0, 0, <ExtraUtilities:unstableingot:2>);
-game.setLocalization("en_US", "tc.research_name.STABLE", "Stable ingot!");
-game.setLocalization("en_US", "tc.research_text.STABLE", "[MT] Very dangerous");
-mods.thaumcraft.Research.addPage("STABLE", "derp.research_page.STABLE");
-game.setLocalization("en_US", "derp.research_page.STABLE", "Very dangerous! <BR>This item can explodes, maybe.");
-
-mods.thaumcraft.Arcane.addShaped("STABLE", <ExtraUtilities:unstableingot:2>, "perditio 60", [[<ore:ingotThaumium>], [<ExtraUtilities:divisionSigil>.withTag({stable: 1 as byte})], [<MineFactoryReloaded:pinkslime:1>]]);
-
-mods.thaumcraft.Research.addArcanePage("STABLE", <ExtraUtilities:unstableingot:2>);
-
-mods.thaumcraft.Research.addPrereq("STABLE", "ENCHANTER", false);
+mods.thaumcraft.Warp.addToResearch("MARSH", 2);
 
 
 //Destruction Pickaxe
@@ -762,10 +882,10 @@ mods.thaumcraft.Research.addPage("PICKAXE", "derp.research_page.PICKAXE");
 game.setLocalization("en_US", "derp.research_page.PICKAXE", "Infinity! <BR>Very nice tools!");
 
 mods.thaumcraft.Infusion.addRecipe("PICKAXE", <Thaumcraft:ItemPickaxeElemental>, [<ExtraUtilities:unstableingot:2>, <ExtraUtilities:unstableingot:2>, <Thaumcraft:WandRod:51>, <ExtraUtilities:unstableingot:2>], "auram 50, perfodio 50, potentia 50, lucrum 50, instrumentum 50", <ExtraUtilities:destructionpickaxe>.withTag({ench: [{lvl: 10 as short, id: 32 as short}]}), 8);
-
 mods.thaumcraft.Research.addInfusionPage("PICKAXE", <ExtraUtilities:destructionpickaxe>);
+mods.thaumcraft.Research.addPrereq("PICKAXE", "ENCHANTER", false);
+mods.thaumcraft.Warp.addToResearch("PICKAXE", 2);
 
-mods.thaumcraft.Research.addPrereq("PICKAXE", "STABLE", false);
 
 //Healing Axe
 mods.thaumcraft.Research.addResearch("AXE", "When guides don't help", "instrumentum 3, metallum 1, perfodio 2", 4, -2, 4, <ExtraUtilities:defoliageAxe>);
@@ -778,7 +898,8 @@ mods.thaumcraft.Infusion.addRecipe("AXE", <Thaumcraft:ItemAxeElemental>, [<Extra
 
 mods.thaumcraft.Research.addInfusionPage("AXE", <ExtraUtilities:defoliageAxe>);
 
-mods.thaumcraft.Research.addPrereq("AXE", "STABLE", false);
+mods.thaumcraft.Research.addPrereq("AXE", "ENCHANTER", false);
+mods.thaumcraft.Warp.addToResearch("AXE", 2);
 
 //Etheric Sword
 mods.thaumcraft.Research.addResearch("SWORD", "When guides don't help", "instrumentum 2, metallum 1, perfodio 3", 4, 0, 4, <ExtraUtilities:lawSword>);
@@ -791,7 +912,9 @@ mods.thaumcraft.Infusion.addRecipe("SWORD", <Thaumcraft:ItemSwordElemental>, [<E
 
 mods.thaumcraft.Research.addInfusionPage("SWORD", <ExtraUtilities:lawSword>);
 
-mods.thaumcraft.Research.addPrereq("SWORD", "STABLE", false);
+mods.thaumcraft.Research.addPrereq("SWORD", "ENCHANTER", false);
+mods.thaumcraft.Warp.addToResearch("SWORD", 2);
+
 
 //Erosion Shovel
 mods.thaumcraft.Research.addResearch("SHOVEL", "When guides don't help", "instrumentum 1, metallum 3, perfodio 2", 4, 1, 4, <ExtraUtilities:erosionShovel>);
@@ -804,7 +927,8 @@ mods.thaumcraft.Infusion.addRecipe("SHOVEL", <Thaumcraft:ItemShovelElemental>, [
 
 mods.thaumcraft.Research.addInfusionPage("SHOVEL", <ExtraUtilities:erosionShovel>);
 
-mods.thaumcraft.Research.addPrereq("SHOVEL", "STABLE", false);
+mods.thaumcraft.Research.addPrereq("SHOVEL", "ENCHANTER", false);
+mods.thaumcraft.Warp.addToResearch("SHOVEL", 2);
 
 //Reversing Hoe
 mods.thaumcraft.Research.addResearch("HOE", "When guides don't help", "instrumentum 2, metallum 3, perfodio 1", 4, 2, 4, <ExtraUtilities:temporalHoe>);
@@ -817,7 +941,8 @@ mods.thaumcraft.Infusion.addRecipe("HOE", <Thaumcraft:ItemHoeElemental>, [<Extra
 
 mods.thaumcraft.Research.addInfusionPage("HOE", <ExtraUtilities:temporalHoe>);
 
-mods.thaumcraft.Research.addPrereq("HOE", "STABLE", false);
+mods.thaumcraft.Research.addPrereq("HOE", "ENCHANTER", false);
+mods.thaumcraft.Warp.addToResearch("HOE", 2);
 
 //Precision Shears
 mods.thaumcraft.Research.addResearch("SHEARS", "When guides don't help", "instrumentum 1, metallum 2, perfodio 1", 5, 0, 4, <ExtraUtilities:shears>);
@@ -830,7 +955,8 @@ mods.thaumcraft.Infusion.addRecipe("SHEARS", <WitchingGadgets:item.WG_ThaumiumSh
 
 mods.thaumcraft.Research.addInfusionPage("SHEARS", <ExtraUtilities:shears>);
 
-mods.thaumcraft.Research.addPrereq("SHEARS", "STABLE", false);
+mods.thaumcraft.Research.addPrereq("SHEARS", "ENCHANTER", false);
+mods.thaumcraft.Warp.addToResearch("SHEARS", 2);
 
 
 Assembler.addRecipe(<minecraft:nether_star>*2, <Thaumcraft:ItemResource:14>*16, <witchery:ingredient:130>, null, 1200, 512);

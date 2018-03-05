@@ -1,7 +1,9 @@
 import mods.nei.NEI;
+import mods.gregtech.Assembler;
 
 #Name: Galacticraft.zs
-#Author: Georggi, FreeGMan
+#Author: Georggi, FreeGMan, Spartak1997
+
 
 print("Initializing 'Galacticraft.zs'...");
 
@@ -139,3 +141,81 @@ mods.gregtech.FluidCanner.addRecipe(<gregtech:gt.metaitem.01:30112>,<IC2:itemCel
 
 recipes.remove(<GalacticraftCore:tile.spinThruster>);
 recipes.addShaped(<GalacticraftCore:tile.spinThruster>, [[null,null,null],[<GalacticraftCore:item.fuelCanisterPartial:1>,<ore:waferAdvanced>,<GalacticraftCore:item.engine>],[<ore:compressedSteel>,<ore:ingotMeteoricIron>,<ore:compressedSteel>]]);
+
+
+recipes.remove(<GalacticraftMars:item.itemBasicAsteroids:7>);
+Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:7>*2, [<ore:blockCloth>*6, <ore:plateRubber>*6, <ore:pipeTinyStainlessSteel>*2, <ore:pumpLV>], null, 800, 256);
+
+recipes.remove(<GalacticraftMars:item.thermalPadding>);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 5, <gregtech:gt.integrated_circuit:5> * 0], null, 200, 96);
+
+recipes.remove(<GalacticraftMars:item.thermalPadding:1>);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:1>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 8, <gregtech:gt.integrated_circuit:8> * 0], null, 320, 96);
+
+recipes.remove(<GalacticraftMars:item.thermalPadding:2>);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:2>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 7, <gregtech:gt.integrated_circuit:7> * 0], null, 280, 96);
+
+recipes.remove(<GalacticraftMars:item.thermalPadding:3>);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:3>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 4, <gregtech:gt.integrated_circuit:4> * 0], null, 160, 96);
+
+recipes.remove(<GalacticraftMars:item.itemBasicAsteroids:2>);
+Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:2>, [<GalacticraftMars:item.itemBasicAsteroids>*4, <GalacticraftMars:item.null:3>*3, <gregtech:gt.metaitem.01:27316>*4], null, 400, 4096);
+
+recipes.remove(<GalacticraftMars:item.itemBasicAsteroids:1>);
+Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:1>, [<GalacticraftMars:item.itemBasicAsteroids>*4, <GalacticraftCore:item.airVent>*2, <gregtech:gt.blockcasings3:15>, <gregtech:gt.metaitem.01:32620>], null, 1600, 4096);
+
+recipes.remove(<GalacticraftMars:item.heavyNoseCone>);
+Assembler.addRecipe(<GalacticraftMars:item.heavyNoseCone>, [<GalacticraftMars:item.itemBasicAsteroids>*4, <IC2:itemPartIridium>*3, <ore:circuitMaster>*2, <gregtech:gt.metaitem.01:32685>], null, 2000, 4096);
+
+
+recipes.remove(<GalacticraftCore:item.noseCone>);
+recipes.addShaped(<GalacticraftCore:item.noseCone>, 
+[[<ore:craftingToolFile>,<gregtech:gt.metaitem.01:32683>,<ore:craftingToolHardHammer>],
+[<GalacticraftCore:item.heavyPlating>,<ore:circuitData>,<GalacticraftCore:item.heavyPlating>],
+[<GalacticraftCore:item.heavyPlating>,<ore:craftingToolWrench>,<GalacticraftCore:item.heavyPlating>]]);
+
+recipes.remove(<GalacticraftCore:item.rocketFins>);
+recipes.addShaped(<GalacticraftCore:item.rocketFins>, 
+[[<ore:craftingToolFile>, <ore:compressedSteel>, <ore:craftingToolHardHammer>], 
+[<GalacticraftCore:item.heavyPlating>, <ore:compressedSteel>, <GalacticraftCore:item.heavyPlating>], 
+[<GalacticraftCore:item.heavyPlating>, <ore:compressedSteel>, <GalacticraftCore:item.heavyPlating>]]);
+
+recipes.remove(<GalacticraftCore:item.engine:1>);
+recipes.addShaped(<GalacticraftCore:item.engine:1>, [
+[<GalacticraftCore:item.meteoricIronIngot:1>, <GalacticraftCore:item.meteoricIronIngot:1>, <GalacticraftCore:item.meteoricIronIngot:1>],
+[<GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.fuelCanisterPartial:1>, <GalacticraftCore:item.heavyPlating>],
+[<GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.airVent>, <GalacticraftCore:item.heavyPlating>]]);
+
+recipes.remove(<GalacticraftCore:item.engine>);
+recipes.addShaped(<GalacticraftCore:item.engine>, [
+[<gregtech:gt.metaitem.01:32613>, <gregtech:gt.blockmachines:5152>, <gregtech:gt.metaitem.01:32613>],
+[<GalacticraftCore:item.heavyPlating>, <gregtech:gt.blockcasings4:3>, <GalacticraftCore:item.heavyPlating>],
+[<GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.airVent>, <GalacticraftCore:item.heavyPlating>]]);
+
+
+// --- Light Oxygen Tak
+recipes.remove(<GalacticraftCore:item.oxygenTankLightFull:900>);
+recipes.addShaped(<GalacticraftCore:item.oxygenTankLightFull:900>, [
+[<GalacticraftCore:item.basicItem:8>, <gregtech:gt.blockmachines:5140>,<GalacticraftCore:item.basicItem:8>],
+[<GalacticraftCore:item.basicItem:8>, <ore:cellEmpty>, <GalacticraftCore:item.basicItem:8>],
+[<GalacticraftCore:item.basicItem:8>, <GalacticraftCore:item.basicItem:8>, <GalacticraftCore:item.basicItem:8>]]);
+// -
+recipes.addShaped(<GalacticraftCore:item.oxygenTankLightFull:900>, [
+[<GalacticraftCore:item.basicItem:8>, <gregtech:gt.blockmachines:5140>,<GalacticraftCore:item.basicItem:8>],
+[<GalacticraftCore:item.basicItem:8>, <IC2:itemFluidCell>, <GalacticraftCore:item.basicItem:8>],
+[<GalacticraftCore:item.basicItem:8>, <GalacticraftCore:item.basicItem:8>, <GalacticraftCore:item.basicItem:8>]]);
+
+// --- Medium Oxygen Tank
+recipes.remove(<GalacticraftCore:item.oxygenTankMedFull:1800>);
+recipes.addShaped(<GalacticraftCore:item.oxygenTankMedFull:1800>, [
+[<GalacticraftCore:item.basicItem:9>, <gregtech:gt.blockmachines:5150>,<GalacticraftCore:item.basicItem:9>],
+[<GalacticraftCore:item.basicItem:9>, <gregtech:gt.metaitem.01:32405>, <GalacticraftCore:item.basicItem:9>],
+[<GalacticraftCore:item.basicItem:9>, <GalacticraftCore:item.basicItem:9>, <GalacticraftCore:item.basicItem:9>]]);
+
+// --- Heavy Oxygen Tank
+recipes.remove(<GalacticraftCore:item.oxygenTankHeavyFull:2700>);
+recipes.addShaped(<GalacticraftCore:item.oxygenTankHeavyFull:2700>, [
+[<GalacticraftMars:item.null:5>, <gregtech:gt.blockmachines:5160>,<GalacticraftMars:item.null:5>],
+[<GalacticraftMars:item.null:5>, <gregtech:gt.metaitem.01:32406>, <GalacticraftMars:item.null:5>],
+[<GalacticraftMars:item.null:5>, <GalacticraftMars:item.null:5>, <GalacticraftMars:item.null:5>]]);
+

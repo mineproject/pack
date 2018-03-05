@@ -1,9 +1,10 @@
 #Name: WWDraconicGreg.zs
-#Author: Fuck The Beast
+#Author: Fuck The Beast and Spartak1997
 
 recipes.remove(<ExtraUtilities:block_bedrockium>);
 mods.tconstruct.Casting.removeBasinRecipe(<ExtraUtilities:block_bedrockium>);
-mods.gregtech.ImplosionCompressor.addRecipe([<ExtraUtilities:block_bedrockium>], <ExtraUtilities:bedrockiumIngot> * 9, 64);
+mods.gregtech.ImplosionCompressor.addRecipe([<ExtraUtilities:block_bedrockium>], <ExtraUtilities:bedrockiumIngot> * 9, 256);
+
 
 #Reactor reflector
 #According to wikipedia, graphite, beryllium, steel, tungsten carbide are neutron reflectors
@@ -70,12 +71,6 @@ mods.gregtech.Autoclave.addRecipe(<minecraft:ender_eye>, <gregtech:gt.metaitem.0
 mods.gregtech.Assembler.addRecipe(<IC2:blockGenerator:3>, <gregtech:gt.metaitem.01:32750>, <gregtech:gt.blockmachines:11>, null, 20, 120);
 
 mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11081>);
-mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:48>);
-furnace.remove(<StevesCarts:ModuleComponents:49>);
-mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:46>);
-furnace.remove(<StevesCarts:ModuleComponents:47>);
-mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:47>, <gregtech:gt.metaitem.01:2816>], <liquid:oxygen> * 12000, [<StevesCarts:ModuleComponents:46>], 6000, 2000, 3000);
-mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:49>, <gregtech:gt.metaitem.01:2816>], <liquid:oxygen> * 24000, [<StevesCarts:ModuleComponents:48>], 12000, 2000, 3000);
 
 mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:ingot>);
 mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:cube:2>);

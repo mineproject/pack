@@ -1,7 +1,18 @@
 #=======================#
 #        GregTech       #
 #=======================#
-#Author: FreeGMan
+#Author: FreeGMan, Spartak1997
+
+import mods.gregtech.Extruder;
+import mods.gregtech.PlateBender;
+import mods.gregtech.ForgeHammer;
+import mods.gregtech.CuttingSaw;
+import mods.gregtech.Assembler;
+import mods.gregtech.FluidExtractor;
+import mods.gregtech.Lathe;
+import mods.ic2.Compressor;
+import mods.ic2.Extractor;
+
 
 print("Initializing 'GregTech.zs'...");
 
@@ -126,6 +137,8 @@ print("Initializing 'GregTech.zs'...");
 <gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.white("4) ") + format.darkGreen("Hot Draconium Ingot") + format.white(" in ") + format.darkRed("Vacuum Freezer") + format.white(" = ") + format.gold("Draconium Ingot"));
 <gregtech:gt.metaitem.01:11386>.addShiftTooltip("");
 <gregtech:gt.metaitem.01:11386>.addShiftTooltip(format.darkPurple("You embark on a slippery-slope road to nowhere!"));
+FluidExtractor.addRecipe(null, <ore:ingotDraconium> , <liquid:molten.draconium>*144, 10000, 1200, 1024);
+FluidExtractor.addRecipe(null, <ore:ingotDraconiumAwakened> , <liquid:molten.draconiumawakened>*144, 10000, 2400, 1874);
 
 
 //Proto Adamantiumium
@@ -186,19 +199,36 @@ mods.thermalexpansion.Furnace.removeRecipe(<GalacticraftMars:tile.asteroidsBlock
 mods.thermalexpansion.Furnace.removeRecipe(<ore:shardTitanium>);
 
 //Fix Aluminium
+recipes.remove(<GalacticraftCore:tile.gcBlockCore:11>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustAluminium> * 2);
+mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustAluminum> * 2);
 mods.thermalexpansion.Smelter.removeRecipe(<*>, <ore:oreAluminium>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:dustAluminium>);
+mods.thermalexpansion.Furnace.removeRecipe(<ore:dustAluminum>);
+mods.thermalexpansion.Furnace.removeRecipe(<ore:clusterAluminum>);
 #Del Induction Furnace
 recipes.removeShaped(<ProjRed|Expansion:projectred.expansion.machine1>);
+furnace.remove(<ImmersiveEngineering:metal:1>);
+furnace.remove(<GalacticraftCore:item.basicItem:5>);
+furnace.remove(<TConstruct:materials:11>);
+mods.tconstruct.Smeltery.removeMelting(<ore:oreAluminium>);
+mods.tconstruct.Smeltery.removeMelting(<ore:oreAluminum>);
+mods.tconstruct.Smeltery.removeMelting(<ore:dustAluminum>);
+mods.tconstruct.Smeltery.removeMelting(<WitchingGadgets:item.WG_Cluster>);
+mods.tconstruct.Casting.removeBasinRecipe(<GalacticraftCore:tile.gcBlockCore:11>);
+mods.tconstruct.Casting.removeTableRecipe(<ImmersiveEngineering:metal:23>);
+mods.tconstruct.Casting.removeTableRecipe(<GalacticraftCore:item.basicItem:5>);
+mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<GalacticraftCore:item.basicItem:5>);
+
 
 //Fix Draconium
 furnace.remove(<ore:ingotDraconium>);
-#mods.thermalexpansion.Furnace.removeRecipe(<ore:dustDraconium>);
+furnace.remove(<ore:ingotDraconiumAwakened>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:oreDraconium>);
 mods.thermalexpansion.Furnace.removeRecipe(<ore:blockDraconium>);
+mods.thermalexpansion.Furnace.removeRecipe(<ore:blockDraconiumAwakened>);
 mods.thermalexpansion.Furnace.removeRecipe(<DraconicEvolution:draconiumBlend>);
-#mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustDraconium>);
+mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:dustDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<minecraft:sand>, <ore:oreDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalExpansion:material:515>, <ore:oreDraconium>);
 mods.thermalexpansion.Smelter.removeRecipe(<ThermalFoundation:material:20>, <ore:oreDraconium>);
@@ -206,8 +236,41 @@ mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIn
 mods.immersiveengineering.ArcFurnace.removeRecipe(<gregtech:gt.metaitem.01:11386>);
 mods.gregtech.PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:1324> * 2], <liquid:molten.tartarite> * 144, <ore:dustDraconium>, <liquid:molten.naquadah> * 144, [10000], 1200, 500);
 mods.gregtech.FusionReactor.addRecipe(<liquid:plasma.draconium> * 144, <liquid:molten.tartarite> * 144, <liquid:molten.neutronium> * 36, 1200, 100000, 500000000);
-mods.gregtech.FluidSolidifier.addRecipe(<gregtech:gt.metaitem.01:12386>, <gregtech:gt.metaitem.01:32306> * 0, <liquid:plasma.draconium> * 144, 200, 16);
+mods.gregtech.FluidSolidifier.addRecipe(<TabulaRasa:RasaItem0>, <gregtech:gt.metaitem.01:32306> * 0, <liquid:plasma.draconium> * 144, 400, 256);
 mods.gregtech.VacuumFreezer.addRecipe(<gregtech:gt.metaitem.01:11386>, <TabulaRasa:RasaItem0>, 4800);
+mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.01:17386>);
+recipes.remove(<gregtech:gt.metaitem.01:17386>);
+mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.01:17387>);
+recipes.remove(<gregtech:gt.metaitem.01:17387>);
+mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.01:23386>);
+recipes.remove(<gregtech:gt.metaitem.01:23386>);
+mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.01:23387>);
+recipes.remove(<gregtech:gt.metaitem.01:23387>);
+recipes.remove(<gregtech:gt.metaitem.02:22386>);
+recipes.remove(<gregtech:gt.metaitem.02:22387>);
+recipes.remove(<gregtech:gt.metaitem.01:18386>);
+recipes.remove(<gregtech:gt.metaitem.01:18387>);
+recipes.remove(<gregtech:gt.metaitem.01:22387>);
+Extruder.addRecipe(<gregtech:gt.metaitem.01:17386>, <ore:ingotDraconium>, <gregtech:gt.metaitem.01:32350> * 0, 1200, 16384);
+Extruder.addRecipe(<gregtech:gt.metaitem.01:17387>, <ore:ingotDraconiumAwakened>, <gregtech:gt.metaitem.01:32350> * 0, 2400, 40960);
+PlateBender.addRecipe(<gregtech:gt.metaitem.01:18386>, <ore:ingotDraconium> * 2, 2400, 16384);
+PlateBender.addRecipe(<gregtech:gt.metaitem.01:18386>, <ore:plateDraconium> * 2, 2400, 16384);
+PlateBender.addRecipe(<gregtech:gt.metaitem.01:18387>, <ore:ingotDraconiumAwakened> * 2, 4800, 40960);
+PlateBender.addRecipe(<gregtech:gt.metaitem.01:18387>, <ore:plateDraconiumAwakened> * 2, 4800, 40960);
+PlateBender.addRecipe(<gregtech:gt.metaitem.01:22387>, <ore:ingotDraconiumAwakened> * 9, 21600, 40960);
+PlateBender.addRecipe(<gregtech:gt.metaitem.01:22387>, <ore:plateDraconiumAwakened> * 9, 21600, 40960);
+Extruder.addRecipe(<gregtech:gt.metaitem.01:23386>*2, <ore:ingotDraconium>, <gregtech:gt.metaitem.01:32351> * 0, 600, 16384);
+Extruder.addRecipe(<gregtech:gt.metaitem.01:23387>*2, <ore:ingotDraconiumAwakened>, <gregtech:gt.metaitem.01:32351> * 0, 1200, 40960);
+Assembler.addRecipe(<gregtech:gt.metaitem.02:22386>, <ore:stickDraconium>*2, <gregtech:gt.integrated_circuit:2>*0, 1200, 16384);
+Assembler.addRecipe(<gregtech:gt.metaitem.02:22387>, <ore:stickDraconiumAwakened>*2, <gregtech:gt.integrated_circuit:2>*0, 2400, 40960);
+CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:17386> * 9], <DraconicEvolution:draconium>, <liquid:water> * 1000, 20800, 16384);
+CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:17386> * 9], <DraconicEvolution:draconium>, <liquid:ic2distilledwater> * 750, 20800, 16384);
+CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:17386> * 9], <DraconicEvolution:draconium>, <liquid:lubricant> * 250, 10400, 16384);
+CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:17387> * 9], <DraconicEvolution:draconicBlock>, <liquid:water> * 1000, 43200, 40960);
+CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:17387> * 9], <DraconicEvolution:draconicBlock>, <liquid:ic2distilledwater> * 750, 43200, 40960);
+CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:17387> * 9], <DraconicEvolution:draconicBlock>, <liquid:lubricant> * 250, 21600, 40960);
+
+
 
 //Fix Adamantium recipes with Blast Furnace
 mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11319>);
@@ -262,6 +325,79 @@ mods.immersiveengineering.MetalPress.addRecipe(<TabulaRasa:RasaItem1:9> * 2, <Ta
 
 #Fix dense obsidian not crafting
 mods.gregtech.PlateBender.addRecipe(<IC2:itemDensePlates:7>, <gregtech:gt.metaitem.01:17804> * 9, 900, 96);
+
+#Fix netronium items
+mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.01:17129>);
+recipes.remove(<gregtech:gt.metaitem.01:17129>);
+recipes.remove(<gregtech:gt.metaitem.02:22129>);
+recipes.remove(<gregtech:gt.metaitem.01:28129>);
+recipes.remove(<gregtech:gt.metaitem.01:27129>);
+recipes.remove(<gregtech:gt.metaitem.01:26129>);
+recipes.remove(<gregtech:gt.metaitem.01:25129>);
+mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.01:23129>);
+recipes.remove(<gregtech:gt.metaitem.01:23129>);
+recipes.remove(<gregtech:gt.metaitem.01:18129>);
+mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.02:31129>);
+recipes.remove(<gregtech:gt.metaitem.02:31129>);
+
+//Bricked Blast Furnace
+recipes.remove(<gregtech:gt.blockmachines:130>);
+recipes.addShaped(<gregtech:gt.blockmachines:130>, [
+[<gregtech:gt.blockcasings4:15>, <IC2:blockMachine:1>, <gregtech:gt.blockcasings4:15>], 
+[<IC2:blockMachine:1>, <ore:craftingToolWrench>, <IC2:blockMachine:1>], 
+[<gregtech:gt.blockcasings4:15>, <IC2:blockMachine:1>, <gregtech:gt.blockcasings4:15>]]);
+
+//Brick Dust
+recipes.addShaped(<gregtech:gt.metaitem.01:1625>*2, [
+[<ore:craftingToolHardHammer>],
+[<minecraft:brick_block>]]);
+
+//Stone
+recipes.addShapeless(<gregtech:gt.metaitem.01:23299>, [
+<ore:craftingToolFile>, <ore:stone>]);
+Lathe.addRecipe([<gregtech:gt.metaitem.01:23299>, <gregtech:gt.metaitem.01:1299>*2], <ore:stone>, 200, 8);
+
+//Scanning Assembly Line Recipes
+<gregtech:gt.blockmachines:1170>.addTooltip("Hold " + format.aqua(format.italic("Shift")) + format.gray(" for Proccessing"));
+<gregtech:gt.blockmachines:1170>.addShiftTooltip(format.white("1) ") + format.darkGreen("Data Stick") + format.white(" in ") + format.darkRed("Scanner") + format.white(" = ") + format.gold("Stick with recipe"));
+<gregtech:gt.blockmachines:1170>.addShiftTooltip(format.white("2) ") + format.darkGreen("Stick with recipe") + format.white(" + ") + format.darkGreen("Paper * 3") + format.white(" + ") + format.darkGreen("Liquid Squid Ink * 144") + format.white(" in ") + format.darkRed("Printer") + format.white(" = ") + format.gold("Printed Pages"));
+<gregtech:gt.blockmachines:1170>.addShiftTooltip(format.white("3) ") + format.darkGreen("Printed Pages") + format.white(" + ") + format.darkGreen("Leather") + format.white(" + ") + format.darkGreen("Liquid Glue * 20") + format.white(" in ") + format.darkRed("Assembler") + format.white(" = ") + format.gold("Written Book"));
+
+
+//Fix Coils
+recipes.remove(<gregtech:gt.blockcasings5>);
+Assembler.addRecipe(<gregtech:gt.blockcasings5>, [<ore:wireGt02Cupronickel>*8, <ore:foilBronze>*8, <gregtech:gt.integrated_circuit:8>*0], null, 200, 8);
+
+recipes.remove(<gregtech:gt.blockcasings5:1>);
+Assembler.addRecipe(<gregtech:gt.blockcasings5:1>, [<ore:wireGt02Kanthal>*8, <ore:foilSilicon>*8, <gregtech:gt.integrated_circuit:8>*0], null, 300, 24);
+
+recipes.remove(<gregtech:gt.blockcasings5:2>);
+Assembler.addRecipe(<gregtech:gt.blockcasings5:2>, [<ore:wireGt02Nichrome>*8, <ore:foilStainlessSteel>*8, <gregtech:gt.integrated_circuit:8>*0], null, 400, 96);
+
+recipes.remove(<gregtech:gt.blockcasings5:3>);
+Assembler.addRecipe(<gregtech:gt.blockcasings5:3>, [<ore:wireGt02TungstenSteel>*8, <ore:foilVanadium>*8, <gregtech:gt.integrated_circuit:8>*0], null, 500, 384);
+
+recipes.remove(<gregtech:gt.blockcasings5:4>);
+Assembler.addRecipe(<gregtech:gt.blockcasings5:4>, [<ore:wireGt02HSSG>*8, <ore:foilTitanium>*8, <gregtech:gt.integrated_circuit:8>*0], null, 600, 1536);
+
+recipes.remove(<gregtech:gt.blockcasings5:5>);
+Assembler.addRecipe(<gregtech:gt.blockcasings5:5>, [<ore:wireGt02Naquadah>*8, <ore:foilOsmiridium>*8, <gregtech:gt.integrated_circuit:8>*0], null, 700, 6144);
+
+recipes.remove(<gregtech:gt.blockcasings5:6>);
+Assembler.addRecipe(<gregtech:gt.blockcasings5:6>, [<ore:wireGt02NaquadahAlloy>*8, <ore:foilDuranium>*8, <gregtech:gt.integrated_circuit:8>*0], null, 800, 24576);
+
+//Wrough Iron
+furnace.addRecipe(<gregtech:gt.metaitem.01:11304>, <ore:ingotIron>, 0.5);
+furnace.addRecipe(<gregtech:gt.metaitem.01:9304>, <ore:nuggetIron>, 0.5);
+furnace.remove(<ore:nuggetIron>);
+
+//Cabel
+recipes.addShapeless(<gregtech:gt.blockmachines:1247>, [<ore:wireGt02Tin>, <minecraft:paper>, <ImmersiveEngineering:material:3>, <minecraft:paper>, <ImmersiveEngineering:material:3>, <ore:paperEmpty>]);
+recipes.addShapeless(<gregtech:gt.blockmachines:1246>, [<ore:wireGt01Tin>, <minecraft:paper>, <ImmersiveEngineering:material:3>, <minecraft:paper>]);
+recipes.addShaped(<gregtech:gt.blockmachines:1248>, [[<ImmersiveEngineering:material:3>, <minecraft:paper>, <ImmersiveEngineering:material:3>], [<minecraft:paper>, <gregtech:gt.blockmachines:1242>, <minecraft:paper>], [<ImmersiveEngineering:material:3>, <minecraft:paper>, <ImmersiveEngineering:material:3>]]);
+
+
+
 
 #==================================================================#
 

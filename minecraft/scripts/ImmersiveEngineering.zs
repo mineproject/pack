@@ -1,9 +1,15 @@
 #=======================#
 # Immersive Engineering #
 #=======================#
-#Author: FreeGMan
+#Author: FreeGMan and Spartak1997
 
 import mods.ic2.Compressor;
+import mods.gregtech.Assembler;
+import mods.gregtech.ChemicalBath;
+import mods.gregtech.BlastFurnace;
+import mods.gregtech.AlloySmelter;
+import mods.gregtech.CuttingSaw;
+import mods.gregtech.Lathe;
 
 print("Initializing 'ImmersiveEngineering.zs'...");
 
@@ -17,26 +23,187 @@ print("Initializing 'ImmersiveEngineering.zs'...");
 
 #==================================================================#
 #Blocks
-
-//lightning rod base
-recipes.remove(<ImmersiveEngineering:metalMultiblock>);
-recipes.addShaped(<ImmersiveEngineering:metalMultiblock>, [[<ImmersiveEngineering:coil:2>, <IC2:blockFenceIron>, <ImmersiveEngineering:coil:2>], [<StevesCarts:ModuleComponents:49>, <IC2:blockFenceIron>, <StevesCarts:ModuleComponents:49>], [<ore:blockDarkSteel>, <ore:blockDarkSteel>, <ore:blockDarkSteel>]]);
-
-//powerGen
-recipes.remove(<ImmersiveEngineering:metalDevice:9>);
-recipes.remove(<ImmersiveEngineering:metalDevice:10>);
-recipes.remove(<ImmersiveEngineering:woodenDevice:2>);
+recipes.remove(<ImmersiveEngineering:railgun>);
+recipes.remove(<ImmersiveEngineering:chemthrower>);
+recipes.remove(<ImmersiveEngineering:skyhook>);
+recipes.remove(<ImmersiveEngineering:toolupgrade:7>);
+recipes.remove(<ImmersiveEngineering:toolupgrade:4>);
+recipes.remove(<ImmersiveEngineering:toolupgrade:3>);
+recipes.remove(<ImmersiveEngineering:toolupgrade:2>);
+recipes.remove(<ImmersiveEngineering:toolupgrade:1>);
+recipes.remove(<ImmersiveEngineering:toolupgrade>);
+recipes.remove(<ImmersiveEngineering:drill>);
+recipes.remove(<ImmersiveEngineering:revolver:1>);
+recipes.remove(<ImmersiveEngineering:material:8>);
+recipes.remove(<ImmersiveEngineering:revolver>);
+recipes.remove(<ImmersiveEngineering:material:10>);
+recipes.remove(<ImmersiveEngineering:material:7>);
+recipes.remove(<ImmersiveEngineering:material:9>);
+recipes.remove(<ImmersiveEngineering:material:5>);
+recipes.remove(<ImmersiveEngineering:material:2>);
+recipes.remove(<ImmersiveEngineering:woodenDecoration:6>);
+recipes.remove(<ImmersiveEngineering:woodenDevice:5>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:9>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:8>);
+recipes.remove(<ImmersiveEngineering:tool:2>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:2>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:9>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:10>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:3>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:4>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:2>);
+recipes.remove(<ImmersiveEngineering:metalDevice2>);
+recipes.remove(<ImmersiveEngineering:metalDevice:13>);
+recipes.remove(<ImmersiveEngineering:metalDevice:15>);
+recipes.remove(<ImmersiveEngineering:metalDevice:11>);
+recipes.remove(<ImmersiveEngineering:metalDevice:8>);
+recipes.remove(<ImmersiveEngineering:metalDevice:4>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:7>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:10>);
+recipes.remove(<ImmersiveEngineering:metalDecoration2:2>);
+recipes.remove(<ImmersiveEngineering:metalDecoration2:1>);
+recipes.remove(<ImmersiveEngineering:metalDecoration2>);
+recipes.remove(<ImmersiveEngineering:material:1>);
+recipes.remove(<ImmersiveEngineering:treatedWood>);
+recipes.remove(<ImmersiveEngineering:metalDevice:5>);
+recipes.remove(<ImmersiveEngineering:stoneDevice:4>);
 recipes.remove(<ImmersiveEngineering:woodenDevice:1>);
 recipes.remove(<ImmersiveEngineering:woodenDevice:3>);
-recipes.addShaped(<ImmersiveEngineering:metalDevice:9>, [[<ore:plateIron>, <ImmersiveEngineering:metalDevice:3>, <ore:plateIron>], [<ore:dustRedstone>, <ImmersiveEngineering:storage:9>, <ore:dustRedstone>], [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
-recipes.addShaped(<ImmersiveEngineering:metalDevice:10>, [[<ore:ingotConstantan>, <ImmersiveEngineering:metalDevice:7>, <ore:ingotConstantan>], [<ore:plateEnderium>, <ImmersiveEngineering:storage:10>, <ore:plateEnderium>], [<ore:plateEnderium>, <ore:plateEnderium>, <ore:plateEnderium>]]);
-recipes.addShaped(<ImmersiveEngineering:woodenDevice:3>, [[<ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>], [<ImmersiveEngineering:material:5>, <IC2:itemRecipePart:12>, <ImmersiveEngineering:material:5>], [<ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>]]);
-recipes.addShaped(<ImmersiveEngineering:woodenDevice:1>, [[<ImmersiveEngineering:material:1>, <ImmersiveEngineering:material:1>, <ImmersiveEngineering:material:1>], [<ImmersiveEngineering:material:1>, <IC2:itemRecipePart:11>, <ImmersiveEngineering:material:1>], [<ImmersiveEngineering:material:1>, <ImmersiveEngineering:material:1>, <ImmersiveEngineering:material:1>]]);
-recipes.addShaped(<ImmersiveEngineering:woodenDevice:2>, [[<ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>], [<ImmersiveEngineering:material:2>, <IC2:itemRecipePart:11>, <ImmersiveEngineering:material:2>], [<ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>]]);
-
-//light engineering block
+recipes.remove(<ImmersiveEngineering:woodenDevice:2>);
+recipes.remove(<ImmersiveEngineering:tool:3>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:13>);
+recipes.remove(<ImmersiveEngineering:metalDecoration>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:1>);
+recipes.remove(<ImmersiveEngineering:metalDevice:14>);
+recipes.remove(<ImmersiveEngineering:tool>);
+recipes.remove(<ImmersiveEngineering:tool:1>);
+recipes.remove(<ImmersiveEngineering:metalDevice:9>);
+recipes.remove(<ImmersiveEngineering:metalDevice:7>);
+recipes.remove(<ImmersiveEngineering:metalDevice:3>);
+recipes.remove(<ImmersiveEngineering:metalDevice:1>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:5>);
+recipes.remove(<ImmersiveEngineering:metalDevice:12>);
+recipes.remove(<ImmersiveEngineering:metalDevice:10>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:6>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:4>);
+recipes.remove(<ImmersiveEngineering:metalMultiblock:2>);
+recipes.remove(<ImmersiveEngineering:metalDevice:6>);
+recipes.remove(<ImmersiveEngineering:metalDevice:2>);
+recipes.remove(<ImmersiveEngineering:metalDevice>);
+recipes.remove(<ImmersiveEngineering:stoneDecoration:2>);
+recipes.remove(<ImmersiveEngineering:stoneDecoration:1>);
+recipes.remove(<ImmersiveEngineering:stoneDecoration:6>);
+recipes.remove(<ImmersiveEngineering:storage:10>);
+recipes.remove(<ImmersiveEngineering:storage:9>);
+recipes.remove(<ImmersiveEngineering:storage:8>);
+recipes.remove(<ImmersiveEngineering:coil:2>);
+recipes.remove(<ImmersiveEngineering:coil:1>);
+recipes.remove(<ImmersiveEngineering:coil>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:11>);
+recipes.remove(<ImmersiveEngineering:metalMultiblock>);
+recipes.remove(<ImmersiveEngineering:metalMultiblock:3>);
+recipes.remove(<ImmersiveEngineering:material:12>);
+recipes.remove(<ImmersiveEngineering:material:11>);
+recipes.remove(<ImmersiveEngineering:metalDecoration:5>);
 recipes.remove(<ImmersiveEngineering:metalDecoration:7>);
-recipes.addShaped(<ImmersiveEngineering:metalDecoration:7> * 2, [[<ore:plateIron>, <ImmersiveEngineering:material:11>, <ore:plateIron>], [<ore:plateCopper>, <ore:dustObsidian>, <ore:plateCopper>], [<ore:plateIron>, <ImmersiveEngineering:material:11>, <ore:plateIron>]]);
+recipes.remove(<ImmersiveEngineering:metalDecoration:12>);
+recipes.remove(<ImmersiveEngineering:material>);
+recipes.remove(<ImmersiveEngineering:woodenDecoration:1>);
+recipes.remove(<ImmersiveEngineering:woodenDecoration:5>);
+recipes.remove(<ImmersiveEngineering:metalDevice2:6>);
+recipes.remove(<ImmersiveEngineering:woodenDevice:4>);
+recipes.remove(<ImmersiveEngineering:storage:7>);
+recipes.remove(<ImmersiveEngineering:storage:6>);
+recipes.remove(<ImmersiveEngineering:storage:5>);
+recipes.remove(<ImmersiveEngineering:storage:4>);
+recipes.remove(<ImmersiveEngineering:storage>);
+recipes.remove(<ImmersiveEngineering:storage:1>);
+recipes.remove(<ImmersiveEngineering:storage:2>);
+recipes.remove(<ImmersiveEngineering:storage:3>);
+
+recipes.removeShaped(<gregtech:gt.metaitem.01:23032>, [[<ore:ingotIron>], [<ore:ingotIron>]]);
+recipes.removeShaped(<gregtech:gt.metaitem.01:23305>, [[<ore:ingotSteel>], [<ore:ingotSteel>]]);
+recipes.removeShaped(<gregtech:gt.metaitem.01:23019>, [[<ore:ingotAluminium>], [<ore:ingotAluminium>]]);
+
+recipes.addShapeless(<ImmersiveEngineering:treatedWood> * 2, [<Railcraft:cube:8>]);
+
+recipes.addShaped(<ImmersiveEngineering:tool:3>, [[<ore:wireFineSteel>, <ore:platePaper>, null], [<minecraft:leather>, <ore:platePaper>, <ore:craftingToolKnife>], [<ore:wireFineSteel>, <ore:platePaper>, null]]);
+recipes.addShaped(<ImmersiveEngineering:skyhook>, [[<ore:stickSteel>, <ore:stickSteel>, <ore:craftingToolHardHammer>], [<ore:stickSteel>, <ImmersiveEngineering:material:11>, <ImmersiveEngineering:material:9>], [<ore:craftingToolFile>, <ImmersiveEngineering:material:10>, <ImmersiveEngineering:material:9>]]);
+recipes.addShaped(<ImmersiveEngineering:toolupgrade:7>, [[<ore:craftingToolHardHammer>, <ore:plateSteel>, <ore:plateSteel>], [<ore:ringSteel>, <ore:pipeMediumSteel>, <ore:pipeMediumSteel>], [<ore:craftingToolFile>, <ore:plateSteel>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:toolupgrade:4>, [[<ore:craftingToolKnife>.noReturn(), <ore:plateSteel>], [<ore:plateSteel>, <ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:toolupgrade:3>, [[<gregtech:gt.metaitem.01:32610>, <ore:dyeRed>, null], [<ore:dyeRed>, <ore:pipeLargeSteel>, <ore:dyeRed>], [null, <ore:dyeRed>, <ore:pipeLargeSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:toolupgrade:2>, [[<ore:craftingToolHardHammer>, null, null], [null, <ore:ringSteel>, null], [null, null, <ore:stickSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:toolupgrade:1>, [[<ore:cellLubricant>.giveBack(<IC2:itemCellEmpty>), null, null], [null, <ore:pipeLargeSteel>, null], [null, null, <gregtech:gt.metaitem.01:32611>]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDevice:5>, [[<ore:plateDoubleSteel>, <ore:craftingToolHardHammer>, null], [<ore:slabTreatedWood>, <ore:slabTreatedWood>, <ore:slabTreatedWood>], [<Forestry:factory2:2>, <ore:craftingToolFile>, <ImmersiveEngineering:woodenDecoration:1>]]);
+recipes.addShaped(<ImmersiveEngineering:drill>, [[<ore:craftingToolHardHammer>, <ore:screwSteel>, <ImmersiveEngineering:material:9>], [<gregtech:gt.metaitem.01:32616>, <ImmersiveEngineering:material:12>, <ImmersiveEngineering:material:9>], [<ore:gearSteel>, <ore:screwSteel>, <ore:craftingToolScrewdriver>]]);
+recipes.addShaped(<ImmersiveEngineering:revolver:1>, [[null, <ore:craftingToolHardHammer>, <ore:plateSteel>], [<ore:stickSteel>, <ore:stickSteel>, <ore:plateSteel>], [null, <ore:craftingToolFile>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:material:8>, [[<ore:pipeSmallSteel>, <ore:pipeSmallSteel>, <ore:pipeSmallSteel>], [<ore:ringSteel>, <ore:craftingToolWrench>, <ore:ringSteel>], [<ore:pipeSmallSteel>, <ore:pipeSmallSteel>, <ore:pipeSmallSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:revolver>, [[<ore:craftingToolHardHammer>, <ore:plateSteel>, <ImmersiveEngineering:material:9>], [<ImmersiveEngineering:material:7>, <ImmersiveEngineering:material:8>, <ImmersiveEngineering:material:10>], [<ore:craftingToolFile>, <ore:plateSteel>, <ImmersiveEngineering:material:9>]]);
+recipes.addShaped(<ImmersiveEngineering:material:10>, [[<ore:plateSteel>, null, <ore:craftingToolHardHammer>], [<ore:plateSteel>, <ore:plateSteel>, null], [<ore:craftingToolFile>, <ore:plateSteel>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:material:9>, [[<ore:treatedStick>, <ore:treatedStick>, null], [<ore:screwBronze>, <ore:treatedStick>, <ore:craftingToolScrewdriver>], [<ore:treatedStick>, <ore:treatedStick>, null]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDecoration:6>, [[<ore:craftingToolSoftHammer>, null, <ore:plankTreatedWood>], [null, <ore:treatedStick>, <ore:plankTreatedWood>], [<ore:plankTreatedWood>, <ore:plankTreatedWood>, <ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:metalMultiblock>, [[<IC2:itemBatChargeLamaCrystal:*>, <gregtech:gt.blockmachines:25>, <IC2:itemBatChargeLamaCrystal:*>], [<gregtech:gt.blockmachines:25>, <gregtech:gt.blockmachines:15>, <gregtech:gt.blockmachines:25>], [<IC2:itemBatChargeLamaCrystal:*>, <gregtech:gt.blockmachines:25>, <IC2:itemBatChargeLamaCrystal:*>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:9>, [[<ore:craftingToolHardHammer>, null, <ore:plateSteel>], [null, <ore:stickSteel>, <ore:plateSteel>], [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:8>, [[null, <ore:craftingToolHardHammer>, null], [<ore:plateSteel>, <ore:stickSteel>, <ore:plateSteel>], [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:2>, [[<ore:craftingToolHardHammer>, <ore:plateSteel>, null], [<ore:plateGlass>, <ore:glowstone>, <ore:plateGlass>], [null, <ore:plateSteel>, null]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:9>, [[<ImmersiveEngineering:metalDevice:6>, <ore:craftingToolHardHammer>, <ImmersiveEngineering:metalDevice:6>], [<ore:plateSteel>, <ProjRed|Integration:projectred.integration.gate:26>, <ore:plateSteel>], [<ore:plateSteel>, <ore:wireGt01RedAlloy>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:10>, [[<ore:plateSteel>, <ImmersiveEngineering:metalDevice:2>, <ore:plateSteel>], [<ore:blockGlass>, <ore:craftingToolWrench>, <ore:blockGlass>], [<ore:plankTreatedWood>, <ImmersiveEngineering:storage:8>, <ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:3>, [[<ore:plateSteel>, <ore:ringSteel>, <ore:plateSteel>], [<ore:plateGlass>, <ore:dustGlowstone>, <ore:plateGlass>], [<ore:plateSteel>, <ore:wireGt01RedAlloy>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:4>, [[<ore:plateSteel>, <ore:plateSteel>, <ore:craftingToolWrench>], [<ore:plateGlass>, <IC2:blockLuminatorDark>, <ImmersiveEngineering:storage:8>], [<ore:plateSteel>, <ImmersiveEngineering:material:11>, <ore:craftingToolHardHammer>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:2>, [[<ore:plateSteel>, <ImmersiveEngineering:tool:2>, <ore:plateSteel>], [<ImmersiveEngineering:storage:8>, <ore:craftingToolWrench>, <ImmersiveEngineering:storage:8>], [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2>, [[null, <ore:stickSteel>, null], [<ore:ringSteel>, <ore:craftingToolWrench>, <ore:plateCopper>], [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:13>, [[null, <gregtech:gt.metaitem.01:32650>, null], [<ore:chestWood>, <gregtech:gt.blockmachines:10>, <gregtech:gt.metaitem.01:32630>], [null, <ore:craftingFilter>, null]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:11> * 4, [[<ore:plateRubber>, <ore:plateRubber>, <ore:plateRubber>], [<ore:plateIron>, <gregtech:gt.metaitem.01:32630>, <ore:plateIron>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:8>, [[<ImmersiveEngineering:metalDevice:2>, <ore:craftingToolHardHammer>, <ImmersiveEngineering:metalDevice:6>], [<ore:plateSteel>, <ImmersiveEngineering:storage:10>, <ore:plateSteel>], [<ore:plateSteel>, <gregtech:gt.blockmachines:23>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:4>, [[<ImmersiveEngineering:metalDevice>, <ore:craftingToolHardHammer>, <ImmersiveEngineering:metalDevice:2>], [<ore:plateSteel>, <ImmersiveEngineering:storage:9>, <ore:plateSteel>], [<ore:plateSteel>, <gregtech:gt.blockmachines:22>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:7>, [[<ImmersiveEngineering:metalDecoration:10>, <ImmersiveEngineering:metalDecoration:10>, <ImmersiveEngineering:metalDecoration:10>], [<ImmersiveEngineering:metalDecoration:10>, <ore:craftingToolWrench>, <ImmersiveEngineering:metalDecoration:10>], [<ImmersiveEngineering:metalDecoration:10>, <ImmersiveEngineering:metalDecoration:10>, <ImmersiveEngineering:metalDecoration:10>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:10>, [[<ore:screwIron>, <ore:plateIron>, <ore:screwIron>], [<ore:plateIron>, <ore:craftingToolScrewdriver>, <ore:plateIron>], [<ore:screwIron>, <ore:plateIron>, <ore:screwIron>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration2:2>, [[<ore:screwSteel>, <ore:plateSteel>, <ore:screwSteel>], [<ore:plateSteel>, <ore:craftingToolScrewdriver>, <ore:plateSteel>], [<ore:screwSteel>, <ore:plateSteel>, <ore:screwSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration2:1>, [[<ore:screwLead>, <ore:plateLead>, <ore:screwLead>], [<ore:plateLead>, <ore:craftingToolScrewdriver>, <ore:plateLead>], [<ore:screwLead>, <ore:plateLead>, <ore:screwLead>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration2>, [[<ore:screwAluminium>, <ore:plateAluminium>, <ore:screwAluminium>], [<ore:plateAluminium>, <ore:craftingToolScrewdriver>, <ore:plateAluminium>], [<ore:screwAluminium>, <ore:plateAluminium>, <ore:screwAluminium>]]);
+recipes.addShaped(<ImmersiveEngineering:material:1>, [[<ore:screwSteel>, <ore:treatedStick>, <ore:screwSteel>], [<ore:treatedStick>, <ore:plankTreatedWood>, <ore:treatedStick>], [<ore:plankTreatedWood>, <ore:craftingToolScrewdriver>, <ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:treatedWood> * 4, [[<ore:craftingToolSaw>], [<Railcraft:cube:8>]]);
+recipes.addShaped(<ImmersiveEngineering:tool>, [[null, <ore:ingotSteel>, <ImmersiveEngineering:material:3>], [null, <ore:treatedStick>, <ore:ingotSteel>], [<ore:treatedStick>, null, null]]);
+recipes.addShaped(<ImmersiveEngineering:tool:1>, [[<ore:plateSteel>, <ore:craftingToolFile>, <ore:plateSteel>], [<ore:craftingToolHardHammer>, <ore:plateSteel>, <ore:craftingToolScrewdriver>], [<ore:treatedStick>, <ore:screwSteel>, <ore:treatedStick>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:9>, [[<ore:plateBlackSteel>, <ImmersiveEngineering:storage:8>, <ore:plateBlackSteel>], [<ore:gearGtSteel>, <ore:stickLongSteelMagnetic>, <gregtech:gt.metaitem.01:32601>], [<ore:plateBlackSteel>, <ImmersiveEngineering:storage:8>, <ore:plateBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:7>, [[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>], [<ore:plateSteel>, <gregtech:gt.metaitem.01:32538>, <ore:plateSteel>], [<ore:plankTreatedWood>, <ore:wireGt01Aluminium>, <ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:3>, [[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>], [<ore:plateSteel>, <gregtech:gt.metaitem.01:32528>, <ore:plateSteel>], [<ore:plankTreatedWood>, <ore:wireGt01Silver>, <ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:1>, [[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>], [<ore:calclavia:BATTERY>, <ore:craftingToolWrench>, <ore:calclavia:BATTERY>], [<ore:plankTreatedWood>, <ore:wireGt01Copper>, <ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:5> * 2, [[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], [<ore:craftingToolWrench>, null, <ore:craftingToolHardHammer>], [<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:12>, [[<ore:plateSteel>, <ore:wireGt02Cupronickel>, <ore:plateSteel>], [<ore:wireGt02Cupronickel>, <gregtech:gt.blockmachines:11>, <ore:wireGt02Cupronickel>], [<ore:plateSteel>, <ore:wireGt02Cupronickel>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:material:12> * 2, [[<gregtech:gt.metaitem.01:17334>, <gregtech:gt.metaitem.01:32601>, <gregtech:gt.metaitem.01:17334>], [<gregtech:gt.metaitem.02:31305>, <ore:craftingToolWrench>, <gregtech:gt.metaitem.02:31305>], [<gregtech:gt.metaitem.01:17334>, <gregtech:gt.metaitem.01:32601>, <gregtech:gt.metaitem.01:17334>]]);
+recipes.addShaped(<ImmersiveEngineering:material:11> * 2, [[<ore:plateSteel>, <gregtech:gt.metaitem.01:32600>, <ore:plateSteel>], [<ore:gearIron>, <ore:craftingToolWrench>, <ore:gearIron>], [<ore:plateSteel>, <gregtech:gt.metaitem.01:32600>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:14>, [[<ore:frameGtStainlessSteel>, <IC2:blockMiningPipe>, <ore:frameGtStainlessSteel>], [<ore:frameGtStainlessSteel>, <IC2:blockMiningPipe>, <ore:frameGtStainlessSteel>], [<ImmersiveEngineering:metalDecoration:7>, <gregtech:gt.metaitem.01:32602>, <ImmersiveEngineering:metalDecoration:7>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:1> * 4, [[<ore:frameGtBlackSteel>, <ore:screwSteel>, <ore:frameGtBlackSteel>], [<ore:screwSteel>, <ore:craftingToolScrewdriver>, <ore:screwSteel>], [<ore:frameGtBlackSteel>, <ore:screwSteel>, <ore:frameGtBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:4>, [[<ore:screwTitanium>, <ore:craftingToolScrewdriver>, <ore:screwTitanium>], [<ore:gearGtSmallTitanium>, <gregtech:gt.blockmachines:34>, <ore:gearGtSmallTitanium>], [<gregtech:gt.metaitem.01:32603>, <ore:rotorTitanium>, <gregtech:gt.metaitem.01:32603>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:6>, [[<ore:screwBlackSteel>, <ore:cableGt01Aluminium>, <ore:screwBlackSteel>], [<ImmersiveEngineering:storage:9>, <gregtech:gt.blockmachines:24>, <ImmersiveEngineering:storage:9>], [<ore:screwBlackSteel>, <ore:craftingToolScrewdriver>, <ore:screwBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalMultiblock:2>, [[<ore:screwBlackSteel>, <ore:craftingToolScrewdriver>, <ore:screwBlackSteel>], [<gregtech:gt.metaitem.01:32641>, <ImmersiveEngineering:metalDecoration:7>, <gregtech:gt.metaitem.01:32611>], [<ore:screwBlackSteel>, <ore:circuitGood>, <ore:screwBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalMultiblock:3>, [[<ore:screwBlackSteel>, <ore:craftingToolScrewdriver>, <ore:screwBlackSteel>], [<ore:circuitGood>, <ImmersiveEngineering:metalDecoration:7>, <ore:circuitGood>], [<ore:screwBlackSteel>, <gregtech:gt.metaitem.01:32611>, <ore:screwBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:5>, [[<ore:gearGtSmallTitanium>, <ore:craftingToolHardHammer>, <ore:gearGtSmallTitanium>], [<gregtech:gt.metaitem.01:32603>, <gregtech:gt.blockcasings2:4>, <gregtech:gt.metaitem.01:32603>], [<ore:screwTitanium>, <ore:craftingToolScrewdriver>, <ore:screwTitanium>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:7>, [[<ore:gearGtSmallSteel>, <ore:craftingToolHardHammer>, <ore:gearGtSmallSteel>], [<gregtech:gt.metaitem.01:32601>, <gregtech:gt.blockcasings2:3>, <gregtech:gt.metaitem.01:32601>], [<ore:screwBlackSteel>, <ore:craftingToolScrewdriver>, <ore:screwBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:13> * 8, [[<ore:frameGtAluminium>, <ore:screwStainlessSteel>, <ore:frameGtAluminium>], [<ore:frameGtAluminium>, <ore:craftingToolScrewdriver>, <ore:frameGtAluminium>], [<ore:frameGtAluminium>, <ore:screwStainlessSteel>, <ore:frameGtAluminium>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:13> * 12, [[<ore:frameGtAluminium>, <ore:screwTitanium>, <ore:frameGtAluminium>], [<ore:frameGtAluminium>, <ore:craftingToolScrewdriver>, <ore:frameGtAluminium>], [<ore:frameGtAluminium>, <ore:screwTitanium>, <ore:frameGtAluminium>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:13> * 16, [[<ore:frameGtAluminium>, <ore:screwTungstenSteel>, <ore:frameGtAluminium>], [<ore:frameGtAluminium>, <ore:craftingToolScrewdriver>, <ore:frameGtAluminium>], [<ore:frameGtAluminium>, <ore:screwTungstenSteel>, <ore:frameGtAluminium>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:1> * 8, [[<ore:frameGtBlackSteel>, <ore:screwStainlessSteel>, <ore:frameGtBlackSteel>], [<ore:frameGtBlackSteel>, <ore:craftingToolScrewdriver>, <ore:frameGtBlackSteel>], [<ore:frameGtBlackSteel>, <ore:screwStainlessSteel>, <ore:frameGtBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:1> * 12, [[<ore:frameGtBlackSteel>, <ore:screwTitanium>, <ore:frameGtBlackSteel>], [<ore:frameGtBlackSteel>, <ore:craftingToolScrewdriver>, <ore:frameGtBlackSteel>], [<ore:frameGtBlackSteel>, <ore:screwTitanium>, <ore:frameGtBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:1> * 16, [[<ore:frameGtBlackSteel>, <ore:screwTungstenSteel>, <ore:frameGtBlackSteel>], [<ore:frameGtBlackSteel>, <ore:craftingToolScrewdriver>, <ore:frameGtBlackSteel>], [<ore:frameGtBlackSteel>, <ore:screwTungstenSteel>, <ore:frameGtBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:13> * 4, [[<ore:frameGtAluminium>, <ore:screwAluminium>, <ore:frameGtAluminium>], [<ore:screwAluminium>, <ore:craftingToolScrewdriver>, <ore:screwAluminium>], [<ore:frameGtAluminium>, <ore:screwAluminium>, <ore:frameGtAluminium>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration> * 6, [[<ImmersiveEngineering:metalDecoration:1>, <gregtech:gt.metaitem.01:23028>, <ImmersiveEngineering:metalDecoration:1>], [<ImmersiveEngineering:metalDecoration:1>, <gregtech:gt.metaitem.01:23028>, <ImmersiveEngineering:metalDecoration:1>], [<gregtech:gt.metaitem.01:27028>, <ore:craftingToolScrewdriver>, <gregtech:gt.metaitem.01:27028>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration> * 2, [[<ore:stickBlackSteel>, <ImmersiveEngineering:metalDecoration:1>, <ore:stickBlackSteel>], [<ore:stickBlackSteel>, <ImmersiveEngineering:metalDecoration:1>, <ore:stickBlackSteel>], [<ore:screwBlackSteel>, <ore:craftingToolScrewdriver>, <ore:screwBlackSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:stoneDecoration:6>, [[<ore:screwSteel>, <ore:craftingToolScrewdriver>, <ore:screwSteel>], [<ore:plateSteel>, <ImmersiveEngineering:stoneDecoration:2>, <ore:plateSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:12> * 4, [[<ImmersiveEngineering:metalDecoration:13>, <ore:stickStainlessSteel>, <ImmersiveEngineering:metalDecoration:13>], [<ImmersiveEngineering:metalDecoration:13>, <ore:stickStainlessSteel>, <ImmersiveEngineering:metalDecoration:13>], [<ore:screwStainlessSteel>, <ore:craftingToolScrewdriver>, <ore:screwStainlessSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDecoration:12> * 2, [[<ore:stickAluminium>, <ImmersiveEngineering:metalDecoration:13>, <ore:stickAluminium>], [<ore:stickAluminium>, <ImmersiveEngineering:metalDecoration:13>, <ore:stickAluminium>], [<ore:screwAluminium>, <ore:craftingToolScrewdriver>, <ore:screwAluminium>]]);
+recipes.addShaped(<ImmersiveEngineering:material> * 4, [[<ore:craftingToolSaw>], [<ore:plankTreatedWood>], [<ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:material> * 2, [[<ore:plankTreatedWood>], [<ore:plankTreatedWood>]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDecoration:1> * 4, [[<ImmersiveEngineering:woodenDecoration:5>, <ore:stickSteel>, <ImmersiveEngineering:woodenDecoration:5>], [<ImmersiveEngineering:woodenDecoration:5>, <ore:stickSteel>, <ImmersiveEngineering:woodenDecoration:5>], [<ore:screwSteel>, <ore:craftingToolScrewdriver>, <ore:screwSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDecoration:1> * 2, [[<ore:stickIron>, <ImmersiveEngineering:woodenDecoration:5>, <ore:stickIron>], [<ore:stickIron>, <ImmersiveEngineering:woodenDecoration:5>, <ore:stickIron>], [<ore:screwIron>, <ore:craftingToolScrewdriver>, <ore:screwIron>]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDecoration:5> * 2, [[<ore:treatedStick>, <ore:treatedStick>, <ore:treatedStick>], [<ore:treatedStick>, <ore:craftingToolWrench>, <ore:treatedStick>], [<ore:treatedStick>, <ore:treatedStick>, <ore:treatedStick>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:11>, [[null, <gregtech:gt.blockmachines:11>, null], [<ore:plateSteel>, <gregtech:gt.metaitem.01:32600>, <ore:plateSteel>], [<minecraft:iron_bars>, <ore:rotorSteel>, <ore:ringSteel>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice2:6>, [[<gregtech:gt.metaitem.01:32731>, <gregtech:gt.blockmachines:11>, <gregtech:gt.metaitem.01:32731>], [<ore:plateSteel>, <gregtech:gt.metaitem.01:32600>, <ore:plateSteel>], [<gregtech:gt.metaitem.01:32610>, <ore:ringSteel>, <gregtech:gt.metaitem.01:32610>]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDevice:4>, [[<ore:logWood>, <ore:plankWood>, <ore:logWood>], [<ore:plankWood>, <ore:craftingToolSoftHammer>, <ore:plankWood>], [<ore:logWood>, <ore:plankWood>, <ore:logWood>]]);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:10>, [[<ore:plateCupronickel>, <ImmersiveEngineering:metalDevice:7>, <ore:plateCupronickel>], [<ore:plateEnderium>, <ImmersiveEngineering:storage:10>, <ore:plateEnderium>], [<ore:plateEnderium>, <ore:plateEnderium>, <ore:plateEnderium>]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDevice:2>, [[<ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>], [<ImmersiveEngineering:material:2>, <IC2:itemRecipePart:11>, <ImmersiveEngineering:material:2>], [<ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>, <ImmersiveEngineering:material:2>]]);
+recipes.addShaped(<ImmersiveEngineering:woodenDevice:3>, [[<ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>], [<ImmersiveEngineering:material:5>, <IC2:itemRecipePart:12>, <ImmersiveEngineering:material:5>], [<ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>]]);
 
 
 #==================================================================#
@@ -49,35 +216,11 @@ recipes.removeShaped(<ImmersiveEngineering:metal:33>, [[<ore:ingotLead>, <Immers
 recipes.removeShaped(<ImmersiveEngineering:metal:32>, [[<ore:ingotAluminium>, <ImmersiveEngineering:tool>]]);
 recipes.removeShaped(<ImmersiveEngineering:metal:30>, [[<ore:plateIron>, <ImmersiveEngineering:tool>]]);
 
-recipes.remove(<ImmersiveEngineering:metalDevice2:10>);
-recipes.remove(<ImmersiveEngineering:metalDevice2:6>);
-recipes.addShaped(<ImmersiveEngineering:metalDevice2:10>, [[<ore:plateIron>, <ImmersiveEngineering:metalDevice:2>, <ore:plateIron>], [<ore:blockGlassColorless>, <ore:blockGlassColorless>, <ore:blockGlassColorless>], [<ore:plankTreatedWood>, <ThermalExpansion:Frame:2>, <ore:plankTreatedWood>]]);
-recipes.addShaped(<ImmersiveEngineering:metalDevice2:6>, [[null, <ore:plateIron>, null], [<ore:plateIron>, <BuildCraft|Factory:pumpBlock>, <ore:plateIron>], [<ImmersiveEngineering:metalDevice2:5>, <ImmersiveEngineering:metalDevice2:5>, <ImmersiveEngineering:metalDevice2:5>]]);
-
-//wire
-recipes.remove(<ImmersiveEngineering:coil:2>);
-recipes.remove(<ImmersiveEngineering:coil:1>);
-recipes.remove(<ImmersiveEngineering:coil>);
-recipes.addShaped(<ImmersiveEngineering:coil:2> * 2, [[null, <ore:plateElectrum>, null], [<ore:plateElectrum>, <ImmersiveEngineering:material>, <ore:plateElectrum>], [null, <ore:plateElectrum>, null]]);
-recipes.addShaped(<ImmersiveEngineering:coil:1> * 2, [[null, <ore:plateSteel>, null], [<ore:plateSteel>, <ImmersiveEngineering:material>, <ore:plateSteel>], [null, <ore:plateSteel>, null]]);
-recipes.addShaped(<ImmersiveEngineering:coil> * 2, [[null, <ore:plateCopper>, null], [<ore:plateCopper>, <ore:treatedStick>, <ore:plateCopper>], [null, <ore:plateCopper>, null]]);
-
-//drill heads
-recipes.remove(<ImmersiveEngineering:drillhead>);
-recipes.remove(<ImmersiveEngineering:drillhead:1>);
-recipes.addShaped(<ImmersiveEngineering:drillhead:1>, [[<minecraft:iron_ingot>, <minecraft:iron_ingot>, null], [<minecraft:iron_block>, <minecraft:iron_block>, <GraviSuite:advDDrill:*>], [<minecraft:iron_ingot>, <minecraft:iron_ingot>, null]]);
-recipes.addShaped(<ImmersiveEngineering:drillhead>, [[<ore:plateSteel>, <ore:plateSteel>, null], [<ore:blockSteel>, <ore:blockSteel>, <IC2:itemToolIridiumDrill:*>], [<ore:plateSteel>, <ore:plateSteel>, null]]);
-
-//core sample drill
-recipes.remove(<ImmersiveEngineering:metalDevice:14>);
-recipes.addShaped(<ImmersiveEngineering:metalDevice:14>, [[<ImmersiveEngineering:metalDecoration:1>, <BuildCraft|Factory:miningWellBlock>, <ImmersiveEngineering:metalDecoration:1>], [<ImmersiveEngineering:metalDecoration:1>, <ore:fenceSteel>, <ImmersiveEngineering:metalDecoration:1>], [<ImmersiveEngineering:metalDecoration:5>, <ImmersiveEngineering:drillhead:1>, <ImmersiveEngineering:metalDecoration:5>]]);
-
 //blueprints
 recipes.addShaped(<ImmersiveEngineering:blueprint:2>, [[<ImmersiveEngineering:metal:20>, null, <ImmersiveEngineering:metal:20>], [<ImmersiveEngineering:metal:20>, <ImmersiveEngineering:blueprint>, <ImmersiveEngineering:metal:20>], [<ImmersiveEngineering:metal:20>, <minecraft:emerald_block>, <ImmersiveEngineering:metal:20>]]);
 recipes.addShaped(<ImmersiveEngineering:blueprint:1>, [[<ore:ingotHOPGraphite>, <ore:blockEmerald>, <ore:ingotHOPGraphite>], [<ore:ingotHOPGraphite>, <ImmersiveEngineering:blueprint>, <ore:ingotHOPGraphite>], [<ore:ingotHOPGraphite>, <ore:blockEmerald>, <ore:ingotHOPGraphite>]]);
 
 //Pressurized Air Tank
-recipes.remove(<ImmersiveEngineering:toolupgrade>);
 recipes.addShaped(<ImmersiveEngineering:toolupgrade>,[
 [<gregtech:gt.blockmachines:5141>, <ore:dyeBlue>, null],
 [<ore:dyeBlue>, <gregtech:gt.blockmachines:5141>, <gregtech:gt.metaitem.01:32612>],
@@ -85,7 +228,6 @@ recipes.addShaped(<ImmersiveEngineering:toolupgrade>,[
 ]);
 
 //Chemical Thrower
-recipes.remove(<ImmersiveEngineering:chemthrower>);
 recipes.addShaped(<ImmersiveEngineering:chemthrower>,[
 [null, <ImmersiveEngineering:toolupgrade>, <ImmersiveEngineering:material:9>],
 [null, <ImmersiveEngineering:metalDecoration:5>, <ImmersiveEngineering:material:9>],
@@ -93,7 +235,6 @@ recipes.addShaped(<ImmersiveEngineering:chemthrower>,[
 ]);
 
 //RailGun
-recipes.remove(<ImmersiveEngineering:railgun>);
 recipes.addShaped(<ImmersiveEngineering:railgun>,[
 [null, <ImmersiveEngineering:metalDevice:7>, <ImmersiveEngineering:material:9>],
 [<gregtech:gt.blockcasings:15>, <gregtech:gt.metaitem.02:24356>, <ImmersiveEngineering:metalDevice:7>],
@@ -274,6 +415,82 @@ mods.immersiveengineering.MetalPress.addRecipe(<gregtech:gt.metaitem.02:31035>, 
 mods.immersiveengineering.MetalPress.removeRecipe(<gregtech:gt.metaitem.01:23035>);
 mods.immersiveengineering.MetalPress.removeRecipe(<TConstruct:toolRod:13>);
 mods.immersiveengineering.MetalPress.addRecipe(<gregtech:gt.metaitem.01:23035> * 2, <gregtech:gt.metaitem.01:11035>, <ImmersiveEngineering:mold:2>, 2000);
+
+
+Assembler.addRecipe(<ImmersiveEngineering:coil>, <gregtech:gt.blockmachines:1360>*8, <gregtech:gt.metaitem.01:28305>, null, 60, 32);
+Assembler.addRecipe(<ImmersiveEngineering:coil:1>, <gregtech:gt.blockmachines:1440>*8, <gregtech:gt.metaitem.01:28305>, null, 80, 64);
+Assembler.addRecipe(<ImmersiveEngineering:coil:2>, <gregtech:gt.blockmachines:1520>*8, <gregtech:gt.metaitem.01:28305>, null, 120, 256);
+
+Assembler.addRecipe(<ImmersiveEngineering:storage:8>, <gregtech:gt.blockmachines:1360>*32, <gregtech:gt.metaitem.02:22305>, null, 120, 32);
+Assembler.addRecipe(<ImmersiveEngineering:storage:9>, <gregtech:gt.blockmachines:1440>*32, <gregtech:gt.metaitem.02:22305>, null, 180, 64);
+Assembler.addRecipe(<ImmersiveEngineering:storage:10>, <gregtech:gt.blockmachines:1520>*32, <gregtech:gt.metaitem.02:22305>, null, 240, 256);
+
+Assembler.addRecipe(<ImmersiveEngineering:metalDevice>, <minecraft:hardened_clay>*2, <gregtech:gt.metaitem.01:23035>, null, 60, 16);
+Assembler.addRecipe(<ImmersiveEngineering:metalDevice:2>, <minecraft:hardened_clay>*3, <gregtech:gt.metaitem.01:23032>, null, 90, 32);
+Assembler.addRecipe(<ImmersiveEngineering:metalDevice:6>, <minecraft:hardened_clay>*6, <gregtech:gt.metaitem.01:23019>*2, null, 120, 96);
+Assembler.addRecipe(<ImmersiveEngineering:metalDevice:5>, <ImmersiveEngineering:stoneDevice:4>*6, <gregtech:gt.metaitem.01:23019>*2, null, 120, 96);
+Assembler.addRecipe(<ImmersiveEngineering:material:1>, <ImmersiveEngineering:material>*3, <ImmersiveEngineering:treatedWood>*3, null, 200, 48);
+Assembler.addRecipe(<ImmersiveEngineering:metalDevice:11>*6, <ore:plateIron>*2, <gregtech:gt.metaitem.01:32630>, <liquid:molten.rubber>*576, 200, 32);
+Assembler.addRecipe(<ImmersiveEngineering:metalDevice:15>, <minecraft:hopper>, <ImmersiveEngineering:metalDevice:11>, null, 80, 8);
+Assembler.addRecipe(<ImmersiveEngineering:tool:2>, <gregtech:gt.metaitem.01:32734>, <ImmersiveEngineering:treatedWood>*2, null, 60, 16);
+Assembler.addRecipe(<ImmersiveEngineering:material:7>, <gregtech:gt.blockmachines:5131>, <gregtech:gt.integrated_circuit:1>*0, null, 80, 16);
+
+Assembler.addRecipe(<ImmersiveEngineering:woodenDevice:1>, <ImmersiveEngineering:material:1>*8, <IC2:itemRecipePart:12>, <liquid:lubricant>*750, 200, 120);
+
+recipes.addShaped(<ImmersiveEngineering:material:2>, 
+[[<ore:plankTreatedWood>, <ore:plankTreatedWood>, <ore:craftingToolFile>], 
+[<ore:treatedStick>, <ore:treatedStick>, <ore:plankTreatedWood>], 
+[<ore:treatedStick>, <ore:treatedStick>, <ore:craftingToolSaw>]]);
+Assembler.addRecipe(<ImmersiveEngineering:material:2>, [<ore:treatedStick>*4, <ore:plankTreatedWood>*3], null, 100, 24);
+Assembler.addRecipe(<ImmersiveEngineering:material:5>, [<ImmersiveEngineering:material:4>*4, <ImmersiveEngineering:material:2>], null, 200, 96);
+
+Assembler.addRecipe(<ImmersiveEngineering:stoneDecoration:6>, [<ore:plateSteel>, <ImmersiveEngineering:stoneDecoration:2>], null, 80, 24);
+
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:1>, <gregtech:gt.blockmachines:4430>, <gregtech:gt.metaitem.01:27305>, null, 40, 16);
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:1>*4, <gregtech:gt.blockmachines:4430>*3, <gregtech:gt.metaitem.01:27306>, null, 100, 32);
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:1>*6, <gregtech:gt.blockmachines:4430>*3, <gregtech:gt.metaitem.01:27028>, null, 100, 48);
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:1>*8, <gregtech:gt.blockmachines:4430>*3, <gregtech:gt.metaitem.01:27316>, null, 100, 64);
+
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:13>, <gregtech:gt.blockmachines:4115>, <gregtech:gt.metaitem.01:27305>, null, 40, 16);
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:13>*4, <gregtech:gt.blockmachines:4115>*3, <gregtech:gt.metaitem.01:27306>, null, 100, 32);
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:13>*6, <gregtech:gt.blockmachines:4115>*3, <gregtech:gt.metaitem.01:27028>, null, 100, 48);
+Assembler.addRecipe(<ImmersiveEngineering:metalDecoration:13>*8, <gregtech:gt.blockmachines:4115>*3, <gregtech:gt.metaitem.01:27316>, null, 100, 64);
+
+Assembler.addRecipe(<ImmersiveEngineering:woodenDecoration:5>, <ImmersiveEngineering:material>*4, <gregtech:gt.integrated_circuit:4>*0, null, 60, 8);
+
+Assembler.addRecipe(<ImmersiveEngineering:stoneDecoration:6>, [<ImmersiveEngineering:stoneDecoration:2>, <ore:plateSteel>, <gregtech:gt.integrated_circuit:1>*0], null, 80, 8);
+
+BlastFurnace.addRecipe([<ImmersiveEngineering:stoneDevice:4>], <liquid:oxygen>*100, [<ore:blockGlass>], 200, 120, 930);
+
+
+AlloySmelter.addRecipe(<ImmersiveEngineering:stoneDecoration:1>*2, <minecraft:brick>*6, <Railcraft:machine.alpha:7>, 80, 8);
+AlloySmelter.addRecipe(<ImmersiveEngineering:stoneDecoration:2>*2, <minecraft:netherbrick>*6, <gregtech:gt.blockcasings4:15>, 120, 8);
+
+
+ChemicalBath.addRecipe ([<ImmersiveEngineering:treatedWood>], <ore:plankWood>, <liquid:creosote> * 125, [10000], 40, 8);
+
+
+CuttingSaw.addRecipe([<ImmersiveEngineering:treatedWood>*4], <Railcraft:cube:8>, <liquid:water>*5, 400, 8);
+CuttingSaw.addRecipe([<ImmersiveEngineering:treatedWood>*6], <Railcraft:cube:8>, <liquid:lubricant>*1, 200, 8);
+
+Lathe.addRecipe([<ImmersiveEngineering:material>*2], <ImmersiveEngineering:treatedWood>, 10, 8);
+
+//Blast furnace
+mods.immersiveengineering.BlastFurnace.removeRecipe(<ImmersiveEngineering:metal:7>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11305>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<SolarExpansion:steelIngot>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<TConstruct:materials:16>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<Railcraft:ingot>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<TConstruct:MetalBlock:9>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<ImmersiveEngineering:storage:7>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<Railcraft:cube:2>);
+mods.immersiveengineering.BlastFurnace.removeRecipe(<gregtech:gt.blockmetal6:13>);
+mods.immersiveengineering.BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11305>, <gregtech:gt.metaitem.01:11304>, 1190, <gregtech:gt.metaitem.01:2816>);
+
+//Coke Oven
+mods.immersiveengineering.CokeOven.removeRecipe(<ImmersiveEngineering:material:6>);
+mods.immersiveengineering.CokeOven.removeRecipe(<ImmersiveEngineering:stoneDecoration:3>);
+mods.immersiveengineering.CokeOven.addRecipe(<Railcraft:fuel.coke>, 500, <minecraft:coal>, 1200);
 
 
 #==================================================================#

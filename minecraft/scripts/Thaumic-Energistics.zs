@@ -111,6 +111,7 @@ mods.thaumcraft.Infusion.addRecipe("thaumicenergistics.TEESSPROV", <appliedenerg
 // -
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TEESSPROV", "sensus 21, praecantatio 18, lucrum 15, metallum 12, ordo 9, potentia 6, machina 3");
 mods.thaumcraft.Research.setComplexity("thaumicenergistics.TEESSPROV", 3);
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEESSPROV", 2);
 
 // --- Iron Gear
 mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEIRONGEARBOX", <thaumicenergistics:material:2>, "terra 10, ignis 5, ordo 5", [
@@ -135,6 +136,7 @@ mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEARCANETERM", <thaumicener
 // -
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TEARCANETERM", "instrumentum 15, fabrico 12, potentia 9, machina 6, vacuos 3");
 mods.thaumcraft.Research.setComplexity("thaumicenergistics.TEARCANETERM", 3);
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEARCANETERM", 1);
 
 // --- Quartz Duplication
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TECERTUSDUPE", "vitreus 9, praecantatio 6, lucrum 9, permutatio 3");
@@ -162,11 +164,12 @@ mods.thaumcraft.Research.addPage("thaumicenergistics.TEESSTERM", "thaumicenergis
 mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEESSTERM", <thaumicenergistics:part.base:4>, "aqua 25, ordo 25, ignis 25, terra 25 ", [
 [<appliedenergistics2:item.ItemMultiMaterial:23>, <Thaumcraft:ItemResource:8>, <appliedenergistics2:item.ItemMultiMaterial:22>],
 [<thaumicenergistics:material>, <appliedenergistics2:item.ItemMultiPart:380>, <thaumicenergistics:material:1>],
-[<ore:plateInfusedWater>, <Thaumcraft:ItemResource:8>, <ore:plateInfusedWater>]]);
+[<Thaumcraft:blockEssentiaReservoir>, <Thaumcraft:ItemResource:8>, <Thaumcraft:blockEssentiaReservoir>]]);
 // -
 mods.thaumcraft.Research.addArcanePage("thaumicenergistics.TEESSTERM", <thaumicenergistics:part.base:4>);
 // -
 mods.thaumcraft.Research.addPage("thaumicenergistics.TEESSTERM", "thaumicenergistics.research_page.TEESSTERM.3");
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEESSTERM", 2);
 
 // --- Essentia Level Emitter
 mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEESSTERM", <thaumicenergistics:part.base:1>, "ordo 10, ignis 10", [
@@ -181,7 +184,7 @@ mods.thaumcraft.Research.addPage("thaumicenergistics.TEESSTERM", "thaumicenergis
 mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEESSTERM", <thaumicenergistics:part.base:7>, "aqua 15, ordo 15", [
 [<ore:craftingToolScrewdriver>, <ore:itemIlluminatedPanel>, <ore:craftingToolHardHammer>],
 [<ore:screwInfusedWater>, <thaumicenergistics:part.base:1>, <ore:screwInfusedWater>],
-[<ore:plateInfusedOrder>, <ore:plateInfusedOrder>, <ore:plateInfusedOrder>]]);
+[<ore:plateInfusedOrder>, <Thaumcraft:blockEssentiaReservoir>, <ore:plateInfusedOrder>]]);
 // -
 mods.thaumcraft.Research.addArcanePage("thaumicenergistics.TEESSTERM", <thaumicenergistics:part.base:7>);
 
@@ -204,6 +207,7 @@ mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEESSVIBCMBR", <thaumicener
 // -
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TEESSVIBCMBR", "vitreus 18, machina 15, potentia 12, praecantatio 9, motus 6, aqua 3");
 mods.thaumcraft.Research.setComplexity("thaumicenergistics.TEESSVIBCMBR", 3);
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEESSVIBCMBR", 2);
 
 // --- Essentia Import Bus
 mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEIO", <thaumicenergistics:part.base>, "ordo 15, aqua 15, ignis 15, terra 15", [
@@ -225,6 +229,7 @@ mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEIO", <thaumicenergistics:
 // -
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TEIO", "motus 18, machina 15, metallum 12, vitreus 9, aer 6, aqua 3");
 mods.thaumcraft.Research.setComplexity("thaumicenergistics.TEIO", 3);
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEIO", 1);
 
 // --- Distillation Pattern Encoder
 mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEDISTILLATIONPATTERNENCODER", <thaumicenergistics:thaumicenergistics.block.distillation.encoder>, "ordo 25, perditio 25, ignis 25", [
@@ -234,6 +239,7 @@ mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEDISTILLATIONPATTERNENCODE
 // -
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TEDISTILLATIONPATTERNENCODER", "ordo 21, fabrico 18, permutatio 15, perditio 12, machina 9, lucrum 6, cognitio 3");
 mods.thaumcraft.Research.setComplexity("thaumicenergistics.TEDISTILLATIONPATTERNENCODER", 3);
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEDISTILLATIONPATTERNENCODER", 1);
 
 // --- Wand Focus AE Wrench
 mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEFOCUSWRENCH", <thaumicenergistics:focus.aewrench>, "ordo 25, aer 25, ignis 25", [
@@ -252,6 +258,7 @@ mods.thaumcraft.Arcane.addShaped("thaumicenergistics.TEGOLEMWIFIBACKPACK", <thau
 // -
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TEGOLEMWIFIBACKPACK", "vacuos 21, potentia 18, auram 15, cognitio 12, tutamen 9, motus 6, permutatio 3");
 mods.thaumcraft.Research.setComplexity("thaumicenergistics.TEGOLEMWIFIBACKPACK", 3);
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEGOLEMWIFIBACKPACK", 1);
 
 // --- 1k ME Essentia Storage
 mods.thaumcraft.Research.clearPages("thaumicenergistics.TESTORAGE");
@@ -392,6 +399,7 @@ mods.thaumcraft.Infusion.addRecipe("thaumicenergistics.TEINFPROV", <thaumicenerg
 // -
 mods.thaumcraft.Research.setAspects("thaumicenergistics.TEINFPROV", "permutatio 21, motus 18, sensus 15, machina 12, praecantatio 9, alienis 6, spiritus 3");
 mods.thaumcraft.Research.setComplexity("thaumicenergistics.TEINFPROV", 3);
+mods.thaumcraft.Warp.addToResearch("thaumicenergistics.TEINFPROV", 3);
 
 // --- Essentia Provider
 mods.thaumcraft.Research.refreshResearchRecipe("thaumicenergistics.TEESSPROV");

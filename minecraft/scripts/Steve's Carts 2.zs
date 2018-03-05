@@ -1,6 +1,7 @@
 #Author: Spartak1997
 
 import mods.gregtech.Assembler;
+import mods.gregtech.CircuitAssembler;
 import mods.gregtech.ChemicalBath;
 import mods.gregtech.ImplosionCompressor;
 import mods.ic2.Compressor;
@@ -22,78 +23,6 @@ var LiquidRed = <liquid:dye.watermixed.dyered>;
 var LiquidWhite = <liquid:dye.watermixed.dyewhite>;
 var LiquidYellow = <liquid:dye.watermixed.dyeyellow>;
 
-Assembler.addRecipe(<StevesCarts:ModuleComponents:9>, <ore:circuitBasic>, <gregtech:gt.metaitem.01:17086>, <liquid:molten.redstone>*144, 200, 16);
-
-Assembler.addRecipe(<StevesCarts:ModuleComponents:16>, <ore:circuitGood>, <StevesCarts:ModuleComponents:9>*2, <liquid:molten.redalloy>*288, 400, 32);
-
-Assembler.addRecipe(<StevesCarts:BlockJunction>, <Railcraft:track>.withTag({track: "railcraft:track.junction"}), <gregtech:gt.blockmachines:2000>*4, null, 200, 30);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:21>*2, <gregtech:gt.metaitem.01:11306>, <StevesCarts:ModuleComponents:20>, <liquid:molten.bluesteel>*72, 400, 64);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:20>, <StevesCarts:ModuleComponents:19>*2, <gregtech:gt.integrated_circuit:2>*0, null, 300, 32);
-Assembler.addRecipe(<StevesCarts:BlockAdvDetector>, <minecraft:detector_rail>, <Railcraft:detector:9>, null, 200, 30);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:2>, <gregtech:gt.metaitem.01:17086>*2, <minecraft:dye:1>*4, null, 100, 2);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:2>, <gregtech:gt.metaitem.01:17086>*2, <gregtech:gt.metaitem.02:32415>*4, null, 100, 2);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:3>, <gregtech:gt.metaitem.01:17086>*2, <minecraft:dye:2>*4, null, 100, 2);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:3>, <gregtech:gt.metaitem.01:17086>*2, <gregtech:gt.metaitem.02:32416>*4, null, 100, 2);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:4>, <gregtech:gt.metaitem.01:17086>*2, <minecraft:dye:4>*4, null, 100, 2);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:4>, <gregtech:gt.metaitem.01:17086>*2, <gregtech:gt.metaitem.02:32418>*4, null, 100, 2);
-
-Assembler.addRecipe(<StevesCarts:ModuleComponents:11>, <gregtech:gt.metaitem.01:23305>, <gregtech:gt.metaitem.01:23874>, null, 100, 8);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:26>, <gregtech:gt.metaitem.01:32691>, <StevesCarts:CartModule:24>, null, 400, 120);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:27>, <gregtech:gt.metaitem.01:32762>, <StevesCarts:CartModule:24>, null, 400, 120);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:29>, <minecraft:torch>*3, <gregtech:gt.integrated_circuit:3>*0, null, 100, 8);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:31>, <StevesCarts:ModuleComponents:30>*4, <gregtech:gt.integrated_circuit:4>*0, null, 200, 16);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:32>, <StevesCarts:ModuleComponents:31>*4, <gregtech:gt.integrated_circuit:4>*0, null, 400, 32);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:35>, <StevesCarts:ModuleComponents:34>*4, <gregtech:gt.integrated_circuit:4>*0, null, 400, 16);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:36>, <StevesCarts:ModuleComponents:35>*4, <gregtech:gt.integrated_circuit:4>*0, null, 800, 32);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:34>*2, <Railcraft:part.plate>, <gregtech:gt.integrated_circuit:1>*0, null, 100, 8);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:44>, <gregtech:gt.metaitem.01:32750>, <StevesCarts:ModuleComponents:9>, null, 600, 30);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:58>, <StevesCarts:ModuleComponents:44>*4, <StevesCarts:ModuleComponents:16>*2, null, 1200, 120);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:62>, <StevesCarts:ModuleComponents:61>*4, <gregtech:gt.integrated_circuit:4>*0, null, 160, 8);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:63>, <StevesCarts:ModuleComponents:62>*4, <gregtech:gt.integrated_circuit:4>*0, null, 320, 16);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:83>, <gregtech:gt.metaitem.02:16032>, <gregtech:gt.integrated_circuit:1>*0, null, 400, 16);
-Assembler.addRecipe(<StevesCarts:ModuleComponents:84>, <StevesCarts:ModuleComponents:83>*4, <gregtech:gt.metaitem.02:31032>, null, 600, 16);
-Assembler.addRecipe(<StevesCarts:CartModule:28>, <StevesCarts:ModuleComponents:24>*8, <StevesCarts:ModuleComponents:25>, null, 400, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:87>, <StevesCarts:ModuleComponents:9>*2, <gregtech:gt.metaitem.01:32744>, null, 300, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:91>, <StevesCarts:ModuleComponents:9>*2, <IC2:blockMachine:1>, null, 300, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:92>, <StevesCarts:ModuleComponents:16>*2, <StevesCarts:CartModule:87>, null, 300, 120);
-Assembler.addRecipe(<StevesCarts:CartModule:93>, <StevesCarts:ModuleComponents:16>*2, <StevesCarts:CartModule:91>, null, 300, 120);
-Assembler.addRecipe(<StevesCarts:CartModule:101>, <StevesCarts:ModuleComponents:16>, <StevesCarts:CartModule:41>, null, 200, 30);
-
-Assembler.addRecipe(<StevesCarts:CartModule:21>, <minecraft:porkchop>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:22>, <gregtech:gt.metaitem.01:17500>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:23>, <gregtech:gt.metaitem.01:17501>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:24>, <minecraft:slime_ball>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:51>, <minecraft:glass_bottle>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
-Assembler.addRecipe(<StevesCarts:CartModule:53>, <minecraft:egg>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
-
-
-mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:23>, <gregtech:gt.metaitem.01:11019>*2, <StevesCarts:ModuleComponents:1>, 100, 32);
-mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:82>, <gregtech:gt.metaitem.01:11306>*2, <StevesCarts:ModuleComponents:23>, 200, 128);
-mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:80>, <gregtech:gt.metaitem.01:11019>*2, <StevesCarts:ModuleComponents:15>, 200, 32);
-mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:81>, <gregtech:gt.metaitem.01:11306>*2, <StevesCarts:ModuleComponents:80>, 400, 128);
-
-
-ChemicalBath.addRecipe([<StevesCarts:ModuleComponents:37>], <StevesCarts:ModuleComponents:34>, <liquid:molten.redstone> * 144, [10000], 600, 2);
-ChemicalBath.addRecipe([<StevesCarts:ModuleComponents:38>], <StevesCarts:ModuleComponents:35>, <liquid:molten.redstone> * 576, [10000], 700, 4);
-ChemicalBath.addRecipe([<StevesCarts:ModuleComponents:39>], <StevesCarts:ModuleComponents:36>, <liquid:molten.redstone> * 2304, [10000], 800, 8);
-ChemicalBath.addRecipe ([<StevesCarts:ModuleComponents:65>], <StevesCarts:ModuleComponents:24>, LiquidGreen * 864, [10000], 200, 2);
-ChemicalBath.addRecipe ([<StevesCarts:ModuleComponents:42>], <StevesCarts:ModuleComponents:24>, LiquidOrange * 864, [10000], 200, 2);
-
-mods.gregtech.CuttingSaw.addRecipe([<StevesCarts:ModuleComponents:30>*2], <gregtech:gt.metaitem.01:17809>, <liquid:water>*50, 40, 8);
-mods.gregtech.CuttingSaw.addRecipe([<StevesCarts:ModuleComponents:61>*2], <minecraft:glass_pane>, <liquid:water>*50, 40, 8);
-
-
-furnace.remove(<StevesCarts:ModuleComponents:12>);
-
-mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:12>], null, [<StevesCarts:ModuleComponents:11>], 200, 120, 1700);
-mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:11>);
-
-ImplosionCompressor.addRecipe([<StevesCarts:ModuleComponents:48>, <gregtech:gt.metaitem.01:816> * 2], <StevesCarts:ModuleComponents:47> * 9, 32);
-mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:46>, <gregtech:gt.metaitem.01:816>], null, [<gregtech:gt.metaitem.01:9028>, <gregtech:gt.metaitem.01:2823>], 1600, 120, 2500);
-
-recipes.remove(<StevesCarts:BlockMetalStorage:2>);
-Compressor.addRecipe(<StevesCarts:BlockMetalStorage:2>, <StevesCarts:ModuleComponents:49>*9);
-
 recipes.remove(<StevesCarts:CartModule:53>);
 recipes.remove(<StevesCarts:CartModule:51>);
 recipes.remove(<StevesCarts:CartModule:24>);
@@ -110,7 +39,6 @@ recipes.remove(<StevesCarts:CartModule:8>);
 recipes.remove(<StevesCarts:CartModule:42>);
 recipes.remove(<StevesCarts:BlockJunction>);
 recipes.remove(<StevesCarts:BlockAdvDetector>);
-recipes.remove(<StevesCarts:CartModule:45>);
 recipes.remove(<StevesCarts:CartModule:44>);
 recipes.remove(<StevesCarts:CartModule:41>);
 recipes.remove(<StevesCarts:CartModule:40>);
@@ -246,6 +174,91 @@ recipes.remove(<StevesCarts:ModuleComponents:37>);
 recipes.remove(<StevesCarts:ModuleComponents:36>);
 recipes.remove(<StevesCarts:ModuleComponents:35>);
 recipes.remove(<StevesCarts:ModuleComponents:34>);
+
+CircuitAssembler.addRecipe(<StevesCarts:ModuleComponents:9>, [<gregtech:gt.metaitem.01:32710>, <ore:circuitBasic>, <ore:wireFineGold>*8], <liquid:molten.solderingalloy> * 72, 1200, 30);
+CircuitAssembler.addRecipe(<StevesCarts:ModuleComponents:9>, [<gregtech:gt.metaitem.01:32710>, <ore:circuitBasic>, <ore:wireFineGold>*8], <liquid:molten.tin> * 144, 1200, 30);
+CircuitAssembler.addRecipe(<StevesCarts:ModuleComponents:9>, [<gregtech:gt.metaitem.01:32710>, <ore:circuitBasic>, <ore:wireFineGold>*8], <liquid:molten.lead> * 288, 1200, 30);
+
+CircuitAssembler.addRecipe(<StevesCarts:ModuleComponents:16>, [<gregtech:gt.metaitem.01:32719>, <StevesCarts:ModuleComponents:9>*2, <ore:wireFineGold>*16], <liquid:molten.solderingalloy> * 144, 2400, 96);
+CircuitAssembler.addRecipe(<StevesCarts:ModuleComponents:16>, [<gregtech:gt.metaitem.01:32719>, <StevesCarts:ModuleComponents:9>*2, <ore:wireFineGold>*16], <liquid:molten.tin> * 288, 2400, 96);
+CircuitAssembler.addRecipe(<StevesCarts:ModuleComponents:16>, [<gregtech:gt.metaitem.01:32719>, <StevesCarts:ModuleComponents:9>*2, <ore:wireFineGold>*16], <liquid:molten.lead> * 576, 2400, 96);
+
+
+Assembler.addRecipe(<StevesCarts:BlockJunction>, <Railcraft:track>.withTag({track: "railcraft:track.junction"}), <gregtech:gt.blockmachines:2000>*4, null, 200, 30);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:21>*2, <gregtech:gt.metaitem.01:11306>, <StevesCarts:ModuleComponents:20>, <liquid:molten.bluesteel>*72, 400, 64);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:20>, <StevesCarts:ModuleComponents:19>*2, <gregtech:gt.integrated_circuit:2>*0, null, 300, 32);
+Assembler.addRecipe(<StevesCarts:BlockAdvDetector>, <minecraft:detector_rail>, <Railcraft:detector:9>, null, 200, 30);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:2>, <gregtech:gt.metaitem.01:17086>*2, <minecraft:dye:1>*4, null, 100, 2);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:2>, <gregtech:gt.metaitem.01:17086>*2, <gregtech:gt.metaitem.02:32415>*4, null, 100, 2);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:3>, <gregtech:gt.metaitem.01:17086>*2, <minecraft:dye:2>*4, null, 100, 2);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:3>, <gregtech:gt.metaitem.01:17086>*2, <gregtech:gt.metaitem.02:32416>*4, null, 100, 2);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:4>, <gregtech:gt.metaitem.01:17086>*2, <minecraft:dye:4>*4, null, 100, 2);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:4>, <gregtech:gt.metaitem.01:17086>*2, <gregtech:gt.metaitem.02:32418>*4, null, 100, 2);
+
+Assembler.addRecipe(<StevesCarts:ModuleComponents:11>, <gregtech:gt.metaitem.01:23305>, <gregtech:gt.metaitem.01:23874>, null, 100, 8);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:26>, <gregtech:gt.metaitem.01:32691>, <StevesCarts:CartModule:24>, null, 400, 120);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:27>, <gregtech:gt.metaitem.01:32762>, <StevesCarts:CartModule:24>, null, 400, 120);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:29>, <minecraft:torch>*3, <gregtech:gt.integrated_circuit:3>*0, null, 100, 8);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:31>, <StevesCarts:ModuleComponents:30>*4, <gregtech:gt.integrated_circuit:4>*0, null, 200, 16);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:32>, <StevesCarts:ModuleComponents:31>*4, <gregtech:gt.integrated_circuit:4>*0, null, 400, 32);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:35>, <StevesCarts:ModuleComponents:34>*4, <gregtech:gt.integrated_circuit:4>*0, null, 400, 16);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:36>, <StevesCarts:ModuleComponents:35>*4, <gregtech:gt.integrated_circuit:4>*0, null, 800, 32);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:34>*2, <Railcraft:part.plate>, <gregtech:gt.integrated_circuit:1>*0, null, 100, 8);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:44>, <gregtech:gt.metaitem.01:32750>, <StevesCarts:ModuleComponents:9>, null, 600, 30);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:58>, <StevesCarts:ModuleComponents:44>*4, <StevesCarts:ModuleComponents:16>*2, null, 1200, 120);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:62>, <StevesCarts:ModuleComponents:61>*4, <gregtech:gt.integrated_circuit:4>*0, null, 160, 8);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:63>, <StevesCarts:ModuleComponents:62>*4, <gregtech:gt.integrated_circuit:4>*0, null, 320, 16);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:83>, <gregtech:gt.metaitem.02:16032>, <gregtech:gt.integrated_circuit:1>*0, null, 400, 16);
+Assembler.addRecipe(<StevesCarts:ModuleComponents:84>, <StevesCarts:ModuleComponents:83>*4, <gregtech:gt.metaitem.02:31032>, null, 600, 16);
+Assembler.addRecipe(<StevesCarts:CartModule:28>, <StevesCarts:ModuleComponents:24>*8, <StevesCarts:ModuleComponents:25>, null, 400, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:87>, <StevesCarts:ModuleComponents:9>*2, <gregtech:gt.metaitem.01:32744>, null, 300, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:91>, <StevesCarts:ModuleComponents:9>*2, <IC2:blockMachine:1>, null, 300, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:92>, <StevesCarts:ModuleComponents:16>*2, <StevesCarts:CartModule:87>, null, 300, 120);
+Assembler.addRecipe(<StevesCarts:CartModule:93>, <StevesCarts:ModuleComponents:16>*2, <StevesCarts:CartModule:91>, null, 300, 120);
+Assembler.addRecipe(<StevesCarts:CartModule:101>, <StevesCarts:ModuleComponents:16>, <StevesCarts:CartModule:41>, null, 200, 30);
+
+Assembler.addRecipe(<StevesCarts:CartModule:21>, <minecraft:porkchop>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:22>, <gregtech:gt.metaitem.01:17500>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:23>, <gregtech:gt.metaitem.01:17501>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:24>, <minecraft:slime_ball>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:51>, <minecraft:glass_bottle>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
+Assembler.addRecipe(<StevesCarts:CartModule:53>, <minecraft:egg>, <StevesCarts:ModuleComponents:28>, null, 200, 30);
+
+
+mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:23>, <gregtech:gt.metaitem.01:11019>*2, <StevesCarts:ModuleComponents:1>, 100, 32);
+mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:82>, <gregtech:gt.metaitem.01:11306>*2, <StevesCarts:ModuleComponents:23>, 200, 128);
+mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:80>, <gregtech:gt.metaitem.01:11019>*2, <StevesCarts:ModuleComponents:15>, 200, 32);
+mods.gregtech.AlloySmelter.addRecipe(<StevesCarts:ModuleComponents:81>, <gregtech:gt.metaitem.01:11306>*2, <StevesCarts:ModuleComponents:80>, 400, 128);
+
+
+ChemicalBath.addRecipe([<StevesCarts:ModuleComponents:37>], <StevesCarts:ModuleComponents:34>, <liquid:molten.redstone> * 144, [10000], 600, 2);
+ChemicalBath.addRecipe([<StevesCarts:ModuleComponents:38>], <StevesCarts:ModuleComponents:35>, <liquid:molten.redstone> * 576, [10000], 700, 4);
+ChemicalBath.addRecipe([<StevesCarts:ModuleComponents:39>], <StevesCarts:ModuleComponents:36>, <liquid:molten.redstone> * 2304, [10000], 800, 8);
+ChemicalBath.addRecipe ([<StevesCarts:ModuleComponents:65>], <StevesCarts:ModuleComponents:24>, LiquidGreen * 864, [10000], 200, 2);
+ChemicalBath.addRecipe ([<StevesCarts:ModuleComponents:42>], <StevesCarts:ModuleComponents:24>, LiquidOrange * 864, [10000], 200, 2);
+
+mods.gregtech.CuttingSaw.addRecipe([<StevesCarts:ModuleComponents:30>*2], <gregtech:gt.metaitem.01:17809>, <liquid:water>*50, 40, 8);
+mods.gregtech.CuttingSaw.addRecipe([<StevesCarts:ModuleComponents:61>*2], <minecraft:glass_pane>, <liquid:water>*50, 40, 8);
+
+
+furnace.remove(<StevesCarts:ModuleComponents:12>);
+
+mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:12>], null, [<StevesCarts:ModuleComponents:11>], 200, 120, 1700);
+mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:11>);
+
+ImplosionCompressor.addRecipe([<StevesCarts:ModuleComponents:48>, <gregtech:gt.metaitem.01:816> * 2], <StevesCarts:ModuleComponents:47> * 9, 32);
+mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:46>, <gregtech:gt.metaitem.01:816>], null, [<gregtech:gt.metaitem.01:9028>, <gregtech:gt.metaitem.01:2823>], 1600, 120, 2500);
+mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:48>);
+furnace.remove(<StevesCarts:ModuleComponents:49>);
+mods.thermalexpansion.Furnace.removeRecipe(<StevesCarts:ModuleComponents:46>);
+furnace.remove(<StevesCarts:ModuleComponents:47>);
+mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:47>, <gregtech:gt.metaitem.01:2816>], <liquid:oxygen> * 12000, [<StevesCarts:ModuleComponents:46>, <StevesCarts:ModuleComponents:45>], 6000, 2000, 3000);
+mods.gregtech.BlastFurnace.addRecipe([<StevesCarts:ModuleComponents:49>, <gregtech:gt.metaitem.01:2816>], <liquid:oxygen> * 24000, [<StevesCarts:ModuleComponents:48>], 12000, 2000, 3000);
+mods.gregtech.Mixer.addRecipe(<StevesCarts:ModuleComponents:45>, null, [<OpenBlocks:goldenEye:*>, <minecraft:magma_cream>, <minecraft:ghast_tear>, <minecraft:fermented_spider_eye>], <liquid:molten.thaumium> * 288, 200, 96);
+
+recipes.remove(<StevesCarts:BlockMetalStorage:2>);
+Compressor.addRecipe(<StevesCarts:BlockMetalStorage:2>, <StevesCarts:ModuleComponents:49>*9);
+
 
 
 recipes.addShapeless(<StevesCarts:ModuleComponents:6>, [<IC2:itemDynamite>]);

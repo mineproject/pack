@@ -1,6 +1,9 @@
 #Name: DraconicEvolution.zs
 #Author: "Feed the Beast" and Spartak1997 
 
+import mods.gregtech.CircuitAssembler;
+import mods.gregtech.Pulverizer;
+import mods.gregtech.ImplosionCompressor;
 print("Initializing 'DraconicEvolution.zs'...");
 
 recipes.remove(<DraconicEvolution:infusedObsidian>);
@@ -75,17 +78,17 @@ recipes.addShaped(<DraconicEvolution:magnet:1>, [[<DraconicEvolution:draconium:2
 recipes.addShaped(<DraconicEvolution:draconiumChest>, [[<TConstruct:heavyPlate:6>, <TConstruct:heavyPlate:6>, <TConstruct:heavyPlate:6>], [<IronChest:BlockIronChest:6>, <DraconicEvolution:draconium>, <IronChest:BlockIronChest:6>], [null, <IC2:itemRTGPellet>, null]]);
 recipes.addShaped(<DraconicEvolution:generator:3>, [[<minecraft:netherbrick>, <ore:ingotIron>, <minecraft:netherbrick>], [<ore:ingotIron>, <minecraft:furnace:*>, <ore:ingotIron>], [<minecraft:netherbrick>, <DraconicEvolution:wyvernCore>, <minecraft:netherbrick>]]);
 
-recipes.addShaped(<DraconicEvolution:draconicAxe>, [[<ore:plateDraconiumAwakened>, <ore:craftingToolHardHammer>, <ore:plateDraconiumAwakened>], [<ore:plateDraconiumAwakened>, <gregtech:gt.metatool.01:6>.withTag({"GT.ToolStats": {PrimaryMaterial: "Neutronium", MaxDamage: 65536000 as long, SecondaryMaterial: "TungstenSteel"}}), <ore:plateDraconiumAwakened>], [<gregtech:gt.metaitem.03:32095>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.03:32095>]]);
-recipes.addShaped(<DraconicEvolution:draconicHoe>, [[<ore:plateDraconiumAwakened>, <ore:craftingToolHardHammer>, <ore:plateDraconiumAwakened>], [<ore:plateDraconiumAwakened>, <gregtech:gt.metatool.01:8>.withTag({"GT.ToolStats": {PrimaryMaterial: "Neutronium", MaxDamage: 65536000 as long, SecondaryMaterial: "TungstenSteel"}}), <ore:plateDraconiumAwakened>], [<gregtech:gt.metaitem.03:32095>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.03:32095>]]);
+recipes.addShaped(<DraconicEvolution:draconicAxe>, [[<ore:plateDraconiumAwakened>, <ore:craftingToolHardHammer>, <ore:plateDraconiumAwakened>], [<ore:plateDraconiumAwakened>, <RedstoneArsenal:tool.axeFlux>, <ore:plateDraconiumAwakened>], [<gregtech:gt.metaitem.03:32095>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.03:32095>]]);
+recipes.addShaped(<DraconicEvolution:draconicHoe>, [[<ore:plateDraconiumAwakened>, <ore:craftingToolHardHammer>, <ore:plateDraconiumAwakened>], [<ore:plateDraconiumAwakened>, <RedstoneArsenal:tool.sickleFlux>, <ore:plateDraconiumAwakened>], [<gregtech:gt.metaitem.03:32095>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.03:32095>]]);
 recipes.addShaped(<DraconicEvolution:draconicBow>, [[<ore:stickLongDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:wireFineNaquadah>], [<DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:wyvernBow>, <ore:wireFineNaquadah>], [<ore:stickLongDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:wireFineNaquadah>]]);
 recipes.addShaped(<DraconicEvolution:draconicSword>, [[<ore:plateDraconiumAwakened>, <ore:craftingToolHardHammer>, <ore:plateDraconiumAwakened>], [<ore:plateDraconiumAwakened>, <DraconicEvolution:wyvernSword>, <ore:plateDraconiumAwakened>], [<gregtech:gt.metaitem.03:32095>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.03:32095>]]);
 recipes.addShaped(<DraconicEvolution:draconicShovel>, [[<ore:plateDraconiumAwakened>, <ore:craftingToolHardHammer>, <ore:plateDraconiumAwakened>], [<ore:plateDraconiumAwakened>, <DraconicEvolution:wyvernShovel>, <ore:plateDraconiumAwakened>], [<gregtech:gt.metaitem.03:32095>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.03:32095>]]);
 recipes.addShaped(<DraconicEvolution:draconicPickaxe>, [[<ore:plateDraconiumAwakened>, <ore:craftingToolHardHammer>, <ore:plateDraconiumAwakened>], [<ore:plateDraconiumAwakened>, <DraconicEvolution:wyvernPickaxe>, <ore:plateDraconiumAwakened>], [<gregtech:gt.metaitem.03:32095>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.03:32095>]]);
 
-recipes.addShaped(<DraconicEvolution:wyvernBow>, [[<ore:stickLongDraconium>, <ore:plateDraconium>, <ore:wireFineEnderium>], [<DraconicEvolution:draconiumFluxCapacitor>, <ore:craftingToolHardHammer>, <ore:wireFineEnderium>], [<ore:stickLongDraconium>, <ore:plateDraconium>, <ore:wireFineEnderium>]]);
-recipes.addShaped(<DraconicEvolution:wyvernShovel>, [[<ore:plateDraconium>, <ore:craftingToolHardHammer>, <ore:plateDraconium>], [<ore:plateDraconium>, <gregtech:gt.metatool.01:4>.withTag({"GT.ToolStats": {PrimaryMaterial: "Tritanium", MaxDamage: 1024000 as long, SecondaryMaterial: "Wood"}}), <ore:plateDraconium>], [<ore:circuitUltimate>, <DraconicEvolution:draconiumFluxCapacitor>, <ore:circuitUltimate>]]);
-recipes.addShaped(<DraconicEvolution:wyvernSword>, [[<ore:plateDraconium>, <ore:craftingToolHardHammer>, <ore:plateDraconium>], [<ore:plateDraconium>, <gregtech:gt.metatool.01>.withTag({"GT.ToolStats": {PrimaryMaterial: "Tritanium", MaxDamage: 1024000 as long, SecondaryMaterial: "Wood"}}), <ore:plateDraconium>], [<ore:circuitUltimate>, <DraconicEvolution:draconiumFluxCapacitor>, <ore:circuitUltimate>]]);
-recipes.addShaped(<DraconicEvolution:wyvernPickaxe>, [[<ore:plateDraconium>, <ore:craftingToolHardHammer>, <ore:plateDraconium>], [<ore:plateDraconium>, <gregtech:gt.metatool.01:2>.withTag({"GT.ToolStats": {PrimaryMaterial: "Tritanium", MaxDamage: 1024000 as long, SecondaryMaterial: "Wood"}}), <ore:plateDraconium>], [<ore:circuitUltimate>, <DraconicEvolution:draconiumFluxCapacitor>, <ore:circuitUltimate>]]);
+recipes.addShaped(<DraconicEvolution:wyvernBow>, [[<ore:stickLongDraconium>, <ore:plateDraconium>, <ore:wireFineEnderium>], [<DraconicEvolution:draconiumFluxCapacitor>, <RedstoneArsenal:tool.bowFlux>, <ore:wireFineEnderium>], [<ore:stickLongDraconium>, <ore:plateDraconium>, <ore:wireFineEnderium>]]);
+recipes.addShaped(<DraconicEvolution:wyvernShovel>, [[<ore:plateDraconium>, <ore:craftingToolHardHammer>, <ore:plateDraconium>], [<ore:plateDraconium>, <RedstoneArsenal:tool.shovelFlux>, <ore:plateDraconium>], [<ore:circuitUltimate>, <DraconicEvolution:draconiumFluxCapacitor>, <ore:circuitUltimate>]]);
+recipes.addShaped(<DraconicEvolution:wyvernSword>, [[<ore:plateDraconium>, <ore:craftingToolHardHammer>, <ore:plateDraconium>], [<ore:plateDraconium>, <RedstoneArsenal:tool.swordFlux>, <ore:plateDraconium>], [<ore:circuitUltimate>, <DraconicEvolution:draconiumFluxCapacitor>, <ore:circuitUltimate>]]);
+recipes.addShaped(<DraconicEvolution:wyvernPickaxe>, [[<ore:plateDraconium>, <ore:craftingToolHardHammer>, <ore:plateDraconium>], [<ore:plateDraconium>, <RedstoneArsenal:tool.pickaxeFlux>, <ore:plateDraconium>], [<ore:circuitUltimate>, <DraconicEvolution:draconiumFluxCapacitor>, <ore:circuitUltimate>]]);
 
 recipes.addShaped(<ExtraUtilities:pureLove>, [[<ThermalFoundation:material:516>, <ThermalFoundation:material:516>, <ThermalFoundation:material:516>], [<ThermalFoundation:material:516>, <ThermalFoundation:material:516>, <ThermalFoundation:material:516>], [<ThermalFoundation:material:516>, <ThermalFoundation:material:516>, <ThermalFoundation:material:516>]]);
 recipes.addShapeless(<ThermalFoundation:material:516> * 9, [<ExtraUtilities:pureLove>]);
@@ -93,16 +96,16 @@ recipes.addShapeless(<ThermalFoundation:material:516> * 9, [<ExtraUtilities:pure
 recipes.addShaped(<DraconicEvolution:safetyMatch:1000>, [[<ore:dyeOrange>, <minecraft:flint_and_steel>], [<ore:stickWood>, null]]);
 
 //Draconium Armor
-mods.gregtech.AssemblyLine.addRecipe(<IC2:itemArmorQuantumHelmet:*>, 144000, [<RedstoneArsenal:armor.helmetFlux>, <DraconicEvolution:draconiumEnergyCore> * 4, <gregtech:gt.metaitem.01:17386> * 4, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>, <gregtech:gt.metaitem.01:32696> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernHelm>, 2400, 32768);
-mods.gregtech.AssemblyLine.addRecipe(<GraviSuite:graviChestPlate:*>, 144000, [<RedstoneArsenal:armor.plateFlux>, <DraconicEvolution:draconiumEnergyCore> * 6, <gregtech:gt.metaitem.01:17386> * 6, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>*2, <gregtech:gt.metaitem.01:32656> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernChest>, 2400, 32768);
-mods.gregtech.AssemblyLine.addRecipe(<IC2:itemArmorQuantumLegs:*>, 144000, [<RedstoneArsenal:armor.legsFlux>, <DraconicEvolution:draconiumEnergyCore> * 6, <gregtech:gt.metaitem.01:17386> * 6, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>*2, <gregtech:gt.metaitem.01:32607> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernLeggs>, 2400, 32768);
-mods.gregtech.AssemblyLine.addRecipe(<IC2:itemArmorQuantumBoots:*>, 144000, [<RedstoneArsenal:armor.bootsFlux>.withTag({Energy: 0}), <DraconicEvolution:draconiumEnergyCore> * 4, <gregtech:gt.metaitem.01:17386> * 4, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>, <gregtech:gt.metaitem.01:32646> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernBoots>, 2400, 32768);
+mods.gregtech.AssemblyLine.addRecipe(<IC2:itemArmorQuantumHelmet:*>, 144000, [<RedstoneArsenal:armor.helmetFlux>, <DraconicEvolution:draconiumEnergyCore> * 4, <gregtech:gt.metaitem.01:17386> * 4, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>, <gregtech:gt.metaitem.01:32696> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernHelm>, 2400, 30768);
+mods.gregtech.AssemblyLine.addRecipe(<GraviSuite:graviChestPlate:*>, 144000, [<RedstoneArsenal:armor.plateFlux>, <DraconicEvolution:draconiumEnergyCore> * 6, <gregtech:gt.metaitem.01:17386> * 6, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>*2, <gregtech:gt.metaitem.01:32656> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernChest>, 2400, 30768);
+mods.gregtech.AssemblyLine.addRecipe(<IC2:itemArmorQuantumLegs:*>, 144000, [<RedstoneArsenal:armor.legsFlux>, <DraconicEvolution:draconiumEnergyCore> * 6, <gregtech:gt.metaitem.01:17386> * 6, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>*2, <gregtech:gt.metaitem.01:32607> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernLeggs>, 2400, 30768);
+mods.gregtech.AssemblyLine.addRecipe(<IC2:itemArmorQuantumBoots:*>, 144000, [<RedstoneArsenal:armor.bootsFlux>.withTag({Energy: 0}), <DraconicEvolution:draconiumEnergyCore> * 4, <gregtech:gt.metaitem.01:17386> * 4, <DraconicEvolution:draconiumFluxCapacitor>, <gregtech:gt.metaitem.01:32676>, <gregtech:gt.metaitem.01:32646> * 2, <gregtech:gt.metaitem.01:27329> *4], [<liquid:molten.tritanium> * 576], <DraconicEvolution:wyvernBoots>, 2400, 30768);
 
 //Awakened Draconium Armor
-mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernHelm>, 144000, [<DraconicEvolution:wyvernHelm>, <DraconicEvolution:draconiumEnergyCore:1> * 8, <gregtech:gt.metaitem.01:17387> * 4, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*2, <gregtech:gt.metaitem.01:32697> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicHelm>, 2400, 524288);
-mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernChest>, 144000, [<DraconicEvolution:wyvernChest>, <simplyjetpacks:jetpacks:5>, <DraconicEvolution:draconiumEnergyCore:1> * 12, <gregtech:gt.metaitem.01:17387> * 6, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*4, <gregtech:gt.metaitem.01:32657> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicChest>, 2400, 524288);
-mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernLeggs>, 144000, [<DraconicEvolution:wyvernLeggs>, <DraconicEvolution:draconiumEnergyCore:1> * 12, <gregtech:gt.metaitem.01:17387> * 6, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*4, <gregtech:gt.metaitem.01:32608> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicLeggs>, 2400, 524288);
-mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernBoots>, 144000, [<DraconicEvolution:wyvernBoots>, <DraconicEvolution:draconiumEnergyCore:1> * 8, <gregtech:gt.metaitem.01:17387> * 4, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*2, <gregtech:gt.metaitem.01:32647> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicBoots>, 2400, 524288);
+mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernHelm>, 144000, [<DraconicEvolution:wyvernHelm>, <DraconicEvolution:draconiumEnergyCore:1> * 8, <gregtech:gt.metaitem.01:17387> * 4, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*2, <gregtech:gt.metaitem.01:32697> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicHelm>, 4800, 128288);
+mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernChest>, 144000, [<DraconicEvolution:wyvernChest>, <simplyjetpacks:jetpacks:5>, <DraconicEvolution:draconiumEnergyCore:1> * 12, <gregtech:gt.metaitem.01:17387> * 6, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*4, <gregtech:gt.metaitem.01:32657> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicChest>, 4800, 128288);
+mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernLeggs>, 144000, [<DraconicEvolution:wyvernLeggs>, <DraconicEvolution:draconiumEnergyCore:1> * 12, <gregtech:gt.metaitem.01:17387> * 6, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*4, <gregtech:gt.metaitem.01:32608> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicLeggs>, 4800, 128288);
+mods.gregtech.AssemblyLine.addRecipe(<DraconicEvolution:wyvernBoots>, 144000, [<DraconicEvolution:wyvernBoots>, <DraconicEvolution:draconiumEnergyCore:1> * 8, <gregtech:gt.metaitem.01:17387> * 4, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*2, <gregtech:gt.metaitem.01:32647> * 4, <gregtech:gt.metaitem.01:27129> *8], [<liquid:molten.neutronium> * 1152], <DraconicEvolution:draconicBoots>, 4800, 128288);
 
 
 
@@ -112,27 +115,27 @@ mods.tconstruct.Casting.addBasinRecipe(<ExtraUtilities:pureLove>, <liquid:redsto
 
 
 //Draconic Cores
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconicCore>, <gregtech:gt.blockmachines:1743> * 4, <gregtech:gt.metaitem.01:32724>, <liquid:molten.draconium> * 576, 80, 16384);
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconicCore>, <gregtech:gt.blockmachines:1723> * 4, <gregtech:gt.metaitem.01:32724>, <liquid:molten.draconium> * 576, 80, 16384);
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconicCore>, <gregtech:gt.blockmachines:1763> * 4, <gregtech:gt.metaitem.01:32724>, <liquid:molten.draconium> * 576, 80, 16384);
+CircuitAssembler.addRecipe(<DraconicEvolution:draconicCore>, [<minecraft:nether_star>, <ore:circuitMaster>*2, <gregtech:gt.metaitem.03:32057>*4, <gregtech:gt.blockmachines:1743> * 4, <ore:boltDesh>*16], <liquid:molten.draconium> * 576, 200, 16384);
+CircuitAssembler.addRecipe(<DraconicEvolution:draconicCore>, [<minecraft:nether_star>, <ore:circuitMaster>*2, <gregtech:gt.metaitem.03:32057>*4, <gregtech:gt.blockmachines:1723> * 4, <ore:boltDesh>*16], <liquid:molten.draconium> * 576, 200, 16384);
+CircuitAssembler.addRecipe(<DraconicEvolution:draconicCore>, [<minecraft:nether_star>, <ore:circuitMaster>*2, <gregtech:gt.metaitem.03:32057>*4, <gregtech:gt.blockmachines:1763> * 4, <ore:boltDesh>*16], <liquid:molten.draconium> * 576, 200, 16384);
 
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:wyvernCore>, <DraconicEvolution:draconicCore> * 4, <gregtech:gt.metaitem.01:32725>, <liquid:molten.draconium> * 2304, 160, 65536);
+CircuitAssembler.addRecipe(<DraconicEvolution:wyvernCore>, [<gregtech:gt.metaitem.01:32725>, <ore:circuitUltimate>*2, <ore:plateDoubleDraconium>*8, <ore:plateNeutronium>*4, <DraconicEvolution:draconicCore> * 4, <ore:boltOsmiridium>*16], null, 600, 30564);
 
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:awakenedCore>, <DraconicEvolution:wyvernCore> * 4, <gregtech:gt.metaitem.01:32726>, <liquid:molten.draconiumawakened> * 576, 320, 262144);
+CircuitAssembler.addRecipe(<DraconicEvolution:awakenedCore>, [<gregtech:gt.metaitem.01:32726>, <ore:circuitSuperconductor>*2, <ore:plateDoubleDraconiumAwakened>*8, <ore:plateNaquadah>*4, <DraconicEvolution:wyvernCore> * 4, <ore:boltNaquadria>*16], null, 1800, 128726);
 
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:chaoticCore>, <DraconicEvolution:awakenedCore> * 4, <DraconicEvolution:chaosShard>, <liquid:ic2uumatter> * 16000, 640, 524288);
+CircuitAssembler.addRecipe(<DraconicEvolution:chaoticCore>, [<DraconicEvolution:chaosFragment>, <ore:circuitInfinite>*2, <ore:plateDenseDraconiumAwakened>*8, <ore:plateDoubleNaquadahAlloy>*8, <DraconicEvolution:awakenedCore> * 4, <ore:boltNeutronium>*16], <liquid:ic2uumatter> * 16000, 3600, 500144);
 
 
 //Energy Cores
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore>, <gregtech:gt.blockmachines:1743> * 8, <DraconicEvolution:draconium:2>, <liquid:molten.draconium> * 576, 200, 32768);
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore>, <gregtech:gt.blockmachines:1723> * 8, <DraconicEvolution:draconium:2>, <liquid:molten.draconium> * 576, 200, 32768);
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore>, <gregtech:gt.blockmachines:1763> * 8, <DraconicEvolution:draconium:2>, <liquid:molten.draconium> * 576, 200, 32768);
+mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore>, [<gregtech:gt.blockmachines:1743> * 8, <AdvancedSolarPanel:asp_crafting_items:1>*4, <DraconicEvolution:draconium:2>, <DraconicEvolution:wyvernCore>], <liquid:molten.draconium> * 576, 200, 30564);
+mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore>, [<gregtech:gt.blockmachines:1723> * 8, <AdvancedSolarPanel:asp_crafting_items:1>*4, <DraconicEvolution:draconium:2>, <DraconicEvolution:wyvernCore>], <liquid:molten.draconium> * 576, 200, 30564);
+mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore>, [<gregtech:gt.blockmachines:1763> * 8, <AdvancedSolarPanel:asp_crafting_items:1>*4, <DraconicEvolution:draconium:2>, <DraconicEvolution:wyvernCore>], <liquid:molten.draconium> * 576, 200, 30564);
 
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore:1>, <GraviSuite:itemSimpleItem:1> * 16, <DraconicEvolution:draconiumEnergyCore>*4, <liquid:molten.draconiumawakened> * 1152, 800, 131072);
+mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumEnergyCore:1>, [<GraviSuite:itemSimpleItem:1> * 16, <AdvancedSolarPanel:asp_crafting_items:4>*4, <DraconicEvolution:draconiumEnergyCore>*4, <DraconicEvolution:awakenedCore>], <liquid:molten.draconiumawakened> * 1152, 800, 128726);
 
 //Capacitors
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumFluxCapacitor>, <DraconicEvolution:draconiumEnergyCore> * 4, <gregtech:gt.metaitem.01:32597>, <liquid:molten.tritanium> * 576, 400, 65536);
-mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconiumEnergyCore:1> * 4, <gregtech:gt.metaitem.01:32599>, <liquid:molten.neutronium> * 1152, 1600, 262144);
+mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumFluxCapacitor>, [<gregtech:gt.blockmachines:2022>*8, <DraconicEvolution:draconiumEnergyCore> * 4, <AdvancedSolarPanel:asp_crafting_items:4>*4, <gregtech:gt.metaitem.01:32597>], <liquid:molten.tritanium> * 576, 400, 65536);
+mods.gregtech.Assembler.addRecipe(<DraconicEvolution:draconiumFluxCapacitor:1>, [<gregtech:gt.blockmachines:2025>*8, <DraconicEvolution:draconiumEnergyCore:1> * 4, <AdvancedSolarPanel:asp_crafting_items:13>*4, <gregtech:gt.metaitem.01:32599>], <liquid:molten.neutronium> * 1152, 1600, 262144);
 
 //Wireless Transceiver
 mods.gregtech.Assembler.addRecipe(<DraconicEvolution:energyCrystal:4>, <DraconicEvolution:particleGenerator> * 2, <DraconicEvolution:energyCrystal>, <liquid:molten.enderium> * 1152, 1600, 8192);
@@ -141,7 +144,7 @@ mods.gregtech.Assembler.addRecipe(<DraconicEvolution:energyCrystal:5>, <Draconic
 
 //Stuff of Power
 recipes.remove(<DraconicEvolution:draconicDistructionStaff>);
-mods.gregtech.AssemblyLine.addRecipe(<GraviSuite:vajra:*>, 144000, [<DraconicEvolution:draconicPickaxe>, <DraconicEvolution:draconicSword>, <DraconicEvolution:draconicAxe>, <DraconicEvolution:draconicShovel>, <DraconicEvolution:draconicBlock>*16, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*8, <gregtech:gt.metaitem.01:32657>*4, <gregtech:gt.metaitem.01:32697>*2, <gregtech:gt.metaitem.01:32687>*2, <gregtech:gt.metaitem.02:22129>*8], [<liquid:ic2uumatter> * 16000], <DraconicEvolution:draconicDistructionStaff>, 2400, 524288);
+mods.gregtech.AssemblyLine.addRecipe(<GraviSuite:vajra:*>, 144000, [<DraconicEvolution:draconicPickaxe>, <DraconicEvolution:draconicSword>, <DraconicEvolution:draconicAxe>, <DraconicEvolution:draconicShovel>, <DraconicEvolution:draconicBlock>*16, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>*8, <gregtech:gt.metaitem.01:32657>*4, <gregtech:gt.metaitem.01:32697>*2, <gregtech:gt.metaitem.01:32687>*2, <gregtech:gt.metaitem.02:22129>*8], [<liquid:ic2uumatter> * 16000], <DraconicEvolution:draconicDistructionStaff>, 5600, 486288);
 
 //Infused Obsidian
 recipes.remove(<ExtraUtilities:decorativeBlock1:1>);
@@ -187,9 +190,9 @@ mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:reactorCraftingPart>,
 [[<ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>],
 [<ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, null, null, null, null, null, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>],
 [<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
-[<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
-[<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateDraconiumAwakened>, <DraconicEvolution:awakenedCore>, <ore:plateDraconiumAwakened>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
-[<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
+[<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateDoubleDraconiumAwakened>, <ore:plateDoubleDraconiumAwakened>, <ore:plateDoubleDraconiumAwakened>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
+[<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateDoubleDraconiumAwakened>, <DraconicEvolution:awakenedCore>, <ore:plateDoubleDraconiumAwakened>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
+[<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateDoubleDraconiumAwakened>, <ore:plateDoubleDraconiumAwakened>, <ore:plateDoubleDraconiumAwakened>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
 [<ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, null, <ore:plateNaquadahAlloy>],
 [<ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, null, null, null, null, null, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>],
 [<ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>]]);
@@ -210,7 +213,7 @@ mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:reactorStabilizer>,
 [<gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>],
 [<gregtech:gt.blockcasings5:7>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconicBlock>, <gregtech:gt.metaitem.01:32677>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.blockcasings5:7>],
 [<gregtech:gt.blockcasings5:7>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <DraconicEvolution:chaoticCore>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockcasings5:7>],
-[<DraconicEvolution:reactorCraftingPart>, <gregtech:gt.blockcasings4:14>, <gregtech:gt.blockcasings4:14>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:3>, <gregtech:gt.blockcasings4:14>, <gregtech:gt.blockcasings4:14>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:4>],
+[<DraconicEvolution:reactorCraftingPart>, <gregtech:gt.blockcasings4:7>, <gregtech:gt.blockcasings4:7>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:3>, <gregtech:gt.blockcasings4:7>, <gregtech:gt.blockcasings4:7>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:4>],
 [<gregtech:gt.blockcasings5:7>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <DraconicEvolution:chaoticCore>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockmetal5:1>, <gregtech:gt.blockcasings5:7>],
 [<gregtech:gt.blockcasings5:7>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.metaitem.01:32677>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconiumFluxCapacitor:1>, <DraconicEvolution:draconicBlock>, <gregtech:gt.metaitem.01:32677>, <DraconicEvolution:draconiumFluxCapacitor:1>, <gregtech:gt.blockcasings5:7>],
 [<gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>, <gregtech:gt.blockcasings5:7>],
@@ -218,14 +221,14 @@ mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:reactorStabilizer>,
 
 mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:reactorEnergyInjector>,
 [[null, null, null, <gregtech:gt.blockcasings5:7>, <gregtech:gt.metaitem.01:24506>, <gregtech:gt.blockcasings5:7>, null, null, null],
-[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
-[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
-[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
-[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
-[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
-[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:14>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
+[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
+[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
+[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
+[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
+[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
+[null, null, <gregtech:gt.blockcasings5:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings4:7>, <DraconicEvolution:reactorCraftingPart:1>, <gregtech:gt.blockcasings5:7>, null, null],
 [null, <ore:plateNaquadahAlloy>, <gregtech:gt.metaitem.01:32687>, <DraconicEvolution:awakenedCore>, <gregtech:gt.metaitem.01:32687>, <DraconicEvolution:awakenedCore>, <gregtech:gt.metaitem.01:32687>, <ore:plateNaquadahAlloy>, null],
-[<ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <gregtech:gt.blockcasings4:15>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>]]);
+[<ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <gregtech:gt.blockmachines:49>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>, <ore:plateNaquadahAlloy>]]);
 
 mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:particleGenerator>,
 [[<DraconicEvolution:draconium:2>, <gregtech:gt.blockmetal5:13>, <gregtech:gt.metaitem.01:32687>, <gregtech:gt.blockcasings5:4>, <gregtech:gt.blockcasings5:4>, <gregtech:gt.blockcasings5:4>, <gregtech:gt.metaitem.01:32687>, <gregtech:gt.blockmetal5:13>, <DraconicEvolution:draconium:2>],
@@ -328,13 +331,13 @@ mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:flowGate:6>,
 
 mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:reactorCore>,
 [[null, null, null, null, null, null, null, null, null],
-[null, null, null, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, null, null, null],
-[null, null, <ore:plateDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDraconiumAwakened>, null, null],
-[null, <ore:plateDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDraconiumAwakened>, null],
-[null, <ore:plateDraconiumAwakened>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:chaosShard>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconium:2>, <ore:plateDraconiumAwakened>, null],
-[null, <ore:plateDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDraconiumAwakened>, null],
-[null, null, <ore:plateDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDraconiumAwakened>, null, null],
-[null, null, null, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, <ore:plateDraconiumAwakened>, null, null, null],
+[null, null, null, <ore:plateDenseDraconiumAwakened>, <ore:plateDenseDraconiumAwakened>, <ore:plateDenseDraconiumAwakened>, null, null, null],
+[null, null, <ore:plateDenseDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDenseDraconiumAwakened>, null, null],
+[null, <ore:plateDenseDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDenseDraconiumAwakened>, null],
+[null, <ore:plateDenseDraconiumAwakened>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:chaosShard>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconium:2>, <ore:plateDenseDraconiumAwakened>, null],
+[null, <ore:plateDenseDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconicBlock>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDenseDraconiumAwakened>, null],
+[null, null, <ore:plateDenseDraconiumAwakened>, <DraconicEvolution:draconium>, <DraconicEvolution:draconium:2>, <DraconicEvolution:draconium>, <ore:plateDenseDraconiumAwakened>, null, null],
+[null, null, null, <ore:plateDenseDraconiumAwakened>, <ore:plateDenseDraconiumAwakened>, <ore:plateDenseDraconiumAwakened>, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
 
 mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:upgradeModifier>,
@@ -383,12 +386,23 @@ mods.avaritia.ExtremeCrafting.addShaped(<DraconicEvolution:sunDial>,
 
 
 
-
 //Relocator
 recipes.remove(<GraviSuite:relocator:*>);
 recipes.addShaped(<GraviSuite:relocator:27>, [[<gregtech:gt.metaitem.01:32707>, <gregtech:gt.metaitem.01:32740>, <gregtech:gt.metaitem.01:32695>], [<gregtech:gt.metaitem.01:32675>, <gregtech:gt.blockmachines:1145>, <gregtech:gt.metaitem.01:32675>], [<gregtech:gt.metaitem.01:32685>, <ore:circuitUltimate>, <gregtech:gt.metaitem.01:32707>]]);
 
 recipes.addShaped(<DraconicEvolution:teleporterMKII>, [[<gregtech:gt.metaitem.01:32687>, <DraconicEvolution:draconium:2>, <gregtech:gt.metaitem.01:32697>], [<DraconicEvolution:teleporterMKI>, <GraviSuite:relocator:*>, <DraconicEvolution:teleporterMKI>], [<DraconicEvolution:draconium:2>, <DraconicEvolution:draconiumFluxCapacitor>, <DraconicEvolution:draconium:2>]]);
 recipes.addShaped(<DraconicEvolution:teleporterMKI>, [[<ore:ingotDraconium>, <DraconicEvolution:infusedObsidian>, <ore:ingotDraconium>], [<DraconicEvolution:infusedObsidian>, <ore:plateEnderium>, <DraconicEvolution:infusedObsidian>], [<ore:ingotDraconium>, <DraconicEvolution:infusedObsidian>, <ore:ingotDraconium>]]);
+
+recipes.remove(<DraconicEvolution:chaosShard>);
+recipes.remove(<DraconicEvolution:chaosFragment>);
+recipes.remove(<DraconicEvolution:chaosFragment:1>);
+recipes.remove(<DraconicEvolution:chaosFragment:2>);
+Pulverizer.addRecipe([<DraconicEvolution:chaosFragment:2>, <DraconicEvolution:chaosFragment:2>, <gregtech:gt.metaitem.01:2506>, <gregtech:gt.metaitem.01:1324>], <DraconicEvolution:chaosShard>, [10000, 5000, 5000, 2500], 400, 16384);
+Pulverizer.addRecipe([<DraconicEvolution:chaosFragment:1>, <DraconicEvolution:chaosFragment:1>, <gregtech:gt.metaitem.01:1506>, <gregtech:gt.metaitem.01:1326>], <DraconicEvolution:chaosFragment:2>, [10000, 5000, 5000, 2500], 400, 65536);
+Pulverizer.addRecipe([<DraconicEvolution:chaosFragment>, <DraconicEvolution:chaosFragment>, <gregtech:gt.metaitem.01:506>, <gregtech:gt.metaitem.01:1327>], <DraconicEvolution:chaosFragment:1>, [10000, 7500, 5000, 2500], 400, 262144);
+
+ImplosionCompressor.addRecipe([<DraconicEvolution:chaosFragment:1>, <gregtech:gt.metaitem.01:2816> * 16], <DraconicEvolution:chaosFragment> * 9, 256);
+ImplosionCompressor.addRecipe([<DraconicEvolution:chaosFragment:2>, <gregtech:gt.metaitem.01:2816> * 16], <DraconicEvolution:chaosFragment:1> * 9, 256);
+ImplosionCompressor.addRecipe([<DraconicEvolution:chaosShard>, <gregtech:gt.metaitem.01:2816> * 16], <DraconicEvolution:chaosFragment:2> * 9, 256);
 
 print("Initialized 'DraconicEvolution.zs'");
