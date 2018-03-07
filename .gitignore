@@ -36,8 +36,15 @@ instance.cfg
 /minecraft/config/AppliedEnrgestics2/recipes/generated/*
 /minecraft/config/AppliedEnrgestics2/recipes/item.csv
 /minecraft/config/HardcoreEnderExpansion.clientsave.cfg
-/minecraft/config/IC2.ini
 /minecraft/config/InvTweaks.cfg
 /minecraft/config/fastcraft.ini
 /minecraft/config/splash.properties
 /minecraft/mods/carpentersblocks/CarpentersBlocksCachedResources.zip
+/minecraft/DynmapModScraper/*
+/minecraft/config/CustomSpawner/*
+/minecraft/config/DynmapModScraper.cfg
+/minecraft/config/UniqueNames.txt
+/minecraft/visualvm_139/*
+/minecraft/config/MapWriterBlockColourOverrides.txt
+/minecraft/config/MapWriterBlockColours.txt
+/minecraft/dumps/*
